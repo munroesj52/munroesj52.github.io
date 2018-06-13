@@ -225,7 +225,7 @@ C Language restrictions.</h4>
 <p>GCC also adds the __int128 type for some targets including the PowerPC64 ABIs. Values of __int128 type are held (for operations, parameter passing and function return) in 64-bit GPR pairs. GCC adds __ibm128 and _Decimal128 floating point types which are held in Floating-point Registers pairs. GCC recently added the __float128 floating point type which are held in single vector register. Similarly for vector __int128.</p>
 <p>GCC defines Generic Vector Extensions that allow typedefs for vectors of various element sizes/types and generic SIMD (arithmetic, logical, and element indexing) operations. For PowerPC64 ABIs this is currently restricted to 16-byte vectors as defined in &lt;altivec.h&gt;. For currently available compilers attempts to define vector types with larger (32 or 64 byte) <em>vector_size</em> values are treated as arrays of scalar elements. Only vector_size(16) variables are passed and returned in vector registers.</p>
 <p>The OpenPOWER 64-Bit ELF V2 ABI Specification makes specific provisions for passing/returning <em>homogeneous aggregates</em> of multiple like data types. Such aggregates can be passed as up to eight floating-point or vector registers. This is defined for the Little Endian ELF V2 ABI and is not applicable to Big Endian ELF V1 targets. Also current GCC versions, in common use, do not fully implement this ABI feature.</p>
-<p>So we have shown that there are mechanisms for functions to return multiple vector register values. But none are really practical at this time as they not yet available (function or optimal code generation) in current GCC compilers, in common use.</p>
+<p>So we have shown that there are mechanisms for functions to return multiple vector register values. But none are really practical at this time as they not yet available (function or optimal code generation) in current GCC compilers, that are in common use.</p>
 <p>Returning pairs of vector __int128 values as _Complex __float128 would be awkward at best. And it is not clear when or if _Complex vector __int128 will be supported. GCC's Generic Vector Extensions are only implemented for vector_size(16). And current GCC compilers can generate some sub-optimal code for passing/returning <em>homogeneous aggregates</em> as suggested in the OpenPOWER ABI.</p>
 <h4><a class="anchor" id="mainpage_sub_1_3_3"></a>
 Subsetting the problem.</h4>
@@ -277,7 +277,7 @@ pveclib is not a vector math library</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 8 2018 20:43:29 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 13 2018 15:53:03 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
