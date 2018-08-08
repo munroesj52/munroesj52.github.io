@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Header package containing a collection of 128-bit SIMD operations over 32-bit floating point elements.  
+<p>Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elements.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vec__common__ppc_8h_source.html">vec_common_ppc.h</a>&gt;</code><br />
 </div>
@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Typedefs</h2></td></tr>
 <tr class="memitem:a033068a4da4bc268328b136f3ffff689"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a033068a4da4bc268328b136f3ffff689"></a>
 typedef <a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f32__ppc_8h.html#a033068a4da4bc268328b136f3ffff689">__vbinary32</a></td></tr>
-<tr class="memdesc:a033068a4da4bc268328b136f3ffff689"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef __vbinary32 to vector of float elements. <br /></td></tr>
+<tr class="memdesc:a033068a4da4bc268328b136f3ffff689"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef __vbinary32 to vector of 4 xfloat elements. <br /></td></tr>
 <tr class="separator:a033068a4da4bc268328b136f3ffff689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -162,20 +162,22 @@ Functions</h2></td></tr>
 <tr class="separator:a0b76fdcb61ad12bdbedb3cb6b766a1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 32-bit floating point elements. </p>
-<p>Most vector float (32-bit float) operations are implemented with PowerISA VMX instructions either defined by the original VMX (AKA Altivec) or added to later versions of the PowerISA. POWER8 added the Vector Scalar Extended (VSX) with access to additional vector (64) registers and operations. Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</p>
-<dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power7</b>, some of the wordwise pack, unpack and merge operations useful for conversions are not defined and the equivalent vec_perm and permute control must be used instead. This header will provide the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</dd></dl>
-<p>Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</p>
-<p>This header covers operations that are either:</p>
+<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elements. </p>
+<p>Most vector float (32-bit float) operations are implemented with PowerISA VMX instructions either defined by the original VMX (a.k.a. Altivec) or added to later versions of the PowerISA. POWER8 added the Vector Scalar Extended (VSX) with access to additional vector registers (64 total) and operations. Most of these operations (compiler built-ins, or intrinsics) are defined in &lt;altivec.h&gt; and described in the <a href="https://gcc.gnu.org/onlinedocs/">compiler documentation</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power7</b>, some of the wordwise pack, unpack and merge operations useful for conversions are not defined and the equivalent vec_perm and permute control must be used instead. This header will provide the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</dd>
+<dd>
+Most ppc64le compilers will default to -mcpu=power8 if not specified.</dd></dl>
+<p>Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides an inline assembler implementation for older compilers that do not provide the built-ins.</p>
+<p>This header covers operations that are any of the following:</p>
 <ul>
-<li>Implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include the multiply even/odd/modulo word operations.</li>
-<li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.n&gt; provided by available compilers in common use. Examples include vector float even/odd.</li>
-<li>Provide special vector float tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions.</li>
-<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. See example above.</li>
+<li>Implemented in hardware instructions in newer processors, but useful to programmers on slightly older processors (even if the equivalent function requires more instructions). Examples include the multiply even/odd/modulo word operations.</li>
+<li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include vector float even/odd.</li>
+<li>Providing special vector float tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions.</li>
+<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious.</li>
 </ul>
 <h1><a class="anchor" id="f32_perf_0_0"></a>
 Performance data.</h1>
-<p>High performance estimates are provided a s an aid to function selection when evaluating algorithms. For background on how <em>Latency</em> and <em>Throughput</em> are derived see: <a class="el" href="index.html#perf_data">Performance data.</a> </p>
+<p>High performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <em>Latency</em> and <em>Throughput</em> are derived see: <a class="el" href="index.html#perf_data">Performance data.</a> </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a083462955e2fcb17cbaefb8dd3f3193d"></a>
 <div class="memitem">
@@ -214,7 +216,7 @@ Performance data.</h1>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vector float absolute values of vf32x. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vector absolute values of 4x float elements of vf32x. </dd></dl>
 
 </div>
 </div>
@@ -515,7 +517,7 @@ Performance data.</h1>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a boolean int, true if aany of 4 vector float values are NaN. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a boolean int, true if any of 4 vector float values are NaN. </dd></dl>
 
 </div>
 </div>
@@ -644,7 +646,7 @@ Performance data.</h1>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a boolean int, true if aany of 4 vector float values are +/- zero. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a boolean int, true if any of 4 vector float values are +/- zero. </dd></dl>
 
 </div>
 </div>
@@ -917,7 +919,7 @@ Performance data.</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 25 2018 14:40:59 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 8 2018 14:37:23 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

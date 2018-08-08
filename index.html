@@ -131,7 +131,7 @@ POWER Vector Library Intrinsic headers</h3>
 <li><a class="el" href="vec__bcd__ppc_8h.html" title="Header package containing a collection of Binary Coded Decimal (BCD) computation functions implemente...">vec_bcd_ppc.h</a> Operations on vectors of Binary Code Decimal and Zoned Decimal values</li>
 <li>vec_f128_ppc.h Operations on vector _Float128 values</li>
 <li>vec_f64_ppc.h Operations on vector double values</li>
-<li><a class="el" href="vec__f32__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over 32-bit floating point elements...">vec_f32_ppc.h</a> Operations on vector float values</li>
+<li><a class="el" href="vec__f32__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elemen...">vec_f32_ppc.h</a> Operations on vector float values</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>The list above is more of an aspiration at this time. You will not find all of these headers or complete operation set and platform coverage in the current public github. But many of these headers do exist in private trees as we work on completing function and testing across compilers and PowerISA versions.</dd></dl>
 <p>The goal is to provide high quality implementations that adapt to the specifics of the compile target (-mcpu=) and compiler (&lt;altivec.h&gt;) version you are using. Initially pveclib will focus on the GCC compiler and -mcpu=[power7|power8|power9] for Linux. Testing will focus on Little Endian (<b>powerpc64le</b> for power8 and power9 targets. Any testing for Big Endian (<b>powerpc64</b> will be initially restricted to power7 and power8 targets.</p>
@@ -294,8 +294,8 @@ pveclib is not a vector math library</h2>
 <p>We believe that pveclib will be helpful to implementors of vector math libraries by providing a higher level, more portable, and more consistent vector interface for the PowerISA. Similarly for implementors of extended arithmetic, cryptographic, compression/decompression, and pattern matching / search libraries.</p>
 <h1><a class="anchor" id="perf_data"></a>
 Performance data.</h1>
-<p>It is useful to provide basic performance data for each pveclib function. This is challenging as these functions are small and intended to be in-lined within larger functions (algorithms). As such they are subject to both the compilers instruction scheduling and common subexpression optimizations plus the processors super-scalar and out-of-order execution design features.</p>
-<p>As pveclib functions are normally only a few instructions, the actual timing will depend on the context it is in (the instructions that is depends on for data and instructions that proceed them in the pipelines).</p>
+<p>It is useful to provide basic performance data for each pveclib function. This is challenging as these functions are small and intended to be in-lined within larger functions (algorithms). As such they are subject to both the compiler's instruction scheduling and common subexpression optimizations plus the processors super-scalar and out-of-order execution design features.</p>
+<p>As pveclib functions are normally only a few instructions, the actual timing will depend on the context it is in (the instructions that it depends on for data and instructions that proceed them in the pipelines).</p>
 <p>The simplest approach is to use the same performance metrics as the Power Processor Users Manuals Performance Profile. This is normally per instruction latency in cycles and throughput in instructions issued per cycle. There may also be additional information for special conditions that may apply.</p>
 <p>For example the vector float absolute value function. For recent PowerISA implementations this a single (VSX <b>xvabssp</b>) instruction which we can look up in the POWER8 / POWER9 Processor User's Manuals (<b>UM</b>).</p>
 <table class="doxtable">
@@ -351,13 +351,13 @@ Additional analysis and tools.</h2>
 <dl class="section note"><dt>Note</dt><dd>This information is intended as a guide for compiler and application developers wishing to optimize for the platform. Any performance tables provided for pveclib functions are in this spirit.</dd></dl>
 <p>Of course the actual performance is complicated by the overall environment and how the pveclib functions are used. It would be unusual for pveclib functions to be used in isolation. The compiler will in-line pveclib functions and look for sub-expressions it can hoist out of loops or share across pveclib function instances. The The compiler will also model the processor and schedule instructions across the larger containing function. So in actual use the instruction sequences for the examples above are likely to be interleaved with instructions from other pvevlib functions and user written code.</p>
 <p>Larger functions that use pveclib and even some of the more complicated pveclib functions (like vec_muludq) defy simple analysis. For these cases it is better to use POWER specific analysis tools. To understand the overall pipeline flows and identify hazards the instruction trace driven performance simulator is recommended.</p>
-<p>The IBM Advance Toolchain includes an updated (POWER enabled) Valgrind tool and instruction trace plug-in (itrace). The itrace tool (&ndash;tool=itrace) collects instruction traces for the whole program or specific functions (via &ndash;fnname= option).</p>
+<p>The <a href="https://developer.ibm.com/linuxonpower/advance-toolchain/">IBM Advance Toolchain</a> includes an updated (POWER enabled) Valgrind tool and instruction trace plug-in (itrace). The itrace tool (&ndash;tool=itrace) collects instruction traces for the whole program or specific functions (via &ndash;fnname= option).</p>
 <dl class="section note"><dt>Note</dt><dd>The Valgrind package provided by the Linux Distro may not be enabled for the latest POWER processor. Nor will it include the itrace plug-in or the associated vgi2qt conversion tool.</dd></dl>
-<p>Instruction traces are processed by the performance simulator (sim_ppc) models. Performance simulators are specific to each processor generation (POWER7-9) and provides a cycle accurate modeling for instruction trace streams. The results of the model (a pipe file) can viewed via one the interactive display tools (scrollpv, jviewer) or passed to an analysis tool like <b>pipestat</b>. </p>
+<p>Instruction trace files are processed by the <a href="https://developer.ibm.com/linuxonpower/sdk-packages/">Performance Simulator</a> (sim_ppc) models. Performance simulators are specific to each processor generation (POWER7-9) and provides a cycle accurate modeling for instruction trace streams. The results of the model (a pipe file) can viewed via one the interactive display tools (scrollpv, jviewer) or passed to an analysis tool like <a href="https://developer.ibm.com/linuxonpower/sdk-packages/">pipestat</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 25 2018 14:40:59 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 8 2018 14:37:23 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
