@@ -87,38 +87,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">vec_f64_ppc.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header package containing a collection of 128-bit SIMD operations over 64-bit double floating point elements.  
+<p>Header package containing a collection of 128-bit SIMD operations over 64-bit double-precision floating point elements.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vec__common__ppc_8h_source.html">vec_common_ppc.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vec__int64__ppc_8h_source.html">vec_int64_ppc.h</a>&gt;</code><br />
 </div>
 <p><a href="vec__f64__ppc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a8b03cddf29e839c554da86dd95d270ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b03cddf29e839c554da86dd95d270ad"></a>
-typedef __vector double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a8b03cddf29e839c554da86dd95d270ad">__vbinary64</a></td></tr>
-<tr class="memdesc:a8b03cddf29e839c554da86dd95d270ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of 64-bit binary64 elements. Same as vector double for PPC. <br /></td></tr>
-<tr class="separator:a8b03cddf29e839c554da86dd95d270ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac396fe321d73f75b57ebab8c365e20f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#ac396fe321d73f75b57ebab8c365e20f3">vec_unpack_longdouble</a> (long double lval)</td></tr>
-<tr class="memdesc:ac396fe321d73f75b57ebab8c365e20f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the pair of doubles from a IBM long double to a vector double.  <a href="#ac396fe321d73f75b57ebab8c365e20f3">More...</a><br /></td></tr>
-<tr class="separator:ac396fe321d73f75b57ebab8c365e20f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabd670e9d3dd600198336708bb71fe77"><td class="memItemLeft" align="right" valign="top">static long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#aabd670e9d3dd600198336708bb71fe77">vec_pack_longdouble</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> lval)</td></tr>
-<tr class="memdesc:aabd670e9d3dd600198336708bb71fe77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the pair of doubles from a vector to IBM long double.  <a href="#aabd670e9d3dd600198336708bb71fe77">More...</a><br /></td></tr>
-<tr class="separator:aabd670e9d3dd600198336708bb71fe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab56ccacba6a3b48a7a920c7d5b0fe30e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#ab56ccacba6a3b48a7a920c7d5b0fe30e">vec_absf64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64x)</td></tr>
 <tr class="memdesc:ab56ccacba6a3b48a7a920c7d5b0fe30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector double absolute value.  <a href="#ab56ccacba6a3b48a7a920c7d5b0fe30e">More...</a><br /></td></tr>
 <tr class="separator:ab56ccacba6a3b48a7a920c7d5b0fe30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdfdf013a97ccd6dc20b1447f81d498"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a6bdfdf013a97ccd6dc20b1447f81d498">vec_all_isfinitef64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
+<tr class="memdesc:a6bdfdf013a97ccd6dc20b1447f81d498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if all 2x64-bit vector double values are Finite (Not NaN nor Inf).  <a href="#a6bdfdf013a97ccd6dc20b1447f81d498">More...</a><br /></td></tr>
+<tr class="separator:a6bdfdf013a97ccd6dc20b1447f81d498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f2bf6308d932b9604dbd8c5f8e90da"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#ac8f2bf6308d932b9604dbd8c5f8e90da">vec_all_isinff64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:ac8f2bf6308d932b9604dbd8c5f8e90da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if all 2x64-bit vector double values are infinity.  <a href="#ac8f2bf6308d932b9604dbd8c5f8e90da">More...</a><br /></td></tr>
 <tr class="separator:ac8f2bf6308d932b9604dbd8c5f8e90da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +123,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a27becc842e7270c96c54a00d4a292d54"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a27becc842e7270c96c54a00d4a292d54">vec_all_iszerof64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:a27becc842e7270c96c54a00d4a292d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if all 2x64-bit vector double values are +-0.0.  <a href="#a27becc842e7270c96c54a00d4a292d54">More...</a><br /></td></tr>
 <tr class="separator:a27becc842e7270c96c54a00d4a292d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5108dc5fc533329fdd794f306a6ec3d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#aa5108dc5fc533329fdd794f306a6ec3d">vec_any_isfinitef64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
+<tr class="memdesc:aa5108dc5fc533329fdd794f306a6ec3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if any of 2x64-bit vector double values are Finite (Not NaN nor Inf).  <a href="#aa5108dc5fc533329fdd794f306a6ec3d">More...</a><br /></td></tr>
+<tr class="separator:aa5108dc5fc533329fdd794f306a6ec3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71abdbd1fd938daa250682ef9bbc5e84"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a71abdbd1fd938daa250682ef9bbc5e84">vec_any_isinff64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:a71abdbd1fd938daa250682ef9bbc5e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if any of 2x64-bit vector double values are infinity.  <a href="#a71abdbd1fd938daa250682ef9bbc5e84">More...</a><br /></td></tr>
 <tr class="separator:a71abdbd1fd938daa250682ef9bbc5e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a59d567f31837de74d7fa722b59e73928"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a59d567f31837de74d7fa722b59e73928">vec_copysignf64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64x, <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64y)</td></tr>
 <tr class="memdesc:a59d567f31837de74d7fa722b59e73928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the sign bit from vf64y merged with magnitude from vf64x and return the resulting vector double values.  <a href="#a59d567f31837de74d7fa722b59e73928">More...</a><br /></td></tr>
 <tr class="separator:a59d567f31837de74d7fa722b59e73928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0220385a453649170124948f9085f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">vec_isfinitef64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
+<tr class="memdesc:aae0220385a453649170124948f9085f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 2x64-bit vector boolean true values for each double element that is Finite (Not NaN nor Inf).  <a href="#aae0220385a453649170124948f9085f1">More...</a><br /></td></tr>
+<tr class="separator:aae0220385a453649170124948f9085f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5508cb768d48ffec6e833076fc10b497"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a5508cb768d48ffec6e833076fc10b497">vec_isinff64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:a5508cb768d48ffec6e833076fc10b497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 2x64-bit vector boolean true values for each double, if infinity.  <a href="#a5508cb768d48ffec6e833076fc10b497">More...</a><br /></td></tr>
 <tr class="separator:a5508cb768d48ffec6e833076fc10b497"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,21 +162,47 @@ Functions</h2></td></tr>
 <tr class="memitem:a0391d8549f3070e515c0f20ed6bea9ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a0391d8549f3070e515c0f20ed6bea9ac">vec_iszerof64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:a0391d8549f3070e515c0f20ed6bea9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 2x64-bit vector boolean true values, for each double value that is +-0.0.  <a href="#a0391d8549f3070e515c0f20ed6bea9ac">More...</a><br /></td></tr>
 <tr class="separator:a0391d8549f3070e515c0f20ed6bea9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd670e9d3dd600198336708bb71fe77"><td class="memItemLeft" align="right" valign="top">static long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#aabd670e9d3dd600198336708bb71fe77">vec_pack_longdouble</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> lval)</td></tr>
+<tr class="memdesc:aabd670e9d3dd600198336708bb71fe77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the pair of doubles from a vector to IBM long double.  <a href="#aabd670e9d3dd600198336708bb71fe77">More...</a><br /></td></tr>
+<tr class="separator:aabd670e9d3dd600198336708bb71fe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac396fe321d73f75b57ebab8c365e20f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#ac396fe321d73f75b57ebab8c365e20f3">vec_unpack_longdouble</a> (long double lval)</td></tr>
+<tr class="memdesc:ac396fe321d73f75b57ebab8c365e20f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the pair of doubles from a IBM long double to a vector double.  <a href="#ac396fe321d73f75b57ebab8c365e20f3">More...</a><br /></td></tr>
+<tr class="separator:ac396fe321d73f75b57ebab8c365e20f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 64-bit double floating point elements. </p>
-<p>Most vector double (64-bit float) operations are implemented with PowerISA-2.06 (POWER7 and later) VSX instructions. Most of these operations (compiler built-ins, or intrinsics) are defined in &lt;altivec.h&gt; and described in the <a href="https://gcc.gnu.org/onlinedocs/">compiler documentation</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power7</b>, most of the doubleword integer add, subtract, and compare operations useful for floating point classification are not defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</dd>
+<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 64-bit double-precision floating point elements. </p>
+<p>Many vector double-precision (64-bit float) operations are implemented with PowerISA-2.06 Vector Scalar Extended (VSX) (POWER7 and later) instructions. Most VSX instructions provide access to 64 combined scalar/vector registers. PowerISA-3.0 (POWER9) provides additional vector double operations: convert with round, convert to/from integer, insert/extract exponent and significand, and test data class. Most of these operations (compiler built-ins, or intrinsics) are defined in &lt;altivec.h&gt; and described in the <a href="https://gcc.gnu.org/onlinedocs/">compiler documentation</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power8</b>, the double-precision vector converts, insert/extract and test data class built-ins are are not defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</dd>
 <dd>
-Most ppc64le compilers will default to -mcpu=power8 if not specified.</dd></dl>
-<p>Most of these operations are implemented in a few instructions on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides an inline assembler implementation for older compilers that do not provide the built-ins.</p>
+Most ppc64le compilers will default to -mcpu=power8 if not specified.</dd>
+<dd>
+GCC 7.3 defines vector forms of the test data class, extract significand, and extract/insert_exp for float and double. These built-ins are not defined in GCC 6.4. See <a href="https://gcc.gnu.org/onlinedocs/">compiler documentation</a>. These are useful operations and can be implemented in a few vector logical instructions for earlier machines.</dd></dl>
+<p>So it is reasonable for this header to provide vector forms of the double-precision floating point classification functions (isnormal/subnormal/finite/inf/nan/zero, etc.). These functions can be implemented directly using (one or more) POWER9 instructions, or a few vector logical and integer compare instructions for POWER7/8. Each is comfortably small enough to be in-lined and inherently faster than the equivalent POSIX or compiler built-in runtime scalar functions.</p>
+<p>Most of these operations are implemented in a few instructions on newer (POWER7/POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides an inline assembler implementation for older compilers that do not provide the built-ins.</p>
 <p>This header covers operations that are any of the following:</p>
 <ul>
 <li>Implemented in hardware instructions in newer processors, but useful to programmers on slightly older processors (even if the equivalent function requires more instructions).</li>
-<li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include vector double even/odd.</li>
-<li>Providing special vector float tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions. Examples include vector isnan, isinf, etc.</li>
-<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. See example ISO C99 functions above.</li>
+<li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include vector double even/odd conversions.</li>
+<li>Providing special vector double tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions. Examples include vector double isnan, isinf, etc.</li>
+<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. For example, converts that change element size and imply converting two vectors into one vector of smaller elements, or one vector into two vectors of larger elements. Another example is the special case of packing/unpacking an IBM long double between a pair of floating-point registers (FPRs) and a single vector register (VR).</li>
 </ul>
+<h1><a class="anchor" id="f64_examples_0_0"></a>
+Examples</h1>
+<p>For example: using the the classification functions for implementing the math library function sine and cosine. The POSIX specification requires that special input values are processed without raising extraneous floating point exceptions and return specific floating point values in response. For example, the sin() function.</p><ul>
+<li>If the input <em>value</em> is NaN then return a NaN.</li>
+<li>If the input <em>value</em> is +-0.0 then return <em>value</em>.</li>
+<li>If the input <em>value</em> is subnormal then return <em>value</em>.</li>
+<li>If the input <em>value</em> is +-Inf then return a quiet-NaN.</li>
+<li>Otherwise compute and return sin(value).</li>
+</ul>
+<p>The following code example uses functions from this header to address the POSIX requirements for special values input to for a vectorized sinf(): </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a></div><div class="line">test_vec_sinf64 (<a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> value)</div><div class="line">{</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vec_f0 = { 0.0, 0.0 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a> vec_f64_qnan =</div><div class="line">    { 0x7ff8000000000000, 0x7ff8000000000000 };</div><div class="line">  <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> result;</div><div class="line">  <a class="code" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a> normmask, infmask;</div><div class="line"></div><div class="line">  normmask = <a class="code" href="vec__f64__ppc_8h.html#a8f764b415ce41cbbc504554f779bcbe6">vec_isnormalf64</a> (value);</div><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="vec__f64__ppc_8h.html#a9c198001c1db455c8a70478fe7c76c8c">vec_any_isnormalf64</a> (value))</div><div class="line">    {</div><div class="line">      <span class="comment">// replace non-normal input values with safe values.</span></div><div class="line">      <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> safeval = vec_sel (vec_f0, value, normmask);</div><div class="line">      <span class="comment">// body of vec_sin(safeval) computation elided for this example.</span></div><div class="line">    }</div><div class="line">  <span class="keywordflow">else</span></div><div class="line">    result = value;</div><div class="line"></div><div class="line">  <span class="comment">// merge non-normal input values back into result</span></div><div class="line">  result = vec_sel (value, result, normmask);</div><div class="line">  <span class="comment">// Inf input value elements return quiet-nan.</span></div><div class="line">  infmask = <a class="code" href="vec__f64__ppc_8h.html#a5508cb768d48ffec6e833076fc10b497">vec_isinff64</a> (value);</div><div class="line">  result = vec_sel (result, (<a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>) vec_f64_qnan, infmask);</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> result;</div><div class="line">}</div></div><!-- fragment --><p> The code generated for this fragment runs between 24 (-mcpu=power9) and 40 (-mcpu=power8) instructions. The normal execution path is 14 to 25 instructions respectively.</p>
+<p>Another example the cos() function.</p><ul>
+<li>If the input <em>value</em> is NaN then return a NaN.</li>
+<li>If the input <em>value</em> is +-0.0 then return <em>1.0</em>.</li>
+<li>If the input <em>value</em> is +-Inf then return a quiet-NaN.</li>
+<li>Otherwise compute and return cos(value).</li>
+</ul>
+<p>The following code example uses functions from this header to address the POSIX requirements for special values input to vectorized cosf(): </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a></div><div class="line">test_vec_cosf64 (<a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> value)</div><div class="line">{</div><div class="line">  <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> result;</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vec_f0 = { 0.0, 0.0 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vec_f1 = { 1.0, 1.0 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a> vec_f64_qnan =</div><div class="line">    { 0x7ff8000000000000, 0x7ff8000000000000 };</div><div class="line">  <a class="code" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a> finitemask, infmask, zeromask;</div><div class="line"></div><div class="line">  finitemask = <a class="code" href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">vec_isfinitef64</a> (value);</div><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="vec__f64__ppc_8h.html#aa5108dc5fc533329fdd794f306a6ec3d">vec_any_isfinitef64</a> (value))</div><div class="line">    {</div><div class="line">      <span class="comment">// replace non-finite input values with safe values.</span></div><div class="line">      <a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> safeval = vec_sel (vec_f0, value, finitemask);</div><div class="line">      <span class="comment">// body of vec_sin(safeval) computation elided for this example.</span></div><div class="line">    }</div><div class="line">  <span class="keywordflow">else</span></div><div class="line">    result = value;</div><div class="line"></div><div class="line">  <span class="comment">// merge non-finite input values back into result</span></div><div class="line">  result = vec_sel (value, result, finitemask);</div><div class="line">  <span class="comment">// Set +-0.0 input elements to exactly 1.0 in result.</span></div><div class="line">  zeromask = <a class="code" href="vec__f64__ppc_8h.html#a0391d8549f3070e515c0f20ed6bea9ac">vec_iszerof64</a> (value);</div><div class="line">  result = vec_sel (result, vec_f1, zeromask);</div><div class="line">  <span class="comment">// Set Inf input elements to quiet-nan in result.</span></div><div class="line">  infmask = <a class="code" href="vec__f64__ppc_8h.html#a5508cb768d48ffec6e833076fc10b497">vec_isinff64</a> (value);</div><div class="line">  result = vec_sel (result, (<a class="code" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>) vec_f64_qnan, infmask);</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> result;</div><div class="line">}</div></div><!-- fragment --><p>Neither example raises floating point exceptions or sets <b>errno</b>, as appropriate for a vector math library.</p>
 <h1><a class="anchor" id="f64_perf_0_0"></a>
 Performance data.</h1>
 <p>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <em>Latency</em> and <em>Throughput</em> are derived see: <a class="el" href="index.html#perf_data">Performance data.</a> </p>
@@ -227,6 +248,49 @@ Performance data.</h1>
 
 </div>
 </div>
+<a class="anchor" id="a6bdfdf013a97ccd6dc20b1447f81d498"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int vec_all_isfinitef64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td>
+          <td class="paramname"><em>vf64</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if all 2x64-bit vector double values are Finite (Not NaN nor Inf). </p>
+<p>A IEEE Binary64 finite value has an exponent between 0x000 and 0x7fe (a 0x7ff indicates NaN or Inf). The significand can be any value. The sign bit is ignored.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-20 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>This function will not raise VXSNAN or VXVC (FE_INVALID) exceptions. A normal __binary64 compare can.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vf64</td><td>a vector of __binary64 values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an int containing 0 or 1. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac8f2bf6308d932b9604dbd8c5f8e90da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +322,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -301,7 +365,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -344,7 +408,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">10-28 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">8-16 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -387,7 +451,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">10-30 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">10-19 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -430,7 +494,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -439,6 +503,49 @@ Performance data.</h1>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean int, true if all 2 vector double values are +/- zero. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa5108dc5fc533329fdd794f306a6ec3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int vec_any_isfinitef64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td>
+          <td class="paramname"><em>vf64</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if any of 2x64-bit vector double values are Finite (Not NaN nor Inf). </p>
+<p>A IEEE Binary64 finite value has an exponent between 0x000 and 0x7fe (a 0x7ff indicates NaN or Inf). The significand can be any value. The sign bit is ignored.</p>
+<dl class="section note"><dt>Note</dt><dd>This function will not raise VXSNAN or VXVC (FE_INVALID) exceptions. A normal double compare can.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-20 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vf64</td><td>a vector of __binary64 values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an int containing 0 or 1. </dd></dl>
 
 </div>
 </div>
@@ -473,7 +580,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -516,7 +623,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -559,7 +666,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -602,7 +709,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">10-18 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">14 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -645,7 +752,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-20 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">6 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -709,6 +816,50 @@ Performance data.</h1>
 
 </div>
 </div>
+<a class="anchor" id="aae0220385a453649170124948f9085f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a> vec_isfinitef64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td>
+          <td class="paramname"><em>vf64</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return 2x64-bit vector boolean true values for each double element that is Finite (Not NaN nor Inf). </p>
+<p>A IEEE Binary64 finite value has an exponent between 0x000 and 0x7fe (a 0x7ff indicates NaN or Inf). The significand can be any value.</p>
+<p>Using the vec_cmpeq conditional to generate the predicate mask for NaN / Inf and then invert this for the finite condition. The sign bit is ignored.</p>
+<dl class="section note"><dt>Note</dt><dd>This function will not raise VXSNAN or VXVC (FE_INVALID) exceptions. A normal double compare can.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">6-15 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">5 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vf64</td><td>a vector of __binary64 values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a vector boolean long, each containing all 0s(false) or 1s(true). </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5508cb768d48ffec6e833076fc10b497"></a>
 <div class="memitem">
 <div class="memproto">
@@ -740,7 +891,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">4-13 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -782,7 +933,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">4-13 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5-14 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -825,7 +976,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-15 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">7-16 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">5 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -868,7 +1019,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">6-16 </td><td align="left">1/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">7-16 </td><td align="left">1/cycle </td></tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">1/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -911,7 +1062,7 @@ Performance data.</h1>
 <tr>
 <td align="right">power8 </td><td align="center">4-13 </td><td align="left">2/cycle </td></tr>
 <tr>
-<td align="right">power9 </td><td align="center">5 </td><td align="left">2/cycle </td></tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -992,7 +1143,7 @@ Performance data.</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 5 2018 15:01:22 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 20 2018 16:33:27 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

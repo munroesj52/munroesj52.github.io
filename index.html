@@ -130,10 +130,10 @@ POWER Vector Library Intrinsic headers</h3>
 <li><a class="el" href="vec__char__ppc_8h.html" title="Header package containing a collection of char and 8-bit integer computation functions implemented wi...">vec_char_ppc.h</a> Operations on vector char (values) values</li>
 <li><a class="el" href="vec__bcd__ppc_8h.html" title="Header package containing a collection of Binary Coded Decimal (BCD) computation functions implemente...">vec_bcd_ppc.h</a> Operations on vectors of Binary Code Decimal and Zoned Decimal values</li>
 <li><a class="el" href="vec__f128__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over Quad-Precision floating point ...">vec_f128_ppc.h</a> Operations on vector _Float128 values</li>
-<li><a class="el" href="vec__f64__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over 64-bit double floating point e...">vec_f64_ppc.h</a> Operations on vector double values</li>
+<li><a class="el" href="vec__f64__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over 64-bit double-precision floati...">vec_f64_ppc.h</a> Operations on vector double values</li>
 <li><a class="el" href="vec__f32__ppc_8h.html" title="Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elemen...">vec_f32_ppc.h</a> Operations on vector float values</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>The list above is more of an aspiration at this time. You will not find all of these headers or complete operation set and platform coverage in the current public github. But many of these headers do exist in private trees as we work on completing function and testing across compilers and PowerISA versions.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The list above is complete in the current public github as a first pass. A backlog of functions remain to be implemented across these headers. Development continues while we work on the backlog listed in: <a href="https://github.com/open-power-sdk/pveclib/issues/13">Issue #13 TODOs</a></dd></dl>
 <p>The goal is to provide high quality implementations that adapt to the specifics of the compile target (-mcpu=) and compiler (&lt;altivec.h&gt;) version you are using. Initially pveclib will focus on the GCC compiler and -mcpu=[power7|power8|power9] for Linux. Testing will focus on Little Endian (<b>powerpc64le</b> for power8 and power9 targets. Any testing for Big Endian (<b>powerpc64</b> will be initially restricted to power7 and power8 targets.</p>
 <p>Expanding pveclib support beyond this list to include:</p><ul>
 <li>additional compilers (ie Clang)</li>
@@ -357,7 +357,7 @@ Additional analysis and tools.</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 7 2018 19:22:43 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 20 2018 16:33:27 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
