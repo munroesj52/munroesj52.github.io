@@ -1,6 +1,7 @@
 var searchData=
 [
   ['vec_5fabsdub',['vec_absdub',['../vec__char__ppc_8h.html#a3eca950eb052ce1b0ad7a8d20ce3f971',1,'vec_char_ppc.h']]],
+  ['vec_5fabsduw',['vec_absduw',['../vec__int32__ppc_8h.html#a85ec15f292163e0e40e6faa5f4797367',1,'vec_int32_ppc.h']]],
   ['vec_5fabsf128',['vec_absf128',['../vec__f128__ppc_8h.html#add641f5a217eff45f0e836fa98613584',1,'vec_f128_ppc.h']]],
   ['vec_5fabsf32',['vec_absf32',['../vec__f32__ppc_8h.html#a083462955e2fcb17cbaefb8dd3f3193d',1,'vec_f32_ppc.h']]],
   ['vec_5fabsf64',['vec_absf64',['../vec__f64__ppc_8h.html#ab56ccacba6a3b48a7a920c7d5b0fe30e',1,'vec_f64_ppc.h']]],
