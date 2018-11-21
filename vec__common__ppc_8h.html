@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Common definitions and typedef used by the collection of Power Vector Library headers.  
+<p>Common definitions and typedef used by the collection of Power Vector Library (pveclib) headers.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;altivec.h&gt;</code><br />
@@ -131,13 +131,21 @@ Macros</h2></td></tr>
 <tr class="memdesc:a7e03d3eaeafea2c6613233fd58f98ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange elements of word initializer in high-&gt;low order. <br /></td></tr>
 <tr class="separator:a7e03d3eaeafea2c6613233fd58f98ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63ce8985f81cfb37c2bc3f9900dddd51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63ce8985f81cfb37c2bc3f9900dddd51"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a63ce8985f81cfb37c2bc3f9900dddd51">CONST_VINT128_H</a>(__hw0,  __hw1,  __hw2,  __hw3,  __hw4,  __hw5,  __hw6,  __hw7)&#160;&#160;&#160;{__hw7, __hw6, __hw5, __hw4, __hw3, __hw2, __hw1, __hw0}</td></tr>
-<tr class="memdesc:a63ce8985f81cfb37c2bc3f9900dddd51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange word elements of a unsigned int initializer in high-&gt;low order. May require an explicit cast. <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a63ce8985f81cfb37c2bc3f9900dddd51">CONST_VINT128_H</a>(__hw0,  __hw1,  __hw2,  __hw3,  __hw4,  __hw5,  __hw6,  __hw7)&#160;&#160;&#160;(<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>){__hw7, __hw6, __hw5, __hw4, __hw3, __hw2, __hw1, __hw0}</td></tr>
+<tr class="memdesc:a63ce8985f81cfb37c2bc3f9900dddd51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange halfword elements of a unsigned int initializer in high-&gt;low order. May require an explicit cast. <br /></td></tr>
 <tr class="separator:a63ce8985f81cfb37c2bc3f9900dddd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b39d3ef7e2d5321449f6f2ab2a51b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31b39d3ef7e2d5321449f6f2ab2a51b2"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a31b39d3ef7e2d5321449f6f2ab2a51b2">CONST_VINT16_H</a>(__hw0,  __hw1,  __hw2,  __hw3,  __hw4,  __hw5,  __hw6,  __hw7)&#160;&#160;&#160;{__hw7, __hw6, __hw5, __hw4, __hw3, __hw2, __hw1, __hw0}</td></tr>
-<tr class="memdesc:a31b39d3ef7e2d5321449f6f2ab2a51b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange elements of word initializer in high-&gt;low order. <br /></td></tr>
+<tr class="memdesc:a31b39d3ef7e2d5321449f6f2ab2a51b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange elements of halfword initializer in high-&gt;low order. <br /></td></tr>
 <tr class="separator:a31b39d3ef7e2d5321449f6f2ab2a51b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47803d5079cc714a1524f4cd2a05ef72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47803d5079cc714a1524f4cd2a05ef72"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a47803d5079cc714a1524f4cd2a05ef72">CONST_VINT128_B</a>(_b0,  _b1,  _b2,  _b3,  _b4,  _b5,  _b6,  _b7,  _b8,  _b9,  _b10,  _b11,  _b12,  _b13,  _b14,  _b15)&#160;&#160;&#160;(<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>){_b15, _b14, _b13, _b12, _b11, _b10, _b9, _b8, _b7, _b6, _b5, _b4, _b3, _b2, _b1, _b0}</td></tr>
+<tr class="memdesc:a47803d5079cc714a1524f4cd2a05ef72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange byte elements of a unsigned int initializer in high-&gt;low order. May require an explicit cast. <br /></td></tr>
+<tr class="separator:a47803d5079cc714a1524f4cd2a05ef72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ff90cc45d590754b2403af4d014d7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5ff90cc45d590754b2403af4d014d7c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#af5ff90cc45d590754b2403af4d014d7c">CONST_VINT8_B</a>(_b0,  _b1,  _b2,  _b3,  _b4,  _b5,  _b6,  _b7,  _b8,  _b9,  _b10,  _b11,  _b12,  _b13,  _b14,  _b15)&#160;&#160;&#160;{_b15, _b14, _b13, _b12, _b11, _b10, _b9, _b8, _b7, _b6, _b5, _b4, _b3, _b2, _b1, _b0}</td></tr>
+<tr class="memdesc:af5ff90cc45d590754b2403af4d014d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrange elements of byte initializer in high-&gt;low order. <br /></td></tr>
+<tr class="separator:af5ff90cc45d590754b2403af4d014d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2bc7bad8fc5c335244ac6f877f3c8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb2bc7bad8fc5c335244ac6f877f3c8f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#adb2bc7bad8fc5c335244ac6f877f3c8f">VEC_DW_H</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:adb2bc7bad8fc5c335244ac6f877f3c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element index for high order dword. <br /></td></tr>
@@ -271,18 +279,64 @@ typedef __vector __bool unsigned int&#160;</td><td class="memItemRight" valign="
 <tr class="separator:ab5d79f74c685d3a42b49c413d0144d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Common definitions and typedef used by the collection of Power Vector Library headers. </p>
-<h1><a class="anchor" id="includes"></a>
-includes</h1>
-<ul>
+<div class="textblock"><p>Common definitions and typedef used by the collection of Power Vector Library (pveclib) headers. </p>
+<p>This includes:</p><ul>
 <li>Typedefs as short names of common vector types.</li>
 <li>Union used to transfer 128-bit data between vector and non-vector types.</li>
-<li>Helper macros that make declaring constants and accessing elements, a little easier. </li>
+<li>Helper macros that make declaring constants and accessing elements a little easier.</li>
 </ul>
+<h1><a class="anchor" id="common_type_naming_0_0"></a>
+Consistent vector type naming</h1>
+<p>Type names should be short, concise, and consistent. The ABI defines the vector types as extensions of the existing C Language types. So while <em>vector unsigned long long</em> is consistent it is neither short or concise. Pveclib uses the following naming convention for typedefs used in its operations, function prototypes, and internal variables.</p><ul>
+<li>Starting with the <b>v</b> prefix for vector.</li>
+<li>followed by one of the element classes:<ul>
+<li><b>i</b> for signed integer.</li>
+<li><b>ui</b> for unsigned integer.</li>
+<li><b>f</b> for floating-point.</li>
+<li><b>b</b> for bool.</li>
+</ul>
+</li>
+<li>followed by the element size in bits:<ul>
+<li>8, 16, 32, 64, 128</li>
+</ul>
+</li>
+<li>Ending with the <b>_t</b> suffix signifying a typedef.</li>
+</ul>
+<p>For example: <a class="el" href="vec__common__ppc_8h.html#adf5717f56a3dac6980206dbd37614ca2">vi32_t</a> is a vector int, <a class="el" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> is a vector unsigned int, <a class="el" href="vec__common__ppc_8h.html#aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</a> is a vector bool int, and <a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> is vector float.</p>
+<h1><a class="anchor" id="common_type_xfer_0_0"></a>
+Transferring 128-bit types</h1>
+<p>The OpenPOWER ABI and the GCC compiler define a number of 128-bit scalar types that are not vector types:</p><ul>
+<li>__int128 (a general purpose register pair)</li>
+<li>_Decimal128 (a floating-point even/odd register pair)</li>
+<li>__ibm128 (a floating-point register pair)</li>
+<li>__float128 (a vector register)</li>
+</ul>
+<p>These are not cast nor assignment compatible with any vector type. However it may be useful to transfer to/from vector types for conversion or manipulation within an operation. For example:</p><ul>
+<li>Conversions between __float128 and __int128, __ibm128, and _Decimal128 types.</li>
+<li>Conversions between vector BCD integers and __int128 and _Decimal128 types.</li>
+<li>Conversions between vector __int128 and __float128, __ibm128, and _Decimal128 types.</li>
+</ul>
+<p>Here we use the <a class="el" href="union____VEC__U__128.html" title="Union used to transfer 128-bit data between vector and non-vector types. ">__VEC_U_128</a> union to affect the transfer between the various types. We assume (fervently hope) that the compiler will recognize and optimize these as registers to registers transfers using the hardware instructions provided.</p>
+<p>The vector to/from __float128 transfer should be the simplest as __float128 operations are defined over the vector register set. However __float128 types are defined in the PowerISA and OpenPOWER ABI, as scalars that just happens to use vector registers for parameter passing and operations. This distinction between scalars and vector prevents a direct cast between types. The <a class="el" href="union____VEC__U__128.html" title="Union used to transfer 128-bit data between vector and non-vector types. ">__VEC_U_128</a> union is the simplest work around but in most cases no code should generated for this transfer. For example: <a class="el" href="vec__f128__ppc_8h.html#aec6e44a75847d3d3e5611b89eed71c0a" title="Transfer function from a __binary128 scalar to a vector __int128. ">vec_xfer_bin128_2_vui128t()</a> and <a class="el" href="vec__f128__ppc_8h.html#a91b99b632646aaca91de6834e2b1da26" title="Transfer a vector unsigned __int128 to __binary128 scalar. ">vec_xfer_vui128t_2_bin128()</a>.</p>
+<p>Any vector to/from __int128 transfer requires a transfer between vector and general purpose registers. POWER8 (PowerISA 2.07B) added Move to/from Vector Scalar Register (mfvsr, mtvsr) instructions. Again the <a class="el" href="union____VEC__U__128.html" title="Union used to transfer 128-bit data between vector and non-vector types. ">__VEC_U_128</a> union is used to effect the transfer and the compiler should leverage the move instructions in the generated code.</p>
+<p>Any vector to/from __ibm128 or _Decimal128 requires a transfer between a pair of FPRs and a Vector Scalar Register (VSR). Technically this is transfer between the upper doubleword of two VSRs in the lower bank (VSR0-31) and another VSR. POWER7 (PowerISA 2.06B) provides the Permute Doubleword Immediate (xxpermdi) instruction. Again the <a class="el" href="union____VEC__U__128.html" title="Union used to transfer 128-bit data between vector and non-vector types. ">__VEC_U_128</a> union is used to effect the transfer and the compiler should leverage the Permute Doubleword Immediate instructions in the generate code. For example: <a class="el" href="vec__bcd__ppc_8h.html#aa782bbca107af08916b4aa8b78c58a75" title="Convert a Vector Signed BCD value to __Decimal128. ">vec_BCD2DFP()</a> and <a class="el" href="vec__bcd__ppc_8h.html#a9964017c5488e0922c285351c7fb571a" title="Convert a __Decimal128 value to Vector BCD. ">vec_DFP2BCD()</a>.</p>
+<h1><a class="anchor" id="common_endian_issues_0_0"></a>
+Endian and vector constants</h1>
+<p>Vector constants are often needed for: masking operations, range checks, permute selection, and radix conversion. Also compiler support for large integer and floating-point constants may be limited by the compiler. For example the GCC compilers support the (vector) __int128 type but do not directly support __int128 (39 digit) decimal constants. Another example is __float128 where the type and Q suffix constants are recent additions. In both cases we need to construct: large numeric constants, special values (infinity and NaN), masks for manipulating the sign bit and exponent bits. Often these values will be constructed from vectors of word or doubleword constants.</p>
+<dl class="section note"><dt>Note</dt><dd>GCC does not support expressing an integer constant of type __int128 for targets where long long integer is less than 128 bits wide. This applies to the PowerPC target as the long long type is reserved for 64-bit integers. This was verified in GCC 8.2,</dd>
+<dd>
+GCC __float128 support for the PowerPC target began with GCC 6. In GCC 6 __float128 support is off by default and has to be explicitly enabled via the '-mfloat128' option. Starting with GCC 7, __float128 is enabled by default with VSX support.</dd></dl>
+<p>Defining large constants for vectors is complicated by <em>little-endian</em> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the order of constant elements in initializers. But the __int128 numerical order of magnitude or floating-point format does not change in registers. The high order bits are on the left and the low order bits are on the right.</p>
+<p>So for example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0x80000000, 0, 0, 0 };</div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0x7fff0000, 0, 0, 0 };</div></div><!-- fragment --><p> are correct sign and exponent masks for __float128 in big endian (BE) but would be incorrect for little endian (LE). To get correct results for both endians, one could code something like this: </p><div class="fragment"><div class="line"><span class="preprocessor">#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__</span></div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0, 0, 0, 0x80000000 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0, 0, 0, 0x7fff0000 };</div><div class="line"><span class="preprocessor">#else</span></div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0x80000000, 0, 0, 0 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0x7fff0000, 0, 0, 0 };</div><div class="line"><span class="preprocessor">#endif</span></div></div><!-- fragment --><p> But this gets tedious after the first dozen times. Also this can be confusing because it does not appear to the match the floating-point format diagrams in the PowerISA. The sign-bit and the exponent are always on the left.</p>
+<p>So this header provides endian sensitive macros that maintain consistent "magnitude" order. For example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a> (0x80000000, 0, 0, 0);</div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a> (0x7fff0000, 0, 0, 0);</div></div><!-- fragment --><p> This is always correct in either endian.</p>
+<p>Another example; the multiplicative inverse for __int128 10**32 is 211857340822306639531405861550393824741. The GCC compiler will not accept this constant in a vector __int128 initializer. The next best thing would be </p><div class="fragment"><div class="line"><span class="comment">// The multiplicative inverse for 1 / 10**32 is</span></div><div class="line"><span class="comment">// 211857340822306639531405861550393824741</span></div><div class="line"><span class="comment">// or 0x9f623d5a8a732974cfbc31db4b0295e5</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a> mulinv_10to32 =</div><div class="line">         (<a class="code" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a>) <a class="code" href="vec__common__ppc_8h.html#a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</a> ( 0x9f623d5a8a732974UL,</div><div class="line">                                          0xcfbc31db4b0295e5UL );</div></div><!-- fragment --><p> Here we use the CONST_VINT128_DW128 macro to maintain magnitude order across endian. Again the high order bits are on the left and the low order bits are on the right.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="vec__int32__ppc_8h.html#i32_endian_issues_0_0">Endian problems with word operations</a> </dd>
+<dd>
+<a class="el" href="index.html#mainpage_endian_issues_1_1">General Endian Issues</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 20 2018 16:33:27 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 21 2018 10:57:37 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

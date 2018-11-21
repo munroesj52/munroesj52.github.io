@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Header package containing a collection of char and 8-bit integer computation functions implemented with PowerISA VMX, VSX, and DFP instructions.  
+<p>Header package containing a collection of 128-bit SIMD operations over 8-bit integer (char) elements.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vec__common__ppc_8h_source.html">vec_common_ppc.h</a>&gt;</code><br />
 </div>
@@ -116,6 +116,27 @@ Functions</h2></td></tr>
 <tr class="memitem:a0152053aed21f65166488df7e6b6c2a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a0152053aed21f65166488df7e6b6c2a9">vec_isdigit</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_str)</td></tr>
 <tr class="memdesc:a0152053aed21f65166488df7e6b6c2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector isdigit.  <a href="#a0152053aed21f65166488df7e6b6c2a9">More...</a><br /></td></tr>
 <tr class="separator:a0152053aed21f65166488df7e6b6c2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ec8f3ed5b75f1e1b21998484d878e8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#ab2ec8f3ed5b75f1e1b21998484d878e8">vec_mrgahb</a> (<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vrb)</td></tr>
+<tr class="memdesc:ab2ec8f3ed5b75f1e1b21998484d878e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Algebraic High Byte operation.  <a href="#ab2ec8f3ed5b75f1e1b21998484d878e8">More...</a><br /></td></tr>
+<tr class="separator:ab2ec8f3ed5b75f1e1b21998484d878e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07f90ac64ed898a5add48932b8ac010"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#af07f90ac64ed898a5add48932b8ac010">vec_mrgalb</a> (<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vrb)</td></tr>
+<tr class="memdesc:af07f90ac64ed898a5add48932b8ac010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Algebraic Low Byte operation.  <a href="#af07f90ac64ed898a5add48932b8ac010">More...</a><br /></td></tr>
+<tr class="separator:af07f90ac64ed898a5add48932b8ac010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a776401631aedafdaf371e268fcfe7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#ab8a776401631aedafdaf371e268fcfe7">vec_mrgeb</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:ab8a776401631aedafdaf371e268fcfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Even Bytes operation.  <a href="#ab8a776401631aedafdaf371e268fcfe7">More...</a><br /></td></tr>
+<tr class="separator:ab8a776401631aedafdaf371e268fcfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562bddfc070386aabced80167b4571af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a562bddfc070386aabced80167b4571af">vec_mrgob</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:a562bddfc070386aabced80167b4571af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Odd Halfwords operation.  <a href="#a562bddfc070386aabced80167b4571af">More...</a><br /></td></tr>
+<tr class="separator:a562bddfc070386aabced80167b4571af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b81ae683c42ead33d58b422ee8f85cb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a5b81ae683c42ead33d58b422ee8f85cb">vec_mulhsb</a> (<a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a> vrb)</td></tr>
+<tr class="memdesc:a5b81ae683c42ead33d58b422ee8f85cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Multiply High Signed Bytes.  <a href="#a5b81ae683c42ead33d58b422ee8f85cb">More...</a><br /></td></tr>
+<tr class="separator:a5b81ae683c42ead33d58b422ee8f85cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a67dcc2623020b065eb244bc54511c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a81a67dcc2623020b065eb244bc54511c">vec_mulhub</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:a81a67dcc2623020b065eb244bc54511c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Multiply High Unsigned Bytes.  <a href="#a81a67dcc2623020b065eb244bc54511c">More...</a><br /></td></tr>
+<tr class="separator:a81a67dcc2623020b065eb244bc54511c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425151e5a82ee9e204ffd81b1ec7a92c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a425151e5a82ee9e204ffd81b1ec7a92c">vec_mulubm</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:a425151e5a82ee9e204ffd81b1ec7a92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Multiply Unsigned Byte Modulo.  <a href="#a425151e5a82ee9e204ffd81b1ec7a92c">More...</a><br /></td></tr>
+<tr class="separator:a425151e5a82ee9e204ffd81b1ec7a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c33360f34cc31ca2e381bf2e7c9ce6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#ae0c33360f34cc31ca2e381bf2e7c9ce6">vec_popcntb</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra)</td></tr>
 <tr class="memdesc:ae0c33360f34cc31ca2e381bf2e7c9ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Population Count byte.  <a href="#ae0c33360f34cc31ca2e381bf2e7c9ce6">More...</a><br /></td></tr>
 <tr class="separator:ae0c33360f34cc31ca2e381bf2e7c9ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,18 +158,40 @@ Functions</h2></td></tr>
 <tr class="memitem:a73501120e1af14864b7621e318645426"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a73501120e1af14864b7621e318645426">vec_tolower</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_str)</td></tr>
 <tr class="memdesc:a73501120e1af14864b7621e318645426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector tolower.  <a href="#a73501120e1af14864b7621e318645426">More...</a><br /></td></tr>
 <tr class="separator:a73501120e1af14864b7621e318645426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c23ce0e18ad18d46d27f80c40f465e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a86c23ce0e18ad18d46d27f80c40f465e">vec_vmrgeb</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:a86c23ce0e18ad18d46d27f80c40f465e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Even Bytes.  <a href="#a86c23ce0e18ad18d46d27f80c40f465e">More...</a><br /></td></tr>
+<tr class="separator:a86c23ce0e18ad18d46d27f80c40f465e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122434ec49f77cf6968e2cb9523e68d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__char__ppc_8h.html#a122434ec49f77cf6968e2cb9523e68d2">vec_vmrgob</a> (<a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vrb)</td></tr>
+<tr class="memdesc:a122434ec49f77cf6968e2cb9523e68d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Odd Byte.  <a href="#a122434ec49f77cf6968e2cb9523e68d2">More...</a><br /></td></tr>
+<tr class="separator:a122434ec49f77cf6968e2cb9523e68d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header package containing a collection of char and 8-bit integer computation functions implemented with PowerISA VMX, VSX, and DFP instructions. </p>
-<p>Most vector char (8-bit integer) operations are are already covered by the original VMX (AKA Altivec) instructions. VMX intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</p>
+<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 8-bit integer (char) elements. </p>
+<p>Most of these operations are implemented in a single VMX or VSX instruction on newer (POWER6/POWER7/POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides in-line assembler implementations for older compilers that do not provide the build-ins.</p>
+<p>Most vector char (8-bit integer) operations are are already covered by the original VMX (AKA Altivec) instructions. VMX intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation. PowerISA 2.07B (POWER8) added several useful byte operations (count leading zeros, population count) not included in the original VMX. PowerISA 3.0B (POWER9) adds several more (absolute difference, compare not equal, count trailing zeros, extend sign, extract/insert, and reverse bytes). Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</p>
 <dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power7</b>, vec_vclz and vec_vclzb will not be defined. But vec_clzb is always defined in this header, will generate the minimum code, appropriate for the target, and produce correct results.</dd></dl>
-<p>This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</p>
 <p>This header covers operations that are either:</p>
 <ul>
 <li>Implemented in later processors and useful to programmers if the same operations are available on slightly older processors. This is required even if the operation is defined in the OpenPOWER ABI or &lt;altivec.h&gt;, as the compiler disables the associated built-ins if the <b>mcpu</b> target does not enable the instruction.</li>
 <li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.n&gt; provided by available compilers in common use. Examples include Count Leading Zeros and Population Count.</li>
-<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the shift immediate operations and the common ASCII character tests and case conversions. </li>
+<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply high, ASCII character tests, and shift immediate operations.</li>
 </ul>
+<h1><a class="anchor" id="i8_endian_issues_0_0"></a>
+Endian problems with byte operations</h1>
+<p>It would be useful to provide a vector multiply high byte (return the high order 8-bits of the 16-bit product) operation. This can be used for multiplicative inverse (effectively integer divide) operations. Neither integer multiply high nor divide are available as vector instructions. However the multiply high byte operation can be composed from the existing multiply even/odd byte operations followed by the vector merge even byte operation. Similarly a multiply low (modulo) byte operation can be composed from the existing multiply even/odd byte operations followed by the vector merge odd byte operation.</p>
+<p>As a prerequisite we need to provide the merge even/odd byte operations. While PowerISA has added these operations for word and doubleword, instructions are not defined for byte and halfword. Fortunately vector merge operations are just a special case of vector permute. So the <a class="el" href="vec__char__ppc_8h.html#a122434ec49f77cf6968e2cb9523e68d2" title="Vector Merge Odd Byte. ">vec_vmrgob()</a> and <a class="el" href="vec__char__ppc_8h.html#a86c23ce0e18ad18d46d27f80c40f465e" title="Vector Merge Even Bytes. ">vec_vmrgeb()</a> implementation can use vec_perm and appropriate selection vectors to provide these merge operations.</p>
+<p>As described for other element sizes this is complicated by <em>little-endian</em> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the location of even and odd elements. This means that the vector built-ins provided by altivec.h may not generate the instructions you would expect. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="vec__int16__ppc_8h.html#i16_endian_issues_0_0">Endian problems with halfword operations</a> </dd>
+<dd>
+<a class="el" href="index.html#mainpage_endian_issues_1_1">General Endian Issues</a></dd></dl>
+<p>So this header defines endian independent byte operations <a class="el" href="vec__char__ppc_8h.html#a86c23ce0e18ad18d46d27f80c40f465e" title="Vector Merge Even Bytes. ">vec_vmrgeb()</a> and <a class="el" href="vec__char__ppc_8h.html#a122434ec49f77cf6968e2cb9523e68d2" title="Vector Merge Odd Byte. ">vec_vmrgob()</a>. These operations are used in the implementation of the endian sensitive <a class="el" href="vec__char__ppc_8h.html#ab8a776401631aedafdaf371e268fcfe7" title="Vector Merge Even Bytes operation. ">vec_mrgeb()</a> and <a class="el" href="vec__char__ppc_8h.html#a562bddfc070386aabced80167b4571af" title="Vector Merge Odd Halfwords operation. ">vec_mrgob()</a>. These support the OpenPOWER ABI mandated merge even/odd semantic.</p>
+<p>We also provide the merge algebraic high/low operations <a class="el" href="vec__char__ppc_8h.html#ab2ec8f3ed5b75f1e1b21998484d878e8" title="Vector Merge Algebraic High Byte operation. ">vec_mrgahb()</a> and <a class="el" href="vec__char__ppc_8h.html#af07f90ac64ed898a5add48932b8ac010" title="Vector Merge Algebraic Low Byte operation. ">vec_mrgalb()</a> to simplify extended precision arithmetic. These implementations use <a class="el" href="vec__char__ppc_8h.html#a86c23ce0e18ad18d46d27f80c40f465e" title="Vector Merge Even Bytes. ">vec_vmrgeb()</a> and <a class="el" href="vec__char__ppc_8h.html#a122434ec49f77cf6968e2cb9523e68d2" title="Vector Merge Odd Byte. ">vec_vmrgob()</a> as extended precision byte order does not change with endian. These operations are used in turn to implement multiply byte high/low/modulo (<a class="el" href="vec__char__ppc_8h.html#a5b81ae683c42ead33d58b422ee8f85cb" title="Vector Multiply High Signed Bytes. ">vec_mulhsb()</a>, <a class="el" href="vec__char__ppc_8h.html#a81a67dcc2623020b065eb244bc54511c" title="Vector Multiply High Unsigned Bytes. ">vec_mulhub()</a>, <a class="el" href="vec__char__ppc_8h.html#a425151e5a82ee9e204ffd81b1ec7a92c" title="Vector Multiply Unsigned Byte Modulo. ">vec_mulubm()</a>).</p>
+<p>These operations provide a basis for using the multiplicative inverse as a alternative to integer divide. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="vec__int16__ppc_8h.html#int16_examples_0_1">Examples, Divide by integer constant</a></dd></dl>
+<h1><a class="anchor" id="int8_perf_0_0"></a>
+Performance data.</h1>
+<p>The performance characteristics of the merge and multiply byte operations are very similar to the halfword implementations. (see <a class="el" href="vec__int16__ppc_8h.html#int16_perf_0_0">Performance data.</a>).</p>
+<h2><a class="anchor" id="int8_perf_0_1"></a>
+More information.</h2>
+<p>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <em>Latency</em> and <em>Throughput</em> are derived see: <a class="el" href="index.html#perf_data">Performance data.</a> </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a3eca950eb052ce1b0ad7a8d20ce3f971"></a>
 <div class="memitem">
@@ -184,6 +227,14 @@ Functions</h2></td></tr>
 
 <p>Vector Absolute Difference Unsigned byte. </p>
 <p>Compute the absolute difference for each byte. For each unsigned byte, subtract B[i] from A[i] and return the absolute value of the difference.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>vector of 16 unsigned bytes </td></tr>
@@ -221,6 +272,14 @@ Functions</h2></td></tr>
 <p>Count the number of leading '0' bits (0-7) within each byte element of a 128-bit vector.</p>
 <p>For POWER8 (PowerISA 2.07B) or later use the Vector Count Leading Zeros byte instruction <b>vclzb</b>. Otherwise use sequence of pre 2.07 VMX instructions. SIMDized count leading zeros inspired by:</p>
 <p>Warren, Henry S. Jr and <em>Hacker's Delight</em>, 2nd Edition, Addison Wesley, 2013. Chapter 5 Counting Bits, Figure 5-12.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>128-bit vector treated as 16 x 8-bit integer (byte) elements. </td></tr>
@@ -255,6 +314,14 @@ Functions</h2></td></tr>
 
 <p>Vector isalpha. </p>
 <p>Return a vector boolean char with a true indicator for any character that is either Lower Case Alpha ASCII or Upper Case ASCII. False otherwise.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">10-20 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">11-21 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec_str</td><td>vector of 16 ASCII characters </td></tr>
@@ -289,6 +356,14 @@ Functions</h2></td></tr>
 
 <p>Vector isalnum. </p>
 <p>Return a vector boolean char with a true indicator for any character that is either Lower Case Alpha ASCII, Upper Case ASCII, or numeric ASCII. False otherwise.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-18 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">10-19 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec_str</td><td>vector of 16 ASCII characters </td></tr>
@@ -323,6 +398,14 @@ Functions</h2></td></tr>
 
 <p>Vector isdigit. </p>
 <p>Return a vector boolean char with a true indicator for any character that is ASCII decimal digit. False otherwise.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-13 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">5-14 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec_str</td><td>vector of 16 ASCII characters </td></tr>
@@ -330,6 +413,382 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>vector bool char of the isdigit operation applied to each character of vec_str. For each byte 0xff indicates true (isdigit), 0x00 indicates false. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2ec8f3ed5b75f1e1b21998484d878e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mrgahb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Algebraic High Byte operation. </p>
+<p>Merge only the high byte from 16 x Algebraic halfwords across vectors vra and vrb. This is effectively the Vector Merge Even Byte operation that is not modified for Endian.</p>
+<p>For example merge the high 8-bits from each of 16 x 16-bit products as generated by vec_muleub/vec_muloub. This result is effectively a vector multiply high unsigned byte.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned short. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned short. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the high bytes of the 16 x Algebraic halfwords across vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af07f90ac64ed898a5add48932b8ac010"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mrgalb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Algebraic Low Byte operation. </p>
+<p>Merge only the low bytes from 16 x Algebraic halfwords across vectors vra and vrb. This is effectively the Vector Merge Odd Bytes operation that is not modified for Endian.</p>
+<p>For example merge the low 8-bits from each of 16 x 16-bit products as generated by vec_muleub/vec_muloub. This result is effectively a vector multiply low unsigned byte.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned int. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned int. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the high halfwords of the 8 x Algebraic words across vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8a776401631aedafdaf371e268fcfe7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mrgeb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Even Bytes operation. </p>
+<p>Merge the even byte elements from the concatenation of 2 x vectors (vra and vrb).</p>
+<dl class="section note"><dt>Note</dt><dd>The element numbering changes between Big and Little Endian. So the compiler and this implementation adjusts the generated code to reflect this.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the even bytes of vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a562bddfc070386aabced80167b4571af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mrgob </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Odd Halfwords operation. </p>
+<p>Merge the odd halfword elements from the concatenation of 2 x vectors (vra and vrb).</p>
+<dl class="section note"><dt>Note</dt><dd>The element numbering changes between Big and Little Endian. So the compiler and this implementation adjusts the generated code to reflect this.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the odd bytes of vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b81ae683c42ead33d58b422ee8f85cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a> vec_mulhsb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Multiply High Signed Bytes. </p>
+<p>Multiple the corresponding byte elements of two vector signed char values and return the high order 8-bits, for each 16-bit product element.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-13 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">10-14 </td><td align="left">1/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector signed char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector signed char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of the high order 8-bits of the product of the byte elements from vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a81a67dcc2623020b065eb244bc54511c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mulhub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Multiply High Unsigned Bytes. </p>
+<p>Multiple the corresponding byte elements of two vector unsigned char values and return the high order 8-bits, for each 16-bit product element.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-13 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">10-14 </td><td align="left">1/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of the high order 8-bits of the product of the byte elements from vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a425151e5a82ee9e204ffd81b1ec7a92c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_mulubm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Multiply Unsigned Byte Modulo. </p>
+<p>Multiple the corresponding byte elements of two vector unsigned char values and return the low order 8-bits of the 16-bit product for each element.</p>
+<dl class="section note"><dt>Note</dt><dd>vec_mulubm can be used for unsigned or signed char integers. It is the vector equivalent of Multiply Low Byte.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-13 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">10-14 </td><td align="left">1/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of the low order 8-bits of the unsigned product of the byte elements from vra and vrb. </dd></dl>
 
 </div>
 </div>
@@ -359,6 +818,14 @@ Functions</h2></td></tr>
 <p>Count the number of '1' bits (0-8) within each byte element of a 128-bit vector.</p>
 <p>For POWER8 (PowerISA 2.07B) or later use the Vector Population Count Byte instruction. Otherwise use simple Vector (VMX) instructions to count bits in bytes in parallel. SIMDized population count inspired by:</p>
 <p>Warren, Henry S. Jr and <em>Hacker's Delight</em>, 2nd Edition, Addison Wesley, 2013. Chapter 5 Counting Bits, Figure 5-2.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>128-bit vector treated as 16 x 8-bit integers (byte) elements. </td></tr>
@@ -409,6 +876,14 @@ Functions</h2></td></tr>
 
 <p>Shift left double quadword by octet. Return a vector unsigned char that is the left most 16 chars after shifting left 0-15 octets (chars) of the 32 char double vector (vrw||vrx). The octet shift amount is from bits 121:124 of vrb. </p>
 <p>This sequence can be used to align a unaligned 16 char substring based on the result of a vector count leading zero of of the compare boolean.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">6-8 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">8-9 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vrw</td><td>upper 16-bytes of the 32-byte double vector. </td></tr>
@@ -455,6 +930,14 @@ Functions</h2></td></tr>
 
 <p>Vector Shift left Byte Immediate. </p>
 <p>Shift left each byte element [0-15], 0-7 bits, as specified by an immediate value. The shift amount is a const unsigned int in the range 0-7. A shift count of 0 returns the original value of vra. Shift counts greater then 7 bits return zero.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-11 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">5-11 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>a 128-bit vector treated as a vector unsigned char. </td></tr>
@@ -500,6 +983,14 @@ Functions</h2></td></tr>
 
 <p>Vector Shift Right Algebraic Byte Immediate. </p>
 <p>Shift right each byte element [0-15], 0-7 bits, as specified by an immediate value. The shift amount is a const unsigned int in the range 0-7. A shift count of 0 returns the original value of vra. Shift counts greater then 7 bits return the sign bit propagated to each bit of each element.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-11 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">5-11 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>a 128-bit vector treated as a vector signed char. </td></tr>
@@ -545,6 +1036,14 @@ Functions</h2></td></tr>
 
 <p>Vector Shift Right Byte Immediate. </p>
 <p>Shift right each byte element [0-15], 0-7 bits, as specified by an immediate value. The shift amount is a const unsigned int in the range 0-7. A shift count of 0 returns the original value of vra. Shift counts greater then 7 bits return zero.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">4-11 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">5-11 </td><td align="left">2/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vra</td><td>a 128-bit vector treated as a vector unsigned char. </td></tr>
@@ -580,6 +1079,14 @@ Functions</h2></td></tr>
 
 <p>Vector tolower. </p>
 <p>Convert any Upper Case Alpha ASCII characters within a vector unsigned char into the equivalent Lower Case character. Return the result as a vector unsigned char.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">8-17 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">9-18 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec_str</td><td>vector of 16 ASCII characters </td></tr>
@@ -614,6 +1121,14 @@ Functions</h2></td></tr>
 
 <p>Vector toupper. </p>
 <p>Convert any Lower Case Alpha ASCII characters within a vector unsigned char into the equivalent Upper Case character. Return the result as a vector unsigned char.</p>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">8-17 </td><td align="left">1/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">9-18 </td><td align="left">1/cycle </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec_str</td><td>vector of 16 ASCII characters </td></tr>
@@ -624,10 +1139,154 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a86c23ce0e18ad18d46d27f80c40f465e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_vmrgeb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Even Bytes. </p>
+<p>Merge the even byte elements from the concatenation of 2 x vectors (vra and vrb).</p>
+<dl class="section note"><dt>Note</dt><dd>This function implements the operation of a Vector Merge Even Bytes instruction, if the PowerISA included such an instruction. This implementation is NOT Endian sensitive and the function is stable across BE/LE implementations. Using Big Endian element numbering:<ul>
+<li>res[0] = vra[0];</li>
+<li>res[1] = vrb[0];</li>
+<li>res[2] = vra[2];</li>
+<li>res[3] = vrb[2];</li>
+<li>res[4] = vra[4];</li>
+<li>res[5] = vrb[4];</li>
+<li>res[6] = vra[6];</li>
+<li>res[7] = vrb[6];</li>
+<li>res[8] = vra[8];</li>
+<li>res[9] = vrb[8];</li>
+<li>res[10] = vra[10];</li>
+<li>res[11] = vrb[10];</li>
+<li>res[12] = vra[12];</li>
+<li>res[13] = vrb[12];</li>
+<li>res[14] = vra[14];</li>
+<li>res[15] = vrb[14];</li>
+</ul>
+</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the even bytes of vra and vrb. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a122434ec49f77cf6968e2cb9523e68d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a> vec_vmrgob </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a>&#160;</td>
+          <td class="paramname"><em>vrb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Merge Odd Byte. </p>
+<p>Merge the odd byte elements from the concatenation of 2 x vectors (vra and vrb).</p>
+<dl class="section note"><dt>Note</dt><dd>This function implements the operation of a Vector Merge Odd Bytes instruction, if the PowerISA included such an instruction. This implementation is NOT Endian sensitive and the function is stable across BE/LE implementations. Using Big Endian element numbering:<ul>
+<li>res[0] = vra[1];</li>
+<li>res[1] = vrb[1];</li>
+<li>res[2] = vra[3];</li>
+<li>res[3] = vrb[3];</li>
+<li>res[4] = vra[5];</li>
+<li>res[5] = vrb[5];</li>
+<li>res[6] = vra[7];</li>
+<li>res[7] = vrb[7];</li>
+<li>res[8] = vra[9];</li>
+<li>res[9] = vrb[9];</li>
+<li>res[10] = vra[11];</li>
+<li>res[11] = vrb[11];</li>
+<li>res[12] = vra[13];</li>
+<li>res[13] = vrb[13];</li>
+<li>res[14] = vra[15];</li>
+<li>res[15] = vrb[15];</li>
+</ul>
+</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">2-13 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">3-14 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vra</td><td>128-bit vector unsigned char. </td></tr>
+    <tr><td class="paramname">vrb</td><td>128-bit vector unsigned char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector merge from only the odd bytes of vra and vrb. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 20 2018 16:33:27 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 21 2018 10:57:37 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
