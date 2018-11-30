@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Header package containing a collection of 128-bit SIMD operations over 32-bit integer elements. Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.  
+<p>Header package containing a collection of 128-bit SIMD operations over 32-bit integer elements.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vec__int16__ppc_8h_source.html">vec_int16_ppc.h</a>&gt;</code><br />
 </div>
@@ -157,7 +157,8 @@ Functions</h2></td></tr>
 <tr class="separator:af73a97260ce07b46031e2c8560a5320b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 32-bit integer elements. Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins. </p>
+<div class="textblock"><p>Header package containing a collection of 128-bit SIMD operations over 32-bit integer elements. </p>
+<p>Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</p>
 <p>Most vector int (32-bit integer word) operations are implemented with PowerISA VMX instructions either defined by the original VMX (AKA Altivec) or added to later versions of the PowerISA. Vector word-wise merge, shift, and splat operations were added with VSX in PowerISA 2.06B (POWER7). PowerISA 2.07B (POWER8) added several useful word wise operations (multiply, merge even/odd, count leading zeros, population count) not included in the original VMX. PowerISA 3.0B (POWER9) adds several more (compare not equal, count trailing zeros, extend sign, extract/insert, and parity). Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</p>
 <dl class="section note"><dt>Note</dt><dd>The compiler disables associated &lt;altivec.h&gt; built-ins if the <b>mcpu</b> target does not enable the specific instruction. For example if you compile with <b>-mcpu=power7</b>, vec_vclz and vec_vclzw will not be defined. Another example if you compile with <b>-mcpu=power8</b>, vec_revb will not be defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</dd>
 <dd>
@@ -1162,7 +1163,7 @@ Performance data.</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 21 2018 10:57:37 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 30 2018 11:43:44 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
