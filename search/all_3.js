@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
-  ['dpd128',['dpd128',['../union____VEC__U__128.html#a19e0b9960892e2d8f293cfd96d5a0add',1,'__VEC_U_128']]]
+  ['i128',['i128',['../union____VEC__U__128.html#acc051e98e73262bc1efb27fe5749b676',1,'__VEC_U_128']]]
 ];

@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdilptuv",
+  0: "_cdilptuv",
   1: "_",
   2: "v",
-  3: "bv",
+  3: "v",
   4: "diluv",
   5: "_v",
-  6: "cv",
+  6: "_cv",
   7: "dpt"
 };
 

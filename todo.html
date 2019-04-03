@@ -81,13 +81,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="vec__bcd__ppc_8h.html#a7cab22c9e76f6c27e364d3adcb0462c0">vec_bcdmul</a>  (vui32_t a, vui32_t b)</dt>
-<dd>This is tricky as the product can be up to 62 digits and _Decimal128 can only hold 34 digits. So products that are more than 34 digits will loose precision on the right during the conversion back to BCD.</dd>
+<dt><a class="anchor" id="_todo000001"></a>File <a class="el" href="vec__bcd__ppc_8h.html">vec_bcd_ppc.h</a>  </dt>
+<dd>The BCD add/subtract extend/carry story is not complete. The carry extend operations based only on the <b>OV</b> condition codes only works as expected for bcdadd operands with the same sign and bcdsub with different signs. See <a class="el" href="vec__bcd__ppc_8h.html#a76d5034289bea5c7d9159db1d443f6b7" title="Decimal Add &amp; write Carry Signed Quadword. ">vec_bcdaddcsq()</a> and <a class="el" href="vec__bcd__ppc_8h.html#a6bf159e0abdccaa6fca21c6567b2067b" title="Decimal Add Extended &amp; write Carry Signed Quadword. ">vec_bcdaddecsq()</a>. Extended BCD difference (or subtract the same sign or add with different signs) is more complicated. See <a class="el" href="vec__bcd__ppc_8h.html#abd666963d18930e07be06aeb563eeb71" title="Decimal Sudtract &amp; write Carry Signed Quadword. ">vec_bcdsubcsq()</a> and <a class="el" href="vec__bcd__ppc_8h.html#a7eeb50993901b8bef76fa72cea668a15" title="Decimal Add Extended &amp; write Carry Signed Quadword. ">vec_bcdsubecsq()</a>. Generating a true borrow seems to require looking one (31-digit) column ahead or behind. The first attempt at generating correct borrowing is implemented in <a class="el" href="vec__bcd__ppc_8h.html#a486605817b8ca4850f7cf5584c751f45" title="Combined Decimal Add &amp; Write Carry Signed Quadword. ">vec_cbcdaddcsq()</a> and <a class="el" href="vec__bcd__ppc_8h.html#af9718d91a7e14c4a21e14a53f2f65041" title="Combined Decimal Add Extended &amp; write Carry Signed Quadword. ">vec_cbcdaddecsq()</a>. There are still cases where these operation will generate a borrow and invert (10s complement) incorrectly. The net seems to be that for BCD multiple precision difference to work correctly, the larger magnitude must be the first operand.</dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 20 2018 16:33:27 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 3 2019 11:13:35 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
