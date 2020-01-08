@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="union____VEC__U__1024x512">
+<title>__VEC_U_1024x512 union Reference</title>
+<para>
+    <programlisting>#include <link linkend="vec__int512__ppc_8h">&lt;vec_int512_ppc.h&gt;</link></programlisting>
+</para>
+    <simplesect>
+
+<para>A vector representation of a 1024-bit unsigned integer as two 512-bit fields. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A union of:<itemizedlist>
+<listitem>
+<para>homogeneous aggregate of 1024-bit unsigned integer.</para>
+</listitem><listitem>
+<para>struct of:<itemizedlist>
+<listitem>
+<para>two x homogeneous aggregate of 512-bit unsigned integers.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>Useful for summing partial products based on a 512x512-bit multiply. </para>
+</formalpara>
+</para>
+                <para>Definition at line 1378 of file vec_int512_ppc.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="union____VEC__U__128">
+<title>__VEC_U_128 union Reference</title>
+<para>
+    <programlisting>#include <link linkend="vec__common__ppc_8h">&lt;vec_common_ppc.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title> Classes </title>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned __int128 i128<para><emphasis>Signed 128-bit integer from pair of 64-bit GPRs.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned __int128 ui128<para><emphasis>Unsigned 128-bit integer from pair of 64-bit GPRs.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_Decimal128 dpd128<para><emphasis>128 bit Decimal Float from pair of double float registers.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long double ldbl128<para><emphasis>IBM long double float from pair of double float registers.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vui8_t vx16<para><emphasis>128 bit Vector of 16 unsigned char elements.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vui16_t vx8<para><emphasis>128 bit Vector of 8 unsigned short int elements.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vui32_t vx4<para><emphasis>128 bit Vector of 4 unsigned int elements.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vui64_t vx2<para><emphasis>128 bit Vector of 2 unsigned long int (64-bit) elements.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vui128_t vx1<para><emphasis>128 bit Vector of 1 unsigned __int128 element.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vf64_t vf2<para><emphasis>128 bit Vector of 2 double float elements.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint64_t lower</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint64_t upper</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct __VEC_U_128::@0 ulong<para><emphasis>Struct of two unsigned long int (64-bit GPR) fields.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Union used to transfer 128-bit data between vector and non-vector types. </para>
+    </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+</section>

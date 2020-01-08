@@ -1,0 +1,1517 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__int128__ppc_8h">
+    <title>vec_int128_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_int64_ppc.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__int128__ppc_8h_1a0f75e65180e68c4753f3d9c2f42d1a31">CONST_VUINT128_QxW</link> ( (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>) \
+      (((unsigned __int128) __q0) &lt;&lt; 96) \
+    + (((unsigned __int128) __q1) &lt;&lt; 64) \
+    + (((unsigned __int128) __q2) &lt;&lt; 32) \
+    +  ((unsigned __int128) __q3) )<para><emphasis>Generate a vector unsigned __int128 constant from words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__int128__ppc_8h_1a12118674c4e47eb7c939bb29a379d381">CONST_VUINT128_QxD</link> ( (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>) \
+    (((unsigned __int128) __q0) &lt;&lt; 64) \
+    + (((unsigned __int128) __q1) )<para><emphasis>Generate a vector unsigned __int128 constant from doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__int128__ppc_8h_1a25faf0c51245eefdaeda1dc5dd71c516">CONST_VUINT128_Qx19d</link> ( (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>) \
+    (((unsigned __int128) __q0) * 10000000000000000000UL) \
+    + ((unsigned __int128) __q1) )<para><emphasis>Generate a vector unsigned __int128 constant from doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__int128__ppc_8h_1aa9c94b59ae2504f498923ed506a22083">CONST_VUINT128_Qx18d</link> ( (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>) \
+    (((unsigned __int128) __q0) * 1000000000000000000UL) \
+    + ((unsigned __int128) __q1) )<para><emphasis>Generate a vector unsigned __int128 constant from doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__int128__ppc_8h_1acd5c20e29b155f8f575d60f6af8f7955">CONST_VUINT128_Qx16d</link> ( (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>) \
+    (((unsigned __int128) __q0) * 10000000000000000UL) \
+    + ((unsigned __int128) __q1) )<para><emphasis>Generate a vector unsigned __int128 constant from doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1abf1707d712cc191915a8f558eaaa1fe7">vec_absduq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Absolute Difference Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a655de600915e449a8681572961939422">vec_avguq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Average Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ad7aaadba249ce46c4c94f78df1020da3">vec_addcuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Add &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1af18b98d2d73f1afbc439e1407c78f305">vec_addecuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> ci)<para><emphasis>Vector Add Extended &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a44e63f70b182d60fe03b43a80647451a">vec_addeuqm</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> ci)<para><emphasis>Vector Add Extended Unsigned Quadword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Add Unsigned Quadword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a363fa7103ccd730c47bb34cb9f05e80b">vec_addcq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Add with carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a9e27910c148d525e17d099688aec9ba1">vec_addeq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> ci)<para><emphasis>Vector Add Extend with carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a066cc120c198773a2f8dfd17480b7a49">vec_clzq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Count Leading Zeros Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1adf308aff6d9e25ae55b2c9d998c5de68">vec_cmpeqsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a7197cd5c6e946211f2718b5e8464cdc0">vec_cmpequq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1ac7e92209124903c3e8c535263246ff37">vec_cmpgesq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Greater Than or Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1abd88782f327214c07d42519b7d4c69ce">vec_cmpgeuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Greater Than or Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a45ce55b0cba15cddb6764a900922d768">vec_cmpgtsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Greater Than Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1ad4ce43dcbc14fb34623d5ece8073b86e">vec_cmpgtuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Greater Than Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a3642b1e0d48117c91189f69dd0e955ad">vec_cmplesq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Less Than or Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a69b25e7f46986d00997fedaeeb7871c2">vec_cmpleuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Less Than or Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a82d83d78ff2330205a8d74741b34a1be">vec_cmpltsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Less Than Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a7f9ebc5ad32b151a3e08136d51aad4dc">vec_cmpltuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Less Than Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1ae2cdf052bf633951201589454e50f52e">vec_cmpnesq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a186d0b94bbc652e700ab4e1733b9524c">vec_cmpneuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare Not Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a391cc9e4b1221618840767c7487d3032">vec_cmpsq_all_eq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare all Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a269401b65405524bb2d971bef595cb0d">vec_cmpsq_all_ge</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare any Greater Than or Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a62a38e9016e2d94a56f935ddded3830b">vec_cmpsq_all_gt</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare any Greater Than Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a88209b466e628a6a77c6ddab7a15b4c8">vec_cmpsq_all_le</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare any Less Than or Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a395dad1916a94a6cdb2b601565d7ffce">vec_cmpsq_all_lt</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare any Less Than Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1af7587275a406a1e2437ef86c23e2875a">vec_cmpsq_all_ne</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Compare all Not Equal Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a2c2c01f3aa165fedba47600f87067768">vec_cmpuq_all_eq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare all Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1af8f06b2c3d612a7cfdeb3bb883c59e19">vec_cmpuq_all_ge</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare any Greater Than or Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1ac93dc5ed8bb3501470cf70c5cb5796a9">vec_cmpuq_all_gt</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare any Greater Than Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a2b7f505ebca731aa6fdc7433f82c0c6d">vec_cmpuq_all_le</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare any Less Than or Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a31ddb6149475e80f4a1d38277317d980">vec_cmpuq_all_lt</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare any Less Than Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__int128__ppc_8h_1a1799f860ba79e698c66b171392afde01">vec_cmpuq_all_ne</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Compare all Not Equal Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a5f250dfab2a4aee0fd247a1d0217237b">vec_cmul10ecuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> cin)<para><emphasis>Vector combined Multiply by 10 Extended &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a9449c746cad42f0cd9e2fe4560364e18">vec_cmul10cuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a)<para><emphasis>Vector combined Multiply by 10 &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1ae320909aca43d55b8be1069f38544ee8">vec_divsq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra)<para><emphasis>Vector Divide by const 10e31 Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1afa2db6d665f837f96c746d88027e9e19">vec_divudq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * qh, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Divide Unsigned Double Quadword by const 10e31.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a917acd42e775f4bb323ba2104c52d7cb">vec_divudq_10e32</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * qh, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Divide Unsigned Double Quadword by const 10e32.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a9a6a39212f8a8b9ebf20e0117e1e1e88">vec_divuq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Divide by const 10e31 Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ae2b45341cc9cc918198bb69da0552098">vec_divuq_10e32</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Divide by const 10e32 Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1acef64f9ffe8af5a8f08b6bdd0a9e218f">vec_maxsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Maximum Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1adb02d0572ecc17eca0de6d4f0d9aa302">vec_maxuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Maximum Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1ab435fd182688a615fb88b6578321839d">vec_minsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Minimum Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ad0fa6a9987d3bd9593d1780b1c28c390">vec_minuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Minimum Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1aab5db88e4608d4a7408df9042adce86c">vec_modsq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> q)<para><emphasis>Vector Modulo by const 10e31 Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a31a893a75e42f5f6c4dfe793678fea59">vec_modudq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * ql)<para><emphasis>Vector Modulo Unsigned Double Quadword by const 10e31.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a2ccbd77900956c01a51b88e672e593c6">vec_modudq_10e32</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * ql)<para><emphasis>Vector Modulo Unsigned Double Quadword by const 10e32.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1af4b3b91f7e80522d8a8c0c171e077b99">vec_moduq_10e31</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> q)<para><emphasis>Vector Modulo by const 10e31 Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1aff4f1d8a707289d2271eafad4aeb1e82">vec_moduq_10e32</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> q)<para><emphasis>Vector Modulo by const 10e32 Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a8c641b0107fc3e1621ef729c04efd583">vec_mul10cuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a)<para><emphasis>Vector Multiply by 10 &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a7ca2a6427ecb9458858b5caaac8c4dca">vec_mul10ecuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> cin)<para><emphasis>Vector Multiply by 10 Extended &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a2245626e7b90621b33ba79b763a4215e">vec_mul10euq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> cin)<para><emphasis>Vector Multiply by 10 Extended Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a3675fa1a2334eff913df447904be78ad">vec_mul10uq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a)<para><emphasis>Vector Multiply by 10 Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a8bc23a0cd3f522c017ec95d5ce93a2f0">vec_cmul100cuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a)<para><emphasis>Vector combined Multiply by 100 &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ac3f85b6577e5ab0de2b3f68ca45dd33b">vec_cmul100ecuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * cout, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> cin)<para><emphasis>Vector combined Multiply by 100 Extended &amp; write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> c)<para><emphasis>Vector Multiply-Sum Unsigned Doubleword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>Vector Multiply Even Unsigned Doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector Multiply High Unsigned Doubleword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>Vector Multiply Odd Unsigned Doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int128__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector Multiply Unsigned Doubleword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Multiply High Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Multiply Low Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> * mulu, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> a, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> b)<para><emphasis>Vector Multiply Unsigned Double Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ae05185c980535dd28aec3a2a9431cb69">vec_popcntq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Population Count Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1aa40644aaa8146d00f84fce58dd4fd24e">vec_revbq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Byte Reverse Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a52b3bfcc5b277628cd80ecd90440f8a5">vec_rlq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Rotate Left Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a4777f3b762c3313df0a13aa352c2f189">vec_rlqi</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, const unsigned int shb)<para><emphasis>Vector Rotate Left Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1af74036e39e72e0f3c29706d30fbb96d1">vec_setb_cyq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vcy)<para><emphasis>Vector Set Bool from Quadword Carry.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1a921647d5b67f0de5006ee32fb3d9c4f1">vec_setb_ncq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vcy)<para><emphasis>Vector Set Bool from Quadword not Carry.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__int128__ppc_8h_1af21d01bb19f0ea8605d8c37035837802">vec_setb_sq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra)<para><emphasis>Vector Set Bool from Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a8ba40be93339359793ef776e1d5d7577">vec_sldq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrw, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrx, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Shift Left Double Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1aaa33904ec4de42f54cceab34adb303c5">vec_sldqi</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrw, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrx, const unsigned int shb)<para><emphasis>Vector Shift Left Double Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a49fe2c36fca9911ab99a1f8abb53f0ff">vec_slq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Shift Left Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a070fe972995f3954362835f5b72e5ff6">vec_slqi</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Left Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1ab99c4af0aae31b02e1f17f12500198f0">vec_sraq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Shift Right Algebraic Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__int128__ppc_8h_1a50546b5b39e0c21cffe678f225ff59b7">vec_sraqi</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Algebraic Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a0edd172a5656b842d6586c5078284942">vec_srq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Shift Right Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1ac05c640c6a42770cb95466ff4a2d903c">vec_srqi</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a4f6dca233bb7e4edc2adb751d478572e">vec_slq4</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a9964ce224b90a0986122f79f6455cba5">vec_slq5</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a49d355191fabd04a434723265ccafa20">vec_srq4</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a257bcf71eefa1d08482587637dc400da">vec_srq5</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a95d3546b2fd6840b46b031c15b4f60d3">vec_subcuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Subtract and Write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a04f6df21399a4e6228eca254611b23c5">vec_subecuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrc)<para><emphasis>Vector Subtract Extended and Write Carry Unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a2e40f9bf5df59b725cbfb6738c765202">vec_subeuqm</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrc)<para><emphasis>Vector Subtract Extended Unsigned Quadword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Subtract Unsigned Quadword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>Vector Multiply Even Unsigned Doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>Vector Multiply Odd Unsigned Doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit computation functions implemented with PowerISA VMX and VSX instructions. </para>
+
+<para>Some of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins. Other operations do not exist as instructions on any current processor but are useful and should be provided. This header serves to provide these operations as inline functions using existing vector built-ins or other pveclib operations.</para>
+
+<para>The original VMX (AKA Altivec) only defined a few instructions that operated on the 128-bit vector as a whole. This included the vector shift left/right (bit), vector shift left/right by octet (byte), vector shift left double by octet (select a contiguous 16-bytes from 2 concatenated vectors) 256-bit), and generalized vector permute (select any 16-bytes from 2 concatenated vectors). Use of these instructions can be complicated when;<itemizedlist>
+<listitem>
+<para>the shift amount is more than 8 bits,</para>
+</listitem><listitem>
+<para>the shift amount is not a multiple of 8-bits (octet),</para>
+</listitem><listitem>
+<para>the shift amount is a constant and needs to be generated/loaded before use.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>These instructions can used in combination to provide generalized vector __int128 shift/rotate operations. Pveclib uses these operations to provide vector __int128 shift / rotate left, shift right and shift algebraic right operations. These operations require pre-conditions to avoid multiple instructions or require a combination of (bit and octet shift) instructions to get the quadword result. The compiler &lt;altivec.h&gt; built-ins only supports individual instructions. So using these operations quickly inspires a need for a header (like this) to contain implementations of the common operations.</para>
+
+<para>The VSX facility (introduced with POWER7) did not add any integer doubleword (64-bit) or quadword (128-bit) operations. However it did add a useful doubleword permute immediate and word wise; merge, shift, and splat immediate operations. Otherwise vector __int128 (128-bit elements) operations have to be implemented using VMX word and halfword element integer operations for POWER7.</para>
+
+<para>POWER8 added multiply word operations that produce the full doubleword product and full quadword add / subtract (with carry extend). The add quadword is useful to sum the partial products for a full 128 x 128-bit multiply. The add quadword write carry and extend forms, simplify extending arithmetic to 256-bits and beyond.</para>
+
+<para>While POWER8 provided quadword integer add and subtract operations, it did not provide quadword Signed/Unsigned integer compare operations. It is possible to implement quadword compare operations using existing word / doubleword compares and the the new quadword subtract write-carry operation. The trick it so convert the carry into a vector bool __int128 via the vec_setb_ncq () operation. This header provides easy to use quadword compare operations.</para>
+
+<para>POWER9 (PowerISA 3.0B) adds the <emphasis role="bold">Vector Multiply-Sum unsigned Doubleword Modulo</emphasis> instruction. Aspects of this instruction mean it needs to be used carefully as part of larger quadword multiply. It performs only two of the four required doubleword multiplies. The final quadword modulo sum will discard any overflow/carry from the potential 130-bit result. With careful pre-conditioning of doubleword inputs the results are can not overflow from 128-bits. Then separate add quadword add/write carry operations can be used to complete the sum of partial products. These techniques are used in the POWER9 specific implementations of vec_muleud, vec_muloud, vec_mulluq, and vec_muludq.</para>
+
+<para>PowerISA 3.0B also defined additional: Binary Coded Decimal (BCD) and Zoned character format conversions. String processing operations. Vector Parity operations. Integer Extend Sign Operations. Integer Absolute Difference Operations. All of these seem to useful additions to pveclib for older (POWER7/8) processors and across element sizes (including quadword elements).</para>
+
+<para>Most of these intrinsic (compiler built-in) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation. However it took several compiler releases for all the new POWER8 64-bit and 128-bit integer vector intrinsics to be added to <emphasis role="bold">altivec.h</emphasis>. This support started with the GCC 4.9 but was not complete across function/type and bug free until GCC 6.0.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example, if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, vec_vadduqm and vec_vsubudm will not be defined. But <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link> and <link linkend="vec__int64__ppc_8h_1a0b7aee3c81538f5537680b610d934500">vec_subudm()</link> and always be defined in this header, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+</formalpara>
+Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. So this header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</para>
+
+<para>This header covers operations that are either:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Operations implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include quadword byte reverse, add and subtract.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.n&gt; provided by available compilers in common use. Examples include quadword byte reverse, add and subtract.</para>
+</listitem><listitem>
+<para>Are commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include quadword; Signed and Unsigned compare, shift immediate, multiply, multiply by 10 immediate, count leading zeros and population count.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The Multiply sum/even/odd doubleword operations are currently implemented here (in &lt;<link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link>&gt;) which resolves a dependency on Add Quadword. These functions (vec_msumudm, vec_muleud, vec_muloud) all produce a quadword results and may use the vec_adduqm implementation to sum partial products.</para>
+</formalpara>
+See <link linkend="index_1mainpage_sub_1_3">Returning extended quadword results.</link> for more background on extended quadword computation.</para>
+<section xml:id="vec__int128__ppc_8h_1i128_endian_issues_0_0">
+<title>Endian problems with quadword implementations</title>
+
+<para>Technically operations on quadword elements should not require any endian specific transformation. There is only one element so there can be no confusion about element numbering or order. However some of the more complex quadword operations are constructed from operations on smaller elements. And those operations as provided by &lt;altivec.h&gt; are required by the OpenPOWER ABI to be endian sensitive. See <link linkend="vec__int64__ppc_8h_1i64_endian_issues_0_0">Endian problems with doubleword operations</link> for a more detailed discussion.</para>
+
+<para>In any case the arithmetic (high to low) order of bits in a quadword are defined in the PowerISA (See <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link> and <link linkend="vec__int128__ppc_8h_1a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm()</link>). So pveclib implementations will need to either:<itemizedlist>
+<listitem>
+<para>Nullify little endian transforms of &lt;altivec.h&gt; operations. The &lt;altivec.h&gt; built-ins <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw()</link>, <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw()</link>, vec_mergel(), and vec_mergeh() are endian sensitive and often require nullification that restores the original operation.</para>
+</listitem><listitem>
+<para>Use new operations that are specifically defined to be stable across BE/LE implementations. The pveclib operations; <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>, <link linkend="vec__int64__ppc_8h_1acd5bafec6c1c15b0336551e82d1169d4">vec_mrgahd()</link>, <link linkend="vec__int64__ppc_8h_1a5242d6311cd5ab50377cfeb2cf2ac8bf">vec_mrgald()</link>. and <link linkend="vec__int64__ppc_8h_1a8238ba590103ac80fb146a6a2b1aed1c">vec_permdi()</link> are defined to be endian stable.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__int128__ppc_8h_1int128_const_0_0_1">
+<title>Quadword Integer Constants</title>
+
+<para>The compilers may not support 128-bit integers for constants and printf (integer to ascii). For example GCC provides ANSI mandated constant and runtime support for integers up to long long which for PowerPC is only 64-bit.</para>
+
+<para>The __int128 type is an extension that provides basic arithmetic operations but does not compile 128-bit constants or support printf formating for integers larger then long long. The following section provides examples and work around&apos;s for these restrictions.</para>
+
+<para>The GCC compiler allows integer constants to be assigned/cast to __int128 types. The support also allows __int128 constants to be assigned/cast to vector __int128 types. So the following are allowed: <literallayout><computeroutput>const&#32;vui128_t&#32;vec128_zeros&#32;=&#32;{(vui128_t)&#32;((unsigned&#32;__int128)&#32;0)};
+const&#32;vui128_t&#32;vec128_10&#32;=&#32;{(vui128_t)&#32;((unsigned&#32;__int128)&#32;10)};
+const&#32;vui128_t&#32;vec128_10to16&#32;=&#32;{(vui128_t)&#32;((unsigned&#32;__int128)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;10000000000000000UL)};
+const&#32;vui128_t&#32;vec128_maxLong&#32;=&#32;{(vui128_t)&#32;((unsigned&#32;__int128)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__INT64_MAX__)};
+const&#32;vui128_t&#32;vec128_max_Long&#32;=&#32;{(vui128_t)&#32;((unsigned&#32;__int128)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x7fffffffffffffffL)};
+//&#32;-1&#32;signed&#32;extended&#32;to&#32;__int128&#32;is&#32;0xFFFF...FFFF
+const&#32;vui128_t&#32;vec128_foxes&#32;=&#32;{(vui128_t)&#32;((__int128)&#32;-1L)};
+</computeroutput></literallayout></para>
+
+<para>It gets more complicated when the constant exceeds the range of a long long value. For example the magic numbers for the multiplicative inverse described in <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_1">Printing Vector __int128 values</link>. The decimal integer constant we need for the quadword multiplier is &quot;76624777043294442917917351357515459181&quot; or the equivalent hexadecimal value &quot;0x39a5652fb1137856d30baf9a1e626a6d&quot;. GCC does not allow constants this large to be expressed directly.</para>
+
+<para>GCC supports aggregate initializer lists for the elements of vectors. For example: <literallayout><computeroutput>vui32_t&#32;xyzw&#32;=&#32;(vector&#32;int)&#32;{&#32;1,&#32;2,&#32;3,&#32;4&#32;};
+</computeroutput></literallayout> So it is possible to compose a quadword constant by initializing a vector of word or doubleword elements then casting the result to a quadword type. For example: <literallayout><computeroutput>const&#32;vui128_t&#32;invmul&#32;=&#32;(vui128_t)&#32;(vector&#32;unsigned&#32;long&#32;long)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL&#32;};
+</computeroutput></literallayout> or <literallayout><computeroutput>const&#32;vui128_t&#32;invmul&#32;=&#32;(vui128_t)&#32;(vector&#32;unsigned&#32;int)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x39a5652f,&#32;0xb1137856,&#32;0xd30baf9a,&#32;0x1e626a6d&#32;};
+</computeroutput></literallayout> There is one small problem with this as element order is endian dependent, while a vector quadword integer is always big endian. So we would need to adjust the element order for endian. For example: <literallayout><computeroutput>&#32;&#32;&#32;const&#32;vui128_t&#32;invmul&#32;=&#32;(vui128_t)&#32;(vector&#32;unsigned&#32;long&#32;long)
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0xd30baf9a1e626a6dUL,&#32;0x39a5652fb1137856UL&#32;};
+#else
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL&#32;};
+#endif
+</computeroutput></literallayout> or <literallayout><computeroutput>&#32;&#32;&#32;const&#32;vui128_t&#32;invmul&#32;=&#32;(vui128_t)&#32;(vector&#32;unsigned&#32;int)
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x1e626a6d,&#32;0xd30baf9a,&#32;0xb1137856,&#32;0x39a5652f&#32;};
+#else
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x39a5652f,&#32;0xb1137856,&#32;0xd30baf9a,&#32;0x1e626a6d&#32;};
+#endif
+</computeroutput></literallayout> Remembering to add the endian correction for constants used quadword operations is an issue and manually reversing the element order can be error prone. There should be an easier way.</para>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_const_0_0_2">
+<title>Support for Quadword Integer Constants</title>
+
+<para>The <link linkend="vec__common__ppc_8h">vec_common_ppc.h</link> header provides some helper macros for when quadword operations need big endian element order on little endian platforms. These macros accept 2, 4, 8, or 16 element constants to form an aggregate initializer for a vector of the corresponding element type. The elements are always arranged left to right, high to low order. These macros are endian sensitive and either effectively pass-through for big endian or reverse the element order for little endian.</para>
+
+<para>For example: <literallayout><computeroutput>const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL);
+</computeroutput></literallayout> or <literallayout><computeroutput>const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_W(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x39a5652f,&#32;0xb1137856,&#32;0xd30baf9a,&#32;0x1e626a6d);
+</computeroutput></literallayout> These macros internally cast to a vector unsigned integer type for the aggregate initializer. This type corresponds to the size and number of elements to fit in a 128-bit vector. This tells the compiler how many elements to expect and the allowed value range for the initializer. A final explicit cast is required to the vector type needed (usually a signed or unsigned __int128). (See: <link linkend="vec__common__ppc_8h_1a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW()</link>, <link linkend="vec__common__ppc_8h_1ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W()</link>, <link linkend="vec__common__ppc_8h_1a63ce8985f81cfb37c2bc3f9900dddd51">CONST_VINT128_H()</link>, <link linkend="vec__common__ppc_8h_1a47803d5079cc714a1524f4cd2a05ef72">CONST_VINT128_B()</link> ). Other macros require the programmer to provide a cast to match the element count and size. (See: <link linkend="vec__common__ppc_8h_1af4ffb9244d1aa4482b683d35c3544194">CONST_VINT64_DW()</link>, <link linkend="vec__common__ppc_8h_1a7e03d3eaeafea2c6613233fd58f98ec1">CONST_VINT32_W()</link>, <link linkend="vec__common__ppc_8h_1a31b39d3ef7e2d5321449f6f2ab2a51b2">CONST_VINT16_H()</link>, <link linkend="vec__common__ppc_8h_1af5ff90cc45d590754b2403af4d014d7c">CONST_VINT8_B()</link> )</para>
+
+<para>The methods above are effectively forming multi-digit constants where each digit is itself a large (word or doubleword) binary coded integer value. Because the digits are radix 2**N it is normal to convert large decimal constants to hexadecimal. This makes it easier to split the large constants into word or doubleword elements for the initializer.</para>
+
+<para>Most compilers support compile time computation on constants. This is an optimization where only the final computed constant result is used in the generated code. Compile time constant computation supports the usual arithmetic operations on the usual types. Some compilers (including GCC) support constant computation on extended types including __int128.</para>
+
+<para>For example: <literallayout><computeroutput>const&#32;vui128_t&#32;ten32_minus1&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;(((unsigned&#32;__int128)&#32;9999999999999999UL)&#32;*&#32;10000000000000000UL)
+&#32;&#32;&#32;&#32;&#32;+&#32;((unsigned&#32;__int128)&#32;9999999999999999UL);
+</computeroutput></literallayout> produces the quadword integer value for the decimal constant 99999999999999999999999999999999.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>we must cast any int or long long constants to [unsigned] __int128 so the compiler will use 128-bits arithmetic to compute the final constant.</para>
+</formalpara>
+With this technique we can split large decimal constants into 16, 18, or 19 digit blocks and then compute effective 32, 36, or 38 digit constant. (see <link linkend="vec__int128__ppc_8h_1acd5c20e29b155f8f575d60f6af8f7955">CONST_VUINT128_Qx16d()</link>, <link linkend="vec__int128__ppc_8h_1aa9c94b59ae2504f498923ed506a22083">CONST_VUINT128_Qx18d()</link>, and <link linkend="vec__int128__ppc_8h_1a25faf0c51245eefdaeda1dc5dd71c516">CONST_VUINT128_Qx19d()</link>). For example: <literallayout><computeroutput>&#32;&#32;const&#32;vui128_t&#32;ten32_minus1&#32;=&#32;CONST_VUINT128_Qx16d
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(&#32;9999999999999999UL,&#32;9999999999999999UL&#32;);
+//&#32;The&#32;quadword&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**16
+//&#32;is&#32;76624777043294442917917351357515459181.
+//&#32;Which&#32;is&#32;38&#32;digits,&#32;so&#32;we&#32;split&#32;into&#32;2&#32;consts&#32;of&#32;19&#32;digits&#32;each.
+&#32;&#32;const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;CONST_VUINT128_Qx19d(
+&#32;&#32;&#32;&#32;&#32;7662477704329444291UL,&#32;7917351357515459181UL);
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1">
+<title>Vector Quadword Examples</title>
+
+<para>The PowerISA Vector facilities provide logical and integer arithmetic quadword (128-bit) operations. Some operations as direct PowerISA instructions and other operations composed of short instruction sequences. The Power Vector Library provides a higher level and comprehensive API of quadword integer integer arithmetic and support for extended arithmetic to multiple quadwords.</para>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1_1">
+<title>Printing Vector __int128 values</title>
+
+<para>The GCC compiler supports the (vector) __int128 type but the runtime does not support <emphasis role="bold">printf()</emphasis> formating for __int128 types. However if we can use divide/modulo operations to split vector __int128 values into modulo 10^16 long int (doubleword) chunks, we can use printf() to convert and concatenate the decimal values into a complete number.</para>
+
+<para>For example, from the __int128 value (39 decimal digits):<itemizedlist>
+<listitem>
+<para>Detect the sign and set a char to &quot;+&apos; or &apos;-&apos;</para>
+</listitem><listitem>
+<para>Then from the absolute value, divide/modulo by 10000000000000000. Producing:<itemizedlist>
+<listitem>
+<para>The highest 7 digits (t_high)</para>
+</listitem><listitem>
+<para>The middle 16 digits (t_mid)</para>
+</listitem><listitem>
+<para>The lowest 16 digits (t_low)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para>We can use signed compare to detect the sign and set a char value to print a &apos; &apos; or &apos;+&apos; prefix. If the value is negative we want the absolute value before we do the divide/modulo steps. For example: <literallayout><computeroutput>if&#32;(vec_cmpsq_all_ge&#32;(value,&#32;zero128))
+&#32;&#32;{
+&#32;&#32;&#32;&#32;sign&#32;=&#32;&apos;&#32;&apos;;
+&#32;&#32;&#32;&#32;val128&#32;=&#32;(vui128_t)&#32;value;
+&#32;&#32;}
+else
+&#32;&#32;{
+&#32;&#32;&#32;&#32;sign&#32;=&#32;&apos;-&apos;;
+&#32;&#32;&#32;&#32;val128&#32;=&#32;vec_subuqm&#32;((vui128_t)&#32;zero128,&#32;(vui128_t)&#32;value);
+&#32;&#32;}
+</computeroutput></literallayout> Here we use the <emphasis role="bold">pveclib</emphasis> operation <link linkend="vec__int128__ppc_8h_1a269401b65405524bb2d971bef595cb0d">vec_cmpsq_all_ge()</link> because the ABI and compilers do not define compare built-ins operations for the vector __int128 type. For the negative case we use the <emphasis role="bold">pveclib</emphasis> operation <link linkend="vec__int128__ppc_8h_1a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm()</link> instead of vec_abs. Again the ABI and compilers do not define vec_abs built-ins for the vector __int128 type. Using <emphasis role="bold">pveclib</emphasis> operations have the additional benefit of supporting older compilers and platform specific implementations for POWER7 and POWER8.</para>
+
+<para>Now we have the absolute value in val128 we can factor it into (3) chunks of 16 digits each. Normally scalar codes would use integer divide/modulo by 10000000000000000. And we are reminded that the PowerISA vector unit does not support integer divide operations and definitely not for quadword integers.</para>
+
+<para>Instead we can use the multiplicative inverse which is a scaled fixed point fraction calculated from the original divisor. This works nicely if the fixed radix point is just before the 128-bit fraction and we have a multiply high (<link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link>) operation. Multiplying a 128-bit unsigned integer by a 128-bit unsigned fraction generates a 256-bit product with 128-bits above (integer) and below (fraction) the radix point. The high 128-bits of the product is the integer quotient and we can discard the low order 128-bits.</para>
+
+<para>It turns out that generating the multiplicative inverse can be tricky. To produce correct results over the full range requires, possible pre-scaling and post-shifting, and sometimes a corrective addition is necessary. Fortunately the mathematics are well understood and are commonly used in optimizing compilers. Even better, Henry Warren&apos;s book has a whole chapter on this topic. <formalpara><title>See also: </title>
+
+<para>&quot;Hacker&apos;s Delight, 2nd Edition,&quot; Henry S. Warren, Jr, Addison Wesley, 2013. Chapter 10, Integer Division by Constants.</para>
+</formalpara>
+In the chapter above; <blockquote>
+<para>Figure 10-2 Computing the magic number for unsigned division.</para>
+</blockquote>provides a sample C function for generating the magic number (actually a struct containing; the magic multiplicative inverse, &quot;add&quot; indicator, and the shift amount.). For quadword and the divisor 10000000000000000,this is { 76624777043294442917917351357515459181, 0 , 51 }:<itemizedlist>
+<listitem>
+<para>the multiplier is 76624777043294442917917351357515459181.</para>
+</listitem><listitem>
+<para>no corrective add is required.</para>
+</listitem><listitem>
+<para>the final shift is 51-bits right.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><literallayout><computeroutput>const&#32;vui128_t&#32;mul_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;0UL,&#32;10000000000000000UL);
+//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**16
+//&#32;are&#32;76624777043294442917917351357515459181,&#32;no&#32;corrective&#32;add,
+//&#32;and&#32;shift&#32;right&#32;51&#32;bits.
+const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL);
+const&#32;int&#32;shift_ten16&#32;=&#32;51;
+...
+
+//&#32;first&#32;divide/modulo&#32;the&#32;39&#32;digits&#32;__int128&#32;by&#32;10**16.
+//&#32;This&#32;separates&#32;the&#32;high/middle&#32;23&#32;digits&#32;(tmpq)&#32;and&#32;low&#32;16&#32;digits.
+tmpq&#32;=&#32;vec_mulhuq&#32;(val128,&#32;mul_invs_ten16);
+tmpq&#32;=&#32;vec_srqi&#32;(tmpq,&#32;shift_ten16);
+//&#32;Compute&#32;remainder&#32;of&#32;val128&#32;/&#32;10**16
+//&#32;t_low&#32;=&#32;val128&#32;-&#32;(tmpq&#32;*&#32;10**16)
+//&#32;Here&#32;we&#32;know&#32;tmpq&#32;and&#32;mul_ten16&#32;are&#32;less&#32;then&#32;64-bits
+//&#32;so&#32;can&#32;use&#32;vec_vmuloud&#32;instead&#32;of&#32;vec_mulluq
+tmp&#32;=&#32;vec_vmuloud&#32;((vui64_t)&#32;tmpq,&#32;(vui64_t)&#32;mul_ten16);
+t_low&#32;=&#32;(vui64_t)&#32;vec_subuqm&#32;(val128,&#32;tmp);
+
+//&#32;Next&#32;divide/modulo&#32;the&#32;high/middle&#32;digits&#32;by&#32;10**16.
+//&#32;This&#32;separates&#32;the&#32;high&#32;7&#32;and&#32;middle&#32;16&#32;digits.
+val128&#32;=&#32;tmpq;
+tmpq&#32;=&#32;vec_mulhuq&#32;(tmpq,&#32;mul_invs_ten16);
+t_high&#32;=&#32;(vui64_t)&#32;vec_srqi&#32;(tmpq,&#32;shift_ten16);
+tmp&#32;=&#32;vec_vmuloud&#32;(t_high,&#32;(vui64_t)&#32;mul_ten16);
+t_mid&#32;=&#32;(vui64_t)&#32;vec_subuqm&#32;(val128,&#32;tmp);
+</computeroutput></literallayout> All the operations used above are defined and implemented by <emphasis role="bold">pveclib</emphasis>. Most of these operations is not defined as single instructions in the PowerISA or as built-ins the ABI or require alternative implementations for older processors.</para>
+
+<para>Now we have three vector unsigned __int128 values (t_low, t_mid, t_high) in the range 0-9999999999999999. Fixed point values in that range fit into the low order doubleword of each quadword. We can access these doublewords with array notation ([VEC_DW_L]) and the compiler will transfer them to fixed point (long int) GPRs. Then use normal char and long int printf() formating. For example: <literallayout><computeroutput>printf&#32;(&quot;%c%07lld%016lld%016lld&quot;,&#32;sign,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t_high[VEC_DW_L],&#32;t_mid[VEC_DW_L],&#32;t_low[VEC_DW_L]);
+</computeroutput></literallayout></para>
+
+<para>Here is the complete vector __int128 printf example: <literallayout><computeroutput>&#32;void
+example_print_vint128&#32;(vi128_t&#32;value)
+{
+&#32;&#32;const&#32;vi128_t&#32;max_neg&#32;=&#32;(vi128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x8000000000000000L,&#32;0UL);
+&#32;&#32;const&#32;vi128_t&#32;zero128&#32;=&#32;(vi128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x0L,&#32;0UL);
+&#32;&#32;const&#32;vui128_t&#32;mul_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0UL,&#32;10000000000000000UL);
+&#32;&#32;//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**16
+&#32;&#32;//&#32;are&#32;76624777043294442917917351357515459181,&#32;no&#32;corrective&#32;add,
+&#32;&#32;//&#32;and&#32;shift&#32;right&#32;51&#32;bits.
+&#32;&#32;const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL);
+&#32;&#32;const&#32;int&#32;shift_ten16&#32;=&#32;51;
+
+&#32;&#32;vui128_t&#32;tmpq,&#32;tmp;
+&#32;&#32;vui64_t&#32;t_low,&#32;t_mid,&#32;t_high;
+&#32;&#32;vui128_t&#32;val128;
+&#32;&#32;char&#32;sign;
+
+&#32;&#32;if&#32;(vec_cmpsq_all_ge&#32;(value,&#32;zero128))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;sign&#32;=&#32;&apos;&#32;&apos;;
+&#32;&#32;&#32;&#32;&#32;&#32;val128&#32;=&#32;(vui128_t)&#32;value;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;sign&#32;=&#32;&apos;-&apos;;
+&#32;&#32;&#32;&#32;&#32;&#32;val128&#32;=&#32;vec_subuqm&#32;((vui128_t)&#32;zero128,&#32;(vui128_t)&#32;value);
+&#32;&#32;&#32;&#32;}
+&#32;&#32;//&#32;Convert&#32;the&#32;absolute&#32;(unsigned)&#32;value&#32;to&#32;Decimal&#32;and
+&#32;&#32;//&#32;prefix&#32;the&#32;sign.
+
+&#32;&#32;//&#32;first&#32;divide/modulo&#32;the&#32;39&#32;digits&#32;__int128&#32;by&#32;10**16.
+&#32;&#32;//&#32;This&#32;separates&#32;the&#32;high/middle&#32;23&#32;digits&#32;(tmpq)&#32;and&#32;low&#32;16&#32;digits.
+&#32;&#32;tmpq&#32;=&#32;vec_mulhuq&#32;(val128,&#32;mul_invs_ten16);
+&#32;&#32;tmpq&#32;=&#32;vec_srqi&#32;(tmpq,&#32;shift_ten16);
+&#32;&#32;//&#32;Compute&#32;remainder&#32;of&#32;val128&#32;/&#32;10**16
+&#32;&#32;//&#32;t_low&#32;=&#32;val128&#32;-&#32;(tmpq&#32;*&#32;10**16)
+&#32;&#32;//&#32;Here&#32;we&#32;know&#32;tmpq&#32;and&#32;mul_ten16&#32;are&#32;less&#32;then&#32;64-bits
+&#32;&#32;//&#32;so&#32;can&#32;use&#32;vec_vmuloud&#32;instead&#32;of&#32;vec_mulluq
+&#32;&#32;tmp&#32;=&#32;vec_vmuloud&#32;((vui64_t)&#32;tmpq,&#32;(vui64_t)&#32;mul_ten16);
+&#32;&#32;t_low&#32;=&#32;(vui64_t)&#32;vec_subuqm&#32;(val128,&#32;tmp);
+
+&#32;&#32;//&#32;Next&#32;divide/modulo&#32;the&#32;high/middle&#32;digits&#32;by&#32;10**16.
+&#32;&#32;//&#32;This&#32;separates&#32;the&#32;high&#32;7&#32;and&#32;middle&#32;16&#32;digits.
+&#32;&#32;val128&#32;=&#32;tmpq;
+&#32;&#32;tmpq&#32;=&#32;vec_mulhuq&#32;(tmpq,&#32;mul_invs_ten16);
+&#32;&#32;t_high&#32;=&#32;(vui64_t)&#32;vec_srqi&#32;(tmpq,&#32;shift_ten16);
+&#32;&#32;tmp&#32;=&#32;vec_vmuloud&#32;(t_high,&#32;(vui64_t)&#32;mul_ten16);
+&#32;&#32;t_mid&#32;=&#32;(vui64_t)&#32;vec_subuqm&#32;(val128,&#32;tmp);
+
+&#32;&#32;printf&#32;(&quot;%c%07lld%016lld%016lld&quot;,&#32;sign,&#32;t_high[VEC_DW_L],
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t_mid[VEC_DW_L],&#32;t_low[VEC_DW_L]);
+}
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1_2">
+<title>Converting Vector __int128 values to BCD</title>
+
+<para>POWER8 and POWER9 added a number of Binary Code Decimal (BCD) and Zoned Decimal operations that should be helpful for radix conversion and even faster large integer formatting for print. <formalpara><title>See also: </title>
+
+<para><link linkend="vec__bcd__ppc_8h">vec_bcd_ppc.h</link></para>
+</formalpara>
+The issue remains that __int128 values can represent up to 39 decimal digits while Signed BCD supports only 31 digits. POWER9 provides a <emphasis role="bold">Decimal Convert From Signed Quadword</emphasis> instruction with the following restriction:</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>If the signed value of vrb is less then -(10**31-1) or greater than 10**31-1 the result is too large for the BCD format and the result is undefined.</para>
+</formalpara>
+It would be useful to check for this and if required, factor the __int128 value into to the high order 8 digits and the low order 31 digits. This allows for the safe and correct use of the <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq()</link> and with some decimal shifts/truncates <link linkend="vec__bcd__ppc_8h_1a832d31ded0b33a2b46f6491bcb71ea51">vec_bcdctz()</link>. This also enables conversion to multiple precision Vector BCD to represent 39 digits and more for radix conversions.</para>
+
+<para>We first address the factoring by providing <emphasis role="bold">Vector Divide by const 10e31 Unsigned Quadword</emphasis> and <emphasis role="bold">Vector Modulo by const 10e31 Unsigned Quadword</emphasis> operation. This requires the multiplicative inverse using the <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link> operation.</para>
+
+<para><literallayout><computeroutput>static&#32;inline&#32;vui128_t
+vec_divuq_10e31&#32;(vui128_t&#32;vra)
+&#32;&#32;//&#32;ten32&#32;&#32;=&#32;+100000000000000000000000000000000UQ
+&#32;&#32;const&#32;vui128_t&#32;ten31&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;(__int128)&#32;1000000000000000UL&#32;*&#32;(__int128)&#32;10000000000000000UL&#32;};
+&#32;&#32;//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**31
+&#32;&#32;//&#32;are&#32;4804950418589725908363185682083061167,&#32;corrective&#32;add,
+&#32;&#32;//&#32;and&#32;shift&#32;right&#32;107&#32;bits.
+&#32;&#32;const&#32;vui128_t&#32;mul_invs_ten31&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x039d66589687f9e9UL,&#32;0x01d59f290ee19dafUL);
+&#32;&#32;const&#32;int&#32;shift_ten31&#32;=&#32;103;
+&#32;&#32;vui128_t&#32;result,&#32;t,&#32;q;
+
+&#32;&#32;if&#32;(vec_cmpuq_all_ge&#32;(vra,&#32;ten31))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;q&#32;=&#32;vec_mulhuq&#32;(vra,&#32;mul_invs_ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Need&#32;corrective&#32;add&#32;but&#32;want&#32;to&#32;avoid&#32;carry&#32;&amp;&#32;double&#32;quad&#32;shift
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;The&#32;following&#32;avoids&#32;the&#32;carry&#32;and&#32;less&#32;instructions
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_subuqm&#32;(vra,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_srqi&#32;(t,&#32;1);
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_adduqm&#32;(t,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_srqi&#32;(t,&#32;(shift_ten31&#32;-&#32;1));
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;(vui128_t)&#32;{&#32;(__int128)&#32;0&#32;};
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> As the <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link> operation is relatively expensive and we expect most __int128 values to 31-digits or less, using a compare to bypass the multiplication and return the 0 quotient, seems a prudent optimization.</para>
+
+<para>So far we only have the quotient (the high order 8 digits) and still need to extract the remainder (the low order 31 digits). This is simply the quotient from above multiplied by 10e31 and subtracted from the original input. To avoid the multiple return value issue we define a modulo operation to take the original value and the quotient from <link linkend="vec__int128__ppc_8h_1a9a6a39212f8a8b9ebf20e0117e1e1e88">vec_divuq_10e31()</link>.</para>
+
+<para><literallayout><computeroutput>static&#32;inline&#32;vui128_t
+vec_moduq_10e31&#32;(vui128_t&#32;vra,&#32;vui128_t&#32;q)
+{
+&#32;&#32;//&#32;ten32&#32;&#32;=&#32;+100000000000000000000000000000000UQ
+&#32;&#32;const&#32;vui128_t&#32;ten31&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;(__int128)&#32;1000000000000000UL&#32;*&#32;(__int128)&#32;10000000000000000UL&#32;};
+&#32;&#32;vui128_t&#32;result,&#32;t;
+
+&#32;&#32;if&#32;(vec_cmpuq_all_ge&#32;(vra,&#32;ten31))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_mulluq&#32;(q,&#32;ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_subuqm&#32;(vra,&#32;t);
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;vra;
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> Again as the <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq()</link> operation is relatively expensive and we expect most __int128 values to 31-digits or less, using a compare to bypass the multiplication and return the input value as the remainder, seems a prudent optimization.</para>
+
+<para>We expect these operations to be used together as in this example. <literallayout><computeroutput>q&#32;=&#32;vec_divuq_10e31&#32;(a);
+r&#32;=&#32;vec_moduq_10e31&#32;(a,&#32;q);
+</computeroutput></literallayout> We also expect the compiler to common the various constant loads across the two operations as the code is in-lined. This header also provides variants for factoring by 10e32 (to use with the Zone conversion) and signed variants of the 10e31 operation for direct conversion to extend precision signed BCD. <formalpara><title>See also: </title>
+
+<para><link linkend="vec__int128__ppc_8h_1ae2b45341cc9cc918198bb69da0552098">vec_divuq_10e32()</link>, <link linkend="vec__int128__ppc_8h_1aff4f1d8a707289d2271eafad4aeb1e82">vec_moduq_10e32()</link>, <link linkend="vec__int128__ppc_8h_1ae320909aca43d55b8be1069f38544ee8">vec_divsq_10e31</link>, <link linkend="vec__int128__ppc_8h_1aab5db88e4608d4a7408df9042adce86c">vec_modsq_10e31</link>.</para>
+</formalpara>
+</para>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1_3">
+<title>Extending integer operations beyond Quadword</title>
+
+<para>Some algorithms require even high integer precision than __int128 provides. this includes:<itemizedlist>
+<listitem>
+<para>POSIX compliant conversion between __float128 and _Decimal128 types</para>
+</listitem><listitem>
+<para>POSIX compliant conversion from double and __float128 to decimal for print.</para>
+</listitem><listitem>
+<para>Cryptographic operations for Public-key cryptography and Elliptic Curves</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The POWER8 provides instructions for extending add and subtract to 128-bit integer and beyond with carry/extend operations (see <link linkend="vec__int128__ppc_8h_1ad7aaadba249ce46c4c94f78df1020da3">vec_addcuq()</link>, <link linkend="vec__int128__ppc_8h_1af18b98d2d73f1afbc439e1407c78f305">vec_addecuq()</link>, <link linkend="vec__int128__ppc_8h_1a44e63f70b182d60fe03b43a80647451a">vec_addeuqm()</link>, <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link>, (see <link linkend="vec__int128__ppc_8h_1a95d3546b2fd6840b46b031c15b4f60d3">vec_subcuq()</link>, <link linkend="vec__int128__ppc_8h_1a04f6df21399a4e6228eca254611b23c5">vec_subecuq()</link>, <link linkend="vec__int128__ppc_8h_1a2e40f9bf5df59b725cbfb6738c765202">vec_subeuqm()</link>, <link linkend="vec__int128__ppc_8h_1a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm()</link>). POWER9 adds instructions to improve decimal / binary conversion to/from 128-bit integer and beyond with carry/extend operations. And while the PowerISA does not yet provide full 128 x 128 bit integer multiply instructions, it has provided wider integer multiply instructions, beginning in POWER8 (see <link linkend="vec__int32__ppc_8h_1add7b91bf6138d029d9d8cc57b0905f1f">vec_mulesw()</link>, <link linkend="vec__int32__ppc_8h_1a415942bd7b8183634e44e56b6a40101b">vec_mulosw()</link>, <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw()</link>, <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw()</link>) and again in POWER9 (see <link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link>).</para>
+
+<para>This all allows the <emphasis role="bold">pveclib</emphasis> to improve (reduce the latency of) the implementation of multiply quadword operations. This includes operations that generate the full 256-bit multiply product (see <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq()</link>, <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link>. <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq()</link>). And this in combination with add/subtract with carry extend quadword allows the coding of even wider (multiple quadword) multiply operations.</para>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1_3_0">
+<title>Extended Quadword multiply</title>
+
+<para>The following example performs a 256x256 bit unsigned integer multiply generating a 512-bit product: <literallayout><computeroutput>void
+test_mul4uq&#32;(vui128_t&#32;*__restrict__&#32;mulu,&#32;vui128_t&#32;m1h,&#32;vui128_t&#32;m1l,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vui128_t&#32;m2h,&#32;vui128_t&#32;m2l)
+{
+&#32;&#32;vui128_t&#32;mc,&#32;mp,&#32;mq,&#32;mqhl;
+&#32;&#32;vui128_t&#32;mphh,&#32;mphl,&#32;mplh,&#32;mpll;
+&#32;&#32;mpll&#32;=&#32;vec_muludq&#32;(&amp;mplh,&#32;m1l,&#32;m2l);
+&#32;&#32;mp&#32;=&#32;vec_muludq&#32;(&amp;mphl,&#32;m1h,&#32;m2l);
+&#32;&#32;mplh&#32;=&#32;vec_addcq&#32;(&amp;mc,&#32;mplh,&#32;mp);
+&#32;&#32;mphl&#32;=&#32;vec_adduqm&#32;(mphl,&#32;mc);
+&#32;&#32;mp&#32;=&#32;vec_muludq&#32;(&amp;mqhl,&#32;m2h,&#32;m1l);
+&#32;&#32;mplh&#32;=&#32;vec_addcq&#32;(&amp;mq,&#32;mplh,&#32;mp);
+&#32;&#32;mphl&#32;=&#32;vec_addeq&#32;(&amp;mc,&#32;mphl,&#32;mqhl,&#32;mq);
+&#32;&#32;mp&#32;=&#32;vec_muludq&#32;(&amp;mphh,&#32;m2h,&#32;m1h);
+&#32;&#32;mphl&#32;=&#32;vec_addcq&#32;(&amp;mq,&#32;mphl,&#32;mp);
+&#32;&#32;mphh&#32;=&#32;vec_addeuqm&#32;(mphh,&#32;mq,&#32;mc);
+
+&#32;&#32;mulu[0]&#32;=&#32;mpll;
+&#32;&#32;mulu[1]&#32;=&#32;mplh;
+&#32;&#32;mulu[2]&#32;=&#32;mphl;
+&#32;&#32;mulu[3]&#32;=&#32;mphh;
+}
+</computeroutput></literallayout> This example generates some additional questions:<itemizedlist>
+<listitem>
+<para>Why use <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq()</link> instead of pairing <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link> and <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq()</link>?</para>
+</listitem><listitem>
+<para>Why use <link linkend="vec__int128__ppc_8h_1a363fa7103ccd730c47bb34cb9f05e80b">vec_addcq()</link> instead of pairing <link linkend="vec__int128__ppc_8h_1ad7aaadba249ce46c4c94f78df1020da3">vec_addcuq()</link> and <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link>?</para>
+</listitem><listitem>
+<para>Why return the 512-bit product via a pointer instead of returning a struct or array of 4 x vui128_t (<emphasis>homogeneous aggregates</emphasis>)?</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The detailed rationale for this is documented in section <link linkend="index_1mainpage_sub_1_3">Returning extended quadword results.</link> In this specific case (quadword integer operations that generate two vector values) <emphasis role="bold">pveclib</emphasis> provides both alternatives:<itemizedlist>
+<listitem>
+<para>separate operations each returning a single (high or low order) vector.</para>
+</listitem><listitem>
+<para>combined operations providing:<itemizedlist>
+<listitem>
+<para>the lower order vector as the function return value.</para>
+</listitem><listitem>
+<para>the high order (carry or high product) vector via a pointer reference parameter.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Either method should provide the same results. For example: <literallayout><computeroutput>mplh&#32;=&#32;vec_addcq&#32;(&amp;mc,&#32;mplh,&#32;mp);
+</computeroutput></literallayout> is equivalent to <literallayout><computeroutput>mc&#32;&#32;&#32;=&#32;vec_addcuq&#32;(mplh,&#32;mp);
+mplh&#32;=&#32;vec_adduqm&#32;(mplh,&#32;mp);
+</computeroutput></literallayout> and <literallayout><computeroutput>mpll&#32;=&#32;vec_muludq&#32;(&amp;mplh,&#32;m1l,&#32;m2l);
+</computeroutput></literallayout> is equivalent to <literallayout><computeroutput>mpll&#32;=&#32;vec_mulluq&#32;(m1l,&#32;m2l);
+mplh&#32;=&#32;vec_mulhud&#32;(m1l,&#32;m2l);
+</computeroutput></literallayout> So is there any advantage to separate versus combined operations?</para>
+
+<para>Functionally it is useful to have separate operations for the cases where only one quadword part is needed. For example if you know that a add/subtract operation can not overflow, why generate the carry? Alternatively the quadword greater/less-than compares are based solely on the carry from the subtract quadword, why generate lower 128-bit (modulo) difference? For multiplication the modulo (multiply low) operation is the expected semantic or is known to be sufficient. Alternatively the multiplicative inverse only uses the high order (multiply high) quadword of the product.</para>
+
+<para>From the performance (instruction latency and throughput) perspective, if the algorithm requires the extended result or full product, the combined operation is usually the better choice. Otherwise use the specific single return operation needed. At best, the separate operations may generate the same instruction sequence as the combined operation, But this depends on the target platform and specific optimizations implemented by the compiler.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>For inlined operations the pointer reference in the combined form, is usually optimized to a simple register assignment, by the compiler. </para>
+<simplesect/>
+<para>For platform targets where the separate operations each generate a single instruction, we expect the compiler to generate the same instructions as the combined operation. But this is only likely for add/sub quadword on the POWER8 and multiply by 10 quadword on POWER9.</para>
+</formalpara>
+</para>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_examples_0_1_3_1">
+<title>Quadword Long Division</title>
+
+<para>In the section <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_2">Converting Vector __int128 values to BCD</link> above we used multiplicative inverse to factor a binary quadword value in two (high quotient and low remainder) parts. Here we divide by a large power of 10 (10<superscript>31</superscript> or 10<superscript>32</superscript>) of a size where the quotient and remainder allow direct conversion to BCD (see <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq()</link>, <link linkend="vec__bcd__ppc_8h_1a7b8b5371d537cd878ffb37337e93ba14">vec_bcdcfuq()</link>). After conversion, the BCD parts can be concatenated to form the larger (39 digit) decimal radix value equivalent of the 128-bit binary value.</para>
+
+<para>We can extend this technique to larger (multiple quadword) binary values but this requires long division. This is the version of the long division you learned in grade school, where a multi-digit value is divided in stages by a single digit. But the digits we are using are really big (10<superscript>31</superscript>-1 or 10<superscript>32</superscript>-1).</para>
+
+<para>The first step is relatively easy. Start by dividing the left-most <emphasis>digit</emphasis> of the dividend by the divisor, generating the integer quotient and remainder. We already have operations to implement that. <literallayout><computeroutput>//&#32;initial&#32;step&#32;for&#32;the&#32;top&#32;digits
+dn&#32;=&#32;d[0];
+qh&#32;=&#32;vec_divuq_10e31&#32;(dn);
+rh&#32;=&#32;vec_moduq_10e31&#32;(dn,&#32;qh);
+q[0]&#32;=&#32;qh;
+</computeroutput></literallayout> The array <emphasis>d</emphasis> contains the quadwords of the extended precision integer dividend. The array <emphasis>q</emphasis> will contain the quadwords of the extended precision integer quotient. Here we have generated the first <emphasis>quadword q[0]</emphasis> digit of the quotient. The remainder <emphasis>rh</emphasis> will be used in the next step of the long division.</para>
+
+<para>The process repeats except after the first step we have an intermediate dividend formed from:<itemizedlist>
+<listitem>
+<para>The remainder from the previous step</para>
+</listitem><listitem>
+<para>Concatenated with the next <emphasis>digit</emphasis> of the extended precision quadword dividend.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>So for each additional step we need to divide two quadwords (256-bits) by the quadword divisor. Actually this dividend should be less than a full 256-bits because we know the remainder is less than the divisor. So the intermediate dividend is less than ((divisor - 1) * 2<superscript>128</superscript>). So we know the quotient can not exceed (2<superscript>128</superscript>-1) or one quadword.</para>
+
+<para>Now we need an operation that will divide this double quadword value and provide quotient and remainder that are correct (or close enough). Remember your grade school long division where you would:<itemizedlist>
+<listitem>
+<para>estimate the quotient</para>
+</listitem><listitem>
+<para>multiply the quotient by the divisor</para>
+</listitem><listitem>
+<para>subtract this product from the current 2 digit dividend</para>
+</listitem><listitem>
+<para>check that the remainder is less than the divisor.<itemizedlist>
+<listitem>
+<para>if the remainder is greater than the divisor; the estimated quotient is too small</para>
+</listitem><listitem>
+<para>if the remainder is negative (the product was greater than the dividend); the estimated quotient is too large.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>correct the quotient and remainder if needed before doing the next step.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>So we don&apos;t need to be perfect, but close enough. As long as we can detect any problems and (if needed) correct the results, we can implement long division to any size.</para>
+
+<para>We already have an operation for dividing a quadword by 10<superscript>31</superscript> using the magic numbers for multiplicative inverse. This can easily be extended to multiply double quadword high. For example: <literallayout><computeroutput>//&#32;Multiply&#32;high&#32;[vra||vrb]&#32;*&#32;mul_invs_ten31
+q&#32;=&#32;vec_mulhuq&#32;(vrb,&#32;mul_invs_ten31);
+q1&#32;=&#32;vec_muludq&#32;(&amp;t,&#32;vra,&#32;mul_invs_ten31);
+c&#32;=&#32;vec_addcuq&#32;(q1,&#32;q);
+q&#32;=&#32;vec_adduqm&#32;(q1,&#32;q);
+q1&#32;=&#32;vec_adduqm&#32;(t,&#32;c);
+//&#32;corrective&#32;add&#32;[q2||q1||q]&#32;=&#32;[q1||q]&#32;+&#32;[vra||vrb]
+c&#32;=&#32;vec_addcuq&#32;(vrb,&#32;q);
+q&#32;=&#32;vec_adduqm&#32;(vrb,&#32;q);
+//&#32;q2&#32;is&#32;the&#32;carry-out&#32;from&#32;the&#32;corrective&#32;add
+q2&#32;=&#32;vec_addecuq&#32;(q1,&#32;vra,&#32;c);
+q1&#32;=&#32;vec_addeuqm&#32;(q1,&#32;vra,&#32;c);
+//&#32;shift&#32;384-bits&#32;(including&#32;the&#32;carry)&#32;right&#32;107&#32;bits
+//&#32;Using&#32;shift&#32;left&#32;double&#32;quadword&#32;shift&#32;by&#32;(128-107)-bits
+r2&#32;=&#32;vec_sldqi&#32;(q2,&#32;q1,&#32;(128&#32;-&#32;shift_ten31));
+result&#32;=&#32;vec_sldqi&#32;(q1,&#32;q,&#32;(128&#32;-&#32;shift_ten31));
+</computeroutput></literallayout> Here we generate a 256-bit multiply high using the <link linkend="vec__int128__ppc_8h_1ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq()</link> for the low dividend (vrb) and <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq()</link> for high dividend (vra). Then sum the partial products ([t||q1] + [0||q]) to get initial 256-bit product [q1||q]. Then apply the corrective add ([q1||q] + [vra||vrb]). This may generate a carry which needs to be included in the final shift.</para>
+
+<para>Technically we only expect a 128-bit quotient after the shift, but we have 3 quadwords (2 quadwords and a carry) going into the shift right. Also our (estimated) quotient may be <emphasis>off by 1</emphasis> and generate a 129-bit result. This is due to using a the magic numbers for 128-bit multiplicative inverse and not regenerating magic numbers for 256-bits. We can&apos;t do anything about that now and so return a 256-bit double quadword quotient.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>This is where only needing to be &quot;close enough&quot;, works in our favor. We will check and correct the quotient in the modulo operation.</para>
+</formalpara>
+The 256-bits we want are spanning multiple quadwords so we replace a simple quadword shift right with two <emphasis role="bold">Shift Left Double Quadword Immediate</emphasis> operations and complement the shift count (128 - shift_ten31). This gives a 256-bit quotient which we expect to have zero in the high quadword.</para>
+
+<para>As this operation will be used in a loop for long division operations and the extended multiplies are fairly expensive, we should check for an short-circuit special conditions. The most important special condition is when the dividend is less that the divisor and the quotient is zero. This also helps when the long division dividend may have leading quadword zeros that need to be skipped over. For the full implementation looks like: <literallayout><computeroutput>static&#32;inline&#32;vui128_t
+vec_divudq_10e31&#32;(vui128_t&#32;*qh,&#32;vui128_t&#32;vra,&#32;vui128_t&#32;vrb)
+{
+&#32;&#32;const&#32;vui128_t&#32;ten31&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;(__int128)&#32;1000000000000000UL&#32;*&#32;(__int128)&#32;10000000000000000UL&#32;};
+&#32;&#32;const&#32;vui128_t&#32;zero&#32;=&#32;(vui128_t)&#32;{&#32;(__int128)&#32;0UL&#32;};
+&#32;&#32;//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**31
+&#32;&#32;//&#32;are&#32;4804950418589725908363185682083061167,&#32;corrective&#32;add,
+&#32;&#32;//&#32;and&#32;shift&#32;right&#32;103&#32;bits.
+&#32;&#32;const&#32;vui128_t&#32;mul_invs_ten31&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x039d66589687f9e9UL,&#32;0x01d59f290ee19dafUL);
+&#32;&#32;const&#32;int&#32;shift_ten31&#32;=&#32;103;
+&#32;&#32;vui128_t&#32;result,&#32;r2,&#32;t,&#32;q,&#32;q1,&#32;q2,&#32;c;
+
+&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;(vra,&#32;zero)&#32;||&#32;vec_cmpuq_all_ge&#32;(vrb,&#32;ten31))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Multiply&#32;high&#32;[vra||vrb]&#32;*&#32;mul_invs_ten31
+&#32;&#32;&#32;&#32;&#32;&#32;q&#32;=&#32;vec_mulhuq&#32;(vrb,&#32;mul_invs_ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;q1&#32;=&#32;vec_muludq&#32;(&amp;t,&#32;vra,&#32;mul_invs_ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_addcuq&#32;(q1,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;q&#32;=&#32;vec_adduqm&#32;(q1,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;q1&#32;=&#32;vec_adduqm&#32;(t,&#32;c);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;corrective&#32;add&#32;[q2||q1||q]&#32;=&#32;[q1||q]&#32;+&#32;[vra||vrb]
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_addcuq&#32;(vrb,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;q&#32;=&#32;vec_adduqm&#32;(vrb,&#32;q);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;q2&#32;is&#32;the&#32;carry-out&#32;from&#32;the&#32;corrective&#32;add
+&#32;&#32;&#32;&#32;&#32;&#32;q2&#32;=&#32;vec_addecuq&#32;(q1,&#32;vra,&#32;c);
+&#32;&#32;&#32;&#32;&#32;&#32;q1&#32;=&#32;vec_addeuqm&#32;(q1,&#32;vra,&#32;c);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;shift&#32;384-bits&#32;(including&#32;the&#32;carry)&#32;right&#32;103&#32;bits
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Using&#32;shift&#32;left&#32;double&#32;quadword&#32;shift&#32;by&#32;(128-103)-bits
+&#32;&#32;&#32;&#32;&#32;&#32;r2&#32;=&#32;vec_sldqi&#32;(q2,&#32;q1,&#32;(128&#32;-&#32;shift_ten31));
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_sldqi&#32;(q1,&#32;q,&#32;(128&#32;-&#32;shift_ten31));
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Dividend&#32;is&#32;less&#32;than&#32;divisor&#32;then&#32;return&#32;zero&#32;quotient
+&#32;&#32;&#32;&#32;&#32;&#32;r2&#32;=&#32;zero;
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;zero;
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;//&#32;return&#32;256-bit&#32;quotient
+&#32;&#32;*qh&#32;=&#32;r2;
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>To complete the long division operation we need to perform double quadword modulo operations. Here the dividend is two quadwords and the low quadword of the quotient from the divide double quadword operation above. We use multiply double quadword to compute the remainder ([vra||vrb] - (q * 10<superscript>31</superscript>). Generating the 256-bit product and difference ensure we can detect the case where the quotient is off-by-1 on the high side.</para>
+
+<para><literallayout><computeroutput>t&#32;=&#32;vec_muludq&#32;(&amp;th,&#32;*ql,&#32;ten31);
+c&#32;=&#32;vec_subcuq&#32;(vrb,&#32;t);
+t&#32;=&#32;vec_subuqm&#32;(vrb,&#32;t);
+th&#32;=&#32;vec_subeuqm&#32;(vra,&#32;th,&#32;c);
+//&#32;The&#32;remainder&#32;should&#32;be&#32;less&#32;than&#32;the&#32;divisor
+if&#32;(vec_cmpuq_all_ne&#32;(th,&#32;zero)&#32;&amp;&amp;&#32;vec_cmpuq_all_ge&#32;(t,&#32;ten31))
+&#32;&#32;{
+&#32;&#32;&#32;&#32;//&#32;Otherwise&#32;the&#32;estimated&#32;quotient&#32;is&#32;off&#32;by&#32;1
+&#32;&#32;&#32;&#32;&#32;*ql&#32;=&#32;vec_adduqm&#32;(*ql,&#32;minus_one);
+&#32;&#32;&#32;&#32;//&#32;And&#32;the&#32;remainder&#32;is&#32;negative,&#32;so&#32;add&#32;the&#32;divisor
+&#32;&#32;&#32;&#32;t&#32;=&#32;vec_adduqm&#32;(t,&#32;ten31);
+&#32;&#32;}
+result&#32;=&#32;t;
+</computeroutput></literallayout> In this case we need to correct both remainder and the (estimated) quotient. This is a bit tricky as the quotient is normally passed by value, but for this operation we need to pass by reference, which allows the corrected quotient to be passed on to the next step.</para>
+
+<para>Again as this operation will be used in a loop for long division operations and the extended multiplies are fairly expensive, we should check for and short-circuit special conditions. The most important special condition is when the dividend is less that the divisor and the remainder is simply the dividend.</para>
+
+<para><literallayout><computeroutput>static&#32;inline&#32;vui128_t
+vec_modudq_10e31&#32;(vui128_t&#32;vra,&#32;vui128_t&#32;vrb,&#32;vui128_t&#32;*ql)
+{
+&#32;&#32;//&#32;ten31&#32;&#32;=&#32;+100000000000000000000000000000000UQ
+&#32;&#32;const&#32;vui128_t&#32;ten31&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;(__int128)&#32;1000000000000000UL&#32;*&#32;(__int128)&#32;10000000000000000UL&#32;};
+&#32;&#32;const&#32;vui128_t&#32;zero&#32;=&#32;(vui128_t)&#32;{&#32;(__int128)&#32;0UL&#32;};
+&#32;&#32;const&#32;vui128_t&#32;minus_one&#32;=&#32;(vui128_t)&#32;{&#32;(__int128)&#32;-1L&#32;};
+&#32;&#32;vui128_t&#32;result,&#32;t,&#32;th,&#32;c;
+
+&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;(vra,&#32;zero)&#32;||&#32;vec_cmpuq_all_ge&#32;(vrb,&#32;ten31))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_muludq&#32;(&amp;th,&#32;*ql,&#32;ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_subcuq&#32;(vrb,&#32;t);
+&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_subuqm&#32;(vrb,&#32;t);
+&#32;&#32;&#32;&#32;&#32;&#32;th&#32;=&#32;vec_subeuqm&#32;(vra,&#32;th,&#32;c);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;The&#32;remainder&#32;should&#32;be&#32;less&#32;than&#32;the&#32;divisor
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;(th,&#32;zero)&#32;&amp;&amp;&#32;vec_cmpuq_all_ge&#32;(t,&#32;ten31))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;If&#32;not&#32;the&#32;estimated&#32;quotient&#32;is&#32;off&#32;by&#32;1
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ql&#32;=&#32;vec_adduqm&#32;(*ql,&#32;minus_one);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;And&#32;the&#32;remainder&#32;is&#32;negative,&#32;so&#32;add&#32;the&#32;divisor
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;vec_adduqm&#32;(t,&#32;ten31);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;t;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;vrb;
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>Now we have all the operations needed to complete the implementation of long division by the decimal constant (10<superscript>31</superscript>).</para>
+
+<para><literallayout><computeroutput>vui128_t
+example_longdiv_10e31&#32;(vui128_t&#32;*q,&#32;vui128_t&#32;*d,&#32;long&#32;int&#32;_N)
+{
+&#32;&#32;vui128_t&#32;dn,&#32;qh,&#32;ql,&#32;rh;
+&#32;&#32;long&#32;int&#32;i;
+
+&#32;&#32;//&#32;initial&#32;step&#32;for&#32;the&#32;top&#32;digits
+&#32;&#32;dn&#32;=&#32;d[0];
+&#32;&#32;qh&#32;=&#32;vec_divuq_10e31&#32;(dn);
+&#32;&#32;rh&#32;=&#32;vec_moduq_10e31&#32;(dn,&#32;qh);
+&#32;&#32;q[0]&#32;=&#32;qh;
+
+&#32;&#32;//&#32;now&#32;we&#32;know&#32;the&#32;remainder&#32;is&#32;less&#32;than&#32;the&#32;divisor.
+&#32;&#32;for&#32;(i=1;&#32;i&lt;_N;&#32;i++)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;d[i];
+&#32;&#32;&#32;&#32;&#32;&#32;ql&#32;=&#32;vec_divudq_10e31&#32;(&amp;qh,&#32;rh,&#32;dn);
+&#32;&#32;&#32;&#32;&#32;&#32;rh&#32;=&#32;vec_modudq_10e31&#32;(rh,&#32;dn,&#32;&amp;ql);
+&#32;&#32;&#32;&#32;&#32;&#32;q[i]&#32;=&#32;ql;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;//&#32;return&#32;the&#32;final&#32;remainder
+&#32;&#32;return&#32;rh;
+}
+</computeroutput></literallayout> The result of each call to example_longdiv_10e31() is the output array <emphasis>q</emphasis> of quadwords containing the extended quotient, and the remainder as the return value. The input array <emphasis>d</emphasis> and output array <emphasis>q</emphasis> should not overlap in storage. The remainder is in the range 0-9999999999999999999999999999999 and is suitable for conversion to BCD or decimal characters. (see <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq()</link>). Repeated calls passing the quotient from the previous call as the dividend, reduces the quotient by 31 digits and returns another 31 digits in the remainder for conversion. This continues until the quotient is less than 10<superscript>31</superscript> which provides the highest order digits of the decimal result.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>Similarly for long division in support of unsigned 32-digit BCD conversion using operations; <link linkend="vec__int128__ppc_8h_1ae2b45341cc9cc918198bb69da0552098">vec_divuq_10e32()</link>, <link linkend="vec__int128__ppc_8h_1aff4f1d8a707289d2271eafad4aeb1e82">vec_moduq_10e32()</link>, <link linkend="vec__int128__ppc_8h_1a917acd42e775f4bb323ba2104c52d7cb">vec_divudq_10e32()</link>, and <link linkend="vec__int128__ppc_8h_1a2ccbd77900956c01a51b88e672e593c6">vec_modudq_10e32()</link>. Long division for other constant divisors or multiple quadword divisors is an exercise for the student.</para>
+</formalpara>
+<para><link linkend="todo_1_todo000006">Todo</link> 
+<para>The implementation above gives correct results for all the cases tested for divide by constants 10<superscript>31</superscript> and 10<superscript>32</superscript>). This is not a mathematical proof of correctness, just an observation. Anyone who finds a counter example or offers a mathematical proof should submit a bug report.</para>
+</para></para>
+</section>
+</section>
+</section>
+<section xml:id="vec__int128__ppc_8h_1int128_perf_0_0">
+<title>Performance data.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_int128_ppc.h</para>
+    </simplesect>
+</section>

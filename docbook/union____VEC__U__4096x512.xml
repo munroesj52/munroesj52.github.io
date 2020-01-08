@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="union____VEC__U__4096x512">
+<title>__VEC_U_4096x512 union Reference</title>
+<para>
+    <programlisting>#include <link linkend="vec__int512__ppc_8h">&lt;vec_int512_ppc.h&gt;</link></programlisting>
+</para>
+    <simplesect>
+
+<para>A vector representation of a 4096-bit unsigned integer as 8 x 512-bit integer fields. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A union of:<itemizedlist>
+<listitem>
+<para>homogeneous aggregate of 4096-bit unsigned integer.</para>
+</listitem><listitem>
+<para>struct of:<itemizedlist>
+<listitem>
+<para>8 x homogeneous aggregate of 512-bit unsigned integers.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>Useful to access 512-bit blocks to pass to a 512x512-bit multiplies. These can be used as partial products in a larger 2048x2048-bit multiply.</para>
+<simplesect/>
+<para>This structure does not qualify for parameter passing in registers (more than 8 registers are required) and will be passed in memory. </para>
+</formalpara>
+</para>
+                <para>Definition at line 1588 of file vec_int512_ppc.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

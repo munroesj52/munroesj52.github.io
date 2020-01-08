@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__common__ppc_8h">
+    <title>vec_common_ppc.h File Reference</title>
+    <programlisting>#include &lt;stdint.h&gt;</programlisting>
+    <programlisting>#include &lt;altivec.h&gt;</programlisting>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="union____VEC__U__128">__VEC_U_128</link></para>
+<para><emphasis>Union used to transfer 128-bit data between vector and
+non-vector types.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1af4ffb9244d1aa4482b683d35c3544194">CONST_VINT64_DW</link> {__dw1, __dw0}<para><emphasis>Arrange elements of dword initializer in high-&gt;low order.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW</link> (<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link>){__dw1, __dw0}<para><emphasis>Initializer for 128-bits vector, as two unsigned long long
+elements in high-&gt;low order.  May require an explicit cast.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link> (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>)((<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link>){__dw1, __dw0})<para><emphasis>A vector unsigned __int128 initializer, as two unsigned
+long long elements in high-&gt;low order.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</link> (<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link>){__w3, __w2, __w1, __w0}<para><emphasis>Arrange word elements of a unsigned int initializer in
+high-&gt;low order.  May require an explicit cast.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a7e03d3eaeafea2c6613233fd58f98ec1">CONST_VINT32_W</link> {__w3, __w2, __w1, __w0}<para><emphasis>Arrange elements of word initializer in high-&gt;low order.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a63ce8985f81cfb37c2bc3f9900dddd51">CONST_VINT128_H</link> (<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link>){__hw7, __hw6, __hw5, __hw4, __hw3, __hw2, __hw1, __hw0}<para><emphasis>Arrange halfword elements of a unsigned int initializer in
+high-&gt;low order.  May require an explicit cast.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a31b39d3ef7e2d5321449f6f2ab2a51b2">CONST_VINT16_H</link> {__hw7, __hw6, __hw5, __hw4, __hw3, __hw2, __hw1, __hw0}<para><emphasis>Arrange elements of halfword initializer in high-&gt;low order.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a47803d5079cc714a1524f4cd2a05ef72">CONST_VINT128_B</link> (<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link>){_b15, _b14, _b13, _b12, _b11, _b10, _b9, _b8, _b7, _b6, _b5, _b4, _b3, _b2, _b1, _b0}<para><emphasis>Arrange byte elements of a unsigned int initializer in
+high-&gt;low order.  May require an explicit cast.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1af5ff90cc45d590754b2403af4d014d7c">CONST_VINT8_B</link> {_b15, _b14, _b13, _b12, _b11, _b10, _b9, _b8, _b7, _b6, _b5, _b4, _b3, _b2, _b1, _b0}<para><emphasis>Arrange elements of byte initializer in high-&gt;low order.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1adb2bc7bad8fc5c335244ac6f877f3c8f">VEC_DW_H</link> 1<para><emphasis>Element index for high order dword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a9d8b8de825b673b53cd50458dfc6efa8">VEC_DW_L</link> 0<para><emphasis>Element index for low order dword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a47854cd0a31b62fe1ebf0d77ccb7c854">VEC_W_H</link> 3<para><emphasis>Element index for highest order word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1aafb30510341c41500fc4fab3268cfec7">VEC_W_L</link> 0<para><emphasis>Element index for lowest order word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1aa4c9ef3ba2f2c2a8b33f4f4459bbd2aa">VEC_WE_0</link> 3<para><emphasis>Element index for vector splat word 0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a0cbf2bc0426544f7d64ce84da322a919">VEC_WE_1</link> 2<para><emphasis>Element index for vector splat word 1.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1ad739666851dfec6cc520c2ee06fd5d41">VEC_WE_2</link> 1<para><emphasis>Element index for vector splat word 2.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1abf3504d2f86f03f90239a3196da3b3de">VEC_WE_3</link> 0<para><emphasis>Element index for vector splat word 3.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a7a067a69e501014d68d003ac4e11d9fd">VEC_HW_H</link> 7<para><emphasis>Element index for highest order hword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a552c48e130cb4f52febd337c6b7a3bc0">VEC_HW_L_DWH</link> 4<para><emphasis>Element index for lowest order hword of the high dword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a8084f0958a53a6de32969cf234c8ceae">VEC_HW_L</link> 0<para><emphasis>Element index for lowest order hword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a9d1a7749d270995baf9eaae078578961">VEC_BYTE_L</link> 0<para><emphasis>Element index for lowest order byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1ab4d03d7703dc659a4364011b4d00ce22">VEC_BYTE_L_DWH</link> 8<para><emphasis>Element index for lowest order byte of the high dword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a6e778d7d25175af10ba540baa1592ced">VEC_BYTE_L_DWL</link> 0<para><emphasis>Element index for lowest order byte of the low dword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1a3975205947785b1745a791ef12256e9a">VEC_BYTE_H</link> 15<para><emphasis>Element index for highest order byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__common__ppc_8h_1aa2b36d047166859c0f7fabe4b7c131ad">VEC_BYTE_HHW</link> 14<para><emphasis>Element index for second lowest order byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector unsigned char  <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link><para><emphasis>vector of 8-bit unsigned char elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector unsigned short  <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link><para><emphasis>vector of 16-bit unsigned short elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector unsigned int  <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link><para><emphasis>vector of 32-bit unsigned int elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector unsigned long long  <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link><para><emphasis>vector of 64-bit unsigned long long elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector signed char  <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link><para><emphasis>vector of 8-bit signed char elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector short  <link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link><para><emphasis>vector of 16-bit signed short elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector int  <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link><para><emphasis>vector of 32-bit signed int elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector long long  <link linkend="vec__common__ppc_8h_1a0c3abdfe41178c152e0a2130c20476ff">vi64_t</link><para><emphasis>vector of 64-bit signed long long elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector float  <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link><para><emphasis>vector of 32-bit float elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector double  <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link><para><emphasis>vector of 64-bit double elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector __bool char  <link linkend="vec__common__ppc_8h_1ab6d921b672d847662016cb3cbbe58f17">vb8_t</link><para><emphasis>vector of 8-bit bool char elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector __bool short  <link linkend="vec__common__ppc_8h_1a49894941283fbeab49715155872a55d1">vb16_t</link><para><emphasis>vector of 16-bit bool short elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector __bool int  <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link><para><emphasis>vector of 32-bit bool int elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector __bool long long  <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link><para><emphasis>vector of 64-bit bool long long elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector int  <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link><para><emphasis>vector of one 128-bit signed __int128 element.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector unsigned int  <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link><para><emphasis>vector of one 128-bit unsigned __int128 element.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef __vector __bool unsigned int  <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link><para><emphasis>vector of 128-bit bool __int128 elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Common definitions and typedef used by the collection of Power Vector Library (pveclib) headers. </para>
+
+<para>This includes:<itemizedlist>
+<listitem>
+<para>Typedefs as short names of common vector types.</para>
+</listitem><listitem>
+<para>Union used to transfer 128-bit data between vector and non-vector types.</para>
+</listitem><listitem>
+<para>Helper macros that make declaring constants and accessing elements a little easier.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__common__ppc_8h_1common_type_naming_0_0">
+<title>Consistent vector type naming</title>
+
+<para>Type names should be short, concise, and consistent. The ABI defines the vector types as extensions of the existing C Language types. So while <emphasis>vector unsigned long long</emphasis> is consistent it is neither short or concise. Pveclib uses the following naming convention for typedefs used in its operations, function prototypes, and internal variables.<itemizedlist>
+<listitem>
+<para>Starting with the <emphasis role="bold">v</emphasis> prefix for vector.</para>
+</listitem><listitem>
+<para>followed by one of the element classes:<itemizedlist>
+<listitem>
+<para><emphasis role="bold">i</emphasis> for signed integer.</para>
+</listitem><listitem>
+<para><emphasis role="bold">ui</emphasis> for unsigned integer.</para>
+</listitem><listitem>
+<para><emphasis role="bold">f</emphasis> for floating-point.</para>
+</listitem><listitem>
+<para><emphasis role="bold">b</emphasis> for bool.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>followed by the element size in bits:<itemizedlist>
+<listitem>
+<para>8, 16, 32, 64, 128</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Ending with the <emphasis role="bold">_t</emphasis> suffix signifying a typedef.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>For example: <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> is a vector int, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> is a vector unsigned int, <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> is a vector bool int, and <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> is vector float.</para>
+</section>
+<section xml:id="vec__common__ppc_8h_1common_type_xfer_0_0">
+<title>Transferring 128-bit types</title>
+
+<para>The OpenPOWER ABI and the GCC compiler define a number of 128-bit scalar types that are not vector types:<itemizedlist>
+<listitem>
+<para>__int128 (a general purpose register pair)</para>
+</listitem><listitem>
+<para>_Decimal128 (a floating-point even/odd register pair)</para>
+</listitem><listitem>
+<para>__ibm128 (a floating-point register pair)</para>
+</listitem><listitem>
+<para>__float128 (a vector register)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>These are not cast nor assignment compatible with any vector type. However it may be useful to transfer to/from vector types for conversion or manipulation within an operation. For example:<itemizedlist>
+<listitem>
+<para>Conversions between __float128 and __int128, __ibm128, and _Decimal128 types.</para>
+</listitem><listitem>
+<para>Conversions between vector BCD integers and __int128 and _Decimal128 types.</para>
+</listitem><listitem>
+<para>Conversions between vector __int128 and __float128, __ibm128, and _Decimal128 types.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Here we use the <link linkend="union____VEC__U__128">__VEC_U_128</link> union to affect the transfer between the various types. We assume (fervently hope) that the compiler will recognize and optimize these as registers to registers transfers using the hardware instructions provided.</para>
+
+<para>The vector to/from __float128 transfer should be the simplest as __float128 operations are defined over the vector register set. However __float128 types are defined in the PowerISA and OpenPOWER ABI, as scalars that just happens to use vector registers for parameter passing and operations. This distinction between scalars and vector prevents a direct cast between types. The <link linkend="union____VEC__U__128">__VEC_U_128</link> union is the simplest work around but in most cases no code should generated for this transfer. For example: <link linkend="vec__f128__ppc_8h_1aec6e44a75847d3d3e5611b89eed71c0a">vec_xfer_bin128_2_vui128t()</link> and <link linkend="vec__f128__ppc_8h_1a91b99b632646aaca91de6834e2b1da26">vec_xfer_vui128t_2_bin128()</link>.</para>
+
+<para>Any vector to/from __int128 transfer requires a transfer between vector and general purpose registers. POWER8 (PowerISA 2.07B) added Move to/from Vector Scalar Register (mfvsr, mtvsr) instructions. Again the <link linkend="union____VEC__U__128">__VEC_U_128</link> union is used to effect the transfer and the compiler should leverage the move instructions in the generated code.</para>
+
+<para>Any vector to/from __ibm128 or _Decimal128 requires a transfer between a pair of FPRs and a Vector Scalar Register (VSR). Technically this is transfer between the upper doubleword of two VSRs in the lower bank (VSR0-31) and another VSR. POWER7 (PowerISA 2.06B) provides the Permute Doubleword Immediate (xxpermdi) instruction. Again the <link linkend="union____VEC__U__128">__VEC_U_128</link> union is used to effect the transfer and the compiler should leverage the Permute Doubleword Immediate instructions in the generate code. For example: <link linkend="vec__bcd__ppc_8h_1aa924d03e2f88506e323c4b70f4b7df8b">vec_BCD2DFP()</link> and <link linkend="vec__bcd__ppc_8h_1ad8123fa00f666a0d439a049eb4f7c7eb">vec_DFP2BCD()</link>.</para>
+</section>
+<section xml:id="vec__common__ppc_8h_1common_endian_issues_0_0">
+<title>Endian and vector constants</title>
+
+<para>Vector constants are often needed for: masking operations, range checks, permute selection, and radix conversion. Also compiler support for large integer and floating-point constants may be limited by the compiler. For example the GCC compilers support the (vector) __int128 type but do not directly support __int128 (39 digit) decimal constants. Another example is __float128 where the type and Q suffix constants are recent additions. In both cases we need to construct: large numeric constants, special values (infinity and NaN), masks for manipulating the sign bit and exponent bits. Often these values will be constructed from vectors of word or doubleword constants.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>GCC does not support expressing an integer constant of type __int128 for targets where long long integer is less than 128 bits wide. This applies to the PowerPC target as the long long type is reserved for 64-bit integers. This was verified in GCC 8.2,</para>
+<simplesect/>
+<para>GCC __float128 support for the PowerPC target began with GCC 6. In GCC 6 __float128 support is off by default and has to be explicitly enabled via the &apos;-mfloat128&apos; option. Starting with GCC 7, __float128 is enabled by default with VSX support.</para>
+</formalpara>
+Defining large constants for vectors is complicated by <emphasis>little-endian</emphasis> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the order of constant elements in initializers. But the __int128 numerical order of magnitude or floating-point format does not change in registers. The high order bits are on the left and the low order bits are on the right.</para>
+
+<para>So for example: <literallayout><computeroutput>const&#32;vui32_t&#32;signmask&#32;=&#32;{&#32;0x80000000,&#32;0,&#32;0,&#32;0&#32;};
+const&#32;vui32_t&#32;expmask&#32;=&#32;{&#32;0x7fff0000,&#32;0,&#32;0,&#32;0&#32;};
+</computeroutput></literallayout> are correct sign and exponent masks for __float128 in big endian (BE) but would be incorrect for little endian (LE). To get correct results for both endians, one could code something like this: <literallayout><computeroutput>#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;const&#32;vui32_t&#32;signmask&#32;=&#32;{&#32;0,&#32;0,&#32;0,&#32;0x80000000&#32;};
+&#32;&#32;const&#32;vui32_t&#32;expmask&#32;=&#32;{&#32;0,&#32;0,&#32;0,&#32;0x7fff0000&#32;};
+#else
+&#32;&#32;const&#32;vui32_t&#32;signmask&#32;=&#32;{&#32;0x80000000,&#32;0,&#32;0,&#32;0&#32;};
+&#32;&#32;const&#32;vui32_t&#32;expmask&#32;=&#32;{&#32;0x7fff0000,&#32;0,&#32;0,&#32;0&#32;};
+#endif
+</computeroutput></literallayout> But this gets tedious after the first dozen times. Also this can be confusing because it does not appear to the match the floating-point format diagrams in the PowerISA. The sign-bit and the exponent are always on the left.</para>
+
+<para>So this header provides endian sensitive macros that maintain consistent &quot;magnitude&quot; order. For example: <literallayout><computeroutput>const&#32;vui32_t&#32;signmask&#32;=&#32;CONST_VINT128_W&#32;(0x80000000,&#32;0,&#32;0,&#32;0);
+const&#32;vui32_t&#32;expmask&#32;=&#32;CONST_VINT128_W&#32;(0x7fff0000,&#32;0,&#32;0,&#32;0);
+</computeroutput></literallayout> This is always correct in either endian.</para>
+
+<para>Another example; the multiplicative inverse for __int128 10**32 is 211857340822306639531405861550393824741. The GCC compiler will not accept this constant in a vector __int128 initializer. The next best thing would be <literallayout><computeroutput>//&#32;The&#32;multiplicative&#32;inverse&#32;for&#32;1&#32;/&#32;10**32&#32;is
+//&#32;211857340822306639531405861550393824741
+//&#32;or&#32;0x9f623d5a8a732974cfbc31db4b0295e5
+const&#32;vui128_t&#32;mulinv_10to32&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(vui128_t)&#32;CONST_VINT128_DW128&#32;(&#32;0x9f623d5a8a732974UL,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xcfbc31db4b0295e5UL&#32;);
+</computeroutput></literallayout> Here we use the CONST_VINT128_DW128 macro to maintain magnitude order across endian. Again the high order bits are on the left and the low order bits are on the right.</para>
+
+<para><formalpara><title>See also: </title>
+
+<para><link linkend="vec__int32__ppc_8h_1i32_endian_issues_0_0">Endian problems with word operations</link> </para>
+<simplesect/>
+<para><link linkend="index_1mainpage_endian_issues_1_1">General Endian Issues</link> </para>
+</formalpara>
+</para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_common_ppc.h</para>
+    </simplesect>
+</section>

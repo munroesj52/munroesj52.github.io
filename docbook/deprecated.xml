@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Deprecated List</title>
+
+<para><variablelist>
+<varlistentry><term><anchor id="deprecated_1_deprecated000001"/>Member <link linkend="vec__int128__ppc_8h_1a4f6dca233bb7e4edc2adb751d478572e">vec_slq4</link>  (vui128_t vra)</term>
+<listitem>
+<para>Vector Shift Left 4-bits Quadword. Replaced by vec_slqi with shb param = 4. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="deprecated_1_deprecated000002"/>Member <link linkend="vec__int128__ppc_8h_1a9964ce224b90a0986122f79f6455cba5">vec_slq5</link>  (vui128_t vra)</term>
+<listitem>
+<para>Vector Shift Left 5-bits Quadword. Replaced by vec_slqi with shb param = 5. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="deprecated_1_deprecated000005"/>Member <link linkend="vec__int64__ppc_8h_1a9cd0665fb16981d85c7f948c0578f928">vec_spltd</link>  (vui64_t vra, const int ctl)</term>
+<listitem>
+<para>Vector splat doubleword. Duplicate the selected doubleword element across the doubleword elements of the result. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="deprecated_1_deprecated000003"/>Member <link linkend="vec__int128__ppc_8h_1a49d355191fabd04a434723265ccafa20">vec_srq4</link>  (vui128_t vra)</term>
+<listitem>
+<para>Vector Shift right 4-bits Quadword. Replaced by vec_srqi with shb param = 4. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="deprecated_1_deprecated000004"/>Member <link linkend="vec__int128__ppc_8h_1a257bcf71eefa1d08482587637dc400da">vec_srq5</link>  (vui128_t vra)</term>
+<listitem>
+<para>Vector Shift right 5-bits Quadword. Replaced by vec_srqi with shb param = 5.</para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+
+</chapter>

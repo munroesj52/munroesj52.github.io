@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__int32__ppc_8h">
+    <title>vec_int32_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_int16_ppc.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1a85ec15f292163e0e40e6faa5f4797367">vec_absduw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Absolute Difference Unsigned Word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1afbe65a777f2b75022ae584f76d0a2777">vec_clzw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra)<para><emphasis>Vector Count Leading Zeros word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1a0d39dc4278a5e0711e9109746b23f2c7">vec_mrgahw</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector Merge Algebraic High Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1a4107474cdf1907051de84ea063417911">vec_mrgalw</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector merge Algebraic low words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1ab67359d6f4003fcb7cca8ed1b64b7cf4">vec_mrgew</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Merge Even Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1af10a13aa644282aa60dcbfbd8b02f0bc">vec_mrgow</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Merge Odd Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a0c3abdfe41178c152e0a2130c20476ff">vi64_t</link> <link linkend="vec__int32__ppc_8h_1add7b91bf6138d029d9d8cc57b0905f1f">vec_mulesw</link> (
+<link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> a, <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> b)<para><emphasis>Vector multiply even signed words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a0c3abdfe41178c152e0a2130c20476ff">vi64_t</link> <link linkend="vec__int32__ppc_8h_1a415942bd7b8183634e44e56b6a40101b">vec_mulosw</link> (
+<link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> a, <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> b)<para><emphasis>Vector multiply odd signed words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b)<para><emphasis>Vector multiply even unsigned words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b)<para><emphasis>Vector multiply odd unsigned words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> <link linkend="vec__int32__ppc_8h_1a316e9909abc24eb4f9b5d6d29fe64185">vec_mulhsw</link> (
+<link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> vra, <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> vrb)<para><emphasis>Vector Multiply High Signed Word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1a094c6adb04c1515361426ad58b0fdbb3">vec_mulhuw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Multiply High Unsigned Word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1ab3ea7653d4e60454b91d669e2b1bcfdf">vec_muluwm</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b)<para><emphasis>Vector Multiply Unsigned Word Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1acb5b81dc628ca80e079a86515e391023">vec_popcntw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra)<para><emphasis>Vector Population Count word.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1ae4d2c7192202e70f52997ab743418a77">vec_revbw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra)<para><emphasis>byte reverse each word of a vector unsigned int.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1a500924c8925b336d49b6a5d4307fe14c">vec_slwi</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift left Word Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> <link linkend="vec__int32__ppc_8h_1aefb4872afdd52b5ba965856c7e1a58ad">vec_srawi</link> (
+<link linkend="vec__common__ppc_8h_1adf5717f56a3dac6980206dbd37614ca2">vi32_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Algebraic Word Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int32__ppc_8h_1af73a97260ce07b46031e2c8560a5320b">vec_srwi</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Word Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over 32-bit integer elements. </para>
+
+<para>Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</para>
+
+<para>Most vector int (32-bit integer word) operations are implemented with PowerISA VMX instructions either defined by the original VMX (AKA Altivec) or added to later versions of the PowerISA. Vector word-wise merge, shift, and splat operations were added with VSX in PowerISA 2.06B (POWER7). PowerISA 2.07B (POWER8) added several useful word wise operations (multiply, merge even/odd, count leading zeros, population count) not included in the original VMX. PowerISA 3.0B (POWER9) adds several more (compare not equal, count trailing zeros, extend sign, extract/insert, and parity). Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, vec_vclz and vec_vclzw will not be defined. Another example if you compile with <emphasis role="bold">-mcpu=power8</emphasis>, vec_revb will not be defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+<simplesect/>
+<para>Most ppc64le compilers will default to -mcpu=power8 if not specified.</para>
+</formalpara>
+The newly introduced vector operations imply some useful composite operations. For example, we can make the vector multiply even/odd/modulo word operations available for older compilers. And provide implementations for older (POWER7 and earlier) processors using the original VMX operations.</para>
+
+<para>This header covers operations that are either:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include the multiply even/odd/modulo word operations.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include Count Leading Zeros, Population Count and Byte Reverse.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the shift immediate, merge algebraic high/low, and multiply high operations.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__int32__ppc_8h_1i32_endian_issues_0_0">
+<title>Endian problems with word operations</title>
+
+<para>It would be useful to provide a vector multiply high word (return the high order 32-bits of the 64-bit product) operation. This can be used for multiplicative inverse (effectively integer divide) operations. Neither integer multiply high nor divide are available as vector instructions. However the multiply high word operation can be composed from the existing multiply even/odd word operations followed by the vector merge even word instruction.</para>
+
+<para>As a prerequisite we need to provide the merge even/odd word operations for older compilers and an implementation for older (POWER7) processors. Fortunately vector merge operations are just a special case of vector permute. So the POWER7 (and earlier) implementation can use vec_perm and appropriate selection vectors to provide these merge operations.</para>
+
+<para>But this is complicated by <emphasis>little-endian</emphasis> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the location of even and odd elements. This means that the vector built-ins provided by altivec.h may not generate the instructions you would expect. <formalpara><title>See also: </title>
+
+<para><link linkend="index_1mainpage_endian_issues_1_1">General Endian Issues</link></para>
+</formalpara>
+The OpenPOWER ABI provides a helpful table of <link xlink:href="http://openpowerfoundation.org/wp-content/uploads/resources/leabi/content/dbdoclet.50655244_90667.html">Endian Sensitive Operations</link>. For vec_mergee (vmrgew) it specifies: <blockquote>
+<para>Swap inputs and use vmrgow, for LE.</para>
+</blockquote>Also for vec_mule (vmuleuw, vmulesw): <blockquote>
+<para>Replace with vmulouw and so on, for LE.</para>
+</blockquote>Also for vec_perm (vperm) it specifies: <blockquote>
+<para>For LE, Swap input arguments and complement the selection vector.</para>
+</blockquote>The above is just a sampling of a larger list of Endian Sensitive Operations.</para>
+
+<para>So the obvious coding for Vector Multiply High Word: <literallayout><computeroutput>vui32_t
+test_mulhw&#32;(vui32_t&#32;vra,&#32;vui32_t&#32;vrb)
+{
+&#32;&#32;return&#32;vec_mergee&#32;((vui32_t)vec_mule&#32;(vra,&#32;vrb),
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(vui32_t)vec_mulo&#32;(vra,&#32;vrb));
+}
+</computeroutput></literallayout> Would produce the expected code and correct results when compiled for BE: <literallayout><computeroutput>&lt;test_mulhw&gt;:
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmuleuw&#32;v0,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmuluuw&#32;v2,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmrgew&#32;&#32;v2,v0,v2
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blr
+</computeroutput></literallayout> But the following and wrong code for LE: <literallayout><computeroutput>&lt;test_mulhw&gt;:
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmulouw&#32;v0,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmuleuw&#32;v2,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vmrgow&#32;&#32;v2,v2,v0
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blr
+</computeroutput></literallayout> The compiler swapped the multiplies even for odd and odd of even. That is somewhat mitigated by swapping the input arguments in the merge. But changing the merge from even to odd actually returns the low order 32-bits of the product. This is not the correct result for multiply high.</para>
+
+<para>This header provides implementations of vector merge even/odd word (<link linkend="vec__int32__ppc_8h_1ab67359d6f4003fcb7cca8ed1b64b7cf4">vec_mrgew()</link> and <link linkend="vec__int32__ppc_8h_1af10a13aa644282aa60dcbfbd8b02f0bc">vec_mrgow()</link>) that support older compilers and older (POWER7) processor. Similarly for the multiply Even/odd unsigned/signed word instructions (<link linkend="vec__int32__ppc_8h_1add7b91bf6138d029d9d8cc57b0905f1f">vec_mulesw()</link>, <link linkend="vec__int32__ppc_8h_1a415942bd7b8183634e44e56b6a40101b">vec_mulosw()</link>, <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw()</link> and <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw()</link>). These implementations include the mandated LE transforms.</para>
+<section xml:id="vec__int32__ppc_8h_1i32_example_0_0_0">
+<title>Vector Merge Algebraic High Word example</title>
+
+<para>This header also provides the higher level operations Vector Merge Algebraic High/low Word (<link linkend="vec__int32__ppc_8h_1a0d39dc4278a5e0711e9109746b23f2c7">vec_mrgahw()</link> and <link linkend="vec__int32__ppc_8h_1a4107474cdf1907051de84ea063417911">vec_mrgalw()</link>). These implementations generate the correct merge even/odd word instruction for the operation independent of endian. <formalpara><title>Note: </title>
+
+<para>The parameters are vector unsigned long (vui64_t) to match results from <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw()</link> and <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw()</link>.</para>
+</formalpara>
+<literallayout><computeroutput>static&#32;inline&#32;vui32_t
+vec_mrgahw&#32;(vui64_t&#32;vra,&#32;vui64_t&#32;vrb)
+{
+&#32;&#32;vui32_t&#32;res;
+#ifdef&#32;_ARCH_PWR8
+#ifdef&#32;vec_vmrgew&#32;//&#32;Use&#32;altivec.h&#32;builtins
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;//&#32;really&#32;want&#32;vmrgew&#32;here!&#32;So&#32;do&#32;the&#32;opposite.
+&#32;&#32;res&#32;=&#32;vec_vmrgow&#32;((vui32_t)vrb,&#32;(vui32_t)vra);
+#else
+&#32;&#32;res&#32;=&#32;vec_vmrgew&#32;((vui32_t)vra,&#32;(vui32_t)vrb);
+#endif
+#else&#32;//&#32;Generate&#32;vmrgew&#32;directly&#32;in&#32;assembler
+&#32;&#32;__asm__(
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;vmrgew&#32;%0,%1,%2;\n&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;=v&quot;&#32;(res)
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;v&quot;&#32;(vra),
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;v&quot;&#32;(vrb)
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;);
+#endif
+#else&#32;//&#32;POWER7&#32;and&#32;earlier,&#32;Assume&#32;BE&#32;only
+&#32;&#32;const&#32;vui32_t&#32;vconstp&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;CONST_VINT32_W(0x00010203,&#32;&#32;0x10111213,&#32;0x08090a0b,&#32;&#32;0x18191a1b);
+&#32;&#32;res&#32;=&#32;(vui32_t)&#32;vec_perm&#32;((vui8_t)&#32;vra,&#32;(vui8_t)&#32;vrb,&#32;(vui8_t)&#32;vconstp);
+#endif
+&#32;&#32;return&#32;(res);
+}
+</computeroutput></literallayout> The implementation is a bit complicated so that is can nullify the unwanted LE transformation of vec_vmrgew(), in addition to handling older and compilers and processors.</para>
+</section>
+<section xml:id="vec__int32__ppc_8h_1i32_example_0_0_1">
+<title>Vector Multiply High Unsigned Word example</title>
+
+<para>Now we can implement Vector Multiply High Unsigned Word (<link linkend="vec__int32__ppc_8h_1a094c6adb04c1515361426ad58b0fdbb3">vec_mulhuw()</link>): <literallayout><computeroutput>static&#32;inline&#32;vui32_t
+vec_mulhuw&#32;(vui32_t&#32;vra,&#32;vui32_t&#32;vrb)
+{
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;return&#32;vec_mrgahw&#32;(vec_mulouw&#32;(vra,&#32;vrb),&#32;vec_muleuw&#32;(vra,&#32;vrb));
+#else
+&#32;&#32;return&#32;vec_mrgahw&#32;(vec_muleuw&#32;(vra,&#32;vrb),&#32;vec_mulouw&#32;(vra,&#32;vrb));
+#endif
+}
+</computeroutput></literallayout> Again the implementation is more complicated than expected as we still have to nullify the LE transformation associated with multiply even/odd.</para>
+
+<para>The good news is all this complexity is contained within pveclib and the generated code is still just 3 instructions. <literallayout><computeroutput>vmulouw&#32;v0,v2,v3
+vmuleuw&#32;v2,v2,v3
+vmrgew&#32;&#32;v2,v2,v0
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="vec__int32__ppc_8h_1int32_examples_0_1">
+<title>Vector Word Examples</title>
+
+<para>Suppose we have a requirement to convert an array of 32-bit time-interval values that need to convert to timespec format. For simplicity we will also assume that the array is nicely (Quadword) aligned and an integer multiple of 4 words.</para>
+
+<para>The PowerISA provides a 64-bit TimeBase register that clocks at a constant 512MHz. The TimeBase can be read directly as either the full 64-bit value or as 32-bit upper and lower halves. For this example we assume that the lower 32-bits of the TimeBase is sufficient to compute intervals (~8.38 seconds). TimeBase values of adjacent events are subtracted to generate the intervals stored in the array.</para>
+
+<para>The timespec format it a struct of unsigned int fields for seconds and microseconds. So the task is to convert the 512MHz TimeBase intervals to microseconds and then split the integer seconds and microseconds for the timespec.</para>
+
+<para>First the TimeBase to microseconds conversion is simply (1000000 / 512000000) which reduces to (1 / 512) or divide by 512. The vector unit does not provide integer divide but luckily, 512 is a power of 2 and we can shift right. If we don&apos;t care for the niceties of rounding we can simply shift right 9 bits: <literallayout><computeroutput>tb_usec&#32;=&#32;vec_srwi&#32;(*tb++,&#32;9);
+</computeroutput></literallayout> But if we decide that rounding is important we can leverage the Vector Average Unsigned Word (vavguw) instruction. Here we need to add 256 (512 / 2 = 256) to the timeBase interval before we shift right.</para>
+
+<para>But we need to reverse engineer the vavguw operation to get the results we want. For each word, vavguw computes the sum of A and B plus 1, then shifts the 33-bit sum right 1 bit. We can effectively round by passing the rounding factor as the B operand to the vec_avg() built-in. But we get a +1 and 1 bit right shift for free. So in this case the rounding constant is 256-1 = 255. And we only need to shift an additional 8 bits to complete the conversion: <literallayout><computeroutput>const&#32;vui32_t&#32;rnd_512&#32;=
+&#32;&#32;{&#32;(256-1),&#32;(256-1),&#32;(256-1),&#32;(256-1)&#32;};
+//&#32;Convert&#32;512MHz&#32;timebase&#32;to&#32;microseconds&#32;with&#32;rounding.
+tmp&#32;=&#32;vec_avg&#32;(*tb++,&#32;rnd_512);
+tb_usec&#32;=&#32;vec_srwi&#32;(tmp,&#32;8);
+</computeroutput></literallayout> <formalpara><title>Note: </title>
+
+<para>vec_avg() is an existing altivec.h generic built-in.</para>
+</formalpara>
+Next we need to separate TimeBase microseconds into the integer seconds and microseconds. Normally scalar codes would use integer divide/modulo by 1000000. Did I mention that the PowerISA vector unit does not have a integer divide operation?</para>
+
+<para>Instead we can use the multiplicative inverse which is a scaled fixed point fraction calculated from the original divisor. This works nicely if the fixed radix point is just before the 32-bit fraction and we have a multiply high (<link linkend="vec__int32__ppc_8h_1a094c6adb04c1515361426ad58b0fdbb3">vec_mulhuw()</link>) operation. Multiplying a 32-bit unsigned integer by a 32-bit unsigned fraction generates a 64-bit product with 32-bits above (integer) and below (fraction) the radix point. The high 32-bits of the product is the integer quotient.</para>
+
+<para>It turns out that generating the multiplicative inverse can be tricky. To produce correct results over the full analysis, possible pre-scaling and post-shifting, and sometimes a corrective addition is necessary. Fortunately the mathematics are well understood and are commonly used in optimizing compilers. Even better, Henry Warren&apos;s book has a whole chapter on this topic. <formalpara><title>See also: </title>
+
+<para>&quot;Hacker&apos;s Delight, 2nd Edition,&quot; Henry S. Warren, Jr, Addison Wesley, 2013. Chapter 10, Integer Division by Constants.</para>
+</formalpara>
+In the chapter above; <blockquote>
+<para>Figure 10-2 Computing the magic number for unsigned division.</para>
+</blockquote>provides a sample C function for generating the magic number (actually a struct containing; the magic multiplicative inverse, &quot;add&quot; indicator, and the shift amount.). For the divisor 1000000 this is { 1125899907, 0 , 18 }:<itemizedlist>
+<listitem>
+<para>the multiplier is 1125899907.</para>
+</listitem><listitem>
+<para>no corrective add of the dividend is required.</para>
+</listitem><listitem>
+<para>the final shift is 18-bits right.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><literallayout><computeroutput>const&#32;vui32_t&#32;mul_invs_1m&#32;=
+&#32;&#32;{&#32;1125899907,&#32;1125899907,&#32;1125899907,&#32;1125899907&#32;};
+const&#32;int&#32;shift_1m&#32;=&#32;18;
+
+tmp&#32;=&#32;vec_mulhuw&#32;(tb_usec,&#32;mul_invs_1m);
+seconds&#32;=&#32;vec_srwi&#32;(tmp,&#32;shift_1m);
+</computeroutput></literallayout> Now we need to compute the remainder to get microseconds. <literallayout><computeroutput>const&#32;vui32_t&#32;usec_sec&#32;=
+&#32;&#32;{&#32;1000000,&#32;1000000,&#32;1000000,&#32;1000000&#32;};
+
+tmp&#32;=&#32;vec_muluwm&#32;(seconds,&#32;usec_sec);
+useconds&#32;=&#32;vec_sub&#32;(tb_usec,&#32;tmp);
+</computeroutput></literallayout></para>
+
+<para>Finally we need to merge the vectors of seconds and useconds into vectors of timespec. <literallayout><computeroutput>timespec1&#32;=&#32;vec_mergeh&#32;(seconds,&#32;useconds);
+timespec2&#32;=&#32;vec_mergel&#32;(seconds,&#32;useconds);
+</computeroutput></literallayout> <formalpara><title>Note: </title>
+
+<para>vec_sub(), vec_mergeh(), and vec_mergel() are an existing altivec.h generic built-ins.</para>
+</formalpara>
+</para>
+<section xml:id="vec__int32__ppc_8h_1i32_example_0_1_0">
+<title>Vectorized TimeBase conversion example</title>
+
+<para>Here is the complete vectorized TimeBase to timespec conversion example: <literallayout><computeroutput>void
+example_convert_timebase&#32;(vui32_t&#32;*tb,&#32;vui32_t&#32;*timespec,&#32;int&#32;n)
+{
+&#32;&#32;const&#32;vui32_t&#32;rnd_512&#32;=
+&#32;&#32;&#32;&#32;{&#32;(256-1),&#32;(256-1),&#32;(256-1),&#32;(256-1)&#32;};
+&#32;&#32;//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;1,000,000
+&#32;&#32;//&#32;are&#32;1125899907&#32;and&#32;shift&#32;right&#32;18&#32;bits.
+&#32;&#32;const&#32;vui32_t&#32;mul_invs_1m&#32;=
+&#32;&#32;&#32;&#32;{&#32;1125899907,&#32;1125899907,&#32;1125899907,&#32;1125899907&#32;};
+&#32;&#32;const&#32;int&#32;shift_1m&#32;=&#32;18;
+&#32;&#32;//&#32;Need&#32;const&#32;for&#32;microseconds/second&#32;to&#32;extract&#32;remainder.
+&#32;&#32;const&#32;vui32_t&#32;usec_sec&#32;=
+&#32;&#32;&#32;&#32;{&#32;1000000,&#32;1000000,&#32;1000000,&#32;1000000&#32;};
+&#32;&#32;vui32_t&#32;tmp,&#32;tb_usec,&#32;seconds,&#32;useconds;
+&#32;&#32;vui32_t&#32;timespec1,&#32;timespec2;
+&#32;&#32;int&#32;i;
+
+&#32;&#32;for&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n;&#32;i++)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Convert&#32;512MHz&#32;timebase&#32;to&#32;microseconds&#32;with&#32;rounding.
+&#32;&#32;&#32;&#32;&#32;&#32;tmp&#32;=&#32;vec_avg&#32;(*tb++,&#32;rnd_512);
+&#32;&#32;&#32;&#32;&#32;&#32;tb_usec&#32;=&#32;vec_srwi&#32;(tmp,&#32;8);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;extract&#32;integer&#32;seconds&#32;from&#32;tb_usec.
+&#32;&#32;&#32;&#32;&#32;&#32;tmp&#32;=&#32;vec_mulhuw&#32;(tb_usec,&#32;mul_invs_1m);
+&#32;&#32;&#32;&#32;&#32;&#32;seconds&#32;=&#32;vec_srwi&#32;(tmp,&#32;shift_1m);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Extract&#32;remainder&#32;microseconds.
+&#32;&#32;&#32;&#32;&#32;&#32;tmp&#32;=&#32;vec_muluwm&#32;(seconds,&#32;usec_sec);
+&#32;&#32;&#32;&#32;&#32;&#32;useconds&#32;=&#32;vec_sub&#32;(tb_usec,&#32;tmp);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Use&#32;merge&#32;high/low&#32;to&#32;interleave&#32;seconds&#32;and&#32;useconds&#32;in&#32;timespec.
+&#32;&#32;&#32;&#32;&#32;&#32;timespec1&#32;=&#32;vec_mergeh&#32;(seconds,&#32;useconds);
+&#32;&#32;&#32;&#32;&#32;&#32;timespec2&#32;=&#32;vec_mergel&#32;(seconds,&#32;useconds);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Store&#32;timespec.
+&#32;&#32;&#32;&#32;&#32;&#32;*timespec++&#32;=&#32;timespec1;
+&#32;&#32;&#32;&#32;&#32;&#32;*timespec++&#32;=&#32;timespec2;
+&#32;&#32;&#32;&#32;}
+}
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="vec__int32__ppc_8h_1int32_perf_0_0">
+<title>Performance data.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_int32_ppc.h</para>
+    </simplesect>
+</section>

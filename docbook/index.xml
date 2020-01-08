@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>POWER Vector Library Manual</title>
+    </info>
+        <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="todo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="deprecated.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="struct____VEC__U__1024.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VEC__U__1024x512.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__1152.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VEC__U__128.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__2048.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VEC__U__2048x512.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__2176.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__256.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__4096.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VEC__U__4096x512.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__512.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VEC__U__512x1.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct____VEC__U__640.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="union____VF__128.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="pveclibmaindox_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__bcd__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__char__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__common__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__f128__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__f32__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__f64__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__int128__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__int16__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__int32__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__int512__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vec__int64__ppc_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

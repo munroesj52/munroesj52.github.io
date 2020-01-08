@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__f64__ppc_8h">
+    <title>vec_f64_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_int64_ppc.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> <link linkend="vec__f64__ppc_8h_1ab56ccacba6a3b48a7a920c7d5b0fe30e">vec_absf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64x)<para><emphasis>Vector double absolute value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a6bdfdf013a97ccd6dc20b1447f81d498">vec_all_isfinitef64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double values are Finite
+(Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1ac8f2bf6308d932b9604dbd8c5f8e90da">vec_all_isinff64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double values
+are infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a3b54640bbaa0ad0921680fe69a66246b">vec_all_isnanf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double
+values are NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1ab63ac21e968bf199eadd72f94b653905">vec_all_isnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double
+values are normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1ad0b6b22fcc171729b47878782f823ab4">vec_all_issubnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double
+values are subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a27becc842e7270c96c54a00d4a292d54">vec_all_iszerof64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if all 2x64-bit vector double
+values are +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1aa5108dc5fc533329fdd794f306a6ec3d">vec_any_isfinitef64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double values are
+Finite (Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a71abdbd1fd938daa250682ef9bbc5e84">vec_any_isinff64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double values
+are infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1ad78d13a9a604d48250a0aecba84ce8f2">vec_any_isnanf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double
+values are NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a9c198001c1db455c8a70478fe7c76c8c">vec_any_isnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double
+values are normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a96007b688d4c2c6aed732ec1b04a78de">vec_any_issubnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double
+values is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f64__ppc_8h_1a47c593b367639924729e7d8fbb044f0e">vec_any_iszerof64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return true if any of 2x64-bit vector double
+values are +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> <link linkend="vec__f64__ppc_8h_1a59d567f31837de74d7fa722b59e73928">vec_copysignf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64x, <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64y)<para><emphasis>Copy the sign bit from vf64y merged with magnitude from
+vf64x and return the resulting vector double values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1aae0220385a453649170124948f9085f1">vec_isfinitef64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values for each double
+element that is Finite (Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1a5508cb768d48ffec6e833076fc10b497">vec_isinff64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values for each double,
+if infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1a131162bc90efca47ad3e5513d73c3350">vec_isnanf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values, for each double
+NaN value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1a8f764b415ce41cbbc504554f779bcbe6">vec_isnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values, for each double
+value, if normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1aec48e60f9252ceb1d82ecb76cbce08a8">vec_issubnormalf64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values, for each double
+value that is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aee93592cb008b78c17e85d1eaa3419e1">vb64_t</link> <link linkend="vec__f64__ppc_8h_1a0391d8549f3070e515c0f20ed6bea9ac">vec_iszerof64</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> vf64)<para><emphasis>Return 2x64-bit vector boolean true values, for each double
+value that is +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static long double <link linkend="vec__f64__ppc_8h_1aabd670e9d3dd600198336708bb71fe77">vec_pack_longdouble</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> lval)<para><emphasis>Copy the pair of doubles from a vector to IBM long double.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> <link linkend="vec__f64__ppc_8h_1ac396fe321d73f75b57ebab8c365e20f3">vec_unpack_longdouble</link> (
+long double lval)<para><emphasis>Copy the pair of doubles from a IBM long double to a vector
+double.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over 64-bit double-precision floating point elements. </para>
+
+<para>Many vector double-precision (64-bit float) operations are implemented with PowerISA-2.06 Vector Scalar Extended (VSX) (POWER7 and later) instructions. Most VSX instructions provide access to 64 combined scalar/vector registers. PowerISA-3.0 (POWER9) provides additional vector double operations: convert with round, convert to/from integer, insert/extract exponent and significand, and test data class. Most of these operations (compiler built-ins, or intrinsics) are defined in &lt;altivec.h&gt; and described in the <link xlink:href="https://gcc.gnu.org/onlinedocs/">compiler documentation</link>.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power8</emphasis>, the double-precision vector converts, insert/extract and test data class built-ins are are not defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+<simplesect/>
+<para>Most ppc64le compilers will default to -mcpu=power8 if not specified.</para>
+<simplesect/>
+<para>GCC 7.3 defines vector forms of the test data class, extract significand, and extract/insert_exp for float and double. These built-ins are not defined in GCC 6.4. See <link xlink:href="https://gcc.gnu.org/onlinedocs/">compiler documentation</link>. These are useful operations and can be implemented in a few vector logical instructions for earlier machines.</para>
+</formalpara>
+So it is reasonable for this header to provide vector forms of the double-precision floating point classification functions (isnormal/subnormal/finite/inf/nan/zero, etc.). These functions can be implemented directly using (one or more) POWER9 instructions, or a few vector logical and integer compare instructions for POWER7/8. Each is comfortably small enough to be in-lined and inherently faster than the equivalent POSIX or compiler built-in runtime scalar functions.</para>
+
+<para>Most of these operations are implemented in a few instructions on newer (POWER7/POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides an inline assembler implementation for older compilers that do not provide the built-ins.</para>
+
+<para>This header covers operations that are any of the following:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in hardware instructions in newer processors, but useful to programmers on slightly older processors (even if the equivalent function requires more instructions).</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include vector double even/odd conversions.</para>
+</listitem><listitem>
+<para>Providing special vector double tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions. Examples include vector double isnan, isinf, etc.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. For example, converts that change element size and imply converting two vectors into one vector of smaller elements, or one vector into two vectors of larger elements. Another example is the special case of packing/unpacking an IBM long double between a pair of floating-point registers (FPRs) and a single vector register (VR).</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__f64__ppc_8h_1f64_examples_0_0">
+<title>Examples</title>
+
+<para>For example: using the the classification functions for implementing the math library function sine and cosine. The POSIX specification requires that special input values are processed without raising extraneous floating point exceptions and return specific floating point values in response. For example, the sin() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is subnormal then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a quiet-NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return sin(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the POSIX requirements for special values input to for a vectorized sinf(): <literallayout><computeroutput>vf64_t
+test_vec_sinf64&#32;(vf64_t&#32;value)
+{
+&#32;&#32;const&#32;vf64_t&#32;vec_f0&#32;=&#32;{&#32;0.0,&#32;0.0&#32;};
+&#32;&#32;const&#32;vui64_t&#32;vec_f64_qnan&#32;=
+&#32;&#32;&#32;&#32;{&#32;0x7ff8000000000000,&#32;0x7ff8000000000000&#32;};
+&#32;&#32;vf64_t&#32;result;
+&#32;&#32;vb64_t&#32;normmask,&#32;infmask;
+
+&#32;&#32;normmask&#32;=&#32;vec_isnormalf64&#32;(value);
+&#32;&#32;if&#32;(vec_any_isnormalf64&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;replace&#32;non-normal&#32;input&#32;values&#32;with&#32;safe&#32;values.
+&#32;&#32;&#32;&#32;&#32;&#32;vf64_t&#32;safeval&#32;=&#32;vec_sel&#32;(vec_f0,&#32;value,&#32;normmask);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;vec_sin(safeval)&#32;computation&#32;elided&#32;for&#32;this&#32;example.
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+
+&#32;&#32;//&#32;merge&#32;non-normal&#32;input&#32;values&#32;back&#32;into&#32;result
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(value,&#32;result,&#32;normmask);
+&#32;&#32;//&#32;Inf&#32;input&#32;value&#32;elements&#32;return&#32;quiet-nan.
+&#32;&#32;infmask&#32;=&#32;vec_isinff64&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;(vf64_t)&#32;vec_f64_qnan,&#32;infmask);
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> The code generated for this fragment runs between 24 (-mcpu=power9) and 40 (-mcpu=power8) instructions. The normal execution path is 14 to 25 instructions respectively.</para>
+
+<para>Another example the cos() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>1.0</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a quiet-NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return cos(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the POSIX requirements for special values input to vectorized cosf(): <literallayout><computeroutput>vf64_t
+test_vec_cosf64&#32;(vf64_t&#32;value)
+{
+&#32;&#32;vf64_t&#32;result;
+&#32;&#32;const&#32;vf64_t&#32;vec_f0&#32;=&#32;{&#32;0.0,&#32;0.0&#32;};
+&#32;&#32;const&#32;vf64_t&#32;vec_f1&#32;=&#32;{&#32;1.0,&#32;1.0&#32;};
+&#32;&#32;const&#32;vui64_t&#32;vec_f64_qnan&#32;=
+&#32;&#32;&#32;&#32;{&#32;0x7ff8000000000000,&#32;0x7ff8000000000000&#32;};
+&#32;&#32;vb64_t&#32;finitemask,&#32;infmask,&#32;zeromask;
+
+&#32;&#32;finitemask&#32;=&#32;vec_isfinitef64&#32;(value);
+&#32;&#32;if&#32;(vec_any_isfinitef64&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;replace&#32;non-finite&#32;input&#32;values&#32;with&#32;safe&#32;values.
+&#32;&#32;&#32;&#32;&#32;&#32;vf64_t&#32;safeval&#32;=&#32;vec_sel&#32;(vec_f0,&#32;value,&#32;finitemask);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;vec_sin(safeval)&#32;computation&#32;elided&#32;for&#32;this&#32;example.
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+
+&#32;&#32;//&#32;merge&#32;non-finite&#32;input&#32;values&#32;back&#32;into&#32;result
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(value,&#32;result,&#32;finitemask);
+&#32;&#32;//&#32;Set&#32;+-0.0&#32;input&#32;elements&#32;to&#32;exactly&#32;1.0&#32;in&#32;result.
+&#32;&#32;zeromask&#32;=&#32;vec_iszerof64&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;vec_f1,&#32;zeromask);
+&#32;&#32;//&#32;Set&#32;Inf&#32;input&#32;elements&#32;to&#32;quiet-nan&#32;in&#32;result.
+&#32;&#32;infmask&#32;=&#32;vec_isinff64&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;(vf64_t)&#32;vec_f64_qnan,&#32;infmask);
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>Neither example raises floating point exceptions or sets <emphasis role="bold">errno</emphasis>, as appropriate for a vector math library.</para>
+</section>
+<section xml:id="vec__f64__ppc_8h_1f64_perf_0_0">
+<title>Performance data.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_f64_ppc.h</para>
+    </simplesect>
+</section>

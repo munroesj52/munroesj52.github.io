@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__f32__ppc_8h">
+    <title>vec_f32_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link>  <link linkend="vec__f32__ppc_8h_1a033068a4da4bc268328b136f3ffff689">__vbinary32</link><para><emphasis>typedef __vbinary32 to vector of 4 xfloat elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> <link linkend="vec__f32__ppc_8h_1a083462955e2fcb17cbaefb8dd3f3193d">vec_absf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32x)<para><emphasis>Vector float absolute value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a31dda81cc549201824af4d72d94e0f4d">vec_all_isfinitef32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all 4x32-bit vector float values are Finite
+(Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a0b9b6d623a59f26811e630cf9c5adf07">vec_all_isinff32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all 4x32-bit vector float values
+are infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1aeb5c70afc6b1790af8f3c0d646a93aaf">vec_all_isnanf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all of 4x32-bit vector float
+values are NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a4248a6cd2fc4843c86bb9ecccce94062">vec_all_isnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all of 4x32-bit vector float
+values are normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a9d876f718e28c11dd2cc05e5d942b33a">vec_all_issubnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all of 4x32-bit vector float
+values is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1aa5fcf345ca020c68f8067029d6656cb4">vec_all_iszerof32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if all of 4x32-bit vector float
+values are +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a0a7493764e30ad8714335e54f3f18174">vec_any_isfinitef32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any 4x32-bit vector float values are Finite
+(Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1af8272872f72ae6a67a0d4e00f59f6a1b">vec_any_isinff32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any 4x32-bit vector float values
+are infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1ad08efce0a5e59ec168e17f93a5c099d9">vec_any_isnanf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any of 4x32-bit vector float
+values are NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1a95d2962ea183dc8d6f897baefbe28e91">vec_any_isnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any of 4x32-bit vector float
+values are normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1aa7869701b5edad32495a5bc766987079">vec_any_issubnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any of 4x32-bit vector float
+values is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f32__ppc_8h_1aac3947cd426bd36bd2456d44679b41ba">vec_any_iszerof32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return true if any of 4x32-bit vector float
+values are +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> <link linkend="vec__f32__ppc_8h_1ab69f31ac3c33aa7ff7dca9572a40b851">vec_copysignf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32x, <link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32y)<para><emphasis>Copy the sign bit from vf32y merged with magnitude from
+vf32x and return the resulting vector float values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1ab30f36fba977bc11812ef24b08887613">vec_isfinitef32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values for each float
+element that is Finite (Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1a11f0df67473a5496a40bbecf41bd54d9">vec_isinff32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values for each float,
+if infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1acd364c3e220e61061f6c5ecd858a78de">vec_isnanf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values, for each float
+NaN value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1a0d808fb7bf9b6603274b1b3fdbe626a1">vec_isnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values, for each float
+value, if normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1a7c112ab3e88b7514180cea612232bcab">vec_issubnormalf32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values, for each float
+value that is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link> <link linkend="vec__f32__ppc_8h_1a0b76fdcb61ad12bdbedb3cb6b766a1fc">vec_iszerof32</link> (
+<link linkend="vec__common__ppc_8h_1a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</link> vf32)<para><emphasis>Return 4x32-bit vector boolean true values, for each float
+value that is +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elements. </para>
+
+<para>Most vector float (32-bit float) operations are implemented with PowerISA VMX instructions either defined by the original VMX (a.k.a. Altivec) or added to later versions of the PowerISA. POWER8 added the Vector Scalar Extended (VSX) with access to additional vector registers (64 total) and operations. Most of these operations (compiler built-ins, or intrinsics) are defined in &lt;altivec.h&gt; and described in the <link xlink:href="https://gcc.gnu.org/onlinedocs/">compiler documentation</link>.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, some of the wordwise pack, unpack and merge operations useful for conversions are not defined and the equivalent vec_perm and permute control must be used instead. This header will provide the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+<simplesect/>
+<para>Most ppc64le compilers will default to -mcpu=power8 if not specified.</para>
+</formalpara>
+Most of these operations are implemented in a single instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides an inline assembler implementation for older compilers that do not provide the built-ins.</para>
+
+<para>POWER9 adds useful vector float operations, including: test data class, extract exponent, extract significand, and insert exponent. These operations are common in math library implementations.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>GCC 7.3 defines vector forms of the test data class, extract significand, and extract/insert_exp for float and double. These built-ins are not defined in GCC 6.4. See <link xlink:href="https://gcc.gnu.org/onlinedocs/">compiler documentation</link>. These are useful operations and can be implement in a few vector logical instruction for earlier machines.</para>
+</formalpara>
+So it is reasonable for this header to provide vector forms of the floating point classification functions (isnormal/subnormal/finite/inf/nan/zero, etc.). These functions can be implemented directly using (one or more) POWER9 instructions, or a few vector logical and integer compare instructions for POWER7/8. Each is comfortably small enough to be in-lined and inherently faster than the equivalent POSIX or compiler built-in runtime scalar functions.</para>
+
+<para>This header covers operations that are any of the following:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in hardware instructions in newer processors, but useful to programmers on slightly older processors (even if the equivalent function requires more instructions). Examples include the floating point test data class, extract exponent, extract significand, and insert exponent operations.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include vector float even/odd.</para>
+</listitem><listitem>
+<para>Providing special vector float tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing vectorized forms of ISO C99 Math functions.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__f32__ppc_8h_1f32_examples_0_0">
+<title>Examples</title>
+
+<para>For example: using the the classification functions for implementing the math library function sine and cosine. The POSIX specification requires that special input values are processed without raising extraneous floating point exceptions and return specific floating point values in response. For example the sin() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is subnormal then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return sin(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the POSIX requirements for special values input to for a vectorized sinf(): <literallayout><computeroutput>vf32_t
+test_vec_sinf32&#32;(vf32_t&#32;value)
+{
+&#32;&#32;const&#32;vf32_t&#32;vec_f0&#32;=&#32;{&#32;0.0,&#32;0.0,&#32;0.0,&#32;0.0&#32;};
+&#32;&#32;const&#32;vui32_t&#32;vec_f32_qnan&#32;=
+&#32;&#32;&#32;&#32;{&#32;0x7f800001,&#32;0x7fc00000,&#32;0x7fc00000,&#32;0x7fc00000&#32;};
+&#32;&#32;vf32_t&#32;result;
+&#32;&#32;vb32_t&#32;normmask,&#32;infmask;
+
+&#32;&#32;normmask&#32;=&#32;vec_isnormalf32&#32;(value);
+&#32;&#32;if&#32;(vec_any_isnormalf32&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;replace&#32;non-normal&#32;input&#32;values&#32;with&#32;safe&#32;values.
+&#32;&#32;&#32;&#32;&#32;&#32;vf32_t&#32;safeval&#32;=&#32;vec_sel&#32;(vec_f0,&#32;value,&#32;normmask);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;vec_sin(safeval)&#32;computation&#32;elided&#32;for&#32;this&#32;example.
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+
+&#32;&#32;//&#32;merge&#32;non-normal&#32;input&#32;values&#32;back&#32;into&#32;result
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(value,&#32;result,&#32;normmask);
+&#32;&#32;//&#32;Inf&#32;input&#32;value&#32;elements&#32;return&#32;quiet-nan
+&#32;&#32;infmask&#32;=&#32;vec_isinff32&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;(vf32_t)&#32;vec_f32_qnan,&#32;infmask);
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> The code generated for this fragment runs between 24 (-mcpu=power9) and 40 (-mcpu=power8) instructions. The normal execution path is 14 to 25 instructions respectively.</para>
+
+<para>Another example the cos() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>1.0</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return cos(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the POSIX requirements for special values input to vectorized cosf(): <literallayout><computeroutput>vf32_t
+test_vec_cosf32&#32;(vf32_t&#32;value)
+{
+&#32;&#32;vf32_t&#32;result;
+&#32;&#32;const&#32;vf32_t&#32;vec_f0&#32;=&#32;{&#32;0.0,&#32;0.0,&#32;0.0,&#32;0.0&#32;};
+&#32;&#32;const&#32;vf32_t&#32;vec_f1&#32;=&#32;{&#32;1.0,&#32;1.0,&#32;1.0,&#32;1.0&#32;};
+&#32;&#32;const&#32;vui32_t&#32;vec_f32_qnan&#32;=
+&#32;&#32;&#32;&#32;{&#32;0x7f800001,&#32;0x7fc00000,&#32;0x7fc00000,&#32;0x7fc00000&#32;};
+&#32;&#32;vb32_t&#32;finitemask,&#32;infmask,&#32;zeromask;
+
+&#32;&#32;finitemask&#32;=&#32;vec_isfinitef32&#32;(value);
+&#32;&#32;if&#32;(vec_any_isfinitef32&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;replace&#32;non-finite&#32;input&#32;values&#32;with&#32;safe&#32;values
+&#32;&#32;&#32;&#32;&#32;&#32;vf32_t&#32;safeval&#32;=&#32;vec_sel&#32;(vec_f0,&#32;value,&#32;finitemask);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;vec_sin(safeval)&#32;computation&#32;elided&#32;for&#32;this&#32;example
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+
+&#32;&#32;//&#32;merge&#32;non-finite&#32;input&#32;values&#32;back&#32;into&#32;result
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(value,&#32;result,&#32;finitemask);
+&#32;&#32;//&#32;Set&#32;+-0.0&#32;input&#32;elements&#32;to&#32;exactly&#32;1.0&#32;in&#32;result
+&#32;&#32;zeromask&#32;=&#32;vec_iszerof32&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;vec_f1,&#32;zeromask);
+&#32;&#32;//&#32;Set&#32;Inf&#32;input&#32;elements&#32;to&#32;quiet-nan&#32;in&#32;result
+&#32;&#32;infmask&#32;=&#32;vec_isinff32&#32;(value);
+&#32;&#32;result&#32;=&#32;vec_sel&#32;(result,&#32;(vf32_t)&#32;vec_f32_qnan,&#32;infmask);
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>Neither example raises floating point exceptions or sets <emphasis role="bold">errno</emphasis>, as appropriate for a vector math library.</para>
+</section>
+<section xml:id="vec__f32__ppc_8h_1f32_perf_0_0">
+<title>Performance data.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_f32_ppc.h</para>
+    </simplesect>
+</section>

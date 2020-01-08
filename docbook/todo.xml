@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Todo List</title>
+
+<para><variablelist>
+<varlistentry><term><anchor id="todo_1_todo000007"/>File <link linkend="vec__bcd__ppc_8h">vec_bcd_ppc.h</link>  </term>
+<listitem>
+<para>The BCD add/subtract extend/carry story is not complete. The carry extend operations based only on the <emphasis role="bold">OV</emphasis> condition codes only works as expected for bcdadd operands with the same sign and bcdsub with different signs. See <link linkend="vec__bcd__ppc_8h_1a76d5034289bea5c7d9159db1d443f6b7">vec_bcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a6bf159e0abdccaa6fca21c6567b2067b">vec_bcdaddecsq()</link>. Extended BCD difference (or subtract the same sign or add with different signs) is more complicated. See <link linkend="vec__bcd__ppc_8h_1abd666963d18930e07be06aeb563eeb71">vec_bcdsubcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a7eeb50993901b8bef76fa72cea668a15">vec_bcdsubecsq()</link>. Generating a true borrow seems to require looking one (31-digit) column ahead or behind. The first attempt at generating correct borrowing is implemented in <link linkend="vec__bcd__ppc_8h_1a486605817b8ca4850f7cf5584c751f45">vec_cbcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1af9718d91a7e14c4a21e14a53f2f65041">vec_cbcdaddecsq()</link>. There are still cases where these operation will generate a borrow and invert (10s complement) incorrectly. The net seems to be that for BCD multiple precision difference to work correctly, the larger magnitude must be the first operand. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="todo_1_todo000006"/>File <link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link>  </term>
+<listitem>
+<para>The implementation above gives correct results for all the cases tested for divide by constants 10<superscript>31</superscript> and 10<superscript>32</superscript>). This is not a mathematical proof of correctness, just an observation. Anyone who finds a counter example or offers a mathematical proof should submit a bug report. </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="todo_1_todo000001"/>File <link linkend="vec__int512__ppc_8h">vec_int512_ppc.h</link>  </term>
+<listitem>
+<para>The above above is true for vec_mul2048x2048_PWR9 but vec_mul2048x2048_PWR8 does kick out a few vector spills. Need to look into this and resolve.</para>
+
+<para>Look into adding multiply-sum forms of 512x128 and 512x512 defined to add to the low order product and propagate the carries. The msum512x128s128 and msum512x512s512 operations will not generate a carry out of 640-bit or 1024-bit product-sum and still fit within the homogeneous aggregate size limits for return values. This will reduce the live range for column sums and should reduce register pressure.</para>
+
+<para>Describe the background and rationale</para>
+
+<para>General discussion of static and dynamic libraries should be moved (eventually) to <link linkend="pveclibmaindox_8h_source">pveclibmaindox.h</link>. While specifics of multiple quadword precision integer multiply should remain here.</para>
+
+<para>Is there a way for automake to compile vec_int512_runtime.c with -mcpu=power7 with -o vec_runtime_PWR7.o. And similarly for PWR8/PWR9.</para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+
+</chapter>

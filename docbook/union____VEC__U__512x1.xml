@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="union____VEC__U__512x1">
+<title>__VEC_U_512x1 union Reference</title>
+<para>
+    <programlisting>#include <link linkend="vec__int512__ppc_8h">&lt;vec_int512_ppc.h&gt;</link></programlisting>
+</para>
+    <simplesect>
+
+<para>A vector representation of a 512-bit unsigned integer and a 128-bit carry-out. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A union of:<itemizedlist>
+<listitem>
+<para>homogeneous aggregate of 640-bit unsigned integer.</para>
+</listitem><listitem>
+<para>struct of:<itemizedlist>
+<listitem>
+<para>homogeneous aggregate of 512-bit unsigned integer.</para>
+</listitem><listitem>
+<para>vector representation of the carry out of 512-bit add.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>The Carry out vector overlays the high-order 128-bits of the 640-bit vector.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>Useful for passing the carry-out of a 512-bit add into the carry-in of an extended add. </para>
+</formalpara>
+</para>
+                <para>Definition at line 1228 of file vec_int512_ppc.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

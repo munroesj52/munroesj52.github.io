@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__char__ppc_8h">
+    <title>vec_char_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a3eca950eb052ce1b0ad7a8d20ce3f971">vec_absdub</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Absolute Difference Unsigned byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a29190093e687e416c846b885eb2c10c6">vec_clzb</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra)<para><emphasis>Count leading zeros for a vector unsigned char (byte)
+elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a04af2798abe4f5e568e8fd527bef3b02">vec_isalnum</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vec_str)<para><emphasis>Vector isalpha.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1ab6ea0723c4ae1ce1b4137a25eae1a15e">vec_isalpha</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vec_str)<para><emphasis>Vector isalnum.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a0152053aed21f65166488df7e6b6c2a9">vec_isdigit</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vec_str)<para><emphasis>Vector isdigit.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1ab2ec8f3ed5b75f1e1b21998484d878e8">vec_mrgahb</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Algebraic High Byte operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1af07f90ac64ed898a5add48932b8ac010">vec_mrgalb</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Algebraic Low Byte operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1ab8a776401631aedafdaf371e268fcfe7">vec_mrgeb</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Merge Even Bytes operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a562bddfc070386aabced80167b4571af">vec_mrgob</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Merge Odd Halfwords operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> <link linkend="vec__char__ppc_8h_1a5b81ae683c42ead33d58b422ee8f85cb">vec_mulhsb</link> (
+<link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vra, <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vrb)<para><emphasis>Vector Multiply High Signed Bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a81a67dcc2623020b065eb244bc54511c">vec_mulhub</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Multiply High Unsigned Bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a425151e5a82ee9e204ffd81b1ec7a92c">vec_mulubm</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Multiply Unsigned Byte Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1ae0c33360f34cc31ca2e381bf2e7c9ce6">vec_popcntb</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra)<para><emphasis>Vector Population Count byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a095741b255775d4ccf6228a5655599a2">vec_slbi</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift left Byte Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> <link linkend="vec__char__ppc_8h_1a253a59f286f91817dfac89459ccbeac6">vec_srabi</link> (
+<link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Algebraic Byte Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a495109a7d46f4a97b56f22bb315ac567">vec_srbi</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Byte Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a949a5b375e69a85e76a06e68831cb59a">vec_shift_leftdo</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrw, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrx, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Shift left double quadword by octet.
+Return a vector unsigned char that is the left most 16 chars after
+shifting left 0-15 octets (chars) of the 32 char double vector
+(vrw||vrx).  The octet shift amount is from bits 121:124 of vrb.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a86d585f1bb4fc5efab4df98594cdb46c">vec_toupper</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vec_str)<para><emphasis>Vector toupper.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a73501120e1af14864b7621e318645426">vec_tolower</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vec_str)<para><emphasis>Vector tolower.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a86c23ce0e18ad18d46d27f80c40f465e">vec_vmrgeb</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Merge Even Bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__char__ppc_8h_1a122434ec49f77cf6968e2cb9523e68d2">vec_vmrgob</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Merge Odd Byte.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over 8-bit integer (char) elements. </para>
+
+<para>Most of these operations are implemented in a single VMX or VSX instruction on newer (POWER6/POWER7/POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides in-line assembler implementations for older compilers that do not provide the build-ins.</para>
+
+<para>Most vector char (8-bit integer) operations are are already covered by the original VMX (AKA Altivec) instructions. VMX intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation. PowerISA 2.07B (POWER8) added several useful byte operations (count leading zeros, population count) not included in the original VMX. PowerISA 3.0B (POWER9) adds several more (absolute difference, compare not equal, count trailing zeros, extend sign, extract/insert, and reverse bytes). Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, vec_vclz and vec_vclzb will not be defined. But vec_clzb is always defined in this header, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+</formalpara>
+This header covers operations that are either:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in later processors and useful to programmers if the same operations are available on slightly older processors. This is required even if the operation is defined in the OpenPOWER ABI or &lt;altivec.h&gt;, as the compiler disables the associated built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the instruction.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.n&gt; provided by available compilers in common use. Examples include Count Leading Zeros and Population Count.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply high, ASCII character tests, and shift immediate operations.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__char__ppc_8h_1i8_endian_issues_0_0">
+<title>Endian problems with byte operations</title>
+
+<para>It would be useful to provide a vector multiply high byte (return the high order 8-bits of the 16-bit product) operation. This can be used for multiplicative inverse (effectively integer divide) operations. Neither integer multiply high nor divide are available as vector instructions. However the multiply high byte operation can be composed from the existing multiply even/odd byte operations followed by the vector merge even byte operation. Similarly a multiply low (modulo) byte operation can be composed from the existing multiply even/odd byte operations followed by the vector merge odd byte operation.</para>
+
+<para>As a prerequisite we need to provide the merge even/odd byte operations. While PowerISA has added these operations for word and doubleword, instructions are not defined for byte and halfword. Fortunately vector merge operations are just a special case of vector permute. So the <link linkend="vec__char__ppc_8h_1a122434ec49f77cf6968e2cb9523e68d2">vec_vmrgob()</link> and <link linkend="vec__char__ppc_8h_1a86c23ce0e18ad18d46d27f80c40f465e">vec_vmrgeb()</link> implementation can use vec_perm and appropriate selection vectors to provide these merge operations.</para>
+
+<para>As described for other element sizes this is complicated by <emphasis>little-endian</emphasis> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the location of even and odd elements. This means that the vector built-ins provided by altivec.h may not generate the instructions you would expect. <formalpara><title>See also: </title>
+
+<para><link linkend="vec__int16__ppc_8h_1i16_endian_issues_0_0">Endian problems with halfword operations</link> </para>
+<simplesect/>
+<para><link linkend="index_1mainpage_endian_issues_1_1">General Endian Issues</link></para>
+</formalpara>
+So this header defines endian independent byte operations <link linkend="vec__char__ppc_8h_1a86c23ce0e18ad18d46d27f80c40f465e">vec_vmrgeb()</link> and <link linkend="vec__char__ppc_8h_1a122434ec49f77cf6968e2cb9523e68d2">vec_vmrgob()</link>. These operations are used in the implementation of the endian sensitive <link linkend="vec__char__ppc_8h_1ab8a776401631aedafdaf371e268fcfe7">vec_mrgeb()</link> and <link linkend="vec__char__ppc_8h_1a562bddfc070386aabced80167b4571af">vec_mrgob()</link>. These support the OpenPOWER ABI mandated merge even/odd semantic.</para>
+
+<para>We also provide the merge algebraic high/low operations <link linkend="vec__char__ppc_8h_1ab2ec8f3ed5b75f1e1b21998484d878e8">vec_mrgahb()</link> and <link linkend="vec__char__ppc_8h_1af07f90ac64ed898a5add48932b8ac010">vec_mrgalb()</link> to simplify extended precision arithmetic. These implementations use <link linkend="vec__char__ppc_8h_1a86c23ce0e18ad18d46d27f80c40f465e">vec_vmrgeb()</link> and <link linkend="vec__char__ppc_8h_1a122434ec49f77cf6968e2cb9523e68d2">vec_vmrgob()</link> as extended precision byte order does not change with endian. These operations are used in turn to implement multiply byte high/low/modulo (<link linkend="vec__char__ppc_8h_1a5b81ae683c42ead33d58b422ee8f85cb">vec_mulhsb()</link>, <link linkend="vec__char__ppc_8h_1a81a67dcc2623020b065eb244bc54511c">vec_mulhub()</link>, <link linkend="vec__char__ppc_8h_1a425151e5a82ee9e204ffd81b1ec7a92c">vec_mulubm()</link>).</para>
+
+<para>These operations provide a basis for using the multiplicative inverse as a alternative to integer divide. <formalpara><title>See also: </title>
+
+<para><link linkend="vec__int16__ppc_8h_1int16_examples_0_1">Examples, Divide by integer constant</link></para>
+</formalpara>
+</para>
+</section>
+<section xml:id="vec__char__ppc_8h_1int8_perf_0_0">
+<title>Performance data.</title>
+
+<para>The performance characteristics of the merge and multiply byte operations are very similar to the halfword implementations. (see <link linkend="vec__int16__ppc_8h_1int16_perf_0_0">Performance data.</link>).</para>
+<section xml:id="vec__char__ppc_8h_1int8_perf_0_1">
+<title>More information.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_char_ppc.h</para>
+    </simplesect>
+</section>

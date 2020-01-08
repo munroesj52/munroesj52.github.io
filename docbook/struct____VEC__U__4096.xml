@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="struct____VEC__U__4096">
+<title>__VEC_U_4096 struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="vec__int512__ppc_8h">&lt;vec_int512_ppc.h&gt;</link></programlisting>
+</para>
+    <simplesect>
+
+<para>A vector representation of a 4096-bit unsigned integer. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A homogeneous aggregate of 32 x 128-bit unsigned integer fields. The low order field is named vx0, progressing to the high order field vx31.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>This structure does not qualify for parameter passing in registers (more than 8 registers are required) and will be passed in memory. </para>
+</formalpara>
+</para>
+                <para>Definition at line 1498 of file vec_int512_ppc.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

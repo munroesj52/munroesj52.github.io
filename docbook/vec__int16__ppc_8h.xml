@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__int16__ppc_8h">
+    <title>vec_int16_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_char_ppc.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1af876e907b6f1bf6868033be2127d4238">vec_absduh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Absolute Difference Unsigned halfword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1ad4dbe03259aae45b330f18a7c9a62c81">vec_clzh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra)<para><emphasis>Count Leading Zeros for a vector unsigned short (halfword)
+elements.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a1fa4e2cd07718acb38ed3530930103e0">vec_mrgahh</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Merge Algebraic High Halfword operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a152cc7dff6dd572711432962a211a97e">vec_mrgalh</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Merge Algebraic Low Halfword operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a8fd1ea4bcf0c44883d806d42feb50db2">vec_mrgeh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Even Halfwords operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a2f08727b429f9159f6f189bd49be5617">vec_mrgoh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Odd Halfwords operation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link> <link linkend="vec__int16__ppc_8h_1a2e5392538865fa36128b9a2475541022">vec_mulhsh</link> (
+<link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link> vra, <link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link> vrb)<para><emphasis>Vector Multiply High Signed halfword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1af8f778868c7a8a71b9e901042f24f1c2">vec_mulhuh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Multiply High Unsigned halfword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1abceaf3207f8b6fbb27a3e88409f8357b">vec_muluhm</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Multiply Unsigned halfword Modulo.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a4ffb24b16a416d733b09a53830cd3713">vec_popcnth</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra)<para><emphasis>Vector Population Count halfword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a235df54b24f644e6cc23018bdfa4e37e">vec_revbh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra)<para><emphasis>byte reverse each halfword of a vector unsigned short.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a4fc5f291cc0e6a99700760df89f5070b">vec_slhi</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift left Halfword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a292973c417034f4b8813765b63ca03c2">vec_srhi</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Halfword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link> <link linkend="vec__int16__ppc_8h_1ac9b21dd9f53dd97d3c1f58881f38b5af">vec_srahi</link> (
+<link linkend="vec__common__ppc_8h_1a873846dd078cef3d766814d856760526">vi16_t</link> vra, const unsigned int shb)<para><emphasis>Vector Shift Right Algebraic Halfword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1aabf6f4a95093b3e9ae78c8600e8d9d40">vec_vmrgeh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Even Halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1a525c4f6be5284ec528f3df527b07727a">vec_vmrgoh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Odd Halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over 16-bit integer elements. </para>
+
+<para>Most of these operations are implemented in a single instruction on newer (POWER6/POWER7POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors and provides a in-line assembler implementation for older compilers that do not provide the build-ins.</para>
+
+<para>Most vector short (16-bit integer halfword) operations are implemented with PowerISA VMX instructions either defined by the original VMX (AKA Altivec) or added to later versions of the PowerISA. PowerISA 2.07B (POWER8) added several useful halfword operations (count leading zeros, population count) not included in the original VMX. PowerISA 3.0B (POWER9) adds several more (absolute difference, compare not equal, count trailing zeros, extend sign, extract/insert, and reverse bytes). Most of these intrinsic (compiler built-ins) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, vec_vclz and vec_vclzh will not be defined. Another example if you compile with <emphasis role="bold">-mcpu=power8</emphasis>, vec_revb will not be defined. But vec_vclzh and vec_revbh is always defined in this header. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+<simplesect/>
+<para>Most ppc64le compilers will default to -mcpu=power8 if not specified.</para>
+</formalpara>
+This header covers operations that are either:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include Count Leading Zeros, Population Count and Byte Reverse.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include Count Leading Zeros, Population Count and Byte Reverse.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply high and shift immediate operations.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__int16__ppc_8h_1i16_endian_issues_0_0">
+<title>Endian problems with halfword operations</title>
+
+<para>It would be useful to provide a vector multiply high halfword (return the high order 16-bits of the 32-bit product) operation. This can be used for multiplicative inverse (effectively integer divide) operations. Neither integer multiply high nor divide are available as vector instructions. However the multiply high halfword operation can be composed from the existing multiply even/odd halfword operations followed by the vector merge even halfword operation. Similarly a multiply low (modulo) halfword operation can be composed from the existing multiply even/odd halfword operations followed by the vector merge odd halfword operation.</para>
+
+<para>As a prerequisite we need to provide the merge even/odd halfword operations. While PowerISA has added these operations for word and doubleword, instructions are nor defined for byte and halfword. Fortunately vector merge operations are just a special case of vector permute. So the <link linkend="vec__int16__ppc_8h_1a525c4f6be5284ec528f3df527b07727a">vec_vmrgoh()</link> and <link linkend="vec__int16__ppc_8h_1aabf6f4a95093b3e9ae78c8600e8d9d40">vec_vmrgeh()</link> implementation can use vec_perm and appropriate selection vectors to provide these merge operations.</para>
+
+<para>But this is complicated by <emphasis>little-endian</emphasis> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the location of even and odd elements. This means that the vector built-ins provided by altivec.h may not generate the instructions you would expect. <formalpara><title>See also: </title>
+
+<para><link linkend="index_1mainpage_endian_issues_1_1">General Endian Issues</link> </para>
+<simplesect/>
+<para><link linkend="vec__int32__ppc_8h_1i32_endian_issues_0_0">Endian problems with word operations</link></para>
+</formalpara>
+The OpenPOWER ABI provides a helpful table of <link xlink:href="http://openpowerfoundation.org/wp-content/uploads/resources/leabi/content/dbdoclet.50655244_90667.html">Endian Sensitive Operations</link>. For for vec_mule (vmuleuh, vmulesh): <blockquote>
+<para>Replace with vmulouh and so on, for LE.</para>
+</blockquote>For for vec_mulo (vmulouh, vmulosh): <blockquote>
+<para>Replace with vmuleuh and so on, for LE.</para>
+</blockquote>Also for vec_perm (vperm) it specifies: <blockquote>
+<para>For LE, Swap input arguments and complement the selection vector.</para>
+</blockquote>The above is just a sampling of a larger list of Endian Sensitive Operations.</para>
+
+<para>The obvious coding for Vector Multiply High Halfword would be: <literallayout><computeroutput>vui16_t
+test_mulhw&#32;(vui16_t&#32;vra,&#32;vui16_t&#32;vrb)
+{
+&#32;&#32;return&#32;vec_mergee&#32;((vui16_t)vec_mule&#32;(vra,&#32;vrb),
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(vui16_t)vec_mulo&#32;(vra,&#32;vrb));
+}
+</computeroutput></literallayout> A couple problems with this:<itemizedlist>
+<listitem>
+<para>vec_mergee is only defined for vector int/long and float/double (word/doubleword) types.</para>
+</listitem><listitem>
+<para>vec_mergee is endian sensitive and would produce the wrong results in LE mode.</para>
+</listitem><listitem>
+<para>vec_mule/vec_mulo are endian sensitive and produce the wrong results in LE mode.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The first step is to implement Vector Merge Even Halfword operation: <literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_vmrgeh&#32;(vui16_t&#32;vra,&#32;vui16_t&#32;vrb)
+{
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;vui16_t&#32;permute&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x0302,0x1312,&#32;0x0706,0x1716,&#32;0x0B0A,0x1B1A,&#32;0x0F0E,0x1F1E&#32;};
+
+&#32;&#32;return&#32;vec_perm&#32;(vrb,&#32;vra,&#32;(vui8_t)permute);
+#else
+&#32;&#32;vui16_t&#32;permute&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;{&#32;0x0001,0x1011,&#32;0x0405,0x1415,&#32;0x0809,0x1819,&#32;0x0C0D,0x1C1D};
+
+&#32;&#32;return&#32;vec_perm&#32;(vra,&#32;vrb,&#32;(vui8_t)permute);
+#endif
+}
+</computeroutput></literallayout> For big-endian we have a straight forward vec_perm with a permute select vector interleaving even halfwords from vectors vra and vrb.</para>
+
+<para>For little-endian we need to nullify the LE transform applied by the compiler. So the select vector looks like it interleaves odd halfwords from vectors vrb and vra. It also reverses byte numbering within halfwords. The compiler transforms this back into the operation we wanted in the first place. The result is <emphasis>not</emphasis> endian sensitive and is stable across BE/LE implementations. Similarly for the Vector Merge Odd Halfword operation.</para>
+
+<para>As good OpenPOWER ABI citizens we should also provide endian sensitive operations <link linkend="vec__int16__ppc_8h_1a8fd1ea4bcf0c44883d806d42feb50db2">vec_mrgeh()</link> <link linkend="vec__int16__ppc_8h_1a2f08727b429f9159f6f189bd49be5617">vec_mrgoh()</link>. For example: <literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_mrgeh&#32;&#32;(vui16_t&#32;vra,&#32;vui16_t&#32;vrb)
+{
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;return&#32;vec_vmrgoh&#32;((vui16_t)&#32;vrb,&#32;(vui16_t)&#32;vra);
+#else
+&#32;&#32;return&#32;vec_vmrgeh&#32;((vui16_t)&#32;vra,&#32;(vui16_t)&#32;vrb);
+#endif
+}
+</computeroutput></literallayout> <formalpara><title>Note: </title>
+
+<para>This is essentially what the compiler would do for vec_mergee.</para>
+</formalpara>
+Also to follow that pattern established for <link linkend="vec__int32__ppc_8h">vec_int32_ppc.h</link> we should provide implementations for Vector Merge Algebraic High/Low Halfword. For example: <literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_mrgahh&#32;&#32;(vui32_t&#32;vra,&#32;vui32_t&#32;vrb)
+{
+&#32;&#32;return&#32;vec_vmrgeh&#32;((vui16_t)&#32;vra,&#32;(vui16_t)&#32;vrb);
+}
+</computeroutput></literallayout> This is simpler as we can use the endian invariant <link linkend="vec__int16__ppc_8h_1aabf6f4a95093b3e9ae78c8600e8d9d40">vec_vmrgeh()</link> operation. Similarly for Vector Merge Algebraic Low Halfword using <link linkend="vec__int16__ppc_8h_1a525c4f6be5284ec528f3df527b07727a">vec_vmrgoh()</link>. <formalpara><title>Note: </title>
+
+<para>The inputs are defined as 32-bit to match the results from multiply even/odd halfword.</para>
+</formalpara>
+Now we have all the parts we need to implement multiply high/low halfword. For example Multiply High Unsigned Halfword: <literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_mulhuh&#32;(vui16_t&#32;vra,&#32;vui16_t&#32;vrb)
+{
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;return&#32;vec_mrgahh&#32;(vec_mulo&#32;(vra,&#32;vrb),&#32;vec_mule&#32;(vra,&#32;vrb));
+#else
+&#32;&#32;return&#32;vec_mrgahh&#32;(vec_mule&#32;(vra,&#32;vrb),&#32;vec_mulo&#32;(vra,&#32;vrb));
+#endif
+}
+</computeroutput></literallayout></para>
+
+<para>Similarly for Multiply High Signed Halfword. <formalpara><title>Note: </title>
+
+<para>For LE we need to nullify the compiler transform by reversing of the order of vec_mulo/vec_mule. This is required to get the algebraically correct (multiply high) result.</para>
+</formalpara>
+Finally we can implement the Multiply Low Halfword which by PowerISA conventions is called Multiply Unsigned Halfword Modulo: <literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_muluhm&#32;(vui16_t&#32;vra,&#32;vui16_t&#32;vrb)
+{
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;return&#32;vec_mrgalh&#32;(vec_mulo&#32;(vra,&#32;vrb),&#32;vec_mule&#32;(vra,&#32;vrb));
+#else
+&#32;&#32;return&#32;vec_mrgalh&#32;(vec_mule&#32;(vra,&#32;vrb),&#32;vec_mulo&#32;(vra,&#32;vrb));
+#endif
+}
+</computeroutput></literallayout> <formalpara><title>Note: </title>
+
+<para>We use the endian stable <link linkend="vec__int16__ppc_8h_1a152cc7dff6dd572711432962a211a97e">vec_mrgalh()</link> for multiply low. Again for LE we have to nullify the compiler transform by reversing of the order of vec_mulo/vec_mule. This is required to get the algebraically correct (multiply high) result. </para>
+<simplesect/>
+<para><link linkend="vec__int16__ppc_8h_1abceaf3207f8b6fbb27a3e88409f8357b">vec_muluhm()</link> works for signed and unsigned multiply low (modulo).</para>
+</formalpara>
+</para>
+<section xml:id="vec__int16__ppc_8h_1i16_endian_issues_0_1">
+<title>Multiply High Unsigned Halfword Example</title>
+
+<para>So what does the compiler generate after unwinding three levels of inline functions. For this test case: <literallayout><computeroutput>vui16_t
+__test_mulhuh&#32;(vui16_t&#32;a,&#32;vui16_t&#32;b)
+{
+&#32;&#32;return&#32;vec_mulhuh&#32;(a,&#32;b);
+}
+</computeroutput></literallayout> The GCC 8 compiler targeting powerpc64le and -mcpu=power8 generates: <literallayout><computeroutput>addis&#32;&#32;&#32;r9,r2,.rodata.cst16@ha
+vmulouh&#32;v1,v2,v3
+vmuleuh&#32;v2,v2,v3
+addi&#32;&#32;&#32;&#32;r9,r9,.rodata.cst16@l
+lvx&#32;&#32;&#32;&#32;&#32;v0,0,r9
+xxlnor&#32;&#32;vs32,vs32,vs32
+vperm&#32;&#32;&#32;v2,v2,v1,v0
+</computeroutput></literallayout> The addis, addi, lvx instruction sequence loads the permute selection constant vector. The xxlnor instruction complements the selection vector for LE. These instructions are only needed once per function and can be hoisted out of loops and shared across instances of <link linkend="vec__int16__ppc_8h_1af8f778868c7a8a71b9e901042f24f1c2">vec_mulhuh()</link>. Which might look like this: <literallayout><computeroutput>&#32;&#32;&#32;&#32;&#32;&#32;addis&#32;&#32;&#32;r9,r2,.rodata.cst16@ha
+&#32;&#32;&#32;&#32;&#32;&#32;addi&#32;&#32;&#32;&#32;r9,r9,.rodata.cst16@l
+&#32;&#32;&#32;&#32;&#32;&#32;lvx&#32;&#32;&#32;&#32;&#32;v0,0,r9
+&#32;&#32;&#32;&#32;&#32;&#32;xxlnor&#32;&#32;vs32,vs32,vs32
+&#32;&#32;&#32;&#32;&#32;&#32;...
+Loop:
+&#32;&#32;&#32;&#32;&#32;&#32;vmulouh&#32;v1,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;vmuleuh&#32;v2,v2,v3
+&#32;&#32;&#32;&#32;&#32;&#32;vperm&#32;&#32;&#32;v2,v2,v1,v0
+&#32;&#32;&#32;&#32;&#32;&#32;...
+</computeroutput></literallayout> The vmulouh, vmuleuh, vperm instruction sequence is the core of the function. They multiply the elements and selects/merges the high order 16-bits of each product into the result vector.</para>
+</section>
+</section>
+<section xml:id="vec__int16__ppc_8h_1int16_examples_0_1">
+<title>Examples, Divide by integer constant</title>
+
+<para>Suppose we have a requirement to convert an array of 16-bit unsigned short values to decimal. The classic <emphasis>itoa</emphasis> implementation performs a sequence of divide / modulo by 10 operations that produce one (decimal) value per iteration, until the divide returns 0.</para>
+
+<para>For this example we want to vectorize the operation and the PowerISA (and most other platforms) does not provide a vector integer divide instruction. But we do have vector integer multiply. As we will see the multiply high defined above is very handy for applying the multiplicative inverse. Also, the conversion divide is a constant value applied across the vector which simplifies the coding.</para>
+
+<para>Here we can use the multiplicative inverse which is a scaled fixed point fraction calculated from the original divisor. This works nicely if the fixed radix point is just before the 16-bit fraction and we have a multiply high (<link linkend="vec__int16__ppc_8h_1af8f778868c7a8a71b9e901042f24f1c2">vec_mulhuh()</link>) operation. Multiplying a 16-bit unsigned integer by a 16-bit unsigned fraction generates a 32-bit product with 16-bits above (integer) and below (fraction) the radix point. The high 16-bits of the product is a good approximation of the integer quotient.</para>
+
+<para>It turns out that generating the multiplicative inverse can be tricky. To produce correct results over the full range, requires possible pre-scaling and post-shifting, and sometimes a corrective addition. Fortunately, the mathematics are well understood and are commonly used in optimizing compilers. Even better, Henry Warren&apos;s book has a whole chapter on this topic. <formalpara><title>See also: </title>
+
+<para>&quot;Hacker&apos;s Delight, 2nd Edition,&quot; Henry S. Warren, Jr, Addison Wesley, 2013. Chapter 10, Integer Division by Constants.</para>
+</formalpara>
+</para>
+<section xml:id="vec__int16__ppc_8h_1int16_examples_0_1_1">
+<title>Divide by constant 10 examples</title>
+
+<para>In the chapter above; <blockquote>
+<para>Figure 10-2 Computing the magic number for unsigned division.</para>
+</blockquote>provides a sample C function for generating the magic number (actually a struct containing; the magic multiplicative inverse, &quot;add&quot; indicator, and the shift amount). For the 16-bit unsigned divisor 10, this is { 52429, 0, 3 }:<itemizedlist>
+<listitem>
+<para>the multiplier is 52429.</para>
+</listitem><listitem>
+<para>no corrective add of the dividend is required.</para>
+</listitem><listitem>
+<para>the final shift is 3-bits right.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Which could look like this: <literallayout><computeroutput>&#32;vui16_t
+__test_div10&#32;(vui16_t&#32;n)
+{
+&#32;&#32;vui16_t&#32;q;
+&#32;&#32;//&#32;M=&#32;52429,&#32;a=0,&#32;s=3
+&#32;&#32;vui16_t&#32;magic&#32;=&#32;vec_splats&#32;((unsigned&#32;short)&#32;52429);
+&#32;&#32;const&#32;int&#32;s&#32;=&#32;3;
+
+&#32;&#32;q&#32;=&#32;vec_mulhuh&#32;(magic,&#32;n);
+&#32;&#32;return&#32;vec_srhi&#32;(q,&#32;s);
+}
+</computeroutput></literallayout></para>
+
+<para>But we also need the modulo to extract each digit. The simplest and oldest technique is to multiply the quotient by the divisor (constant 10) and subtract that from the original dividend. Here we can use the <link linkend="vec__int16__ppc_8h_1abceaf3207f8b6fbb27a3e88409f8357b">vec_muluhm()</link> operation we defined above. Which could look like this: <literallayout><computeroutput>&#32;vui16_t
+__test_mod10&#32;(vui16_t&#32;n)
+{
+&#32;&#32;vui16_t&#32;q;
+&#32;&#32;//&#32;M=&#32;52429,&#32;a=0,&#32;s=3
+&#32;&#32;vui16_t&#32;magic&#32;=&#32;vec_splats&#32;((unsigned&#32;short)&#32;52429);
+&#32;&#32;vui16_t&#32;c_10&#32;=&#32;vec_splats&#32;((unsigned&#32;short)&#32;10);
+&#32;&#32;const&#32;int&#32;s&#32;=&#32;3;
+&#32;&#32;vui16_t&#32;tmp,&#32;rem,&#32;q_10;
+
+&#32;&#32;q&#32;=&#32;vec_mulhuh&#32;(magic,&#32;n);
+&#32;&#32;q_10&#32;=&#32;vec_srhi&#32;(q,&#32;s);
+&#32;&#32;tmp&#32;=&#32;vec_muluhm&#32;(q_10,&#32;c_10);
+&#32;&#32;rem&#32;=&#32;vec_sub&#32;(n,&#32;tmp);
+&#32;&#32;return&#32;rem;
+}
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Note: </title>
+
+<para>vec_sub() and vec_splats() are an existing altivec.h generic built-ins.</para>
+</formalpara>
+</para>
+</section>
+<section xml:id="vec__int16__ppc_8h_1int16_examples_0_1_2">
+<title>Divide by constant 10000 example</title>
+
+<para>As we mentioned above, some divisors require an add before the shift as a correction. For the 16-bit unsigned divisor 10000 this is { 41839, 1, 14 }:<itemizedlist>
+<listitem>
+<para>the multiplier is 41839.</para>
+</listitem><listitem>
+<para>corrective add of the dividend is required.</para>
+</listitem><listitem>
+<para>the final shift is 14-bits right.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>In this case the perfect multiplier is too large (&gt;= 2**16). So the magic multiplier is reduced by 2**16 and to correct for this we need to add the dividend to the product. This add may generate a carry that must be included in the shift. Here vec_avg handles the 17-bit sum internally before shifting right 1. But vec_avg adds an extra +1 (for rounding) that we don&apos;t want. So we use (n-1) for the product correction then complete the operation with shift right (s-1). Which could look like this: <literallayout><computeroutput>vui16_t
+__test_div10000&#32;(vui16_t&#32;n)
+{
+&#32;&#32;vui16_t&#32;result,&#32;q;
+&#32;&#32;//&#32;M=&#32;41839,&#32;a=1,&#32;s=14
+&#32;&#32;vui16_t&#32;magic&#32;=&#32;vec_splats&#32;((unsigned&#32;short)&#32;41839);
+&#32;&#32;const&#32;int&#32;s&#32;=&#32;14;
+&#32;&#32;vui16_t&#32;tmp,&#32;rem;
+
+&#32;&#32;q&#32;=&#32;vec_mulhuh&#32;(magic,&#32;n);
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;const&#32;vui16_t&#32;vec_ones&#32;=&#32;vec_splat_u16&#32;(&#32;1&#32;);
+&#32;&#32;&#32;&#32;&#32;&#32;vui16_t&#32;n_1&#32;=&#32;vec_sub&#32;(n,&#32;vec_ones);
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;avg&#32;=&#32;(q&#32;+&#32;(n-1)&#32;+&#32;1)&#32;&gt;&gt;&#32;1
+&#32;&#32;&#32;&#32;&#32;&#32;q&#32;=&#32;vec_avg&#32;(q,&#32;n_1);
+&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_srhi&#32;(q,&#32;(s&#32;-&#32;1));
+&#32;&#32;&#32;&#32;}
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Note: </title>
+
+<para>vec_avg(), vec_sub(), vec_splats() and vec_splat_u16() are existing altivec.h generic built-ins.</para>
+</formalpara>
+The modulo computation remains the same as <link linkend="vec__int16__ppc_8h_1int16_examples_0_1_1">Divide by constant 10 examples</link>.</para>
+</section>
+</section>
+<section xml:id="vec__int16__ppc_8h_1int16_perf_0_0">
+<title>Performance data.</title>
+
+<para>We can use the example above (see <link linkend="vec__int16__ppc_8h_1i16_endian_issues_0_1">Multiply High Unsigned Halfword Example</link>) to illustrate the performance metrics pveclib provides. For <link linkend="vec__int16__ppc_8h_1af8f778868c7a8a71b9e901042f24f1c2">vec_mulhuh()</link> the core operation is the sequence vmulouh/vmuleuh/vperm. This represents the best case latency, when it is used multiple times in a single larger function.</para>
+
+<para>The compiler notes that vmulouh/vmuleuh are independent instructions that can execute concurrently (in separate vector pipelines). The compiler schedules them to issue in same cycle. The latency for vmulouh/vmuleuh is listed as 7 cycle and the throughput of 2 per cycle (there are 2 vector pipes for multiply). As we assume this function will use both vector pipelines, the throughput for this function is reduced to 1 per cycle.</para>
+
+<para>We still need to select/merge the results. The vperm instruction is dependent on the execution of both vmulouh/vmuleuh and load of the select vector complete. For this case we assume that the load of the permute select vector has already executed. The processor can not issue the vperm until both vmulouh/vmuleuh instructions execute. The latency for vperm is 2 cycles (3 on POWER9). So the best case latency for this operation is is (7 + 2 = 9) cycles (10 on POWER9).</para>
+
+<para>Looking at the first or only execution of <link linkend="vec__int16__ppc_8h_1af8f778868c7a8a71b9e901042f24f1c2">vec_mulhuh()</link> in a function defines the worse case latency. Here we have to include the permute select vector load and (for LE) the select vector complement. However this case provides additional multiple pipe parallelism that needs to be accounted for in the latencies.</para>
+
+<para>The compiler notes that addis/vmulouh/vmuleuh are independent instructions that can execute concurrently in separate pipelines. So the compiler schedules them to issue in same cycle. The latency for vmulouh/vmuleuh is 7 cycles while the addis latency is only 2 cycles. The dependent addi instruction can issue in the 3rd cycle, while vmulouh/vmuleuh are still executing. The addi also has a 2 cycle latency, so the dependent lvx can issue in the 5th cycle, while vmulouh/vmuleuh are still executing. The lvx has a latency of 5 cycles and will not complete execution until 2 cycles after vmulouh/vmuleuh. The dependent xxlnor is waiting of the load (lvx) and has a latency of 2 cycles.</para>
+
+<para>So there are two independent instruction sequences; vmulouh/vmuleuh and addis/addi/lvx/xxlnor. Both must complete execution before the vperm can issue and complete the operation. The later sequence has the longer (2+2+5+2=11) latency and dominates the timing. So the worst latency for the full sequence is (2+2+5+2+2 = 13) cycles (14 on POWER9).</para>
+
+<para><table frame="all">
+    <title></title>
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+    <tbody>
+<row>
+<entry>
+<para>processor</para>
+</entry><entry>
+<para>Latency</para>
+</entry><entry>
+<para>Throughput  </para>
+</entry></row>
+<row>
+<entry>
+<para>power8 </para>
+</entry><entry>
+<para>9-13 </para>
+</entry><entry>
+<para>1/cycle </para>
+</entry></row>
+<row>
+<entry>
+<para>power9 </para>
+</entry><entry>
+<para>10-14 </para>
+</entry><entry>
+<para>1/cycle </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</table>
+</para>
+<section xml:id="vec__int16__ppc_8h_1int16_perf_0_1">
+<title>More information.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_int16_ppc.h</para>
+    </simplesect>
+</section>

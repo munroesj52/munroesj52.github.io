@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__f128__ppc_8h">
+    <title>vec_f128_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_int128_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_f64_ppc.h&gt;</programlisting>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="union____VF__128">__VF_128</link></para>
+<para><emphasis>Union used to transfer 128-bit data between vector and
+__float128 types.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>  <link linkend="vec__f128__ppc_8h_1a5c0751a2b64a9a560e9a964294f63166">vf128_t</link><para><emphasis>vector of 128-bit binary128 element.
+Same as __float128 for PPC.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="vec__f128__ppc_8h_1a5c0751a2b64a9a560e9a964294f63166">vf128_t</link>  <link linkend="vec__f128__ppc_8h_1a5f89d266b82d1a8f300348cf99b9ae3f">__Float128</link><para><emphasis>Define __Float128 if not defined by the compiler.
+Same as __float128 for PPC.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="vec__f128__ppc_8h_1a5c0751a2b64a9a560e9a964294f63166">vf128_t</link>  <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link><para><emphasis>Define __binary128 if not defined by the compiler.
+Same as __float128 for PPC.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="vec__f128__ppc_8h_1a5c0751a2b64a9a560e9a964294f63166">vf128_t</link>  <link linkend="vec__f128__ppc_8h_1a4af2270bedc312f7d99c0605358cd28c">__float128</link><para><emphasis>Define __float128 if not defined by the compiler.
+Same as __float128 for PPC.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef long double  <link linkend="vec__f128__ppc_8h_1a55019fe6dc8271e91613db7b1ae96721">__IBM128</link><para><emphasis>Define __IBM128 if not defined by the compiler.
+Same as old long double for PPC.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__f128__ppc_8h_1a57dc5b9171d5ce3d49f0f12795659c1a">vec_xfer_bin128_2_vui8t</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Transfer function from a __binary128 scalar to a vector char.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__f128__ppc_8h_1aff0629194f4f63bb083c271844459072">vec_xfer_bin128_2_vui16t</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Transfer function from a __binary128 scalar to a vector short int.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__f128__ppc_8h_1a8043c2c5ac35d2b0a8bd8f33779c91a6">vec_xfer_bin128_2_vui32t</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Transfer function from a __binary128 scalar to a vector int.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__f128__ppc_8h_1acac5809f5f651e45113de8410664f2c7">vec_xfer_bin128_2_vui64t</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Transfer function from a __binary128 scalar to a vector long long int.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__f128__ppc_8h_1aec6e44a75847d3d3e5611b89eed71c0a">vec_xfer_bin128_2_vui128t</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Transfer function from a __binary128 scalar to a vector __int128.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1a047b7dc5b55b2d13e2fd826c63872ea9">vec_xfer_vui8t_2_bin128</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> f128)<para><emphasis>Transfer a vector unsigned char to __binary128 scalar.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1a3dec5c23a659b2fca1c219fe783f88eb">vec_xfer_vui16t_2_bin128</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> f128)<para><emphasis>Transfer a vector unsigned short to __binary128 scalar.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1af0596ab318ba6d1ec5e7ed40871255a9">vec_xfer_vui32t_2_bin128</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> f128)<para><emphasis>Transfer a vector unsigned int to __binary128 scalar.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1ae8002c29875a226d11ec57a42b5b3955">vec_xfer_vui64t_2_bin128</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> f128)<para><emphasis>Transfer a vector unsigned long long  to __binary128 scalar.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1a91b99b632646aaca91de6834e2b1da26">vec_xfer_vui128t_2_bin128</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> f128)<para><emphasis>Transfer a vector unsigned __int128 to __binary128 scalar.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1add641f5a217eff45f0e836fa98613584">vec_absf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Clear the sign bit of __float128 input
+and return the resulting positive __float128 value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1a946ffd501b32f3ec96563ab101afbfad">vec_all_isfinitef128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128 value is Finite
+(Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1a66fc4e7c94d0b30bb3515931aaf723da">vec_all_isinff128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128 value is infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1af06b73ac57985011c558670adc283e89">vec_all_isnanf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128 value is Not a Number (NaN).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1afc830b382bd45dc0ff815024c1bfb26d">vec_all_isnormalf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128 value is normal
+(Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1adf1a94cccdb3f106a0e6399e2f034718">vec_all_issubnormalf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128
+value is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1ac554a9d0d12fca036772aaaee5908414">vec_all_iszerof128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true if the __float128
+value is +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1adfb73eac40698921735bad8ac4ce560e">vec_copysignf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128x, <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128y)<para><emphasis>Copy the sign bit from f128y and merge with the magnitude
+from f128x. The merged result is returned as a __float128 value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1a0a30726ccfb216e4d2e1ede3854ab96b">vec_const_huge_valf128</link> (
+)<para><emphasis>return a positive infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1a9c68f73f69c4776bb054d42915e7103d">vec_const_inff128</link> (
+)<para><emphasis>return a positive infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1af7fb1013dfcf633156cd7f855a11fb56">vec_const_nanf128</link> (
+)<para><emphasis>return a quiet NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> <link linkend="vec__f128__ppc_8h_1aac806c62ebaae6ab8faca87794cb917c">vec_const_nansf128</link> (
+)<para><emphasis>return a signaling NaN.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1ad1668ff13922ca04059f1844a7a1464f">vec_isfinitef128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return 128-bit vector boolean true if the __float128 value
+is Finite (Not NaN nor Inf).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1aebd9706acb775392282cfe4d4e3a03aa">vec_isinf_signf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return true (nonzero) value if the __float128 value is
+infinity. For infinity indicate the sign as +1 for positive infinity
+and -1 for negative infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1a94f9c7429c2ebd9b9f32ad6e98689ebb">vec_isinff128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return a 128-bit vector boolean true if the __float128 value
+is infinity.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1a11c410994f958a6b4ac9583878a55a72">vec_isnanf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return 128-bit vector boolean true if the __float128 value
+is Not a Number (NaN).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1aa25185c83b69f6af3f3d9399199c8a57">vec_isnormalf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return 128-bit vector boolean true if the __float128 value
+is normal (Not NaN, Inf, denormal, or zero).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1a9670e4655a9c7888c80343780cd7abf9">vec_issubnormalf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return 128-bit vector boolean true value,
+if the __float128 value is subnormal (denormal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1a598a822d22b02ba0d2c2a1095a4e700d">vec_iszerof128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return 128-bit vector boolean true value, if the
+value that is +-0.0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__f128__ppc_8h_1a4d5b388cfc9af26418bdd4ec8e4e6f73">vec_setb_qp</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Vector Set Bool from Quadword Floating-point.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__f128__ppc_8h_1a4ca7749d334c2a2c17a4d2a98b5bf755">vec_signbitf128</link> (
+<link linkend="vec__f128__ppc_8h_1a443a43ae34ab3b78564d2a8277503cac">__binary128</link> f128)<para><emphasis>Return int boolean true if the __float128 value
+is negative (sign bit is &apos;1&apos;).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of 128-bit SIMD operations over Quad-Precision floating point elements. </para>
+
+<para>PowerISA 3.0 added Quad-Precision floating point type and operations to the Vector-Scalar Extension (VSX) facility. The first hardware implementation is available in POWER9.</para>
+
+<para>While all Quad-Precision operations are on 128-bit vector registers, they are defined as scalars in the PowerISA. The OpenPOWER ABI also treats the __float128 type as scalar that just happens to use vector registers for parameter passing and operations. As such no operations using __float128 (_Float128, or __ieee128) as parameter or return value are defined as vector built-ins in the ABI or &lt;altivec.h&gt;.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>GCC 8.2 does document some built-ins, using the <emphasis>scalar</emphasis> prefix (scalar_extract_exp, scalar_extract_sig, scalar_test_data_class), that do accept the __ieee128 type. This work seems to be incomplete as scalar_exp_cmp_* for the __ieee128 type are not present. GCC 7.3 defines vector and scalar forms of the extract/insert_exp for float and double but not for __ieee128. These built-ins are not defined in GCC 6.4. See <link xlink:href="https://gcc.gnu.org/onlinedocs/">compiler documentation</link>. These are useful operations and can be implement in a few vector logical instruction for earlier machines. So it seems reasonable to add these to pveclib for both vector and scalar forms.</para>
+</formalpara>
+Quad-Precision is not supported in hardware until POWER9. However the compiler and runtime supports the __float128 type and arithmetic operations via soft-float emulation for earlier processors. The soft-float implementation follows the ABI and passes __float128 parameters and return values in vector registers.</para>
+
+<para>So it is not unreasonable for this header to provide vector forms of the __float128 classification functions (isnormal/subnormal/finite/inf/nan/zero, copysign, and abs). These functions can be implemented directly using (one or more) POWER9 instructions, or a few vector logical and integer compare instructions for POWER7/8. Each is comfortably small enough to be in-lined and inherently faster than the equivalent POSIX or compiler built-in runtime functions. Performing these operations in-line and directly in vector registers (VRs) avoids call/return and VR &lt;-&gt; GPR transfer overhead.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables associated &lt;altivec.h&gt; built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power8</emphasis>, Quad-Precision floating-point operations useful for floating point classification are not defined. This header provides the appropriate substitutions, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+<simplesect/>
+<para>Most ppc64le compilers will default to <emphasis role="bold">-mcpu=</emphasis><emphasis>power8</emphasis> if <emphasis role="bold">-mcpu</emphasis> is not specified.</para>
+</formalpara>
+This header covers operations that are any of the following:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Implemented in hardware instructions in newer processors, but useful to programmers on slightly older processors (even if the equivalent function requires more instructions).</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include scalar_test_neg, scalar_test_data_class, etc.</para>
+</listitem><listitem>
+<para>Providing special vector float tests for special conditions without generating extraneous floating-point exceptions. This is important for implementing __float128 forms of ISO C99 Math functions. Examples include vector isnan, isinf, etc.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="vec__f128__ppc_8h_1f128_examples_0_0">
+<title>Examples</title>
+
+<para>For example: using the the classification functions for implementing the math library function sine and cosine. The Posix specification requires that special input values are processed without raising extraneous floating point exceptions and return specific floating point values in response. For example the sin() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is subnormal then return <emphasis>value</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return sin(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the POSIX requirements for special values input to sinf128(): <literallayout><computeroutput>__binary128
+test_sinf128&#32;(__binary128&#32;value)
+{
+&#32;&#32;__binary128&#32;result;
+
+&#32;&#32;if&#32;(vec_all_isnormalf128&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;taylor&#32;series.
+&#32;&#32;&#32;&#32;&#32;&#32;...
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_all_isinff128&#32;(value))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_const_nanf128&#32;();
+&#32;&#32;&#32;&#32;&#32;&#32;else
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>For another example the cos() function.<itemizedlist>
+<listitem>
+<para>If the input <emphasis>value</emphasis> is NaN then return a NaN.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-0.0 then return <emphasis>1.0</emphasis>.</para>
+</listitem><listitem>
+<para>If the input <emphasis>value</emphasis> is +-Inf then return a NaN.</para>
+</listitem><listitem>
+<para>Otherwise compute and return cos(value).</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The following code example uses functions from this header to address the Posix requirements for special values input to cosf128(): <literallayout><computeroutput>__binary128
+test_cosf128&#32;(__binary128&#32;value)
+{
+&#32;&#32;__binary128&#32;result;
+
+&#32;&#32;if&#32;(vec_all_isfinitef128&#32;(value))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_all_iszerof128&#32;(value))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;1.0Q;
+&#32;&#32;&#32;&#32;&#32;&#32;else
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;body&#32;of&#32;taylor&#32;series&#32;...
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_all_isinff128&#32;(value))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;vec_const_nanf128&#32;();
+&#32;&#32;&#32;&#32;&#32;&#32;else
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;value;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout></para>
+
+<para>Neither example raises floating point exceptions or sets <emphasis role="bold">errno</emphasis>, as appropriate for a vector math library.</para>
+</section>
+<section xml:id="vec__f128__ppc_8h_1f128_perf_0_0">
+<title>Performance data</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_f128_ppc.h</para>
+    </simplesect>
+</section>

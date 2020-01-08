@@ -1,0 +1,1773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__bcd__ppc_8h">
+    <title>vec_bcd_ppc.h File Reference</title>
+    <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_char_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_int128_ppc.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link><para><emphasis>vector signed BCD integer of up to 31 decimal digits.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__common__ppc_8h_1aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</link><para><emphasis>vector vector bool from 128-bit signed BCD integer.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1ac2eb804164fac106d89ef8fb9cf6a877">_BCD_CONST_PLUS_NINES</link> ((<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link>) <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link>(0x9999999999999999, 0x999999999999999c))<para><emphasis>vector signed BCD constant +9s.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a2dc4f754b3261ac01c51a4e30b332488">_BCD_CONST_PLUS_ONE</link> ((<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link>) <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link>(0, 0x1c))<para><emphasis>vector signed BCD constant +1.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a33ef981c324ce5c25152651b9f40965c">_BCD_CONST_MINUS_ONE</link> ((<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link>) <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link>(0, 0x1d))<para><emphasis>vector signed BCD constant -1.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a65571de03c8870470db44b1abb9dbcb7">_BCD_CONST_ZERO</link> ((<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link>) <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link>(0, 0x0c))<para><emphasis>vector signed BCD constant +0.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="vec__bcd__ppc_8h_1a50e023591594ad9e7110702fed96d9c7">_BCD_CONST_SIGN_MASK</link> ((<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link>) <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link>(0, 0xf))<para><emphasis>vector BCD sign mask in bits 124:127.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__bcd__ppc_8h_1adc0e4636d0720f8b3b6d22268b2cc3e0">vec_BCD2BIN</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> val)<para><emphasis>Convert vector of 2 x unsigned 16-digit BCD values
+to vector 2 x doubleword binary values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static _Decimal128 <link linkend="vec__bcd__ppc_8h_1aa924d03e2f88506e323c4b70f4b7df8b">vec_BCD2DFP</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> val)<para><emphasis>Convert a Vector Signed BCD value to __Decimal128.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ad4222bd4b90a5248015fbea12cbc0a21">vec_BIN2BCD</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> val)<para><emphasis>Convert vector unsigned doubleword binary values to
+Vector unsigned 16-digit BCD values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ad8123fa00f666a0d439a049eb4f7c7eb">vec_DFP2BCD</link> (
+_Decimal128 val)<para><emphasis>Convert a __Decimal128 value to Vector BCD.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Decimal Add Signed Modulo Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a76d5034289bea5c7d9159db1d443f6b7">vec_bcdaddcsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Decimal Add &amp; write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a6bf159e0abdccaa6fca21c6567b2067b">vec_bcdaddecsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> c)<para><emphasis>Decimal Add Extended &amp; write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a3411797c249e42c9c96f6e0b239e6e50">vec_bcdaddesqm</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> c)<para><emphasis>Decimal Add Extended Signed Modulo Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq</link> (
+<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Decimal Convert From Signed Quadword
+returning up to 31 BCD digits.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a049f327cf7468a13cfbda107a178d009">vec_bcdcfud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector Decimal Convert From Unsigned doubleword
+returning up to 2x16 BCD digits.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a7b8b5371d537cd878ffb37337e93ba14">vec_bcdcfuq</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert From Unsigned Quadword
+returning up to 32 BCD digits.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ae4923e7e5746c5c6f21ddc9993894692">vec_bcdcfz</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vrb)<para><emphasis>Vector Decimal Convert From Zoned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ac547402f2432e08ac47123d93a0dc36d">vec_bcdcmp_eqsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a128ecc0b91f7157902f4f5b1c9fc2cc5">vec_bcdcmp_gesq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for greater than or equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a4da91176af0a3ec68eb23cab56fd97e8">vec_bcdcmp_gtsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for greater than.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1aefb25dd6da317584946ad502045742e6">vec_bcdcmp_lesq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for less than or equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a8b44c71b7e48d79892356c3ceb86df26">vec_bcdcmp_ltsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for less than.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a86aa60d4e8d1f7ef10e3796d052499d7">vbBCD_t</link> <link linkend="vec__bcd__ppc_8h_1aefb8a409eea857401b082dbdb129e88f">vec_bcdcmp_nesq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for not equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a1dcd1cfe33aeaa26b23bdd6f9f535361">vec_bcdcmpeq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a9c029287dd2dbc35725faa77354ab599">vec_bcdcmpge</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for greater than or equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1aec74a780fd101d45c3c0823ad3d575ca">vec_bcdcmpgt</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for greater than.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a3d4226f530eac6fdd969ed108261847e">vec_bcdcmple</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for less than or equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a53238244fe1850d37020510aa488d14e">vec_bcdcmplt</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for less than.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a0666db6a81b174fd84f3b5cffe2f93ae">vec_bcdcmpne</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Compare Signed BCD Quadword for not equal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1abeda7137bef8dfc50d539c86f40d8070">vec_bcdcpsgn</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector copy sign BCD.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__bcd__ppc_8h_1a5086ba6056febb11acd5d5cd18e96dfb">vec_bcdctsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert to Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1af89689661c664a010554081b8aba5a49">vec_bcdctub</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert Binary Coded Decimal (BCD) digit
+pairs to binary unsigned bytes .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__bcd__ppc_8h_1af039194f94028cd7e61d5e52ebb57ce5">vec_bcdctuh</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert groups of 4 BCD digits
+to binary unsigned halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__bcd__ppc_8h_1a4a7a98ef7beb93faed6506bbb1145e6e">vec_bcdctuw</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert groups of 8 BCD digits
+to binary unsigned words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__bcd__ppc_8h_1a62b3902055ebf8321ea36881773ac35b">vec_bcdctud</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert groups of 16 BCD digits
+to binary unsigned doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a29ae39efd0668fc35b5b6a33d2d46f9e">vec_bcdctuq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert groups of 32 BCD digits
+to binary unsigned quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1a832d31ded0b33a2b46f6491bcb71ea51">vec_bcdctz</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Decimal Convert To Zoned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a31e982fe4ae794073eb8e60a2525bb0e">vec_bcddiv</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Divide a Vector Signed BCD 31 digit value by another BCD value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1af423945a09a2ed7c4b53a7de336b42dc">vec_bcddive</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Decimal Divide Extended.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1abd65a5de9b45c2ecd452ee8a546d1418">vec_bcdmul</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Multiply two Vector Signed BCD 31 digit values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a54558167b9339ac9459d3f6cecb7ca14">vec_bcdmulh</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Vector Signed BCD Multiply High.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a158f05b60fc824fc8459d6885f2ee9ad">vec_bcds</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vrb)<para><emphasis>Decimal Shift.
+Shift a vector signed BCD value, left or right a variable
+amount of digits (nibbles). The sign nibble is preserved.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a08f861b495ad778c57b081f003ac3091">vec_bcdsetsgn</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vrb)<para><emphasis>Vector Set preferred BCD Sign.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a7c776218e50cd0f1d1878b3f99e111c8">vec_bcdslqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned int _N)<para><emphasis>Vector BCD Shift Right Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a21c6f7871451ad14edc2f1a5a40e5ae5">vec_bcdsluqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned int _N)<para><emphasis>Vector BCD Shift Right unsigned Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ae23289e90f886499ca671f1eb8d1a686">vec_bcdsr</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vrb)<para><emphasis>Decimal Shift and Round.
+Shift a vector signed BCD value, left or right a variable
+amount of digits (nibbles). The sign nibble is preserved.
+If byte element 7 of the shift count is negative (right shift),
+and the last digit shifted out is greater then or equal to 5,
+then increment the shifted magnitude by 1.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a76cd98e594ec0b867a4ffd4be62e77f6">vec_bcdsrqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned int _N)<para><emphasis>Vector BCD Shift Right Signed Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a3f600475b9eddc66b8cc35bf525e5153">vec_bcdsrrqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned int _N)<para><emphasis>Vector BCD Shift Right and Round Signed Quadword Immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a07e013a0fb2fc89a1ad44164f538654d">vec_bcdsruqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned int _N)<para><emphasis>Vector BCD Shift Right Unsigned Quadword immediate.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1aeb48adc4d015b874089fdf9fc4318509">vec_bcdsub</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Subtract two Vector Signed BCD 31 digit values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1abd666963d18930e07be06aeb563eeb71">vec_bcdsubcsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Decimal Sudtract &amp; write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a7eeb50993901b8bef76fa72cea668a15">vec_bcdsubecsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> c)<para><emphasis>Decimal Add Extended &amp; write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a67047bcf3b7e676f9a5229ffa4cfda2b">vec_bcdsubesqm</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> c)<para><emphasis>Decimal Subtract Extended Signed Modulo Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1ac1893edfe60aa10d3983615b2cbb3554">vec_bcdtrunc</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Decimal Truncate.
+Truncate a vector signed BCD value vra to N-digits,
+where N is the unsigned integer value in bits 48-63 of vrb.
+The first 31-N digits are set to 0 and the result returned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a8f135c421ca6bce377de71ff61be03b2">vec_bcdtruncqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned short _N)<para><emphasis>Decimal Truncate Quadword Immediate.
+Truncate a vector signed BCD value vra to N-digits,
+where N is a unsigned short integer constant.
+The first 31-N digits are set to 0 and the result returned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1aedaeb6bf4ee28d7325e6cd87f209b8e7">vec_bcdus</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__common__ppc_8h_1a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</link> vrb)<para><emphasis>Decimal Unsigned Shift.
+Shift a vector unsigned BCD value, left or right a variable
+amount of digits (nibbles).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1abd828916ab936edc1301b02f28f0accb">vec_bcdutrunc</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Decimal Unsigned Truncate.
+Truncate a vector unsigned BCD value vra to N-digits,
+where N is the unsigned integer value in bits 48-63 of vrb.
+The first 32-N digits are set to 0 and the result returned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a05a8e1bbc5ab13592b507c433f25b116">vec_bcdutruncqi</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra, const unsigned short _N)<para><emphasis>Decimal Unsigned Truncate Quadword Immediate.
+Truncate a vector unsigned BCD value vra to N-digits,
+where N is a unsigned short integer constant.
+The first 32-N digits are set to 0 and the result returned.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a486605817b8ca4850f7cf5584c751f45">vec_cbcdaddcsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> * cout, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Combined Decimal Add &amp; Write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1af9718d91a7e14c4a21e14a53f2f65041">vec_cbcdaddecsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> * cout, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> cin)<para><emphasis>Combined Decimal Add Extended &amp; write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a39a5438b38414210fceb891ff2261e7b">vec_cbcdmul</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> * p_high, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Combined Vector Signed BCD Multiply High/Low.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a67fa591c2015f76168c800957083f4b5">vec_cbcdsubcsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> * cout, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> a, <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> b)<para><emphasis>Combined Decimal Subtract &amp; Write Carry Signed Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> <link linkend="vec__bcd__ppc_8h_1ae3ce6a47849278477fe4ea35cff5ca12">vec_pack_Decimal128</link> (
+_Decimal128 lval)<para><emphasis>Pack a FPR pair (_Decimal128) to a doubleword vector
+(vector double).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static _Decimal128 <link linkend="vec__bcd__ppc_8h_1a75ec76de573013acc571e371e7200187">vec_quantize0_Decimal128</link> (
+_Decimal128 val)<para><emphasis>Quantize (truncate) a _Decimal128 value before convert to
+BCD.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1a226e0f45eb9c65e388ee86b3b80540e7">vec_rdxcf100b</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra)<para><emphasis>Vector Decimal Convert Binary Coded Decimal (BCD) digit
+pairs from radix 100 binary integer bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1a72f2f0f36250358a499d809c6779432b">vec_rdxcf10kh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10,000 Binary halfwords to
+pairs of radix 100 binary bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__bcd__ppc_8h_1aa356ff16b5b295a8a392ebba48b8a590">vec_rdxcf100mw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10**8 Binary words to
+pairs of radix 10,000 binary halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__bcd__ppc_8h_1aa1f71d7219b9d4a975c74a84fd55bbda">vec_rdxcf10E16d</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10**16 Binary doublewords to
+pairs of radix 10**8 binary words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__bcd__ppc_8h_1aab57aa00d4c2c17bc2eee01b50523a5a">vec_rdxcf10e32q</link> (
+<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10**32 Binary quadword to
+pairs of radix 10**16 binary doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1ae3a00fe6b7eefdb4e7dc93686068725e">vec_rdxcfzt100b</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone00, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone16)<para><emphasis>Vector Decimal Convert Zoned Decimal digit
+pairs to to radix 100 binary integer bytes..</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> <link linkend="vec__bcd__ppc_8h_1a7e490fa302fb2275fe07368c6276cf9c">vec_rdxct100b</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra)<para><emphasis>Vector Decimal Convert Binary Coded Decimal (BCD) digit
+pairs to radix 100 binary integer bytes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__bcd__ppc_8h_1a58484a98545f49712158d7943047b875">vec_rdxct10kh</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> vra)<para><emphasis>Vector Decimal Convert radix 100 digit
+pairs to radix 10,000 binary integer halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__bcd__ppc_8h_1a2e857a02bebc27fb0bb18eea5ceddf0d">vec_rdxct100mw</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10,000 digit
+halfword pairs to radix 100,000,000 binary integer words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__bcd__ppc_8h_1a3e5105096cab9b9a2ae703262e403352">vec_rdxct10E16d</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra)<para><emphasis>Vector Decimal Convert radix 100,000,000 digit
+word pairs to radix 10E16 binary integer doublewords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1aa3cdbd0a0ce3687c82bdcfad7b2281f9">vec_rdxct10e32q</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10E16 digit
+pairs to radix 10E32 __int128 quadwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1a3e8374dc8f6699a5559502799d0ae628">vec_setbool_bcdinv</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Set Bool from Signed BCD Quadword if invalid.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1ae45a804885d0e9d78fd87f1995da018c">vec_setbool_bcdsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Set Bool from Signed BCD Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="vec__bcd__ppc_8h_1a1d314ab5381ff7997a23f88df2f663d9">vec_signbit_bcdsq</link> (
+<link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Sign bit from Signed BCD Quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static _Decimal128 <link linkend="vec__bcd__ppc_8h_1a9c19a6744e6f0b5fde60a0f36289e468">vec_unpack_Decimal128</link> (
+<link linkend="vec__common__ppc_8h_1ae5cccc22e004bddbb80a51117c448675">vf64_t</link> lval)<para><emphasis>Unpack a doubleword vector (vector double) into a FPR pair.
+(_Decimal128).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a72744e7e29d3226952ae5817b76bf6dd">vec_zndctuq</link> (
+<link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone00, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone16)<para><emphasis>Vector Zoned Decimal Convert 32 digits
+to binary unsigned quadword.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header package containing a collection of Binary Coded Decimal (<emphasis role="bold">BCD</emphasis>) computation and Zoned Character conversion operations on vector registers. </para>
+
+<para>Many of these operations are implemented in a single VMX or DFP instruction on newer (POWER8/POWER9) processors. This header serves to fill in functional gaps for older (POWER7, POWER8) processors (using existing VMX, VSX, and DFP instructions) and provides in-line assembler implementations for older compilers that do not provide the built-ins.</para>
+
+<para>Starting with POWER6 introduced a Decimal Floating-point (<emphasis>DFP</emphasis>) Facility implementing the <link xlink:href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE 754-2008 revision</link> standard. This is implemented in hardware as an independent Decimal Floating-point Unit (<emphasis>DFU</emphasis>). This is supported with ISO C/C++ language bindings and runtime libraries.</para>
+
+<para>The DFP Facility supports a different data format <link xlink:href="https://en.wikipedia.org/wiki/Densely_packed_decimal">Densely packed decimal</link> (<emphasis>DPD</emphasis> and a more extensive set of operations then BCD or Zoned. So DFP and the comprehensive C language and runtime library support makes it a better target for new business oriented applications. As the DFP Facility supports conversions between DPD and BCD, existing DFP operations can be used to emulate BCD operations on older processors and fill in operational gaps in the vector BCD instruction set.</para>
+
+<para>As DFP is supported directly in the hardware and has extensive language and runtime support, there is little that PVECLIB can contribute to general decimal radix computation. However the vector unit and recent BCD and Zoned extensions can still be useful in areas include large order multiple precision computation and conversions between binary and decimal radix. Both are required to convert large decimal numeric or floating-point values with extreme exponents for input or print.</para>
+
+<para>So what operations are needed, what does the PowerISA provide, and what does the ABI and/or compiler provide. Some useful operations include:<itemizedlist>
+<listitem>
+<para>conversions between BCD and __int128<itemizedlist>
+<listitem>
+<para>As intermediate step between external decimal/_Decimal128 and _Float128</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>Conversions between BCD and Zoned (character)</para>
+</listitem><listitem>
+<para>Conversions between BCD and DFP</para>
+</listitem><listitem>
+<para>BCD add/subtract with carry/extend</para>
+</listitem><listitem>
+<para>BCD compare equal, greater than, less than</para>
+</listitem><listitem>
+<para>BCD copy sign and set bool from sign</para>
+</listitem><listitem>
+<para>BCD digit shift left/right</para>
+</listitem><listitem>
+<para>BCD multiply/divide</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The original VMX (AKA Altivec) only defined a few instructions that operated on the 128-bit vector as a whole. This included the vector shifts by bit and octet, and generalized vector permute, general binary integer add, subtract and multiply for byte/halfword/word. But no BCD or decimal character operations.</para>
+
+<para>POWER6 introduced the Decimal Floating-point Facility. DFP provides a robust set of operations with 7 (_Decimal32), 16 (_Decimal64), and 34 (_Decimal128) digit precision. Arithmetic operations include add, subtract, multiply, divide, and compare. Special operations insert/extract exponent, quantize, and digit shift. Conversions to and from signed (31-digits) and unsigned (32-digit) BCD. And conversions to and from binary signed long (64-bit) integer. DFP operations use the existing floating-point registers (FPRs). The 128-bit DFP (quadword) instructions operate on even/odd 64-bit Floating-point register pairs (FPRp).</para>
+
+<para>POWER6 also implemented the Vector Facility (VMX) instructions. No additional vectors operations where added and the Vector Registers (VRs) where separate from the GRPs and FPRs. The only transfer data path between register sets is via storage. So while the DFP Facility could be used for BCD operations and conversions, there was little synergy with the vector unit, in POWER6.</para>
+
+<para>POWER7 introduced the VSX facility providing 64x128-bit Vector Scalar Registers (VSRs) that overlaid both the FPRs (VSRs 0-31) and VRs (VSRs 32-63). It also added useful doubleword permute immediate (xxpermdi) and logical/select operations with access to all 64 VSRs. This greatly simplifies data transfers between VRs and FPRs (FPRps) (see <link linkend="vec__bcd__ppc_8h_1ae3ce6a47849278477fe4ea35cff5ca12">vec_pack_Decimal128()</link>, <link linkend="vec__bcd__ppc_8h_1a9c19a6744e6f0b5fde60a0f36289e468">vec_unpack_Decimal128()</link>). This makes it more practical to transfer vector contents to the DFP Facility for processing (see <link linkend="vec__bcd__ppc_8h_1aa924d03e2f88506e323c4b70f4b7df8b">vec_BCD2DFP()</link> and <link linkend="vec__bcd__ppc_8h_1ad8123fa00f666a0d439a049eb4f7c7eb">vec_DFP2BCD()</link>.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>All the BCD instructions and the quadword binary add/subtract are defined as vector class and can only access vector registers (VSRs 32-63). The DFP instructions can only access FPRs (VSRs 0-31). So only a VSX instruction (like xxpermdi) can perform the transfer without going through storage.</para>
+</formalpara>
+POWER8 added vector add/subtract modulo/carry/extend unsigned quadword for binary integer (vector [unsigned] __int128). This combined with the wider (word) multiply greatly enhances multiple precision operations on large (&gt; 128-bit) binary numbers. POWER8 also added signed BCD add/subtract instructions with up to 31-digits. While the PowerISA did not provide carry/extend forms of bcdadd/bcdsub, it does set a condition code with bits for GT/LT/EQ/OVF. This allows for implementations of BCD compare and the overflow (OVF) bit supports carry/extend operations. Also the lack of BCD multiply/divide in the vector unit is not a problem because we can leverage DFP (see <link linkend="vec__bcd__ppc_8h_1abd65a5de9b45c2ecd452ee8a546d1418">vec_bcdmul()</link>, <link linkend="vec__bcd__ppc_8h_1a31e982fe4ae794073eb8e60a2525bb0e">vec_bcddiv()</link>).</para>
+
+<para>POWER9 (PowerISA 3.0B) adds BCD copy sign, set sign, shift, round, and truncate instructions. There are also unsigned (32-digit) forms of the shift and truncate instructions. And instructions to convert between signed BCD and quadword (__int128) and signed BCD and Zoned. POWER9 also added quadword binary multiply 10 with carry extend forms than can also help with decimal to binary conversion.</para>
+
+<para>The <link xlink:href="https://openpowerfoundation.org/?resource_lib=64-bit-elf-v2-abi-specification-power-architecture">OpenPOWER ABI</link> does have an <emphasis>Appendix B. Binary-Coded Decimal Built-In Functions</emphasis> and proposes that compilers provide a <emphasis role="bold">bcd.h</emphasis> header file. At this time no compiler provides this header. GCC does provides compiler built-ins to generate the bcdadd/bcdsub instructions and access the associated condition codes in <emphasis>if</emphasis> statements. GCC also provides built-ins to generate the DFP instruction encode/decode to and from BCD.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>The compiler disables built-ins if the <emphasis role="bold">mcpu</emphasis> target does not enable the specific instruction. For example if you compile with <emphasis role="bold">-mcpu=power7</emphasis>, __builtin_bcdadd and __builtin_bcdsub are not supported. But <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd()</link> is always defined in this header, will generate the minimum code, appropriate for the target, and produce correct results.</para>
+</formalpara>
+This header covers operations that are either:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Operations implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include quadword BCD add and subtract.</para>
+</listitem><listitem>
+<para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.n&gt; or &lt;bcd.h&gt; provided by available compilers in common use. Examples include bcd_add, bcd_cmpg and bcd_mul.</para>
+</listitem><listitem>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include <link linkend="vec__bcd__ppc_8h_1ae3ce6a47849278477fe4ea35cff5ca12">vec_pack_Decimal128()</link> and <link linkend="vec__bcd__ppc_8h_1a9c19a6744e6f0b5fde60a0f36289e468">vec_unpack_Decimal128()</link>.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>See <link linkend="index_1mainpage_sub_1_3">Returning extended quadword results.</link> for more background on extended quadword computation.</para>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_endian_issues_0_0">
+<title>Endian problems with quadword implementations</title>
+
+<para>Technically, operations on quadword elements should not require any endian specific transformation. There is only one element so there can be no confusion about element numbering or order. However some of the more complex quadword operations are constructed from operations on smaller elements. And those operations as provided by &lt;altivec.h&gt; are required by the OpenPOWER ABI to be endian sensitive. See <link linkend="vec__int64__ppc_8h_1i64_endian_issues_0_0">Endian problems with doubleword operations</link> for a more detailed discussion.</para>
+
+<para>In any case, the arithmetic (high to low) order of digit nibbles in BCD or characters in Zoned are defined in the PowerISA. In the vector register, high order digits are on the left while low order digits and the sign are on the right. (See <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd()</link> and <link linkend="vec__bcd__ppc_8h_1aeb48adc4d015b874089fdf9fc4318509">vec_bcdsub()</link>). So pveclib implementations will need to either:<itemizedlist>
+<listitem>
+<para>Nullify little endian transforms of &lt;altivec.h&gt; operations. The &lt;altivec.h&gt; built-ins vec_mule(), vec_mulo(), and vec_pack() are endian sensitive and often require nullification that restores the original operation.</para>
+</listitem><listitem>
+<para>Use new operations that are specifically defined to be stable across BE/LE implementations. The pveclib operations; <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> and <link linkend="vec__char__ppc_8h_1a425151e5a82ee9e204ffd81b1ec7a92c">vec_mulubm()</link> are defined to be endian stable.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_details_0_0">
+<title>Some details of BCD computation</title>
+
+<para><link xlink:href="https://en.wikipedia.org/wiki/Binary-coded_decimal">Binary-coded decimal</link> (Also called <emphasis>packed decimal</emphasis>) and the related <emphasis>Zoned Decimal</emphasis> are common representations of signed decimal radix (base 10) numbers. BCD is more compact and usually faster then zoned. Zoned format is more closely aligned with human readable and printable character formats. In both formats the sign indicator is associated (in the same character or byte) with the low order digit.</para>
+
+<para>BCD and Zoned formats and operations were implemented for some of the earliest computers. Then circuitry was costly and arithmetic was often implemented as a digit (or bit) serial operation. Modern computers have more circuitry with wider data paths and more complex arithmetic/logic units. The current trend is for each processor core implementation to include multiple computational units that can operate in parallel.</para>
+
+<para>For POWER server class processors separate and multiple Fixed-Point Units (FXU), (binary) Floating-point Units (FPU), and Vector Processing Units (VPU) are the norm. POWER6 introduced a Decimal Floating-point (<emphasis>DFP</emphasis>) Facility implementing the <link xlink:href="https://en.wikipedia.org/wiki/IEEE_754-2008_revision">IEEE 754-2008 revision</link> standard. This is implemented in hardware as an independent Decimal Floating-point Unit (<emphasis>DFU</emphasis>). This is supported with ISO C/C++ language bindings and runtime libraries.</para>
+
+<para>The DFU supports a different data format <link xlink:href="https://en.wikipedia.org/wiki/Densely_packed_decimal">Densely packed decimal</link> (<emphasis>DPD</emphasis> and a more extensive set of operations then BCD or Zoned. So hardware DFP and the comprehensive C language and runtime library support makes it a better target for new business oriented applications. As DFP is supported directly in the hardware and has extensive language and runtime support, there is little that PVECLIB can contribute to general decimal radix computation.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>BCD and DFP support requires at least PowerISA 2.05 (POWER6) or later server level processor support.</para>
+</formalpara>
+However the vector unit and recent BCD and Zoned extensions can still be useful in areas including large order multiple precision computation and conversions between binary and decimal radix. Both are required to convert large decimal numeric or floating-point values with extreme exponents for input or print. And conventions between _Float128 and _Decimal128 types is even more challenging. Basically both POSIX and IEEE 754-2008 require that it possible to convert floating-point values to an external character decimal representation, with the specified rounding, and back recovering the original value. This always requires more precision for the conversion then is available in the given format and size.</para>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_extended_0_1">
+<title>Preferred sign, zone, and zero.</title>
+
+<para>BCD and Zoned Decimal have a long history with multiple computer manufacturers, and this is reflected as multiple encodings of the same basic concept. This is in turn reflected in the PowerISA as Preferred Sign <emphasis role="bold">PS</emphasis> immediate operand on BCD instructions.</para>
+
+<para>This header implementation assumes that users of PVECLIB are not interested in this detail and just want access to BCD computation with consistent results. So PVECLIB does not expose preferred sign at the API and provides reasonable defaults in the implementation.</para>
+
+<para>PVECLIB is targeted at the Linux ecosystem with ASCII character encoding, so the implementation defaults for:<itemizedlist>
+<listitem>
+<para>preferred zone nibble 0x3. ASCII encodes decimal characters as 0x30 - 0x39.</para>
+</listitem><listitem>
+<para>preferred sign code nibbles 0xC and 0xD. Historically accounting refers to <emphasis><emphasis role="bold">C</emphasis>redit</emphasis> as positive and <emphasis><emphasis role="bold">D</emphasis>edit</emphasis> for negative.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The PowerISA implementation is permissive of sign encoding of input values and will accept four (0xA, 0xC, 0xE, 0xF) encodings of positive and two (0xB, 0xD) for negative. But the sign code of the result is always set to the preferred sign.</para>
+
+<para>The BCD encoding allows for signed zeros (-0, +0) but the PowerISA implementation prefers the positive encoding for zero results. Again the implementation is permissive of both encodings for input operands. Usually this is not an issue but can be when dealing with conversions from other formats (DFP also allows signed 0.0) and implementations of BCD operations for older (POWER7/8) processors.</para>
+
+<para>This is most likely to effect user code in comparisons of BCD values for 0. One might expect the following vector binary word compare all <literallayout><computeroutput>if&#32;(vec_all_eq((vui32_t)&#32;t,&#32;(vui32_t)&#32;_BCD_CONST_ZERO))
+</computeroutput></literallayout> to give the same result as <literallayout><computeroutput>if&#32;(vec_bcdcmpeq&#32;(t,&#32;_BCD_CONST_ZERO))
+</computeroutput></literallayout> The vector binary compare is likely to have lower latency (on POWER7/8), but will miss compare on <emphasis>-0</emphasis>. The BCD compare operation (i.e. vec_bcdcmpeq ()) is recommended, unless the programs knows the details for the source operands generation, and have good (performance and latency) reasons to to use the alternative compare. Pveclib strives to provide correct preferred zeros results in its implementation of BCD operations.</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_extended_0_2">
+<title>Extended Precision computation with BCD</title>
+
+<para>Extended precision requires carry and extend forms of bcdadd/sub. Also BCD multiply with multiply high and and double quadword (62-digit) forms. The vector unit does not support BCD multiply so pveclib leverages the DFP Facility to implement these operations. Finally algorithms and extended precision conversions require BCD divide and divide extended. Again leveraging the DPU to implement these operations.</para>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_extended_0_2_0">
+<title>Vector Add/Subtrace with Carry/Extend example</title>
+
+<para>The PowerISA does not provide the extend and write-carry forms of the bcdadd/sub instructions. But bcdadd/sub instructions do post status to CR field 6 which includes:<itemizedlist>
+<listitem>
+<para>Result is less than zero (CR.bit[56])</para>
+</listitem><listitem>
+<para>Result is greater than zero (CR.bit[57])</para>
+</listitem><listitem>
+<para>Result is equal to zero (CR.bit[58])</para>
+</listitem><listitem>
+<para>Result overflowed (CR.bit[59])</para>
+</listitem></itemizedlist>
+</para>
+
+<para>which provides a basis for BCD comparison and the overflow may be used for carry/extend logic. The GCC compiler provides built-ins to generate the bcdadd/sub and test the resulting CR bits in if statements.</para>
+
+<para>Unfortunately, the Overflow flag generated by bcdadd/bcdsub is not a true carry/borrow. If the operands have the same sign for bcdadd (different sign for bcdsub) and there is a carry out of the high order digit, then:<itemizedlist>
+<listitem>
+<para>The sum is truncated to the low order 31 digits</para>
+</listitem><listitem>
+<para>The sum&apos;s sign matches the operands signs</para>
+</listitem><listitem>
+<para>The overflow flag (CR.bit[59]) is set.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>overflow is only set in conjunction with greater than zero (positive) or less than zero (negative) results. This implies that BCD carries are tri-state; +1, 0, or -1.</para>
+</formalpara>
+This can be used to simulate a <emphasis role="bold">Add and Write-Carry</emphasis> operation. However if the operands have different signs the bcdadd (same sign for bcdsub) the operation does the following:<itemizedlist>
+<listitem>
+<para>The smaller magnitude is subtracted from the larger magnitude.</para>
+</listitem><listitem>
+<para>The sign matches the sign of the larger magnitude.</para>
+</listitem><listitem>
+<para>The ox_flag (CR.bit[59]) is NOT set.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>For a simple BCD add this is the desired result (overflow is avoided and the borrow is recorded in the sign). But for multiple precision BCD operation, this will delay propagation of borrows to the higher order digits and the result is a mixture of signs across elements of the larger multiple precision value. This would have to be corrected at some later stage. For example the sum of 32 digits: <literallayout><computeroutput>&#32;&#32;21000000000000000000000000000008
++&#32;19000000000000000000000000000008
+=&#32;40000000000000000000000000000016
+</computeroutput></literallayout> This exceeds the 31-digit capacity of Vector signed BCD so we are forced to represent each number as two or more BCD values. For example: <literallayout><computeroutput>&#32;&#32;0000000000000000000000000000002c&#32;1000000000000000000000000000008c
++&#32;0000000000000000000000000000001c&#32;9000000000000000000000000000008c
+=&#32;0000000000000000000000000000004c&#32;0000000000000000000000000000016c
+</computeroutput></literallayout> The sum of the low order operands will overflow, so we need to detect this overflow and generate a carry that we can apply to sum of the high order operands. For example the following code using the GCC&apos;s __builtin_bcdadd_ov. <literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_bcdaddcsq&#32;(vBCD_t&#32;a,&#32;vBCD_t&#32;b)
+{
+&#32;&#32;vBCD_t&#32;c,&#32;sum_ab;
+&#32;&#32;c&#32;=&#32;_BCD_CONST_ZERO;
+&#32;&#32;//&#32;compute&#32;the&#32;sum&#32;of&#32;(a&#32;+&#32;b)
+&#32;&#32;sum_ab&#32;=&#32;(vBCD_t)&#32;__builtin_bcdadd&#32;((vi128_t)&#32;a,&#32;(vi128_t)&#32;b,&#32;0);;
+&#32;&#32;//&#32;Detect&#32;the&#32;overflow,&#32;which&#32;should&#32;be&#32;rare
+&#32;&#32;if&#32;(__builtin_expect&#32;(__builtin_bcdadd_ov&#32;((vi128_t)&#32;a,&#32;(vi128_t)&#32;b,&#32;0),&#32;0))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;use&#32;copysign&#32;to&#32;generate&#32;a&#32;carry&#32;based&#32;on&#32;the&#32;sign&#32;of&#32;the&#32;sum_ab
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;sum_ab);
+&#32;&#32;&#32;&#32;}
+&#32;&#32;return&#32;(c);
+}
+</computeroutput></literallayout> <literallayout><computeroutput>&#32;&#32;0000000000000000000000000000002c&#32;&#32;&#32;1000000000000000000000000000008c
+&#32;&#32;0000000000000000000000000000001c&#32;+&#32;9000000000000000000000000000008c
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1c&#32;&#32;&#32;0000000000000000000000000000016c
++&#32;0000000000000000000000000000002c
++&#32;0000000000000000000000000000001c
+
+=&#32;0000000000000000000000000000004c
+</computeroutput></literallayout> The higher operands requires a 3-way (a+b+c) sum to propagate the carry. <literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_bcdaddesqm&#32;(vBCD_t&#32;a,&#32;vBCD_t&#32;b,&#32;vBCD_t&#32;c)
+{
+&#32;&#32;vBCD_t&#32;t;
+&#32;&#32;t&#32;=&#32;vec_bcdadd&#32;(vec_bcdadd&#32;(a,&#32;b),&#32;c);
+&#32;&#32;return&#32;(t);
+}
+</computeroutput></literallayout> where vec_bcdadd is a pveclib wrapper around __builtin_bcdadd to simplify the code. The simplified multiple precision BCD use case looks like this: <literallayout><computeroutput>//&#32;r_h|r_l&#32;=&#32;a_h|a_l&#32;+&#32;b_h|b_l
+r_l&#32;=&#32;vec_bcdadd&#32;(a_l,&#32;b_l);
+c_l&#32;=&#32;vec_bcdaddcsq&#32;(a_l,&#32;b_l);
+r_h&#32;=&#32;vec_bcdaddesqm&#32;(a_h,&#32;b_h,&#32;c_l)
+</computeroutput></literallayout></para>
+
+<para>But we should look at some more examples before we assume we have a complete solution. For example a subtract that requires a borrow: <literallayout><computeroutput>&#32;&#32;21000000000000000000000000000008
+-&#32;19000000000000000000000000000008
+=&#32;02000000000000000000000000000000
+</computeroutput></literallayout> The multiple precision BCD would look like this: <literallayout><computeroutput>&#32;&#32;0000000000000000000000000000002c&#32;1000000000000000000000000000008c
++&#32;0000000000000000000000000000001d&#32;9000000000000000000000000000008d
+</computeroutput></literallayout> But with the example code above we expected result: <literallayout><computeroutput>=&#32;0000000000000000000000000000000c&#32;2000000000000000000000000000000c
+</computeroutput></literallayout> instead we see: <literallayout><computeroutput>=&#32;0000000000000000000000000000001c&#32;8000000000000000000000000000000d
+</computeroutput></literallayout></para>
+
+<para>The BCD overflow flag only captures carry/borrow when the bcdadd operands have the same sign (or different signs for bcdsub). In this case it looks like (1 - 9 = -8) which does not overflow. <literallayout><computeroutput>&#32;&#32;0000000000000000000000000000002c&#32;&#32;&#32;1000000000000000000000000000008c
+&#32;&#32;0000000000000000000000000000001d&#32;+&#32;9000000000000000000000000000008d
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0c&#32;&#32;&#32;8000000000000000000000000000000d
++&#32;0000000000000000000000000000002c
++&#32;0000000000000000000000000000001d
+
+=&#32;0000000000000000000000000000001c
+</computeroutput></literallayout> We need a way to detect the borrow and fix up the sum to look like (11 - 9 = 2) and generate a carry digit (-1) to propagate the borrow to the higher order digits.</para>
+
+<para>The secondary borrow is detected by comparing the sign of the result to the sign of the first operand. Something like this: <literallayout><computeroutput>t&#32;=&#32;_BCD_CONST_ZERO;
+sign_ab&#32;=&#32;vec_bcdcpsgn&#32;(sum_ab,&#32;a);
+if&#32;(!vec_all_eq(sign_ab,&#32;sum_ab))
+&#32;&#32;{
+&#32;&#32;//&#32;Borrow&#32;fix-up&#32;code
+&#32;&#32;}
+</computeroutput></literallayout> For multiple precision operations it would be better to retain the sign from the first operand and generate a borrow digit (value of &apos;1&apos; with the sign of the uncorrected result).</para>
+
+<para>This requires re-computing the sum/difference, while applying the effect of borrow, and replacing the carry (currently 0) with a signed borrow digit. The corrected sum is the 10&apos;s complement (9&apos;s complement +1) of the initial sum (like (10 - 8 = 2) or (9 - 8 + 1 = 2). As we obviously don&apos;t know how to represent signed BCD with more then 31-digits (10**32 is 32-digits), the 9&apos;s complement + 1 is a better plan. We know that initial sum has a different sign from the original first operand. So adding 10**31 with the sign of the first operand to the initial sum applies the borrow operation.</para>
+
+<para><literallayout><computeroutput>c&#32;=&#32;_BCD_CONST_ZERO;
+sign_ab&#32;=&#32;vec_bcdcpsgn&#32;(sum_ab,&#32;a);
+if&#32;(!vec_all_eq(sign_ab,&#32;t)&#32;&amp;&amp;&#32;!vec_all_eq(_BCD_CONST_ZERO,&#32;t))
+&#32;&#32;{
+&#32;&#32;&#32;&#32;//&#32;10**31&#32;with&#32;the&#32;original&#32;sign&#32;of&#32;the&#32;first&#32;operand
+&#32;&#32;&#32;&#32;vBCD_t&#32;nines&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_NINES,&#32;a);
+&#32;&#32;&#32;&#32;vBCD_t&#32;c10s&#32;&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;a);
+&#32;&#32;&#32;&#32;//&#32;Generate&#32;the&#32;Borrow&#32;digit&#32;from&#32;the&#32;initial&#32;sum
+&#32;&#32;&#32;&#32;c&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;sum_ab);
+&#32;&#32;&#32;&#32;//&#32;Invert&#32;the&#32;sum&#32;using&#32;the&#32;10s&#32;complement
+&#32;&#32;&#32;&#32;sum_ab&#32;=&#32;vec_bcdaddesqm&#32;(nines,&#32;sum_ab,&#32;c10s);
+&#32;&#32;}
+</computeroutput></literallayout> <literallayout><computeroutput>&#32;&#32;0000000000000000000000000000002c&#32;&#32;&#32;1000000000000000000000000000008c
+&#32;&#32;0000000000000000000000000000001d&#32;+&#32;9000000000000000000000000000008d
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;?
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;8000000000000000000000000000000d
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;9999999999999999999999999999999c
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;0000000000000000000000000000001c
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1d&#32;&#32;&#32;2000000000000000000000000000000c
++&#32;0000000000000000000000000000002c
++&#32;0000000000000000000000000000001d
+
+=&#32;0000000000000000000000000000000c
+</computeroutput></literallayout></para>
+
+<para>This does not fit well into the separate <emphasis>add modulo</emphasis> and <emphasis>add and write-carry</emphasis> operations commonly used for fixed binary arithmetic. Instead it requires a combined operation returning both the generated borrow and a sum/difference result with a corrected sign code. The combined add with carry looks like this: <literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_cbcdaddcsq&#32;(vBCD_t&#32;*cout,&#32;vBCD_t&#32;a,&#32;vBCD_t&#32;b)
+{
+&#32;&#32;vBCD_t&#32;t,&#32;c;
+&#32;&#32;vBCD_t&#32;sum_ab,&#32;sign_a,&#32;sign_ab;
+
+&#32;&#32;sum_ab&#32;=&#32;vec_bcdadd&#32;(a,&#32;b);
+&#32;&#32;if&#32;(__builtin_expect&#32;(__builtin_bcdadd_ov&#32;((vi128_t)&#32;a,&#32;(vi128_t)&#32;b,&#32;0),&#32;0))
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;sum_ab);
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else&#32;//&#32;(a&#32;+&#32;b)&#32;did&#32;not&#32;overflow,&#32;but&#32;did&#32;it&#32;borrow?
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;_BCD_CONST_ZERO;
+&#32;&#32;&#32;&#32;&#32;&#32;sign_ab&#32;=&#32;vec_bcdcpsgn&#32;(sum_ab,&#32;a);
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(!vec_all_eq(sign_ab,&#32;sum_ab)&#32;&amp;&amp;&#32;!vec_all_eq(_BCD_CONST_ZERO,&#32;t))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;10**31&#32;with&#32;the&#32;original&#32;sign&#32;of&#32;the&#32;first&#32;operand
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vBCD_t&#32;nines&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_NINES,&#32;a);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vBCD_t&#32;c10s&#32;&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;a);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Generate&#32;the&#32;Borrow&#32;digit&#32;from&#32;the&#32;initial&#32;sum
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_bcdcpsgn&#32;(_BCD_CONST_PLUS_ONE,&#32;sum_ab);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Invert&#32;the&#32;sum&#32;using&#32;the&#32;10s&#32;complement
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sum_ab&#32;=&#32;vec_bcdaddesqm&#32;(nines,&#32;sum_ab,&#32;c10s);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;}
+&#32;&#32;*cout&#32;=&#32;c;
+&#32;&#32;return&#32;(sum_ab);
+}
+</computeroutput></literallayout> and the usage example looks like this: <literallayout><computeroutput>//&#32;r_h|r_l&#32;=&#32;a_h|a_l&#32;+&#32;b_h|b_l
+r_l&#32;=&#32;vec_cbcdaddcsq&#32;(&amp;c_l,&#32;a_l,&#32;b_l);
+r_h&#32;=&#32;vec_bcdaddesqm&#32;(a_h,&#32;b_h,&#32;c_l)
+</computeroutput></literallayout></para>
+
+<para><para><link linkend="todo_1_todo000007">Todo</link> 
+<para>The BCD add/subtract extend/carry story is not complete. The carry extend operations based only on the <emphasis role="bold">OV</emphasis> condition codes only works as expected for bcdadd operands with the same sign and bcdsub with different signs. See <link linkend="vec__bcd__ppc_8h_1a76d5034289bea5c7d9159db1d443f6b7">vec_bcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a6bf159e0abdccaa6fca21c6567b2067b">vec_bcdaddecsq()</link>. Extended BCD difference (or subtract the same sign or add with different signs) is more complicated. See <link linkend="vec__bcd__ppc_8h_1abd666963d18930e07be06aeb563eeb71">vec_bcdsubcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a7eeb50993901b8bef76fa72cea668a15">vec_bcdsubecsq()</link>. Generating a true borrow seems to require looking one (31-digit) column ahead or behind. The first attempt at generating correct borrowing is implemented in <link linkend="vec__bcd__ppc_8h_1a486605817b8ca4850f7cf5584c751f45">vec_cbcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1af9718d91a7e14c4a21e14a53f2f65041">vec_cbcdaddecsq()</link>. There are still cases where these operation will generate a borrow and invert (10s complement) incorrectly. The net seems to be that for BCD multiple precision difference to work correctly, the larger magnitude must be the first operand.</para>
+</para></para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_muldiv_0_2_1">
+<title>Vector BCD Multiply/Divide Quadword example</title>
+
+<para>BCD multiply and divide operations are not directly supported in the current PowerISA. Decimal multiply and divide are supported in the Decimal Floating-point (DFP) Facility, as well as conversion to and from signed (unsigned) BCD.</para>
+
+<para>So BCD multiply and divide operations can be routed through the DFP Facility with a few caveats.<itemizedlist>
+<listitem>
+<para>DFP Extended format supports up to 34 digits precision</para>
+</listitem><listitem>
+<para>DFP significand represent digits to the <emphasis>left</emphasis> of the implied decimal point.</para>
+</listitem><listitem>
+<para>DFP finite number are not normalized.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>This allows DFP to represent decimal integer and fixed point decimal values with a preferred exponent of 0. The DFP Facility will maintain this preferred exponent for DPF arithmetic operations until:<itemizedlist>
+<listitem>
+<para>An arithmetic operation involves a operand with a non-zero exponent.</para>
+</listitem><listitem>
+<para>A divide operation generates a result with fractional digits</para>
+</listitem><listitem>
+<para>A multiply operation generates a result that exceeds 34 digits.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The implementation can insure that input operands are derived from 31-digit BCD values. The results of any divide operations can be truncated back to decimal integer with the preferred 0 exponent. This can be achieved with the DFP Quantize Immediate instruction, specifying the ideal exponent of 0 and a rounding mode of <emphasis>round toward 0</emphasis> (see <link linkend="vec__bcd__ppc_8h_1a75ec76de573013acc571e371e7200187">vec_quantize0_Decimal128()</link>). This allows the following implementation: <literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_bcddiv&#32;(vBCD_t&#32;a,&#32;vBCD_t&#32;b)
+{
+&#32;&#32;vBCD_t&#32;t;
+&#32;&#32;_Decimal128&#32;d_t,&#32;d_a,&#32;d_b;
+&#32;&#32;d_a&#32;=&#32;vec_BCD2DFP&#32;(a);
+&#32;&#32;d_b&#32;=&#32;vec_BCD2DFP&#32;(b);
+&#32;&#32;d_t&#32;=&#32;vec_quantize0_Decimal128&#32;(d_a&#32;/&#32;d_b);
+&#32;&#32;t&#32;=&#32;vec_DFP2BCD&#32;(d_t);
+&#32;&#32;return&#32;(t);
+}
+</computeroutput></literallayout></para>
+
+<para>The multiply case is bit more complicated as we need to produce up to 62 digit results without losing precision and DFP only supports 34 digits. This requires splitting the input operands into groups of digits where partial products of any combination of these groups is guaranteed not exceed 34 digits.</para>
+
+<para>One way to do this is split each 31-digit operand into two 16-digit chunks (actually 15 and 16-digits). These chunks are converted to DFP extended format and multiplied to produce four 32-digit partial products. These partial products can be aligned and summed to produce the high and low 31-digits of the full 62-digit product. This is the basis for vec_bcd_mul(), <link linkend="vec__bcd__ppc_8h_1a54558167b9339ac9459d3f6cecb7ca14">vec_bcdmulh()</link>, and <link linkend="vec__bcd__ppc_8h_1a39a5438b38414210fceb891ff2261e7b">vec_cbcdmul()</link>.</para>
+
+<para>A simple vec_and() can be used to isolate the low order 16 BCD digits. It is simple at this point to detect if both operands are 16-digits or less by comparing the original operand to the isolate value. In this case the product can not exceed 32 digits and we can short circuit the product to a single multiply. Here we can safely use binary compare all.</para>
+
+<para><literallayout><computeroutput>const&#32;vBCD_t&#32;dword_mask&#32;=&#32;(vBCD_t)&#32;CONST_VINT128_DW(15,&#32;-1);
+vBCD_t&#32;t,&#32;low_a,&#32;low_b,&#32;high_a,&#32;high_b;
+_Decimal128&#32;d_p,&#32;d_t,&#32;d_a,&#32;d_b;
+
+low_a&#32;=&#32;vec_and&#32;(a,&#32;dword_mask);
+low_b&#32;=&#32;vec_and&#32;(b,&#32;dword_mask);
+d_a&#32;=&#32;vec_BCD2DFP&#32;(low_a);
+d_b&#32;=&#32;vec_BCD2DFP&#32;(low_b);
+d_p&#32;=&#32;d_a&#32;*&#32;d_b;
+if&#32;(__builtin_expect&#32;((vec_cmpuq_all_eq&#32;((vui128_t)&#32;low_a,&#32;(vui128_t)&#32;a)
+&#32;&#32;&#32;&#32;&amp;&amp;&#32;vec_cmpuq_all_eq&#32;((vui128_t)&#32;low_b,&#32;(vui128_t)&#32;b)),&#32;1))
+&#32;&#32;{
+&#32;&#32;&#32;&#32;d_t&#32;=&#32;d_p;
+&#32;&#32;}
+else
+&#32;&#32;{
+&#32;&#32;...
+&#32;&#32;}
+t&#32;=&#32;vec_DFP2BCD&#32;(d_t);
+</computeroutput></literallayout> This is a case where negative 0 can be generated in the DFP multiply and converted unchanged to BCD. This is handled with the following fix up code: <literallayout><computeroutput>&#32;&#32;//&#32;Minus&#32;zero
+&#32;&#32;const&#32;vui32_t&#32;mz&#32;=&#32;CONST_VINT128_W&#32;(0,&#32;0,&#32;0,&#32;0x0000000d);
+&#32;&#32;...
+#ifdef&#32;_ARCH_PWR9
+&#32;&#32;t&#32;=&#32;vec_bcdadd&#32;(t,&#32;_BCD_CONST_ZERO);
+#else
+&#32;&#32;if&#32;(vec_all_eq((vui32_t)&#32;t,&#32;mz))
+&#32;&#32;&#32;&#32;t&#32;=&#32;_BCD_CONST_ZERO;
+#endif
+&#32;&#32;return&#32;t;
+</computeroutput></literallayout> From here the code diverges for multiply low and multiply high (and full combined multiply). Multiply low only needs the 3 lower order partial products. The highest order partial product does not impact the lower order 31-digits and is not needed. Multiply high requires the generation and summation of all 4 partial products. Following code completes the implementation of BCD multiply low: <literallayout><computeroutput>...
+else
+&#32;&#32;{
+&#32;&#32;&#32;&#32;_Decimal128&#32;d_ah,&#32;d_bh,&#32;d_hl,&#32;d_lh,&#32;d_h;
+
+&#32;&#32;&#32;&#32;high_a&#32;=&#32;vec_bcdsrqi&#32;(a,&#32;16);
+&#32;&#32;&#32;&#32;high_b&#32;=&#32;vec_bcdsrqi&#32;(b,&#32;16);
+
+&#32;&#32;&#32;&#32;d_ah&#32;=&#32;vec_BCD2DFP&#32;(high_a);
+&#32;&#32;&#32;&#32;d_bh&#32;=&#32;vec_BCD2DFP&#32;(high_b);
+
+&#32;&#32;&#32;&#32;d_hl&#32;=&#32;d_ah&#32;*&#32;d_b;
+&#32;&#32;&#32;&#32;d_lh&#32;=&#32;d_a&#32;*&#32;d_bh;
+
+&#32;&#32;&#32;&#32;d_h&#32;=&#32;d_hl&#32;+&#32;d_lh;
+&#32;&#32;&#32;&#32;d_h&#32;=&#32;__builtin_dscliq&#32;(d_h,&#32;17);
+&#32;&#32;&#32;&#32;d_h&#32;=&#32;__builtin_dscriq&#32;(d_h,&#32;1);
+
+&#32;&#32;&#32;&#32;d_t&#32;=&#32;d_p&#32;+&#32;d_h;
+&#32;&#32;}
+</computeroutput></literallayout> Here we know that there are higher order digits in one or both operands. First use <link linkend="vec__bcd__ppc_8h_1a76cd98e594ec0b867a4ffd4be62e77f6">vec_bcdsrqi()</link> to isolate the high 15-digits of operands a and b. Both Vector unit and DFP Facility have decimal shift operations, but the vector shift operation is faster.</para>
+
+<para>Then convert to DFP and multiply (high_a * low_b and high_b * low_a) for the two middle order partial products which are summed. This sum represents the high 32-digits (the 31-digit sum can carry) of a 48-digit product. Only the lower 16-digits of this sum is needed for the final sum and this needs to be aligned with the high 16 digits of the original lower order partial product.</para>
+
+<para>For this case use <emphasis role="bold">DFP Shift Significand Left Immediate</emphasis> and <emphasis role="bold">DFP Shift Significand Right Immediate</emphasis>. All the data is in the DFP Facility and the high cost of the DFP Facility shift is offset by avoiding extra format conversions. We use shift left 17 followed by shift right 1 to clear the highest order DFP digit and avoid any overflow. A final DFP add produces the low order 32 digits of the product which will be truncated to 31-digits in the conversion to BCD.</para>
+
+<para>How we can look at the BCD multiply high (generate the full 62-digit product returning the high 31 digits) and point out the differences. Multiply high also starts by isolating the low order 16 BCD digits, performing the low order multiply (low_a * low_b), and testing for the short circuit (all higher order digits are 0). The first difference (from multiply low) is that in this case only the high digit of the potential 32-digit product is returned.</para>
+
+<para><literallayout><computeroutput>const&#32;vBCD_t&#32;dword_mask&#32;=&#32;(vBCD_t)&#32;CONST_VINT128_DW(15,&#32;-1);
+vBCD_t&#32;t,&#32;low_a,&#32;low_b,&#32;high_a,&#32;high_b;
+_Decimal128&#32;d_p,&#32;d_t,&#32;d_a,&#32;d_b;
+
+low_a&#32;=&#32;vec_and&#32;(a,&#32;dword_mask);
+low_b&#32;=&#32;vec_and&#32;(b,&#32;dword_mask);
+d_a&#32;=&#32;vec_BCD2DFP&#32;(low_a);
+d_b&#32;=&#32;vec_BCD2DFP&#32;(low_b);
+d_p&#32;=&#32;d_a&#32;*&#32;d_b;
+if&#32;(__builtin_expect&#32;((vec_cmpuq_all_eq&#32;((vui128_t)&#32;low_a,&#32;(vui128_t)&#32;a)
+&#32;&#32;&#32;&#32;&amp;&amp;&#32;vec_cmpuq_all_eq&#32;((vui128_t)&#32;low_b,&#32;(vui128_t)&#32;b)),&#32;1))
+&#32;&#32;{
+&#32;&#32;&#32;&#32;d_t&#32;=&#32;__builtin_dscriq&#32;(d_p,&#32;31);
+&#32;&#32;}
+else
+&#32;&#32;{
+&#32;&#32;...
+&#32;&#32;}
+t&#32;=&#32;vec_DFP2BCD&#32;(d_t);
+</computeroutput></literallayout> So the short circuit code shifts the low partial product right 31 digits and returns that value.</para>
+
+<para>If we can not short circuit, Multiply high requires the generation and summation of all four partial products. Following code completes the implementation of BCD multiply high: <literallayout><computeroutput>...
+else
+&#32;&#32;{
+&#32;&#32;&#32;&#32;_Decimal128&#32;d_ah,&#32;d_bh,&#32;d_hl,&#32;d_lh,&#32;d_h,&#32;d_ll,&#32;d_m;
+
+&#32;&#32;&#32;&#32;high_a&#32;=&#32;vec_bcdsrqi&#32;(a,&#32;16);
+&#32;&#32;&#32;&#32;high_b&#32;=&#32;vec_bcdsrqi&#32;(b,&#32;16);
+&#32;&#32;&#32;&#32;d_ah&#32;=&#32;vec_BCD2DFP&#32;(high_a);
+&#32;&#32;&#32;&#32;d_bh&#32;=&#32;vec_BCD2DFP&#32;(high_b);
+
+&#32;&#32;&#32;&#32;d_hl&#32;=&#32;d_ah&#32;*&#32;d_bl;
+&#32;&#32;&#32;&#32;d_lh&#32;=&#32;d_al&#32;*&#32;d_bh;
+&#32;&#32;&#32;&#32;d_ll&#32;=&#32;__builtin_dscriq&#32;(d_p,&#32;16);
+
+&#32;&#32;&#32;&#32;d_m&#32;=&#32;d_hl&#32;+&#32;d_lh&#32;+&#32;d_ll;
+&#32;&#32;&#32;&#32;d_m&#32;=&#32;__builtin_dscriq&#32;(d_m,&#32;15);
+
+&#32;&#32;&#32;&#32;d_h&#32;=&#32;d_ah&#32;*&#32;d_bh;
+&#32;&#32;&#32;&#32;d_h&#32;=&#32;__builtin_dscliq&#32;(d_h,&#32;1);
+&#32;&#32;&#32;&#32;d_t&#32;=&#32;d_m&#32;+&#32;d_h;
+&#32;&#32;}
+</computeroutput></literallayout> Again we know that there are higher order digits in one or both operands and use <link linkend="vec__bcd__ppc_8h_1a76cd98e594ec0b867a4ffd4be62e77f6">vec_bcdsrqi()</link> to isolate the high 15-digits of operands a and b. Then convert to DFP and multiply (high_a * low_b and high_b * low_a) for the two middle order partial products (d_hl and d_lh).</para>
+
+<para>The low order partial product (d_p) was generated above but we need only the high order 15 digits for summation. Shift the low partial product right 16 digits then sum (d_hl + d_lh + d_ll) the low and middle order partial products. This produces the high 32 digits of the lower 48 digit partial sum. Shift this right 15 digits to align with the high order 31 digits for the product.</para>
+
+<para>Then multiply (high_a * high_b) to generate the high order partial product. This represents the high 30 digits of a 62 digits. Shift this left 1 digit to correct the alignment. The sum of the adjusted high and middle order partials gives the high order 31 digits of the 62-digit product.</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_2">
+<title>Vector BCD to/from Binary conversion</title>
+
+<para>Conversions between Decimal (BCD, Zoned, or string) and binary is another topic which is more complicated that it first appears. Everyone that takes computer science should have learned about <emphasis>atoi</emphasis> and <emphasis>itoa</emphasis> for conversions between strings of decimal character and binary integers.</para>
+
+<para>ASCII to integer is basically;<itemizedlist>
+<listitem>
+<para>initialize a integer accumulator to 0</para>
+</listitem><listitem>
+<para>loop<itemizedlist>
+<listitem>
+<para>multiply the accumulator by 10</para>
+</listitem><listitem>
+<para>load the next character and convert to a binary decimal digit</para>
+</listitem><listitem>
+<para>Add this digit to the accumulator</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>repeat until end of string.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Integer to ASCII is basically;<itemizedlist>
+<listitem>
+<para>initialize a temp variable with the integer number</para>
+</listitem><listitem>
+<para>loop<itemizedlist>
+<listitem>
+<para>compute the remainder/modulo of temp by 10</para>
+</listitem><listitem>
+<para>convert this binary digit to a character and store as the next char</para>
+</listitem><listitem>
+<para>divide temp by 10 and use that for the next iteration</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>repeat until temp is zero.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>You may have noticed that the algorithms above are not exactly vector ready. Both are serialized on expensive multiply and divide operations. This is not so bad for 9 digit (32-bit) integers but will be noticeable when converting between 128-bit binary and 31-digit BCD.</para>
+
+<para>For the vector BCD equivalent of <emphasis role="bold"><emphasis>atoi</emphasis></emphasis> we could use the PVECLIB implementation of <emphasis role="bold">Vector Multiply by 10 Extended Unsigned Quadword</emphasis>. For POWER8, <link linkend="vec__int128__ppc_8h_1a2245626e7b90621b33ba79b763a4215e">vec_mul10euq()</link> uses; multiple even/odd, a couple of shift left octet immediates, and add quadword. This sequence runs 5-7 instructions and has a minimum latency of 13 cycles. To convert from BCD to binary we need to shift and isolate, one BCD digit at time, then feed that into <link linkend="vec__int128__ppc_8h_1a2245626e7b90621b33ba79b763a4215e">vec_mul10euq()</link>. Ignoring for now the latency associated with shifting the BCD digits, we can quickly estimate 13 * 32 = 416 cycles to convert 32 digits.</para>
+
+<para>For the vector BCD equivalent of <emphasis role="bold"><emphasis>itoa</emphasis></emphasis> we could use the POWER8 <emphasis role="bold">Decimal Add Modulo</emphasis> instruction. For POWER8 <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd()</link> has a latency of 13 cycles. But the conversion would be one bit at a time. Use <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd()</link> to multiply by 2 then shift / issolate a bit from the binary value, format / convert that bit to BCD 0/1. and <link linkend="vec__bcd__ppc_8h_1a047be6d6339193b854e0b41759888939">vec_bcdadd()</link> again. So a quick estimate for this conversion is 13 * 2 * 128 = 3328 cycles.</para>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_2_1">
+<title>Vector Parallel conversion</title>
+
+<para>Clearly just using bigger registers for bigger numbers is not helping. So we want to think about algorithms that do more in parallel and leverage the vector unit we have.</para>
+
+<para>For POWER9 we have Decimal Convert From/To Signed Quadword and Decimal Convert From/To Zoned (See <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq()</link>, <link linkend="vec__bcd__ppc_8h_1a5086ba6056febb11acd5d5cd18e96dfb">vec_bcdctsq()</link>, <link linkend="vec__bcd__ppc_8h_1ae4923e7e5746c5c6f21ddc9993894692">vec_bcdcfz()</link>, <link linkend="vec__bcd__ppc_8h_1a832d31ded0b33a2b46f6491bcb71ea51">vec_bcdctz()</link>). These provide direct conversion between quadword binary and signed BCD and between signed BCD and zoned characters.</para>
+
+<para>The BCD convert from/to Zoned are simple operation that run 3 cycles latency on POWER9 and 14-27 cycles for the POWER8 implementation. For POWER8 there is some additional complexity verify and converting the preferred <emphasis>sign code</emphasis> between BCD and Zoned (of course they are different).</para>
+
+<para>But the BCD convert from/to Signed Quadword operations are a bit heavier, running 37 and 23 cycles latency on POWER9. These instructions execute in the DFU and so are single issue. They also keeps the DFU pipeline busy (for 25 and 11 cycles) and block execution of the next DFU operation for a while. Still this is better than the serial conversion examples described above.</para>
+
+<para>But part of the value of PVECLIB is to provide support across POWER7/8/9 and across compiler versions. The convert instructions above are not supported in current compilers with built-ins so PVECLIB provides in-line assembler implementations for these operations. Now we need look into better algorithms for implementing these operations on POWER7/8.</para>
+
+<para>The Vector unit can multiply, add, or subtract integer elements in parallel. The conversion process is basically multiply and add/sub as we can replace divide operations with the multiplicative inverse. So if we are looking for a way to break the conversion down into steps that can be performed in parallel on elements of the larger value and require fewer steps.</para>
+
+<para>For now we can simplify the problem to unsigned radix conversion and deal with signed conversion as a later cleanup step based on the complete unsigned conversion.</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_2_2">
+<title>Vector Parallel BCD to quadword conversion</title>
+
+<para>Starting with BCD (Radix 10) to Binary (Radix 2) conversion. The data is represented as 32 BCD digits encoded as 4-bit <emphasis>nibbles</emphasis> starting with high orders digits on the left, to low order digits on the right.</para>
+
+<para>Said differently, unsigned BCD vectors are represented as 16-bytes each containing a pair of BCD digits, each in the range 00-99. This is helpful because the PowerISA has instructions that multiply and add integer bytes, in parallel. So it seems possible to convert bytes containing even/odd pairs of BCD digits to integer bytes, each in the range 0-99: simply multiply the even digit by 10 and add the odd digit.</para>
+
+<para>The result is a vector of 16 x radix-100 bytes (binary integers in the range 0-99). Said differently a radix 100 vector represented as 8 halfwords each containing a pair of radix 100 digits, each in the range 0-99. Again these pairs of digits (bytes) can be converted by multiply and add to radix 10,000 halfwords.</para>
+
+<para>Repeat the process three more times:<itemizedlist>
+<listitem>
+<para>convert 8 halfwords pairwise into 4 words each containing values in the range 0-99999999 (radix 10**8 digits).</para>
+</listitem><listitem>
+<para>convert 4 words pairwise into 2 doublewords, each containing values in the range 0-9999999999999999 (radix 10*16 digits).</para>
+</listitem><listitem>
+<para>convert 2 doublewords pairwise into a quadword integer in the range 0-99999999999999999999999999999999.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>So in 5 steps, each only using vector multiply and add, we convert 32 BCD digits to a quadword integer.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>Actually 10**32 can be represented in 107 bits, but who is counting.</para>
+</formalpara>
+Actually, it is a little more complicated than multiply and add. The digits of the digit pair must be isolated and shifted into alignment before the multiply and add. Looking something like this:</para>
+
+<para><literallayout><computeroutput>vui8_t
+test_vec_rdxct100b_0&#32;(vui8_t&#32;vra)
+{
+&#32;&#32;vui8_t&#32;x10,&#32;c10,&#32;high_digit,&#32;low_digit;
+&#32;&#32;//&#32;Isolate&#32;the&#32;low_digit
+&#32;&#32;low_digit&#32;=&#32;vec_slbi&#32;(vra,&#32;4);
+&#32;&#32;low_digit&#32;=&#32;vec_srbi&#32;(low_digit,&#32;4);
+&#32;&#32;//&#32;Shift&#32;the&#32;high&#32;digit&#32;into&#32;the&#32;units&#32;position
+&#32;&#32;high_digit&#32;=&#32;vec_srbi&#32;(vra,&#32;4);
+&#32;&#32;//&#32;multiply&#32;the&#32;high&#32;digit&#32;by&#32;10
+&#32;&#32;c10&#32;=&#32;vec_splats&#32;((unsigned&#32;char)&#32;10);
+&#32;&#32;x10&#32;=&#32;vec_mulubm&#32;(high_digit,&#32;c10);
+&#32;&#32;//&#32;add&#32;the&#32;low_digit&#32;to&#32;high_digit&#32;*&#32;10.
+&#32;&#32;return&#32;vec_add&#32;(x10,&#32;low_digit);
+}
+</computeroutput></literallayout> The PowerISA does not provide general <emphasis>nibble</emphasis> arithmetic, only byte. So the first operations involve isolating each nibble into separate (high_digit and low_digit) bytes. The high_digit shift also aligns the binary for the multiply and add.</para>
+
+<para>The Multiply Unsigned Byte Modulo (<link linkend="vec__char__ppc_8h_1a425151e5a82ee9e204ffd81b1ec7a92c">vec_mulubm()</link>) generates vmuleub/vmuloub then loads a permute control vector and permutes the low order bytes of the halfword (even/odd) products into a single vector. Finally, add the x10 product and low_digit to get the binary value in the range 0-99.</para>
+
+<para>This sequence runs 6-10 instructions and 13-22 cycles latency. The lower values assume the shift control and permute control vectors are commoned with other operations.</para>
+
+<para>This is a case where the process on paper is much simpler than the reality of programming computers. The operation is actually (bcd_byte / 16 * 10) + (bcd_byte * 16 / 16) where 16 is the <emphasis>alignment</emphasis> radix and 10 is the <emphasis>decimal</emphasis> radix at this step. The alignment radix operations are (fortunately) strength reduced to vector byte shift left/right.</para>
+
+<para>Let&apos;s use a little algebra to eliminate some of these steps. One approach is to generate a correction factor from the high_digit and the difference between the <emphasis>alignment</emphasis> and decimal radix. This correction factor is subtracted directly from the original BCD byte and reduces the operation to (bcd_byte - ((bcd_byte / 16) x (16 - 10)) Which looks something like: <literallayout><computeroutput>vui8_t
+test_vec_rdxct100b_1&#32;(vui8_t&#32;vra)
+{
+&#32;&#32;vui8_t&#32;x6,&#32;c6,&#32;high_digit;
+&#32;&#32;//&#32;Compute&#32;the&#32;high&#32;digit&#32;correction&#32;factor.&#32;For&#32;BCD&#32;to&#32;binary&#32;100s
+&#32;&#32;//&#32;this&#32;is&#32;the&#32;isolated&#32;high&#32;digit&#32;multiplied&#32;by&#32;the&#32;radix&#32;difference
+&#32;&#32;//&#32;in&#32;binary.&#32;&#32;For&#32;this&#32;stage&#32;we&#32;use&#32;0x10&#32;-&#32;10&#32;=&#32;6.
+&#32;&#32;high_digit&#32;=&#32;vec_srbi&#32;(vra,&#32;4);
+&#32;&#32;c6&#32;=&#32;vec_splats&#32;((unsigned&#32;char)&#32;(16-10));
+&#32;&#32;x6&#32;=&#32;vec_mulubm&#32;(high_digit,&#32;c6);
+&#32;&#32;//&#32;Subtract&#32;the&#32;high&#32;digit&#32;correction&#32;bytes&#32;from&#32;the&#32;original
+&#32;&#32;//&#32;BCD&#32;bytes&#32;in&#32;binary.&#32;&#32;This&#32;reduces&#32;byte&#32;range&#32;to&#32;0-99.
+&#32;&#32;return&#32;vec_sub&#32;(vra,&#32;x6);
+}
+</computeroutput></literallayout> Another opportunity is to let the compiler strength reduce the multiply to shift and add. Newer versions of GCC will perform this optimization when using the generic vec_mul built-in for vector integer elements. <formalpara><title>Note: </title>
+
+<para>Previous to GCC 8, vec_mul() was only supported for vector float and double.</para>
+</formalpara>
+<literallayout><computeroutput>#if&#32;(__GNUC__&#32;&gt;&#32;7)
+&#32;&#32;x6&#32;=&#32;vec_mul&#32;(high_digit,&#32;c6);
+#else
+&#32;&#32;x6&#32;=&#32;vec_mulubm&#32;(high_digit,&#32;c6);
+#endif
+</computeroutput></literallayout> This eliminates vector multiply even/odd, the permute, and the load associated with the permute. The final sequence runs 5-7 instructions and 10-12 cycles latency and looks something like this: <literallayout><computeroutput>vspltisb&#32;v1,4
+vspltisb&#32;v13,1
+vsrb&#32;&#32;&#32;&#32;v1,v2,v1
+vslb&#32;&#32;&#32;&#32;v0,v1,v13
+vaddubm&#32;v0,v0,v1
+vslb&#32;&#32;&#32;&#32;v0,v0,v13
+vsububm&#32;v2,v2,v0
+</computeroutput></literallayout></para>
+
+<para>The next step converts adjacent byte pairs to halfwords. We use the same basic formula but adjust the radix constants to; (rdx_hword - ((rdx_hword / 256) x (256 - 100)). Here we need a byte multiply producing a halfword correction factor. No shifts are needed as the vmuleub multiply will access the high byte of each halfword directly.</para>
+
+<para><literallayout><computeroutput>static&#32;inline&#32;vui16_t
+vec_rdxct10kh&#32;(vui8_t&#32;vra)
+{
+&#32;&#32;vui8_t&#32;c156;
+&#32;&#32;vui16_t&#32;x156;
+&#32;&#32;//&#32;Compute&#32;the&#32;high&#32;digit&#32;correction&#32;factor.&#32;For&#32;100s&#32;to&#32;binary&#32;10ks
+&#32;&#32;//&#32;this&#32;is&#32;the&#32;isolated&#32;high&#32;digit&#32;multiplied&#32;by&#32;the&#32;radix&#32;difference
+&#32;&#32;//&#32;in&#32;binary.&#32;&#32;For&#32;this&#32;stage&#32;we&#32;use&#32;256&#32;-&#32;100&#32;=&#32;156.
+&#32;&#32;c156&#32;=&#32;vec_splats&#32;((unsigned&#32;char)&#32;156);
+#if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
+&#32;&#32;x156&#32;=&#32;vec_mulo&#32;((vui8_t)&#32;vra,&#32;c156);
+#else
+&#32;&#32;x156&#32;=&#32;vec_mule&#32;((vui8_t)&#32;vra,&#32;c156);
+#endif
+&#32;&#32;//&#32;Subtract&#32;the&#32;high&#32;digit&#32;correction&#32;halfword&#32;from&#32;the&#32;original
+&#32;&#32;//&#32;100s&#32;byte&#32;pair&#32;in&#32;binary.&#32;&#32;This&#32;reduces&#32;the&#32;range&#32;to&#32;0-9999.
+&#32;&#32;return&#32;vec_sub&#32;((vui16_t)&#32;vra,&#32;x156);
+}
+</computeroutput></literallayout> This requires: a constant load, a multiply even byte and subtract halfword. The final sequence runs 2-5 instructions and 9-18 cycles latency and looks something like this: <literallayout><computeroutput>addis&#32;&#32;&#32;r9,r2,.rodata.cst16+0x90@ha
+addi&#32;&#32;&#32;&#32;r9,r9,.rodata.cst16+0x90@l
+lvx&#32;&#32;&#32;&#32;&#32;v0,0,r9
+vmuleub&#32;v0,v2,v0
+vsubuhm&#32;v2,v2,v0
+</computeroutput></literallayout></para>
+
+<para>This pattern continues for converting halfwords to words, words to doublewords, and doublewords to quadwords. For POWER8 the first 4 steps are supported by vector multiply and subtract instructions. The last step requires a <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> operation implemented in <link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link>, based on <link linkend="vec__int32__ppc_8h_1ac93f07d5ad73243db2771da83b50d6d8">vec_muleuw()</link>, <link linkend="vec__int32__ppc_8h_1a3ca45c65b9627abfc493d4ad500a961d">vec_mulouw()</link> and <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link>. The <link linkend="vec__int128__ppc_8h_1a539de2a4426a84102471306acc571ce8">vec_adduqm()</link> operation is single instruction for POWER8. For POWER7 we will need to leverage more operations implemented in <link linkend="vec__int64__ppc_8h">vec_int64_ppc.h</link> and <link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link> for the last two steps.</para>
+
+<para>The complete set of steps for converting 32 BCD digits to quadword __int128 binary looks like this: <literallayout><computeroutput>vui128_t
+example_vec_bcdctuq&#32;(vBCD_t&#32;vra)
+{
+&#32;&#32;vui8_t&#32;d100;
+&#32;&#32;vui16_t&#32;d10k;
+&#32;&#32;vui32_t&#32;d100m;
+&#32;&#32;vui64_t&#32;d10e;
+&#32;&#32;vui128_t&#32;result;
+
+&#32;&#32;d100&#32;=&#32;vec_rdxct100b&#32;((vui8_t)&#32;vra);
+&#32;&#32;d10k&#32;=&#32;vec_rdxct10kh&#32;(d100);
+&#32;&#32;d100m&#32;=&#32;vec_rdxct100mw&#32;(d10k);
+&#32;&#32;d10e&#32;=&#32;vec_rdxct10E16d&#32;(d100m);
+&#32;&#32;result&#32;=&#32;vec_rdxct10e32q&#32;(d10e);
+
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> For POWER8 the whole sequence runs 24-36 instructions and 65-78 cycles latency. For POWER9 the whole sequence runs 17-26 instructions and 52-65 cycles latency.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>POWER9 has a Decimal Convert to Signed Quadword instruction, but no unsigned (32-digit) convert.</para>
+</formalpara>
+However we can leverage the POWER9 <emphasis role="bold">Vector Multiply by 10 Extended Unsigned Quadword</emphasis> instruction to extend the 31-digit convert to a full 32-digits. Basically use the <emphasis role="bold">bcdctsq</emphasis> to convert the high 31-digits and then multiply by 10 and add the last digit. See example below:</para>
+
+<para><literallayout><computeroutput>vui128_t
+example_vec_bcdctuq_2&#32;(vBCD_t&#32;vra)
+{
+&#32;&#32;vui128_t&#32;vrt;
+#ifdef&#32;&#32;_ARCH_PWR9
+&#32;&#32;const&#32;vui32_t&#32;bcd_one&#32;=&#32;(vui32_t)&#32;_BCD_CONST_PLUS_ONE;
+&#32;&#32;const&#32;vui32_t&#32;sign_mask&#32;=&#32;(vui32_t)&#32;_BCD_CONST_SIGN_MASK;
+&#32;&#32;vui128_t&#32;vrd;
+&#32;&#32;vBCD_t&#32;sbcd;
+&#32;&#32;//&#32;Need&#32;to&#32;convert&#32;BCD&#32;unsigned&#32;to&#32;signed&#32;for&#32;bcdctsq
+&#32;&#32;//&#32;But&#32;can&apos;t&#32;use&#32;bcdcpsgn&#32;as&#32;the&#32;unit&#32;digit&#32;is&#32;not&#32;a&#32;sign&#32;code
+&#32;&#32;//&#32;So&#32;use&#32;vec_and/sel&#32;to&#32;extract&#32;unit&#32;digit&#32;and&#32;insert&#32;sign
+&#32;&#32;vrd&#32;=&#32;(vui128_t)&#32;vec_and&#32;((vui32_t)&#32;vra,&#32;sign_mask);
+&#32;&#32;sbcd&#32;=&#32;(vBCD_t)&#32;vec_sel&#32;((vui32_t)&#32;vra,&#32;bcd_one,&#32;sign_mask);
+&#32;&#32;//&#32;Convert&#32;top&#32;31&#32;digits&#32;to&#32;binary
+&#32;&#32;vrt&#32;=&#32;(vui128_t)&#32;vec_bcdctsq&#32;(sbcd);
+&#32;&#32;//&#32;Then&#32;X&#32;10&#32;plus&#32;the&#32;unit&#32;digit&#32;to&#32;complete&#32;32-digit&#32;convert
+&#32;&#32;vrt&#32;=&#32;vec_mul10euq&#32;(vrt,&#32;vrd);
+#else
+&#32;&#32;//&#32;P7/P8&#32;implementation&#32;as&#32;above
+#endif
+&#32;&#32;return&#32;vrt;
+}
+</computeroutput></literallayout> This adds a few more cycles to split the high digits from the low digit and insert a positive sign code. This requires loading some vector constants which may be commoned with loads from other operations. This adds 2-11 cycles. The <emphasis role="bold">mul10euq</emphasis> only adds 3 cycles latency to complete the BCD to Binary conversion. This is adds only a 21% to 60% latency over the base <emphasis role="bold">bcdctsq</emphasis> instruction.</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>This process can be extended to 256, 512, 1024-bits, etc by widening the BCD to binary conversion appropriately to blocks of 31 or 32 digits. Then use the basic <emphasis>atoi</emphasis> algorithm using extended quadword multiply / add operations from <link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link> (<link linkend="vec__bcd__ppc_8h_1bcd128_convert_0_2_3">Multiple precision BCD to/from Binary conversion</link>).</para>
+</formalpara>
+</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_2_3">
+<title>Vector Parallel quadword to BCD conversion</title>
+
+<para><formalpara><title>Note: </title>
+
+<para>Binary to BCD conversions are challenging a in a number of ways. First any conversion requires division by non powers of 2. Second, for the same element size binary representation holds more equivalent decimal digits then BCD. If the binary value is too large for the BCD target&apos;s element size, the results are often undefined. For example <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq()</link>. So it is important to constrain the magnitude of the binary to fit the BCD target before conversion. See <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_2">Converting Vector __int128 values to BCD</link> for details.</para>
+</formalpara>
+In most senses, binary to BCD is the reverse of BCD to binary. The radix number in the conversion formula exchange places and the conversion starts with the largest element size (quadword) and works it&apos;s way down to the smallest (4-bit nibble).</para>
+
+<para>Let&apos;s take a look at the conversion formula. For BCD to Binary we used:<itemizedlist>
+<listitem>
+<para>bin_byte &lt;- (bcd_byte - ((bcd_byte / 16) x (16 - 10))</para>
+</listitem><listitem>
+<para>bin_byte &lt;- (bcd_byte - ((bcd_byte &gt;&gt; 4) x 6)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>So after swapping the conversion (to / from) radix constants we see:<itemizedlist>
+<listitem>
+<para>bcd_byte &lt;-(bin_byte - ((bin_byte / 10) x (10 - 16))</para>
+</listitem><listitem>
+<para>bcd_byte &lt;-(bin_byte - ((bin_byte / 10) x (-6))</para>
+</listitem><listitem>
+<para>bcd_byte &lt;-(bin_byte + ((bin_byte / 10) x 6)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The effect is to divide vector elements of 4*2N bits by 10**N and return the quotient in the high half of the element (in 4*N bits), and the remainder of this divide in the low half of the element (in 4*N bits), Where N is a power of 2<superscript>n</superscript> and <emphasis>n</emphasis> ranges from 0 to 4 (5 steps again).</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>So why doesn&apos;t PVECLIB provide these steps as operations. For example: divide a vector unsigned __int128 by 10<superscript>16</superscript> and return the quotient in the high doubleword and the remainder in the low doubleword of a vector unsigned long? Because if the input quadword is not less than 10<superscript>32</superscript> the result is undefined (the quotient will overflow).</para>
+</formalpara>
+This is good news and bad news. It is good that the correction subtract became a simple add. This allows the uses of multiply sum instruction (where PowerISA has such instructions for the element size). The bad news is that the radix divisor is not a power of two. And since the PowerISA does not have vector integer divide instructions, we use the multiplicative inverse. So in effect, each step of the binary to BCD conversion requires, two multiplies and an add.</para>
+
+<para>So let&apos;s look at the first and last step of the conversion (the two extremes). The first step (after verifying that the quadword value is less than 10<superscript>32&lt;</superscript>-1) looks like this: <literallayout><computeroutput>static&#32;inline&#32;vui64_t
+vec_rdxcf10e32q&#32;(vui128_t&#32;vra)
+{
+&#32;&#32;//&#32;Compute&#32;the&#32;high&#32;digit&#32;correction&#32;factor.&#32;For&#32;binary&#32;10**32&#32;to
+&#32;&#32;//&#32;10**16,&#32;this&#32;is&#32;&#32;0x10000000000000000&#32;-&#32;10000000000000000
+&#32;&#32;//&#32;=&#32;18436744073709551616.
+&#32;&#32;const&#32;vui64_t&#32;c&#32;=&#32;CONST_VINT128_DW&#32;(0,&#32;18436744073709551616UL);
+
+&#32;&#32;//&#32;Magic&#32;numbers&#32;for&#32;multiplicative&#32;inverse&#32;to&#32;divide&#32;by&#32;10**16
+&#32;&#32;//&#32;are&#32;76624777043294442917917351357515459181,&#32;no&#32;corrective&#32;add,
+&#32;&#32;//&#32;and&#32;shift&#32;right&#32;51&#32;bits.
+&#32;&#32;const&#32;vui128_t&#32;mul_invs_ten16&#32;=&#32;(vui128_t)&#32;CONST_VINT128_DW(
+&#32;&#32;&#32;&#32;&#32;&#32;0x39a5652fb1137856UL,&#32;0xd30baf9a1e626a6dUL);
+&#32;&#32;const&#32;int&#32;shift_ten16&#32;=&#32;51;
+
+&#32;&#32;vui64_t&#32;result;
+&#32;&#32;vui128_t&#32;x,&#32;high_digit;
+
+&#32;&#32;//&#32;high_digit&#32;=&#32;vra&#32;/&#32;10000000000000000;
+&#32;&#32;high_digit&#32;=&#32;vec_mulhuq&#32;(vra,&#32;mul_invs_ten16);
+&#32;&#32;high_digit&#32;=&#32;vec_srqi&#32;(high_digit,&#32;shift_ten16);
+
+&#32;&#32;//&#32;multiply&#32;high_digit&#32;by&#32;the&#32;radix&#32;difference&#32;c&#32;and&#32;add&#32;vra
+&#32;&#32;//&#32;This&#32;separates&#32;the&#32;high/low&#32;16&#32;digits&#32;into&#32;doublewords.
+#ifdef&#32;_ARCH_PWR9
+&#32;&#32;//&#32;0&#32;in&#32;the&#32;high&#32;dword&#32;of&#32;const&#32;c&#32;reduces&#32;vmsumudm&#32;to&#32;vmuloud
+&#32;&#32;//&#32;but&#32;with&#32;a&#32;qword&#32;add&#32;included.
+&#32;&#32;result&#32;=&#32;(vui64_t)&#32;vec_msumudm&#32;((vui64_t)&#32;high_digit,&#32;c,&#32;vra);
+#else
+&#32;&#32;x&#32;=&#32;vec_vmuloud&#32;((vui64_t)&#32;high_digit,&#32;c);
+&#32;&#32;result&#32;=&#32;(vui64_t)&#32;vec_adduqm&#32;(vra,&#32;x);
+#endif
+&#32;&#32;return&#32;result;
+}
+</computeroutput></literallayout> The first multiply is an expensive (40 to 60 cycles) operation as it requires a full Multiply High Unsigned Quadword. The next operation requires a Multiply Odd Unsigned Doubleword then Add Unsigned Quadword Modulo. For POWER9 we can replace these two operations with a single Multiply Sum Unsigned Doubleword Modulo. The latency of this single step is in the same order at the complete BCD to Binary conversion (<link linkend="vec__bcd__ppc_8h_1a29ae39efd0668fc35b5b6a33d2d46f9e">vec_bcdctuq()</link>).</para>
+
+<para>The conversion steps continue with doubleword to word, word to halfword, halfword to byte, byte to BCD (nibbles). The final step is simple by comparison to the first step. <literallayout><computeroutput>static&#32;inline&#32;vui8_t
+vec_rdxcf100b&#32;(vui8_t&#32;vra)
+{
+&#32;&#32;vui8_t&#32;x6,&#32;c6,&#32;high_digit;
+&#32;&#32;//&#32;Let&#32;the&#32;compiler&#32;generate&#32;the&#32;multiplicative&#32;inverse&#32;code
+&#32;&#32;high_digit&#32;=&#32;vra&#32;/&#32;10;
+&#32;&#32;//&#32;This&#32;separates&#32;two&#32;digit&#32;values&#32;into&#32;BCD&#32;Nibbles.
+&#32;&#32;//&#32;multiply&#32;high_digit&#32;by&#32;the&#32;radix&#32;difference&#32;c&#32;and
+&#32;&#32;x6&#32;=&#32;high_digit&#32;*&#32;6;
+&#32;&#32;//&#32;add&#32;bytes&#32;the&#32;high&#32;digit&#32;correction&#32;to&#32;the&#32;original
+&#32;&#32;//&#32;(radix&#32;100)&#32;bytes&#32;in&#32;binary.
+&#32;&#32;return&#32;(vra&#32;+&#32;x6);
+}
+</computeroutput></literallayout> The GCC vector extensions support dividing a vector char / short / int by a constant. So we can let the compiler generate the multiplicative inverse code for the last three steps. This is not supported (yet) for long and __int128 so the first two steps must explicitly code the multiplicative inverse.</para>
+
+<para>Using GCC vector extensions for the following multiply and add works well in this case as it allows the compiler to perform strength reduction. It is not as useful in the other steps as the programmer knows more about the value ranges then the compiler can or should assume. We know the the quotient and corrective constant always fit into the lower half of the element. This allows the use of the half sized vector multiply odd unsigned while compiler will assume it needs to generate a multiply modulo for the full element size.</para>
+
+<para>For example the third step (word to halfword) we can use Multiply Sum Unsigned Halfword Modulo to replace the multiply odd and add. This is similar to the multiply sum usage in the first step and it is a case not recognized by the compiler.</para>
+
+<para>The full binary to BCD conversion requires all 5 steps to complete the operations and this adds up to 200+ cycles. So this is worth another look.</para>
+
+<para>Initially using the DFP Facility for this binary to BCD conversion was rejected because:<itemizedlist>
+<listitem>
+<para>The DFP Facility only supports signed fixed doubleword conversions (no fixed quadword conversion)</para>
+</listitem><listitem>
+<para>Fixed binary to DFP conversions are expensive operations<itemizedlist>
+<listitem>
+<para>For POWER8, 32 cycles latency and 1 per 19 cycles throughput</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>The DFP Facility does support DFP to BCD conversions for double and quadword<itemizedlist>
+<listitem>
+<para>For POWER8, 13 cycle latency and 1 per cycle throughput</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Perhaps we can use the <link linkend="vec__bcd__ppc_8h_1aab57aa00d4c2c17bc2eee01b50523a5a">vec_rdxcf10e32q()</link> operation we defined above as the first step (factoring quadwords into the 16 digit doublewords). Then use the DFP Facility to convert binary doublewords to BCD. In this case we are not concerned with signed conversion as 10**16 fits in 54-bits binary and guarantees positive binary values. We still have to deal with the VR to/from FPR transfers but that mechanism is already defined and at a reasonable cost (2-4 cycles each way).</para>
+
+<para><literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_BIN2BCD&#32;(vui64_t&#32;val)
+{
+#ifdef&#32;_ARCH_PWR6
+&#32;&#32;vBCD_t&#32;t;
+&#32;&#32;_Decimal128&#32;x,&#32;y,&#32;z;
+&#32;&#32;//&#32;unpack&#32;the&#32;vector&#32;into&#32;a&#32;FPRp
+&#32;&#32;z&#32;=&#32;vec_unpack_Decimal128&#32;((vf64_t)&#32;val);
+&#32;&#32;//&#32;Convert&#32;2&#32;long&#32;int&#32;values&#32;into&#32;2&#32;_Decimal64&#32;values
+&#32;&#32;//&#32;Then&#32;convert&#32;each&#32;_Decimal64&#32;value&#32;into&#32;16-digit&#32;BCD
+&#32;&#32;__asm__(
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;dcffix&#32;%1,%2;\n&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;dcffix&#32;%L1,%L2;\n&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;ddedpd&#32;0,%0,%1;\n&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;ddedpd&#32;0,%L0,%L1;\n&quot;
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;=d&quot;&#32;(x),
+&#32;&#32;&#32;&#32;&#32;&#32;&quot;=&amp;d&quot;&#32;(y)
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;d&quot;&#32;(z)
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;);
+&#32;&#32;//&#32;Pack&#32;the&#32;FPRp&#32;back&#32;into&#32;a&#32;vector
+&#32;&#32;t&#32;=&#32;(vBCD_t)&#32;vec_pack_Decimal128&#32;(x);
+&#32;&#32;return&#32;(t);
+#else
+&#32;&#32;//&#32;no&#32;solution&#32;before&#32;P6
+#endif
+}
+</computeroutput></literallayout> If we assume that the second Decimal Convert From Fixed (dcffix) is independent and issues 19 cycles after the first, we get 32+19 = 51 cycles to complete. Then another 13+1 cycles to convert back to BCD. Add a few cycles for the unpack and pack operations and we estimate 69 cycles for POWER8 and 58 cycles for POWER9. The totals for <link linkend="vec__bcd__ppc_8h_1aab57aa00d4c2c17bc2eee01b50523a5a">vec_rdxcf10e32q()</link> plus <link linkend="vec__bcd__ppc_8h_1ad4222bd4b90a5248015fbea12cbc0a21">vec_BIN2BCD()</link> come to 154-164 for POWER8 and 114-124 for POWER9. This is a 30-60% improvement over the previous (all vector) attempt. So the final unsigned binary to BCD conversion looks like this: <literallayout><computeroutput>static&#32;inline&#32;vBCD_t
+vec_bcdcfuq&#32;(vui128_t&#32;vra)
+{
+&#32;&#32;vui64_t&#32;d10e;
+&#32;&#32;d10e&#32;=vec_rdxcf10e32q&#32;(vra);
+#ifdef&#32;_ARCH_PWR7
+&#32;&#32;return&#32;(vBCD_t)&#32;vec_BIN2BCD&#32;(d10e);
+#else
+&#32;&#32;vui8_t&#32;d100;
+&#32;&#32;vui16_t&#32;d10k;
+&#32;&#32;vui32_t&#32;d100m;
+&#32;&#32;d100m&#32;=&#32;vec_rdxcf10E16d&#32;(d10e);
+&#32;&#32;d10k&#32;=&#32;vec_rdxcf100mw&#32;(d100m);
+&#32;&#32;d100&#32;=&#32;vec_rdxcf10kh&#32;(d10k);
+&#32;&#32;return&#32;(vBCD_t)&#32;vec_rdxcf100b&#32;(d10e);
+#endif
+}
+</computeroutput></literallayout> <formalpara><title>Note: </title>
+
+<para>This process can be extended to 256, 512, 1024-bits, etc by widening the first 5 steps appropriately and adding steps using extended quadword multiply and add operations from <link linkend="vec__int128__ppc_8h">vec_int128_ppc.h</link> (<link linkend="vec__int128__ppc_8h_1int128_examples_0_1_3_1">Quadword Long Division</link>).</para>
+</formalpara>
+</para>
+</section>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_3">
+<title>Multiple precision BCD to/from Binary conversion</title>
+
+<para>The simplest case is converting a vector unsigned __int128 to BCD. This requires up to 39 digits across two vectors. This can either be split into 8 and 31 digits for signed conversion or 7 and 32 for unsigned. Signed conversion is preferred where extended BCD result will be input to additional BCD arithmetic. Unsigned is preferred for conversion to Zoned characters for decimal display.</para>
+
+<para>From <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_2">Converting Vector __int128 values to BCD</link> we see the divide / modulo quadword by constant operations which can used to factor binary quadwords into high and low digit groups for conversion. For example: <literallayout><computeroutput>q&#32;=&#32;vec_divuq_10e32&#32;(a);
+r&#32;=&#32;vec_moduq_10e32&#32;(a,&#32;q);
+//&#32;high&#32;7&#32;digits
+dh&#32;=&#32;vec_bcdcfuq&#32;(q);
+//&#32;lower&#32;32&#32;digits
+dl&#32;=&#32;vec_bcdcfuq&#32;(r);
+
+printf&#32;(&quot;%07lld%016lld%016lld&quot;,&#32;(vui64_t)&#32;dh[VEC_DW_L],
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(vui64_t)&#32;dl[VEC_DW_H],&#32;(vui64_t)&#32;dl[VEC_DW_L]);
+</computeroutput></literallayout></para>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_3_0">
+<title>Multiple precision BCD from Binary conversion</title>
+
+<para>The general multiple precision binary to BCD conversion requires quadword long division as described in <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_3_1">Quadword Long Division</link>. After each long division the remainder is in a range for conversion to BCD. In the example below the remainder is converted to 32 digit BCD as the last step.</para>
+
+<para><literallayout><computeroutput>//&#32;Convert&#32;extended&#32;quadword&#32;binary&#32;to&#32;BCD&#32;32-digits&#32;at&#32;a&#32;time.
+vBCD_t
+example_longbcdcf_10e32&#32;(vui128_t&#32;*q,&#32;vui128_t&#32;*d,&#32;long&#32;int&#32;_N)
+{
+&#32;&#32;vui128_t&#32;dn,&#32;qh,&#32;ql,&#32;rh;
+&#32;&#32;long&#32;int&#32;i;
+
+&#32;&#32;//&#32;init&#32;step&#32;for&#32;the&#32;top&#32;digits
+&#32;&#32;dn&#32;=&#32;d[0];
+&#32;&#32;qh&#32;=&#32;vec_divuq_10e32&#32;(dn);
+&#32;&#32;rh&#32;=&#32;vec_moduq_10e32&#32;(dn,&#32;qh);
+&#32;&#32;q[0]&#32;=&#32;qh;
+
+&#32;&#32;//&#32;now&#32;we&#32;know&#32;the&#32;remainder&#32;is&#32;less&#32;than&#32;the&#32;divisor.
+&#32;&#32;for&#32;(i=1;&#32;i&lt;_N;&#32;i++)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;d[i];
+&#32;&#32;&#32;&#32;&#32;&#32;ql&#32;=&#32;vec_divudq_10e32&#32;(&amp;qh,&#32;rh,&#32;dn);
+&#32;&#32;&#32;&#32;&#32;&#32;rh&#32;=&#32;vec_modudq_10e32&#32;(rh,&#32;dn,&#32;&amp;ql);
+&#32;&#32;&#32;&#32;&#32;&#32;q[i]&#32;=&#32;ql;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;//&#32;convert&#32;to&#32;BCD&#32;and&#32;return&#32;the&#32;remainder&#32;for&#32;this&#32;step
+&#32;&#32;return&#32;vec_bcdcfuq&#32;(rh);
+}
+</computeroutput></literallayout> Each call to example_longbcdcf_10e32 () produces the next 32-digit group. Repeated calls where the previous iterations quotient is passed as the dividend to the next step, produce additional 32-digit groups. This continues until the quotient is less then the divisor (in this case 10<superscript>32</superscript>). This final quadword quotient provides the highest order 32-digit group for the conversion. The digit groups are produced in order from lowest to highest significance.</para>
+
+<para>As the conversion process continues the number of quadwords in the extended dividend/quotient shrinks. The divide / modulo quadword by constant operations test for leading zeros and skip over them.</para>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_convert_0_2_3_1">
+<title>Multiple precision BCD to Binary conversion</title>
+
+<para>The general multiple precision binary from BCD conversion only requires extended quadword multiply as described in <link linkend="vec__int128__ppc_8h_1int128_examples_0_1_3_0">Extended Quadword multiply</link>. Starting with the high order BCD (32 or 31) digit group, multiply by 10<superscript>32</superscript> (or 10<superscript>31</superscript>) then add the next digit group to the extended product. Continue until the low order digit group is added. For example:</para>
+
+<para><literallayout><computeroutput>//&#32;Convert&#32;extended&#32;quadword&#32;BCD&#32;to&#32;binary&#32;32-digits&#32;at&#32;a&#32;time.
+long&#32;int
+example_longbcdct_10e32&#32;(vui128_t&#32;*d,&#32;vBCD_t&#32;decimal,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;long&#32;int&#32;_C&#32;,&#32;long&#32;int&#32;_N)
+{
+&#32;&#32;//&#32;ten32&#32;&#32;=&#32;+100000000000000000000000000000000UQ
+&#32;&#32;const&#32;vui128_t&#32;ten32&#32;=&#32;(vui128_t)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;(__int128)&#32;10000000000000000UL&#32;*&#32;(__int128)&#32;10000000000000000UL&#32;};
+&#32;&#32;const&#32;vui128_t&#32;zero&#32;=&#32;(vui128_t)&#32;{&#32;(__int128)&#32;0UL&#32;};
+&#32;&#32;vui128_t&#32;dn,&#32;ph,&#32;pl,&#32;cn,&#32;c;
+&#32;&#32;long&#32;int&#32;i,&#32;cnt;
+
+&#32;&#32;cnt&#32;=&#32;_C;
+
+&#32;&#32;dn&#32;=&#32;zero;
+&#32;&#32;cn&#32;&#32;=&#32;zero;
+&#32;&#32;//&#32;case&#32;_C&#32;==&#32;0&#32;is&#32;the&#32;initialization&#32;step&#32;and&#32;no&#32;multiply&#32;required
+&#32;&#32;if&#32;(&#32;cnt&#32;==&#32;0&#32;)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;if&#32;the&#32;decimal&#32;is&#32;0,&#32;no&#32;conversion&#32;is&#32;required
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;((vui128_t)&#32;decimal,&#32;zero))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnt++;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;vec_bcdctuq&#32;(decimal);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;But&#32;it&#32;is&#32;a&#32;good&#32;time&#32;to&#32;initialize&#32;d[]
+&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;(_N&#32;-&#32;1);&#32;i++&#32;)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;d[i]&#32;=&#32;zero;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;d[_N&#32;-&#32;cnt]&#32;=&#32;dn;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;else&#32;//&#32;case&#32;_C&#32;&gt;&#32;0
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;convert&#32;decimal&#32;group&#32;to&#32;binary.
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;((vui128_t)&#32;decimal,&#32;zero))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;vec_bcdctuq&#32;(decimal);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Compute&#32;extended&#32;product,&#32;plus&#32;the&#32;decimal&#32;group
+&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(&#32;i&#32;=&#32;(_N&#32;-&#32;1);&#32;i&#32;&gt;=&#32;(_N&#32;-&#32;cnt);&#32;i--)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl&#32;=&#32;vec_muludq&#32;(&amp;ph,&#32;d[i],&#32;ten32);
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;vec_addecuq&#32;(pl,&#32;dn,&#32;cn);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;d[i]&#32;=&#32;vec_addeuqm&#32;(pl,&#32;dn,&#32;cn);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cn&#32;=&#32;c;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;ph;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;//&#32;If&#32;the&#32;product&#32;exceeds&#32;the&#32;current&#32;quadword&#32;count,&#32;extend
+&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(vec_cmpuq_all_ne&#32;(dn,&#32;zero)&#32;||&#32;vec_cmpuq_all_ne&#32;(cn,&#32;zero))
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnt++;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dn&#32;=&#32;vec_adduqm&#32;(dn,&#32;cn);
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;d[_N&#32;-&#32;cnt]&#32;=&#32;dn;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;return&#32;cnt;
+}
+</computeroutput></literallayout> This process starts with a single quadword (the converted high order digit group). As additional digit groups are converted, the extended binary value is multiplied by 10<superscript>32</superscript> before adding the converted digit group. The number of quadwords in the array <emphasis>d[]</emphasis> expand as needed to hold the binary value.</para>
+
+<para>The interface includes:<itemizedlist>
+<listitem>
+<para>A pointer to an array of quadwords which accumulates the converted binary value.</para>
+</listitem><listitem>
+<para>A BCD decimal value to be converted and added to the accumulated binary.</para>
+</listitem><listitem>
+<para>A current quadword count. The number of nonzero quadwords accumulated so far. Should be 0 on the initial call.</para>
+</listitem><listitem>
+<para>A maximum quadword count.</para>
+</listitem><listitem>
+<para>Return the updated quadword count. Passed back as current quadword count on the next iteration.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+</section>
+</section>
+<section xml:id="vec__bcd__ppc_8h_1bcd128_perf_0_0">
+<title>Performance data.</title>
+
+<para>High level performance estimates are provided as an aid to function selection when evaluating algorithms. For background on how <emphasis>Latency</emphasis> and <emphasis>Throughput</emphasis> are derived see: <link linkend="index_1perf_data">Performance data.</link> </para>
+</section>
+    <para>Definition in file /home/sjmunroe/work/pveclib_PDF/src/pveclib/vec_bcd_ppc.h</para>
+    </simplesect>
+</section>
