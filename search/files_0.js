@@ -9,5 +9,6 @@ var searchData=
   ['vec_5fint128_5fppc_2eh',['vec_int128_ppc.h',['../vec__int128__ppc_8h.html',1,'']]],
   ['vec_5fint16_5fppc_2eh',['vec_int16_ppc.h',['../vec__int16__ppc_8h.html',1,'']]],
   ['vec_5fint32_5fppc_2eh',['vec_int32_ppc.h',['../vec__int32__ppc_8h.html',1,'']]],
+  ['vec_5fint512_5fppc_2eh',['vec_int512_ppc.h',['../vec__int512__ppc_8h.html',1,'']]],
   ['vec_5fint64_5fppc_2eh',['vec_int64_ppc.h',['../vec__int64__ppc_8h.html',1,'']]]
 ];
