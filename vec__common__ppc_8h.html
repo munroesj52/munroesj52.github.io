@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">POWER Vector Library Manual
-   &#160;<span id="projectnumber">1.0.3</span>
+   &#160;<span id="projectnumber">1.0.4</span>
    </div>
   </td>
  </tr>
@@ -66,7 +66,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">vec_common_ppc.h File Reference</div>  </div>
 </div><!--header-->
@@ -96,7 +97,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a9ed8c282b57705c960542ed869de3325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializer for 128-bits vector, as two unsigned long long elements in high-&gt;low order. May require an explicit cast. <br /></td></tr>
 <tr class="separator:a9ed8c282b57705c960542ed869de3325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a562dba1b4daf1f8ecb38841ec38c9b4d"><td class="memItemLeft" align="right" valign="top"><a id="a562dba1b4daf1f8ecb38841ec38c9b4d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</a>(__dw0,  __dw1)&#160;&#160;&#160;(<a class="el" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a>)((<a class="el" href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a>){__dw1, __dw0})</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</a>(__dw0,  __dw1)&#160;&#160;&#160;(<a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>)((<a class="el" href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a>){__dw1, __dw0})</td></tr>
 <tr class="memdesc:a562dba1b4daf1f8ecb38841ec38c9b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector unsigned __int128 initializer, as two unsigned long long elements in high-&gt;low order. <br /></td></tr>
 <tr class="separator:a562dba1b4daf1f8ecb38841ec38c9b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4520a89b9b5a292a3e647a6d5b712ad"><td class="memItemLeft" align="right" valign="top"><a id="ae4520a89b9b5a292a3e647a6d5b712ad"></a>
@@ -246,18 +247,33 @@ typedef __vector __bool int&#160;</td><td class="memItemRight" valign="bottom"><
 typedef __vector __bool long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a></td></tr>
 <tr class="memdesc:aee93592cb008b78c17e85d1eaa3419e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of 64-bit bool long long elements. <br /></td></tr>
 <tr class="separator:aee93592cb008b78c17e85d1eaa3419e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1c414a60e2a13398427203b40e8dd3f"><td class="memItemLeft" align="right" valign="top"><a id="ac1c414a60e2a13398427203b40e8dd3f"></a>
-typedef __vector int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#ac1c414a60e2a13398427203b40e8dd3f">vi128_t</a></td></tr>
-<tr class="memdesc:ac1c414a60e2a13398427203b40e8dd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of one 128-bit signed __int128 element. <br /></td></tr>
-<tr class="separator:ac1c414a60e2a13398427203b40e8dd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66332b4bd68c0b5d93121f6dc0f0839b"><td class="memItemLeft" align="right" valign="top"><a id="a66332b4bd68c0b5d93121f6dc0f0839b"></a>
-typedef __vector unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a></td></tr>
-<tr class="memdesc:a66332b4bd68c0b5d93121f6dc0f0839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of one 128-bit unsigned __int128 element. <br /></td></tr>
-<tr class="separator:a66332b4bd68c0b5d93121f6dc0f0839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d79f74c685d3a42b49c413d0144d65"><td class="memItemLeft" align="right" valign="top"><a id="ab5d79f74c685d3a42b49c413d0144d65"></a>
-typedef __vector __bool unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#ab5d79f74c685d3a42b49c413d0144d65">vb128_t</a></td></tr>
-<tr class="memdesc:ab5d79f74c685d3a42b49c413d0144d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of 128-bit bool __int128 elements. <br /></td></tr>
-<tr class="separator:ab5d79f74c685d3a42b49c413d0144d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2bbf9f23490ccca3bdc08bc1dc7831"><td class="memItemLeft" align="right" valign="top"><a id="a3b2bbf9f23490ccca3bdc08bc1dc7831"></a>
+typedef __vector __int128&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></td></tr>
+<tr class="memdesc:a3b2bbf9f23490ccca3bdc08bc1dc7831"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of one 128-bit signed __int128 element. <br /></td></tr>
+<tr class="separator:a3b2bbf9f23490ccca3bdc08bc1dc7831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7a8e92d8ba681dac3d2ec3259c0820"><td class="memItemLeft" align="right" valign="top"><a id="aaf7a8e92d8ba681dac3d2ec3259c0820"></a>
+typedef __vector unsigned __int128&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a></td></tr>
+<tr class="memdesc:aaf7a8e92d8ba681dac3d2ec3259c0820"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of one 128-bit unsigned __int128 element. <br /></td></tr>
+<tr class="separator:aaf7a8e92d8ba681dac3d2ec3259c0820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cdf519bbbf190c311bd27d3e254208"><td class="memItemLeft" align="right" valign="top"><a id="a16cdf519bbbf190c311bd27d3e254208"></a>
+typedef __vector __bool __int128&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a16cdf519bbbf190c311bd27d3e254208">vb128_t</a></td></tr>
+<tr class="memdesc:a16cdf519bbbf190c311bd27d3e254208"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of one 128-bit bool __int128 element. <br /></td></tr>
+<tr class="separator:a16cdf519bbbf190c311bd27d3e254208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9edd75ea323ebad73771ecd346a3cf5a"><td class="memItemLeft" align="right" valign="top"><a id="a9edd75ea323ebad73771ecd346a3cf5a"></a>
+const <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a9edd75ea323ebad73771ecd346a3cf5a">vtipowof10</a> []</td></tr>
+<tr class="memdesc:a9edd75ea323ebad73771ecd346a3cf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">table powers of 10 [0-38] in vector __int128 format. <br /></td></tr>
+<tr class="separator:a9edd75ea323ebad73771ecd346a3cf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa482a8c2f715f1c39f755c86066a7b27"><td class="memItemLeft" align="right" valign="top"><a id="aa482a8c2f715f1c39f755c86066a7b27"></a>
+const <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#aa482a8c2f715f1c39f755c86066a7b27">vtifrexpof10</a> []</td></tr>
+<tr class="memdesc:aa482a8c2f715f1c39f755c86066a7b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">table used to verify 128-bit frexp operations for powers of 10. <br /></td></tr>
+<tr class="separator:aa482a8c2f715f1c39f755c86066a7b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0ffb619c4d9904c405e792347b1553"><td class="memItemLeft" align="right" valign="top"><a id="a7b0ffb619c4d9904c405e792347b1553"></a>
+const _Decimal128&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__common__ppc_8h.html#a7b0ffb619c4d9904c405e792347b1553">decpowof2</a> []</td></tr>
+<tr class="memdesc:a7b0ffb619c4d9904c405e792347b1553"><td class="mdescLeft">&#160;</td><td class="mdescRight">table powers of 2 [0-1077] in _Decimal128 format. <br /></td></tr>
+<tr class="separator:a7b0ffb619c4d9904c405e792347b1553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common definitions and typedef used by the collection of Power Vector Library (pveclib) headers. </p>
@@ -310,14 +326,14 @@ GCC __float128 support for the PowerPC target began with GCC 6. In GCC 6 __float
 <p>Defining large constants for vectors is complicated by <em>little-endian</em> (LE) support as specified in the OpenPOWER ABI and as implemented in the compilers. Little-endian changes the effective vector element numbering and the order of constant elements in initializers. But the __int128 numerical order of magnitude or floating-point format does not change in registers. The high order bits are on the left and the low order bits are on the right.</p>
 <p>So for example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0x80000000, 0, 0, 0 };</div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0x7fff0000, 0, 0, 0 };</div></div><!-- fragment --><p> are correct sign and exponent masks for __float128 in big endian (BE) but would be incorrect for little endian (LE). To get correct results for both endians, one could code something like this: </p><div class="fragment"><div class="line"><span class="preprocessor">#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__</span></div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0, 0, 0, 0x80000000 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0, 0, 0, 0x7fff0000 };</div><div class="line"><span class="preprocessor">#else</span></div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = { 0x80000000, 0, 0, 0 };</div><div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = { 0x7fff0000, 0, 0, 0 };</div><div class="line"><span class="preprocessor">#endif</span></div></div><!-- fragment --><p> But this gets tedious after the first dozen times. Also this can be confusing because it does not appear to the match the floating-point format diagrams in the PowerISA. The sign-bit and the exponent are always on the left.</p>
 <p>So this header provides endian sensitive macros that maintain consistent "magnitude" order. For example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a> (0x80000000, 0, 0, 0);</div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a> (0x7fff0000, 0, 0, 0);</div></div><!-- fragment --><p> This is always correct in either endian.</p>
-<p>Another example; the multiplicative inverse for __int128 10**32 is 211857340822306639531405861550393824741. The GCC compiler will not accept this constant in a vector __int128 initializer. The next best thing would be </p><div class="fragment"><div class="line"><span class="comment">// The multiplicative inverse for 1 / 10**32 is</span></div><div class="line"><span class="comment">// 211857340822306639531405861550393824741</span></div><div class="line"><span class="comment">// or 0x9f623d5a8a732974cfbc31db4b0295e5</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a> mulinv_10to32 =</div><div class="line">         (<a class="code" href="vec__common__ppc_8h.html#a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</a>) <a class="code" href="vec__common__ppc_8h.html#a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</a> ( 0x9f623d5a8a732974UL,</div><div class="line">                                          0xcfbc31db4b0295e5UL );</div></div><!-- fragment --><p> Here we use the CONST_VINT128_DW128 macro to maintain magnitude order across endian. Again the high order bits are on the left and the low order bits are on the right.</p>
+<p>Another example; the multiplicative inverse for __int128 10**32 is 211857340822306639531405861550393824741. The GCC compiler will not accept this constant in a vector __int128 initializer. The next best thing would be </p><div class="fragment"><div class="line"><span class="comment">// The multiplicative inverse for 1 / 10**32 is</span></div><div class="line"><span class="comment">// 211857340822306639531405861550393824741</span></div><div class="line"><span class="comment">// or 0x9f623d5a8a732974cfbc31db4b0295e5</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> mulinv_10to32 =</div><div class="line">         (<a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>) <a class="code" href="vec__common__ppc_8h.html#a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</a> ( 0x9f623d5a8a732974UL,</div><div class="line">                                          0xcfbc31db4b0295e5UL );</div></div><!-- fragment --><p> Here we use the CONST_VINT128_DW128 macro to maintain magnitude order across endian. Again the high order bits are on the left and the low order bits are on the right.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="vec__int32__ppc_8h.html#i32_endian_issues_0_0">Endian problems with word operations</a> </dd>
 <dd>
 <a class="el" href="index.html#mainpage_endian_issues_1_1">General Endian Issues</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 8 2020 10:35:37 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 21 2020 12:31:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">POWER Vector Library Manual
-   &#160;<span id="projectnumber">1.0.3</span>
+   &#160;<span id="projectnumber">1.0.4</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac9b21dd9f53dd97d3c1f58881f38b5af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a873846dd078cef3d766814d856760526">vi16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int16__ppc_8h.html#ac9b21dd9f53dd97d3c1f58881f38b5af">vec_srahi</a> (<a class="el" href="vec__common__ppc_8h.html#a873846dd078cef3d766814d856760526">vi16_t</a> vra, const unsigned int shb)</td></tr>
 <tr class="memdesc:ac9b21dd9f53dd97d3c1f58881f38b5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Shift Right Algebraic Halfword Immediate.  <a href="#ac9b21dd9f53dd97d3c1f58881f38b5af">More...</a><br /></td></tr>
 <tr class="separator:ac9b21dd9f53dd97d3c1f58881f38b5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b8c37da453c373690760370a8ceb39"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int16__ppc_8h.html#ac0b8c37da453c373690760370a8ceb39">vec_vmaddeuh</a> (<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> a, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> b, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> c)</td></tr>
+<tr class="memdesc:ac0b8c37da453c373690760370a8ceb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Multiply-Add Even Unsigned Halfwords.  <a href="#ac0b8c37da453c373690760370a8ceb39">More...</a><br /></td></tr>
+<tr class="separator:ac0b8c37da453c373690760370a8ceb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ddf6a0d591ec6836d1a2b349d16d4d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int16__ppc_8h.html#aa0ddf6a0d591ec6836d1a2b349d16d4d">vec_vmaddouh</a> (<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> a, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> b, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> c)</td></tr>
+<tr class="memdesc:aa0ddf6a0d591ec6836d1a2b349d16d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Multiply-Add Odd Unsigned Halfwords.  <a href="#aa0ddf6a0d591ec6836d1a2b349d16d4d">More...</a><br /></td></tr>
+<tr class="separator:aa0ddf6a0d591ec6836d1a2b349d16d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf6f4a95093b3e9ae78c8600e8d9d40"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int16__ppc_8h.html#aabf6f4a95093b3e9ae78c8600e8d9d40">vec_vmrgeh</a> (<a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a> vrb)</td></tr>
 <tr class="memdesc:aabf6f4a95093b3e9ae78c8600e8d9d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Merge Even Halfwords.  <a href="#aabf6f4a95093b3e9ae78c8600e8d9d40">More...</a><br /></td></tr>
 <tr class="separator:aabf6f4a95093b3e9ae78c8600e8d9d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,8 +144,11 @@ Most ppc64le compilers will default to -mcpu=power8 if not specified.</dd></dl>
 <ul>
 <li>Implemented in hardware instructions for later processors and useful to programmers, on slightly older processors, even if the equivalent function requires more instructions. Examples include Count Leading Zeros, Population Count and Byte Reverse.</li>
 <li>Defined in the OpenPOWER ABI but <em>not</em> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include Count Leading Zeros, Population Count and Byte Reverse.</li>
-<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply high and shift immediate operations.</li>
+<li>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply-add, multiply-high and shift immediate operations.</li>
 </ul>
+<h1><a class="anchor" id="i16_recent_additions"></a>
+Recent Additions</h1>
+<p>Added <a class="el" href="vec__int16__ppc_8h.html#ac0b8c37da453c373690760370a8ceb39" title="Vector Multiply-Add Even Unsigned Halfwords. ">vec_vmaddeuh()</a> and <a class="el" href="vec__int16__ppc_8h.html#aa0ddf6a0d591ec6836d1a2b349d16d4d" title="Vector Multiply-Add Odd Unsigned Halfwords. ">vec_vmaddouh()</a> as an optimization for the vector multiply quadword implementations on POWER7.</p>
 <h1><a class="anchor" id="i16_endian_issues_0_0"></a>
 Endian problems with halfword operations</h1>
 <p>It would be useful to provide a vector multiply high halfword (return the high order 16-bits of the 32-bit product) operation. This can be used for multiplicative inverse (effectively integer divide) operations. Neither integer multiply high nor divide are available as vector instructions. However the multiply high halfword operation can be composed from the existing multiply even/odd halfword operations followed by the vector merge even halfword operation. Similarly a multiply low (modulo) halfword operation can be composed from the existing multiply even/odd halfword operations followed by the vector merge odd halfword operation.</p>
@@ -965,6 +974,136 @@ More information.</h2>
 
 </div>
 </div>
+<a id="ac0b8c37da453c373690760370a8ceb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b8c37da453c373690760370a8ceb39">&#9670;&nbsp;</a></span>vec_vmaddeuh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> vec_vmaddeuh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Multiply-Add Even Unsigned Halfwords. </p>
+<p>Multiply the even 16-bit Words of vector unsigned short values (a * b) and return sums of the unsigned 32-bit product and the even 16-bit halfwords of c (a<sub>even</sub> * b<sub>even</sub>) + EXTZ(c<sub>even</sub>).</p>
+<dl class="section note"><dt>Note</dt><dd>The advantage of this form (versus Multiply-Sum) is that the final 32 bit sums can not overflow. </dd>
+<dd>
+This implementation is NOT endian sensitive and the function is stable across BE/LE implementations.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-18 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">9-16 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>128-bit vector unsigned short. </td></tr>
+    <tr><td class="paramname">b</td><td>128-bit vector unsigned short. </td></tr>
+    <tr><td class="paramname">c</td><td>128-bit vector unsigned short. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector unsigned int sum (a<sub>even</sub> * b<sub>even</sub>) + EXTZ(c<sub>even</sub>). </dd></dl>
+
+</div>
+</div>
+<a id="aa0ddf6a0d591ec6836d1a2b349d16d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ddf6a0d591ec6836d1a2b349d16d4d">&#9670;&nbsp;</a></span>vec_vmaddouh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> vec_vmaddouh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vec__common__ppc_8h.html#afb47075b07673afbf78f8c60298f3712">vui16_t</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Multiply-Add Odd Unsigned Halfwords. </p>
+<p>Multiply the odd 16-bit Halfwords of vector unsigned short values (a * b) and return sums of the unsigned 32-bit product and the odd 16-bit halfwords of c (a<sub>odd</sub> * b<sub>odd</sub>) + EXTZ(c<sub>odd</sub>).</p>
+<dl class="section note"><dt>Note</dt><dd>The advantage of this form (versus Multiply-Sum) is that the final 32 bit sums can not overflow. </dd>
+<dd>
+This implementation is NOT endian sensitive and the function is stable across BE/LE implementations.</dd></dl>
+<table class="doxtable">
+<tr>
+<th align="right">processor</th><th align="center">Latency</th><th align="left">Throughput  </th></tr>
+<tr>
+<td align="right">power8 </td><td align="center">9-18 </td><td align="left">2/cycle </td></tr>
+<tr>
+<td align="right">power9 </td><td align="center">9-16 </td><td align="left">2/cycle </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>128-bit vector unsigned short. </td></tr>
+    <tr><td class="paramname">b</td><td>128-bit vector unsigned short. </td></tr>
+    <tr><td class="paramname">c</td><td>128-bit vector unsigned short. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector unsigned int sum (a<sub>odd</sub> * b<sub>odd</sub>) + EXTZ(c<sub>odd</sub>). </dd></dl>
+
+</div>
+</div>
 <a id="aabf6f4a95093b3e9ae78c8600e8d9d40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabf6f4a95093b3e9ae78c8600e8d9d40">&#9670;&nbsp;</a></span>vec_vmrgeh()</h2>
 
@@ -1100,7 +1239,7 @@ More information.</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 8 2020 10:35:37 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 21 2020 12:31:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
