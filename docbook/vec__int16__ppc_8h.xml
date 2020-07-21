@@ -134,6 +134,24 @@ elements.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int16__ppc_8h_1ac0b8c37da453c373690760370a8ceb39">vec_vmaddeuh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> a, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> b, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> c)<para><emphasis>Vector Multiply-Add Even Unsigned Halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int16__ppc_8h_1aa0ddf6a0d591ec6836d1a2b349d16d4d">vec_vmaddouh</link> (
+<link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> a, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> b, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> c)<para><emphasis>Vector Multiply-Add Odd Unsigned Halfwords.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>static <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> <link linkend="vec__int16__ppc_8h_1aabf6f4a95093b3e9ae78c8600e8d9d40">vec_vmrgeh</link> (
 <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vra, <link linkend="vec__common__ppc_8h_1afb47075b07673afbf78f8c60298f3712">vui16_t</link> vrb)<para><emphasis>Vector Merge Even Halfwords.</emphasis></para>
 </para>
@@ -173,9 +191,14 @@ This header covers operations that are either:</para>
 </listitem><listitem>
 <para>Defined in the OpenPOWER ABI but <emphasis>not</emphasis> yet defined in &lt;altivec.h&gt; provided by available compilers in common use. Examples include Count Leading Zeros, Population Count and Byte Reverse.</para>
 </listitem><listitem>
-<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply high and shift immediate operations.</para>
+<para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the multiply-add, multiply-high and shift immediate operations.</para>
 </listitem></itemizedlist>
 </para>
+<section xml:id="vec__int16__ppc_8h_1i16_recent_additions">
+<title>Recent Additions</title>
+
+<para>Added <link linkend="vec__int16__ppc_8h_1ac0b8c37da453c373690760370a8ceb39">vec_vmaddeuh()</link> and <link linkend="vec__int16__ppc_8h_1aa0ddf6a0d591ec6836d1a2b349d16d4d">vec_vmaddouh()</link> as an optimization for the vector multiply quadword implementations on POWER7.</para>
+</section>
 <section xml:id="vec__int16__ppc_8h_1i16_endian_issues_0_0">
 <title>Endian problems with halfword operations</title>
 

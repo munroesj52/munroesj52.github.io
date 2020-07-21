@@ -143,7 +143,7 @@ _Decimal128 val)<para><emphasis>Convert a __Decimal128 value to Vector BCD.</emp
                 <itemizedlist>
                     <listitem>
                         <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a5a1aec05a6dadcf5a1a8e028223745df">vec_bcdcfsq</link> (
-<link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> vrb)<para><emphasis>Vector Decimal Convert From Signed Quadword
+<link linkend="vec__common__ppc_8h_1a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</link> vrb)<para><emphasis>Vector Decimal Convert From Signed Quadword
 returning up to 31 BCD digits.</emphasis></para>
 </para>
                     </listitem>
@@ -163,7 +163,7 @@ returning up to 2x16 BCD digits.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>static <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> <link linkend="vec__bcd__ppc_8h_1a7b8b5371d537cd878ffb37337e93ba14">vec_bcdcfuq</link> (
-<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert From Unsigned Quadword
+<link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert From Unsigned Quadword
 returning up to 32 BCD digits.</emphasis></para>
 </para>
                     </listitem>
@@ -298,7 +298,7 @@ returning up to 32 BCD digits.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link> <link linkend="vec__bcd__ppc_8h_1a5086ba6056febb11acd5d5cd18e96dfb">vec_bcdctsq</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</link> <link linkend="vec__bcd__ppc_8h_1a5086ba6056febb11acd5d5cd18e96dfb">vec_bcdctsq</link> (
 <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert to Signed Quadword.</emphasis></para>
 </para>
                     </listitem>
@@ -347,7 +347,7 @@ to binary unsigned doublewords.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a29ae39efd0668fc35b5b6a33d2d46f9e">vec_bcdctuq</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a29ae39efd0668fc35b5b6a33d2d46f9e">vec_bcdctuq</link> (
 <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Decimal Convert groups of 32 BCD digits
 to binary unsigned quadword.</emphasis></para>
 </para>
@@ -673,7 +673,7 @@ pairs of radix 10**8 binary words.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__bcd__ppc_8h_1aab57aa00d4c2c17bc2eee01b50523a5a">vec_rdxcf10e32q</link> (
-<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10**32 Binary quadword to
+<link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10**32 Binary quadword to
 pairs of radix 10**16 binary doublewords.</emphasis></para>
 </para>
                     </listitem>
@@ -732,7 +732,7 @@ word pairs to radix 10E16 binary integer doublewords.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1aa3cdbd0a0ce3687c82bdcfad7b2281f9">vec_rdxct10e32q</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1aa3cdbd0a0ce3687c82bdcfad7b2281f9">vec_rdxct10e32q</link> (
 <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra)<para><emphasis>Vector Decimal Convert radix 10E16 digit
 pairs to radix 10E32 __int128 quadwords.</emphasis></para>
 </para>
@@ -742,7 +742,7 @@ pairs to radix 10E32 __int128 quadwords.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1a3e8374dc8f6699a5559502799d0ae628">vec_setbool_bcdinv</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1a16cdf519bbbf190c311bd27d3e254208">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1a3e8374dc8f6699a5559502799d0ae628">vec_setbool_bcdinv</link> (
 <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Set Bool from Signed BCD Quadword if invalid.</emphasis></para>
 </para>
                     </listitem>
@@ -751,7 +751,7 @@ pairs to radix 10E32 __int128 quadwords.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1ae45a804885d0e9d78fd87f1995da018c">vec_setbool_bcdsq</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1a16cdf519bbbf190c311bd27d3e254208">vb128_t</link> <link linkend="vec__bcd__ppc_8h_1ae45a804885d0e9d78fd87f1995da018c">vec_setbool_bcdsq</link> (
 <link linkend="vec__bcd__ppc_8h_1a3bf3bca0987b1225b4c33bfdf0c5c532">vBCD_t</link> vra)<para><emphasis>Vector Set Bool from Signed BCD Quadword.</emphasis></para>
 </para>
                     </listitem>
@@ -779,7 +779,7 @@ pairs to radix 10E32 __int128 quadwords.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a72744e7e29d3226952ae5817b76bf6dd">vec_zndctuq</link> (
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__bcd__ppc_8h_1a72744e7e29d3226952ae5817b76bf6dd">vec_zndctuq</link> (
 <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone00, <link linkend="vec__common__ppc_8h_1aed458e4755a6589049b936cf9f24f6f8">vui8_t</link> zone16)<para><emphasis>Vector Zoned Decimal Convert 32 digits
 to binary unsigned quadword.</emphasis></para>
 </para>
@@ -1086,7 +1086,7 @@ r_l&#32;=&#32;vec_cbcdaddcsq&#32;(&amp;c_l,&#32;a_l,&#32;b_l);
 r_h&#32;=&#32;vec_bcdaddesqm&#32;(a_h,&#32;b_h,&#32;c_l)
 </computeroutput></literallayout></para>
 
-<para><para><link linkend="todo_1_todo000007">Todo</link> 
+<para><para><link linkend="todo_1_todo000004">Todo</link> 
 <para>The BCD add/subtract extend/carry story is not complete. The carry extend operations based only on the <emphasis role="bold">OV</emphasis> condition codes only works as expected for bcdadd operands with the same sign and bcdsub with different signs. See <link linkend="vec__bcd__ppc_8h_1a76d5034289bea5c7d9159db1d443f6b7">vec_bcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a6bf159e0abdccaa6fca21c6567b2067b">vec_bcdaddecsq()</link>. Extended BCD difference (or subtract the same sign or add with different signs) is more complicated. See <link linkend="vec__bcd__ppc_8h_1abd666963d18930e07be06aeb563eeb71">vec_bcdsubcsq()</link> and <link linkend="vec__bcd__ppc_8h_1a7eeb50993901b8bef76fa72cea668a15">vec_bcdsubecsq()</link>. Generating a true borrow seems to require looking one (31-digit) column ahead or behind. The first attempt at generating correct borrowing is implemented in <link linkend="vec__bcd__ppc_8h_1a486605817b8ca4850f7cf5584c751f45">vec_cbcdaddcsq()</link> and <link linkend="vec__bcd__ppc_8h_1af9718d91a7e14c4a21e14a53f2f65041">vec_cbcdaddecsq()</link>. There are still cases where these operation will generate a borrow and invert (10s complement) incorrectly. The net seems to be that for BCD multiple precision difference to work correctly, the larger magnitude must be the first operand.</para>
 </para></para>
 </section>

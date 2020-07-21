@@ -37,7 +37,7 @@ elements in high-&gt;low order.  May require an explicit cast.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>#define <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link> (<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link>)((<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link>){__dw1, __dw0})<para><emphasis>A vector unsigned __int128 initializer, as two unsigned
+                            <para>#define <link linkend="vec__common__ppc_8h_1a562dba1b4daf1f8ecb38841ec38c9b4d">CONST_VINT128_DW128</link> (<link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link>)((<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link>){__dw1, __dw0})<para><emphasis>A vector unsigned __int128 initializer, as two unsigned
 long long elements in high-&gt;low order.</emphasis></para>
 </para>
                     </listitem>
@@ -340,7 +340,7 @@ high-&gt;low order.  May require an explicit cast.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef __vector int  <link linkend="vec__common__ppc_8h_1ac1c414a60e2a13398427203b40e8dd3f">vi128_t</link><para><emphasis>vector of one 128-bit signed __int128 element.</emphasis></para>
+                            <para>typedef __vector __int128  <link linkend="vec__common__ppc_8h_1a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</link><para><emphasis>vector of one 128-bit signed __int128 element.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -348,7 +348,7 @@ high-&gt;low order.  May require an explicit cast.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef __vector unsigned int  <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link><para><emphasis>vector of one 128-bit unsigned __int128 element.</emphasis></para>
+                            <para>typedef __vector unsigned __int128  <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link><para><emphasis>vector of one 128-bit unsigned __int128 element.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -356,7 +356,34 @@ high-&gt;low order.  May require an explicit cast.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef __vector __bool unsigned int  <link linkend="vec__common__ppc_8h_1ab5d79f74c685d3a42b49c413d0144d65">vb128_t</link><para><emphasis>vector of 128-bit bool __int128 elements.</emphasis></para>
+                            <para>typedef __vector __bool __int128  <link linkend="vec__common__ppc_8h_1a16cdf519bbbf190c311bd27d3e254208">vb128_t</link><para><emphasis>vector of one 128-bit bool __int128 element.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__common__ppc_8h_1a9edd75ea323ebad73771ecd346a3cf5a">vtipowof10</link><para><emphasis>table powers of 10 [0-38] in vector __int128 format.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__common__ppc_8h_1aa482a8c2f715f1c39f755c86066a7b27">vtifrexpof10</link><para><emphasis>table used to verify 128-bit frexp operations for powers of 10.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const _Decimal128 <link linkend="vec__common__ppc_8h_1a7b0ffb619c4d9904c405e792347b1553">decpowof2</link><para><emphasis>table powers of 2 [0-1077] in _Decimal128 format.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>

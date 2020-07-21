@@ -28,7 +28,7 @@
 <para>Useful for summing partial products based on a 512x512-bit multiply. </para>
 </formalpara>
 </para>
-                <para>Definition at line 1378 of file vec_int512_ppc.h</para>
+                <para>Definition at line 1058 of file vec_int512_ppc.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
         </simplesect>

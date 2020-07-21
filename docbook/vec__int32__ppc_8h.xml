@@ -166,6 +166,69 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a1b046a56d566ec2ea351042fd9dd11de">vec_vmadd2euw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> d)<para><emphasis>\copybrief vec_int64_ppc.h::vec_vmadd2euw()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a40ab00ed413c1aa1a8148cd9981235bf">vec_vmadd2ouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> d)<para><emphasis>\copybrief vec_int64_ppc.h::vec_vmadd2ouw()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a1e20bdd1df7e3e49dca06d5512ada84b">vec_vmaddeuw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c)<para><emphasis>\copybrief vec_int64_ppc.h::vec_vmaddeuw()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a32acead723b7867ff4c9f8be9bb708ca">vec_vmaddouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c)<para><emphasis>\copybrief vec_int64_ppc.h::vec_vmaddouw()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1a0bb37f8c3bb75090db08ab0981249ae7">vec_vmsumuwm</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> c)<para><emphasis>\copybrief vec_int64_ppc.h::vec_vmsumuwm()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1ae30f226bd27241513f0611b50967a080">vec_vmuleuw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Multiply Even Unsigned words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int32__ppc_8h_1ae52349ced57857d20fb5e06b1b09cc05">vec_vmulouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vra, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> vrb)<para><emphasis>Vector Multiply Odd Unsigned Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </section>
     <simplesect>
         <title>Detailed Description</title>
@@ -195,6 +258,11 @@ The newly introduced vector operations imply some useful composite operations. F
 <para>Commonly used operations, not covered by the ABI or &lt;altivec.h&gt;, and require multiple instructions or are not obvious. Examples include the shift immediate, merge algebraic high/low, and multiply high operations.</para>
 </listitem></itemizedlist>
 </para>
+<section xml:id="vec__int32__ppc_8h_1i32_recent_additions">
+<title>Recent Additions</title>
+
+<para>Added <link linkend="vec__int32__ppc_8h_1a1e20bdd1df7e3e49dca06d5512ada84b">vec_vmaddeuw()</link>, <link linkend="vec__int32__ppc_8h_1a32acead723b7867ff4c9f8be9bb708ca">vec_vmaddouw()</link>, <link linkend="vec__int32__ppc_8h_1a1b046a56d566ec2ea351042fd9dd11de">vec_vmadd2euw()</link>, and <link linkend="vec__int32__ppc_8h_1a40ab00ed413c1aa1a8148cd9981235bf">vec_vmadd2ouw()</link> as an optimization for the vector multiply quadword implementations on POWER8.</para>
+</section>
 <section xml:id="vec__int32__ppc_8h_1i32_endian_issues_0_0">
 <title>Endian problems with word operations</title>
 

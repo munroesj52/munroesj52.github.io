@@ -2,7 +2,7 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vec__f64__ppc_8h">
     <title>vec_f64_ppc.h File Reference</title>
     <programlisting>#include &lt;pveclib/vec_common_ppc.h&gt;</programlisting>
-    <programlisting>#include &lt;pveclib/vec_int64_ppc.h&gt;</programlisting>
+    <programlisting>#include &lt;pveclib/vec_int128_ppc.h&gt;</programlisting>
         <section>
             <title>Functions</title>
             <para>

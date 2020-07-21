@@ -12,7 +12,7 @@
             <title>Detailed Description</title>
 
 <para>A homogeneous aggregate of 8 x 128-bit unsigned integer fields. The low order field is named vx0, progressing to the high order field vx7. </para>
-                <para>Definition at line 1251 of file vec_int512_ppc.h</para>
+                <para>Definition at line 931 of file vec_int512_ppc.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
         </simplesect>

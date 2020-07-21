@@ -32,7 +32,7 @@
 <para>Useful for passing the carry-out of a 512-bit add into the carry-in of an extended add. </para>
 </formalpara>
 </para>
-                <para>Definition at line 1228 of file vec_int512_ppc.h</para>
+                <para>Definition at line 898 of file vec_int512_ppc.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
         </simplesect>

@@ -18,7 +18,7 @@
 <para>Useful for returning the result of a 512x128-bit multiply. </para>
 </formalpara>
 </para>
-                <para>Definition at line 1194 of file vec_int512_ppc.h</para>
+                <para>Definition at line 864 of file vec_int512_ppc.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
         </simplesect>

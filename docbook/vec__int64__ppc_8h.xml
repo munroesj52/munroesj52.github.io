@@ -395,7 +395,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1acd5bafec6c1c15b0336551e82d1169d4">vec_mrgahd</link> (
-<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Merge Algebraic High Doublewords.</emphasis></para>
+<link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vrb)<para><emphasis>Vector Merge Algebraic High Doublewords.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -404,7 +404,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a5242d6311cd5ab50377cfeb2cf2ac8bf">vec_mrgald</link> (
-<link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1a66332b4bd68c0b5d93121f6dc0f0839b">vui128_t</link> vrb)<para><emphasis>Vector Merge Algebraic Low Doublewords.</emphasis></para>
+<link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vra, <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> vrb)<para><emphasis>Vector Merge Algebraic Low Doublewords.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -453,6 +453,51 @@ VSX Permute Doubleword Immediate operation modified for endian.</emphasis></para
 Merge the odd doubleword elements from two vectors into the high
 and low doubleword elements of the result. This is effectively the
 VSX Permute Doubleword Immediate operation modified for endian.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> c)<para><emphasis>\copybrief vec_int128_ppc.h::vec_msumudm()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>\copybrief vec_int128_ppc.h::vec_muleud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>\copybrief vec_int128_ppc.h::vec_mulhud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>\copybrief vec_int128_ppc.h::vec_muloud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>\copybrief vec_int128_ppc.h::vec_muludm()</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -611,6 +656,78 @@ Exchange the high and low doubleword elements of a vector.</emphasis></para>
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a9e8daafaa42c16823750d7fe61224662">vec_vmadd2eud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> c, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> d)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmadd2eud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a6280736f91cb67eca10b55e750bfe1de">vec_vmaddeud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> c)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmaddeud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1af66cdabc7f2bc00f79579ce90fd483e0">vec_vmadd2oud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> c, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> d)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmadd2oud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1ae0b83d2696455fea53b1ecf434a0daf8">vec_vmaddoud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> c)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmaddoud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmuleud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmuloud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a43f6f199cdf39641d940f5b8d55dbf6b">vec_vmsumeud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> c)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmsumeud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> <link linkend="vec__int64__ppc_8h_1a04385860c7a03a9aa57f4a31017caf81">vec_vmsumoud</link> (
+<link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> a, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> b, <link linkend="vec__common__ppc_8h_1aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</link> c)<para><emphasis>\copybrief vec_int128_ppc.h::vec_vmsumoud()</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>static <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> <link linkend="vec__int64__ppc_8h_1a188540de9d76b546ef27e4d3fe21a57b">vec_vpkudum</link> (
 <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vrb)<para><emphasis>Vector Pack Unsigned Doubleword Unsigned Modulo.</emphasis></para>
 </para>
@@ -624,6 +741,42 @@ Exchange the high and low doubleword elements of a vector.</emphasis></para>
 <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> vra, const int ctl)<para><emphasis>Vector splat doubleword.
 Duplicate the selected doubleword element across the doubleword
 elements of the result.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a1e20bdd1df7e3e49dca06d5512ada84b">vec_vmaddeuw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c)<para><emphasis>Vector Multiply-Add Even Unsigned Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a1b046a56d566ec2ea351042fd9dd11de">vec_vmadd2euw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> d)<para><emphasis>Vector Multiply-Add2 Even Unsigned Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a32acead723b7867ff4c9f8be9bb708ca">vec_vmaddouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c)<para><emphasis>Vector Multiply-Add Odd Unsigned Words.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="vec__common__ppc_8h_1a52a773b6353c69a546bdc2e8686a50ec">vui64_t</link> <link linkend="vec__int64__ppc_8h_1a40ab00ed413c1aa1a8148cd9981235bf">vec_vmadd2ouw</link> (
+<link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> a, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> b, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> c, <link linkend="vec__common__ppc_8h_1a2ff4a776536870e01b7c9e454586544b">vui32_t</link> d)<para><emphasis>Vector Multiply-Add2 Odd Unsigned Words.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -657,7 +810,7 @@ elements of the result.</emphasis></para>
 </formalpara>
 <formalpara><title>See also: </title>
 
-<para><link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</link>, <link linkend="vec__int128__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud</link>, <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</link>, <link linkend="vec__int128__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud</link>, <link linkend="vec__int128__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm</link>, <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud</link>, and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud</link></para>
+<para><link linkend="vec__int64__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</link>, <link linkend="vec__int64__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud</link>, <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</link>, <link linkend="vec__int64__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud</link>, <link linkend="vec__int64__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm</link>, <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud</link>, and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud</link></para>
 </formalpara>
 Most of these intrinsic (compiler built-in) operations are defined in &lt;altivec.h&gt; and described in the compiler documentation. However it took several compiler releases for all the new POWER8 64-bit integer vector intrinsics to be added to <emphasis role="bold">altivec.h</emphasis>. This support started with the GCC 4.9 but was not complete across function/type and bug free until GCC 6.0.</para>
 
@@ -884,7 +1037,7 @@ vec_absdud&#32;(vui64_t&#32;vra,&#32;vui64_t&#32;vrb)
 }
 </computeroutput></literallayout> This works because pveclib provides implementations for min, max, and sub operations that work across GCC versions and provide processor specific implementations for POWER8/9 and POWER7.</para>
 
-<para>Now we need to look at the multiply doubleword situation. We need implementations for <link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link>, <link linkend="vec__int128__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link>, <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int128__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link>, and <link linkend="vec__int128__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm()</link>. We saw in the implementations of <link linkend="vec__int32__ppc_8h">vec_int32_ppc.h</link> that multiply high and low/modulo can implemented using multiply and merge even/odd of that element size. Multiply low can also be implemented using the multiply sum and multiply odd of the next smaller element size. Also multiply-sum can be implemented using multiply even/odd and a couple of adds. And multiply even/odd can be implemented using multiply sum by supplying zeros to appropriate inputs/elements.</para>
+<para>Now we need to look at the multiply doubleword situation. We need implementations for <link linkend="vec__int64__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link>, <link linkend="vec__int64__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link>, <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int64__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link>, and <link linkend="vec__int64__ppc_8h_1a2f19a53d6d28ac9b2aab5b8e1c5b2cbb">vec_muludm()</link>. We saw in the implementations of <link linkend="vec__int32__ppc_8h">vec_int32_ppc.h</link> that multiply high and low/modulo can implemented using multiply and merge even/odd of that element size. Multiply low can also be implemented using the multiply sum and multiply odd of the next smaller element size. Also multiply-sum can be implemented using multiply even/odd and a couple of adds. And multiply even/odd can be implemented using multiply sum by supplying zeros to appropriate inputs/elements.</para>
 
 <para>The above discussion has many circular dependencies. Eventually we need to get down to an implementation on each processor using actual hardware instructions. So what multiply doubleword operations does the PowerISA actually have from the list above:<itemizedlist>
 <listitem>
@@ -914,7 +1067,7 @@ vec_absdud&#32;(vui64_t&#32;vra,&#32;vui64_t&#32;vrb)
 vec_msumudm&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b,&#32;vui128_t&#32;c)
 {
 &#32;&#32;vui128_t&#32;res;
-#ifdef&#32;_ARCH_PWR9
+#if&#32;defined&#32;(_ARCH_PWR9)&#32;&amp;&amp;&#32;((__GNUC__&#32;&gt;=&#32;6)&#32;||&#32;(__clang_major__&#32;&gt;=&#32;11))
 &#32;&#32;__asm__(
 &#32;&#32;&#32;&#32;&#32;&#32;&quot;vmsumudm&#32;%0,%1,%2,%3;\n&quot;
 &#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;=v&quot;&#32;(res)
@@ -932,7 +1085,7 @@ vec_msumudm&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b,&#32;vui128_t&#32;c)
 }
 </computeroutput></literallayout> <formalpara><title>Note: </title>
 
-<para>The _ARCH_PWR8 implementation above depends on <link linkend="vec__int128__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link> and <link linkend="vec__int128__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link> for which there are no hardware instructions. Hold that thought.</para>
+<para>The _ARCH_PWR8 implementation above depends on <link linkend="vec__int64__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link> and <link linkend="vec__int64__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link> for which there are no hardware instructions. Hold that thought.</para>
 </formalpara>
 While we are it we can implement multiply-sum unsigned word modulo. <literallayout><computeroutput>static&#32;inline&#32;vui64_t
 vec_vmsumuwm&#32;(vui32_t&#32;vra,&#32;vui32_t&#32;vrb,&#32;vui64_t&#32;vrc)
@@ -947,7 +1100,7 @@ vec_vmsumuwm&#32;(vui32_t&#32;vra,&#32;vui32_t&#32;vrb,&#32;vui64_t&#32;vrc)
 }
 </computeroutput></literallayout> We will need this later.</para>
 
-<para>Now we need to provide implementations of <link linkend="vec__int128__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link> and <link linkend="vec__int128__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link>. For example: <literallayout><computeroutput>static&#32;inline&#32;vui128_t
+<para>Now we need to provide implementations of <link linkend="vec__int64__ppc_8h_1a26f95e02f7b0551e3f2bb7e4b4da040d">vec_muleud()</link> and <link linkend="vec__int64__ppc_8h_1aa989582cbfaa7984f78a937225e92f4a">vec_muloud()</link>. For example: <literallayout><computeroutput>static&#32;inline&#32;vui128_t
 vec_muleud&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b)
 {
 #if&#32;__BYTE_ORDER__&#32;==&#32;__ORDER_LITTLE_ENDIAN__
@@ -956,11 +1109,11 @@ vec_muleud&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b)
 &#32;&#32;return&#32;vec_vmuleud&#32;(a,&#32;b);
 #endif
 }
-</computeroutput></literallayout> The implementation above is just handling the pesky little endian transforms. The real implementations are in <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link> which implement the operation as if the PowerISA included such an instruction. These implementation is NOT endian sensitive and the function is stable across BE/LE implementations. For example: <literallayout><computeroutput>static&#32;inline&#32;vui128_t
+</computeroutput></literallayout> The implementation above is just handling the pesky little endian transforms. The real implementations are in <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link> which implement the operation as if the PowerISA included such an instruction. These implementation is NOT endian sensitive and the function is stable across BE/LE implementations. For example: <literallayout><computeroutput>static&#32;inline&#32;vui128_t
 vec_vmuleud&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b)
 {
 &#32;&#32;vui64_t&#32;res;
-#ifdef&#32;_ARCH_PWR9
+#if&#32;defined&#32;(_ARCH_PWR9)&#32;&amp;&amp;&#32;((__GNUC__&#32;&gt;=&#32;6)&#32;||&#32;(__clang_major__&#32;&gt;=&#32;11))
 &#32;&#32;const&#32;vui64_t&#32;zero&#32;=&#32;{&#32;0,&#32;0&#32;};
 &#32;&#32;vui64_t&#32;b_eud&#32;=&#32;vec_mrgahd&#32;((vui128_t)&#32;b,&#32;(vui128_t)&#32;zero);
 &#32;&#32;__asm__(
@@ -1016,7 +1169,7 @@ vec_vmuleud&#32;(vui64_t&#32;a,&#32;vui64_t&#32;b)
 
 <para>The _ARCH_PWR8 implementation looks ugly but it works. It starts with some merges and splats to get inputs columns lined up for the multiply. Then we use (POWER8 instructions) Multiply Even/Odd Unsigned Word to generate doubleword partial products. Then more merges and a rotate to line up the partial products for summation as the final quadword product.</para>
 
-<para>Individually <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link> execute with a latency of 21-23 cycles on POWER8. Normally these operations are used and scheduled together as in the POWER8 implementation of <link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link> or <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>. Good scheduling by the compiler and pipelining keeps the POWER8 latency in the 28-32 cycle range. For example, the <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link> implementation: <literallayout><computeroutput>static&#32;inline&#32;vui64_t
+<para>Individually <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link> and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link> execute with a latency of 21-23 cycles on POWER8. Normally these operations are used and scheduled together as in the POWER8 implementation of <link linkend="vec__int64__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link> or <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>. Good scheduling by the compiler and pipelining keeps the POWER8 latency in the 28-32 cycle range. For example, the <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link> implementation: <literallayout><computeroutput>static&#32;inline&#32;vui64_t
 vec_mulhud&#32;(vui64_t&#32;vra,&#32;vui64_t&#32;vrb)
 {
 &#32;&#32;return&#32;vec_mrgahd&#32;(vec_vmuleud&#32;(vra,&#32;vrb),&#32;vec_vmuloud&#32;(vra,&#32;vrb));
@@ -1045,9 +1198,9 @@ vadduqm&#32;v0,v0,v12
 xxmrghd&#32;vs34,vs34,vs32
 </computeroutput></literallayout></para>
 
-<para>The POWER9 latencies for this operation range from 5-7 (for vmsumudm itself) to 11-16 (for <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>). The additional latency reflects zero constant vector generation and merges required to condition the inputs and output. For these operations the <link linkend="vec__int128__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link>, <emphasis>vrc</emphasis> operand is always zero. Selecting the even/odd doubleword for input requires a merge low/high. And selecting the high doubleword for multiply high require a final merge high.</para>
+<para>The POWER9 latencies for this operation range from 5-7 (for vmsumudm itself) to 11-16 (for <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>). The additional latency reflects zero constant vector generation and merges required to condition the inputs and output. For these operations the <link linkend="vec__int64__ppc_8h_1a1d183ebd232e5826be109cdaa421aeed">vec_msumudm()</link>, <emphasis>vrc</emphasis> operand is always zero. Selecting the even/odd doubleword for input requires a merge low/high. And selecting the high doubleword for multiply high require a final merge high.</para>
 
-<para><link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link> generates the following code for POWER9: <literallayout><computeroutput>xxspltib&#32;vs32,0
+<para><link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link> generates the following code for POWER9: <literallayout><computeroutput>xxspltib&#32;vs32,0
 xxmrghd&#32;vs33,vs35,vs32
 xxmrgld&#32;vs35,vs32,vs35
 vmsumudm&#32;v1,v2,v1,v0
@@ -1128,7 +1281,7 @@ And we can assume that the constant load of <emphasis>{ 32, 32 }</emphasis> will
 </listitem></itemizedlist>
 </para>
 
-<para>We use the merge algebraic high/low doubleword operations in the implementation of <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the vec_xxspltd operation in the implementation of <link linkend="vec__int64__ppc_8h_1ad8406367635fbd8f1c50a11f6d650a2a">vec_vrld()</link>, <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the paste doubleword (<link linkend="vec__int64__ppc_8h_1a53159a600aba803503ae6ddcb539a123">vec_pasted()</link>) operation in the implementation of <link linkend="vec__int64__ppc_8h_1a517f21d7f771077a51f26718311ca64e">vec_vsrad()</link>, <link linkend="vec__int128__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int128__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the swap doubleword operation in the implementation of <link linkend="vec__int128__ppc_8h_1a7197cd5c6e946211f2718b5e8464cdc0">vec_cmpequq()</link>, <link linkend="vec__int128__ppc_8h_1a186d0b94bbc652e700ab4e1733b9524c">vec_cmpneuq()</link>, <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq()</link>, and <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq()</link>.</para>
+<para>We use the merge algebraic high/low doubleword operations in the implementation of <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>, <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the vec_xxspltd operation in the implementation of <link linkend="vec__int64__ppc_8h_1ad8406367635fbd8f1c50a11f6d650a2a">vec_vrld()</link>, <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the paste doubleword (<link linkend="vec__int64__ppc_8h_1a53159a600aba803503ae6ddcb539a123">vec_pasted()</link>) operation in the implementation of <link linkend="vec__int64__ppc_8h_1a517f21d7f771077a51f26718311ca64e">vec_vsrad()</link>, <link linkend="vec__int64__ppc_8h_1a84e6361054b52ac4564bcef25b718151">vec_vmuleud()</link>, and <link linkend="vec__int64__ppc_8h_1a208744996e7482604ad274b44999d6ce">vec_vmuloud()</link>. We use the swap doubleword operation in the implementation of <link linkend="vec__int128__ppc_8h_1a7197cd5c6e946211f2718b5e8464cdc0">vec_cmpequq()</link>, <link linkend="vec__int128__ppc_8h_1a186d0b94bbc652e700ab4e1733b9524c">vec_cmpneuq()</link>, <link linkend="vec__int128__ppc_8h_1aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq()</link>, and <link linkend="vec__int128__ppc_8h_1a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq()</link>.</para>
 
 <para>Then use the compilers <emphasis role="bold">__BYTE_ORDER__ == <emphasis role="bold">ORDER_LITTLE_ENDIAN</emphasis></emphasis> conditional to invert the <link linkend="vec__int64__ppc_8h_1a8238ba590103ac80fb146a6a2b1aed1c">vec_permdi()</link> select control for endian sensitive merge/splat doubleword operations:<itemizedlist>
 <listitem>
@@ -1151,7 +1304,7 @@ And we can assume that the constant load of <emphasis>{ 32, 32 }</emphasis> will
 
 <para>First we need to separate the raw TimeBase into the integer seconds and (subsecond) clock-ticks. Normally scalar codes would use integer divide/modulo by 512000000. Did I mention that the PowerISA vector unit does not have a integer divide operation?</para>
 
-<para>Instead we can use the multiplicative inverse which is a scaled fixed point fraction calculated from the original divisor. This works nicely if the fixed radix point is just before the 64-bit fraction and we have a multiply high (<link linkend="vec__int128__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>) operation. Multiplying a 64-bit unsigned integer by a 64-bit unsigned fraction generates a 128-bit product with 64-bits above (integer) and below (fraction) the radix point. The high 64-bits of the product is the integer quotient.</para>
+<para>Instead we can use the multiplicative inverse which is a scaled fixed point fraction calculated from the original divisor. This works nicely if the fixed radix point is just before the 64-bit fraction and we have a multiply high (<link linkend="vec__int64__ppc_8h_1a10780cd8a88f18ec564ee6254c179a06">vec_mulhud()</link>) operation. Multiplying a 64-bit unsigned integer by a 64-bit unsigned fraction generates a 128-bit product with 64-bits above (integer) and below (fraction) the radix point. The high 64-bits of the product is the integer quotient.</para>
 
 <para>It turns out that generating the multiplicative inverse can be tricky. To produce correct results over the full range requires, possible pre-scaling and post-shifting, and sometimes a corrective addition is necessary. Fortunately the mathematics are well understood and are commonly used in optimizing compilers. Even better, Henry Warren&apos;s book has a whole chapter on this topic. <formalpara><title>See also: </title>
 

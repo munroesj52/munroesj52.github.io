@@ -20,7 +20,7 @@
 <para>This structure does not qualify for parameter passing in registers (more than 8 registers are required) and will be passed in memory. </para>
 </formalpara>
 </para>
-                <para>Definition at line 1288 of file vec_int512_ppc.h</para>
+                <para>Definition at line 968 of file vec_int512_ppc.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vec_int512_ppc.h</para></listitem></itemizedlist></para>
         </simplesect>
