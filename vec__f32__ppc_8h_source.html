@@ -1168,87 +1168,93 @@ $(function() {
 <div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;{</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> result;</div>
 <div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160;<span class="preprocessor">#if defined (_ARCH_PWR9) &amp;&amp; defined (__VSX__) &amp;&amp; (__GNUC__ &gt; 7)</span></div>
-<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;  __asm__(</div>
-<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;      <span class="stringliteral">&quot;xviexpsp %x0,%x1,%x2&quot;</span></div>
-<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
-<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (sig), <span class="stringliteral">&quot;wa&quot;</span> (exp)</div>
-<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;      : );</div>
-<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160; </div>
-<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> tmp;</div>
-<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
-<div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;                                          0x7f800000, 0x7f800000);</div>
-<div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160; </div>
-<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;  tmp = <a class="code" href="vec__int32__ppc_8h.html#a500924c8925b336d49b6a5d4307fe14c">vec_slwi</a> (exp, 23);</div>
-<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;  result = (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a>) vec_sel ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) sig, tmp, expmask);</div>
-<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;}</div>
-<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160; </div>
-<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
-<div class="line"><a name="l02092"></a><span class="lineno"><a class="line" href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257"> 2092</a></span>&#160;<a class="code" href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257">vec_xvxexpsp</a> (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vrb)</div>
-<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;{</div>
-<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> result;</div>
-<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;<span class="preprocessor">#if defined (_ARCH_PWR9) &amp;&amp; defined (__VSX__) &amp;&amp; (__GNUC__ &gt; 7)</span></div>
-<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160; </div>
-<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;  __asm__(</div>
-<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;      <span class="stringliteral">&quot;xvxexpsp %x0,%x1&quot;</span></div>
-<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
-<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (vrb)</div>
-<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;      : );</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160; </div>
-<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> tmp;</div>
-<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
-<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;                                          0x7f800000, 0x7f800000);</div>
-<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> zero = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0, 0, 0, 0);</div>
-<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160; </div>
-<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;  tmp = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, expmask);</div>
-<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;  result = <a class="code" href="vec__int32__ppc_8h.html#af73a97260ce07b46031e2c8560a5320b">vec_srwi</a> (tmp, 23);</div>
-<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;}</div>
-<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160; </div>
-<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
-<div class="line"><a name="l02141"></a><span class="lineno"><a class="line" href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f"> 2141</a></span>&#160;<a class="code" href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f">vec_xvxsigsp</a> (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vrb)</div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;{</div>
-<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> result;</div>
-<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;<span class="preprocessor">#if defined (_ARCH_PWR9) &amp;&amp; defined (__VSX__) &amp;&amp; (__GNUC__ &gt; 7)</span></div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160; </div>
-<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;  __asm__(</div>
-<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;      <span class="stringliteral">&quot;xvxsigsp %x0,%x1&quot;</span></div>
-<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
-<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (vrb)</div>
-<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;      : );</div>
-<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160; </div>
-<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> t128, tmp;</div>
-<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> normal;</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> zero = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0, 0, 0, 0);</div>
-<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> sigmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x007fffff, 0x007fffff,</div>
-<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;                                          0x007fffff, 0x007fffff);</div>
-<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
-<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;                                          0x7f800000, 0x7f800000);</div>
-<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> hidden = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x00800000, 0x00800000,</div>
-<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;                                         0x00800000, 0x00800000);</div>
-<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160; </div>
-<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;  <span class="comment">// Check if vrb is normal. Normal values need the hidden bit</span></div>
-<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;  <span class="comment">// restored to the significand. We use a simpler sequence here as</span></div>
-<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;  <span class="comment">// vec_isnormalf32 does more then we need.</span></div>
-<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;  tmp = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, expmask);</div>
-<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;  normal = vec_nor ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_cmpeq (tmp, expmask),</div>
-<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;                    (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_cmpeq (tmp, zero));</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;  t128 = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, sigmask);</div>
-<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;  result = (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_sel (t128, normal, hidden);</div>
-<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;}</div>
-<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160; </div>
-<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* VEC_F32_PPC_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;<span class="preprocessor">#if defined (vec_insert_exp)</span></div>
+<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;  result = vec_insert_exp (sig, exp);</div>
+<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;  __asm__(</div>
+<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;      <span class="stringliteral">&quot;xviexpsp %x0,%x1,%x2&quot;</span></div>
+<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
+<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (sig), <span class="stringliteral">&quot;wa&quot;</span> (exp)</div>
+<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;      : );</div>
+<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> tmp;</div>
+<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
+<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;                                          0x7f800000, 0x7f800000);</div>
+<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160; </div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;  tmp = <a class="code" href="vec__int32__ppc_8h.html#a500924c8925b336d49b6a5d4307fe14c">vec_slwi</a> (exp, 23);</div>
+<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;  result = (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a>) vec_sel ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) sig, tmp, expmask);</div>
+<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;}</div>
+<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160; </div>
+<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
+<div class="line"><a name="l02095"></a><span class="lineno"><a class="line" href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257"> 2095</a></span>&#160;<a class="code" href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257">vec_xvxexpsp</a> (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vrb)</div>
+<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;{</div>
+<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> result;</div>
+<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;<span class="preprocessor">#if defined (_ARCH_PWR9) &amp;&amp; defined (__VSX__) &amp;&amp; (__GNUC__ &gt; 7)</span></div>
+<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;<span class="preprocessor">#if defined (vec_extract_exp)</span></div>
+<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;  result = vec_extract_exp (vrb);</div>
+<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;  __asm__(</div>
+<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;      <span class="stringliteral">&quot;xvxexpsp %x0,%x1&quot;</span></div>
+<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
+<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (vrb)</div>
+<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;      : );</div>
+<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> tmp;</div>
+<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;                                          0x7f800000, 0x7f800000);</div>
+<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160; </div>
+<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;  tmp = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, expmask);</div>
+<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;  result = <a class="code" href="vec__int32__ppc_8h.html#af73a97260ce07b46031e2c8560a5320b">vec_srwi</a> (tmp, 23);</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;}</div>
+<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160; </div>
+<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
+<div class="line"><a name="l02145"></a><span class="lineno"><a class="line" href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f"> 2145</a></span>&#160;<a class="code" href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f">vec_xvxsigsp</a> (<a class="code" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vrb)</div>
+<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;{</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> result;</div>
+<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;<span class="preprocessor">#if defined (_ARCH_PWR9) &amp;&amp; defined (__VSX__) &amp;&amp; (__GNUC__ &gt; 7)</span></div>
+<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;<span class="preprocessor">#if defined (vec_extract_sig)</span></div>
+<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;  result = vec_extract_sig (vrb);</div>
+<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;  __asm__(</div>
+<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;      <span class="stringliteral">&quot;xvxsigsp %x0,%x1&quot;</span></div>
+<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;      : <span class="stringliteral">&quot;=wa&quot;</span> (result)</div>
+<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;      : <span class="stringliteral">&quot;wa&quot;</span> (vrb)</div>
+<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;      : );</div>
+<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> t128, tmp;</div>
+<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> normal;</div>
+<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> zero = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0, 0, 0, 0);</div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> sigmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x007fffff, 0x007fffff,</div>
+<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;                                          0x007fffff, 0x007fffff);</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> expmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x7f800000, 0x7f800000,</div>
+<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;                                          0x7f800000, 0x7f800000);</div>
+<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> hidden = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x00800000, 0x00800000,</div>
+<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;                                         0x00800000, 0x00800000);</div>
+<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160; </div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;  <span class="comment">// Check if vrb is normal. Normal values need the hidden bit</span></div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;  <span class="comment">// restored to the significand. We use a simpler sequence here as</span></div>
+<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;  <span class="comment">// vec_isnormalf32 does more then we need.</span></div>
+<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;  tmp = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, expmask);</div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;  normal = vec_nor ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_cmpeq (tmp, expmask),</div>
+<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;                    (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_cmpeq (tmp, zero));</div>
+<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;  t128 = vec_and ((<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vrb, sigmask);</div>
+<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;  result = (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_sel (t128, normal, hidden);</div>
+<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;}</div>
+<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160; </div>
+<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* VEC_F32_PPC_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="avec__f32__ppc_8h_html_ab30f36fba977bc11812ef24b08887613"><div class="ttname"><a href="vec__f32__ppc_8h.html#ab30f36fba977bc11812ef24b08887613">vec_isfinitef32</a></div><div class="ttdeci">static vb32_t vec_isfinitef32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values for each float element that is Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:843</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_ae605ed47fb58a86fe1f81ed86992ceb3"><div class="ttname"><a href="vec__f32__ppc_8h.html#ae605ed47fb58a86fe1f81ed86992ceb3">vec_vlxsspx</a></div><div class="ttdeci">static vf64_t vec_vlxsspx(const signed long long ra, const float *rb)</div><div class="ttdoc">Vector Load Scalar Single Float Indexed.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1552</div></div>
-<div class="ttc" id="avec__f32__ppc_8h_html_aaf211d6b7de2a8aee04ca6b97c69851f"><div class="ttname"><a href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f">vec_xvxsigsp</a></div><div class="ttdeci">static vui32_t vec_xvxsigsp(vf32_t vrb)</div><div class="ttdoc">Vector Extract Significand Single-Precision.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:2141</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_aaf211d6b7de2a8aee04ca6b97c69851f"><div class="ttname"><a href="vec__f32__ppc_8h.html#aaf211d6b7de2a8aee04ca6b97c69851f">vec_xvxsigsp</a></div><div class="ttdeci">static vui32_t vec_xvxsigsp(vf32_t vrb)</div><div class="ttdoc">Vector Extract Significand Single-Precision.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:2145</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_a97d3d15a97b7bcc2a4f5f7fdbefd7f0a"><div class="ttname"><a href="vec__f32__ppc_8h.html#a97d3d15a97b7bcc2a4f5f7fdbefd7f0a">vec_vsstfsdo</a></div><div class="ttdeci">static void vec_vsstfsdo(vf64_t xs, float *array, vi64_t vra)</div><div class="ttdoc">Vector Scatter-Store Floats Singles to Vector Doubleword Offsets.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1804</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_afbbb95bf49c3d44c891749de9b3f8a6a"><div class="ttname"><a href="vec__common__ppc_8h.html#afbbb95bf49c3d44c891749de9b3f8a6a">scalar_extract_uint64_from_high_uint128</a></div><div class="ttdeci">static unsigned long long scalar_extract_uint64_from_high_uint128(unsigned __int128 gprp)</div><div class="ttdoc">Extract the high doubleword from a __int128 scalar.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:503</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_a08ac757161dfee660dcbcd428c1b8c00"><div class="ttname"><a href="vec__f32__ppc_8h.html#a08ac757161dfee660dcbcd428c1b8c00">vec_xviexpsp</a></div><div class="ttdeci">static vf32_t vec_xviexpsp(vui32_t sig, vui32_t exp)</div><div class="ttdoc">Vector Insert Exponent Single-Precision.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:2046</div></div>
@@ -1268,7 +1274,7 @@ $(function() {
 <div class="ttc" id="avec__f32__ppc_8h_html_aeedacc721ace30ad81c6fd59611f9969"><div class="ttname"><a href="vec__f32__ppc_8h.html#aeedacc721ace30ad81c6fd59611f9969">vec_vsst4fswx</a></div><div class="ttdeci">static void vec_vsst4fswx(vf32_t xs, float *array, vi32_t vra)</div><div class="ttdoc">Vector Scatter-Store 4 Float Singles to Vector Word Indexes.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1759</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_ab69f31ac3c33aa7ff7dca9572a40b851"><div class="ttname"><a href="vec__f32__ppc_8h.html#ab69f31ac3c33aa7ff7dca9572a40b851">vec_copysignf32</a></div><div class="ttdeci">static vf32_t vec_copysignf32(vf32_t vf32x, vf32_t vf32y)</div><div class="ttdoc">Copy the sign bit from vf32y merged with magnitude from vf32x and return the resulting vector float v...</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:805</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html"><div class="ttname"><a href="vec__common__ppc_8h.html">vec_common_ppc.h</a></div><div class="ttdoc">Common definitions and typedef used by the collection of Power Vector Library (pveclib) headers.</div></div>
-<div class="ttc" id="avec__f32__ppc_8h_html_a8e4460b8901074a6752edce65ea33257"><div class="ttname"><a href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257">vec_xvxexpsp</a></div><div class="ttdeci">static vui32_t vec_xvxexpsp(vf32_t vrb)</div><div class="ttdoc">Vector Extract Exponent Single-Precision.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:2092</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_a8e4460b8901074a6752edce65ea33257"><div class="ttname"><a href="vec__f32__ppc_8h.html#a8e4460b8901074a6752edce65ea33257">vec_xvxexpsp</a></div><div class="ttdeci">static vui32_t vec_xvxexpsp(vf32_t vrb)</div><div class="ttdoc">Vector Extract Exponent Single-Precision.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:2095</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_aed458e4755a6589049b936cf9f24f6f8"><div class="ttname"><a href="vec__common__ppc_8h.html#aed458e4755a6589049b936cf9f24f6f8">vui8_t</a></div><div class="ttdeci">__vector unsigned char vui8_t</div><div class="ttdoc">vector of 8-bit unsigned char elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:202</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_adf5717f56a3dac6980206dbd37614ca2"><div class="ttname"><a href="vec__common__ppc_8h.html#adf5717f56a3dac6980206dbd37614ca2">vi32_t</a></div><div class="ttdeci">__vector int vi32_t</div><div class="ttdoc">vector of 32-bit signed int elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:215</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_a083462955e2fcb17cbaefb8dd3f3193d"><div class="ttname"><a href="vec__f32__ppc_8h.html#a083462955e2fcb17cbaefb8dd3f3193d">vec_absf32</a></div><div class="ttdeci">static vf32_t vec_absf32(vf32_t vf32x)</div><div class="ttdoc">Vector float absolute value.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:232</div></div>
@@ -1314,7 +1320,7 @@ $(function() {
 <div class="ttc" id="avec__f32__ppc_8h_html_a920bcaf787edd68353498f26da93d992"><div class="ttname"><a href="vec__f32__ppc_8h.html#a920bcaf787edd68353498f26da93d992">vec_vglfsdx</a></div><div class="ttdeci">static vf64_t vec_vglfsdx(float *array, vi64_t vra)</div><div class="ttdoc">Vector Gather-Load Single Floats from Vector Doubleword Indexes.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1448</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 21 2021 17:24:15 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 27 2021 16:15:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
