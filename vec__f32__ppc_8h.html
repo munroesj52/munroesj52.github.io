@@ -77,7 +77,7 @@ $(function() {
 <p>Header package containing a collection of 128-bit SIMD operations over 4x32-bit floating point elements.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vec__common__ppc_8h_source.html">pveclib/vec_common_ppc.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="vec__int64__ppc_8h_source.html">pveclib/vec_int64_ppc.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec__int128__ppc_8h_source.html">pveclib/vec_int128_ppc.h</a>&gt;</code><br />
 </div>
 <p><a href="vec__f32__ppc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -130,7 +130,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aac3947cd426bd36bd2456d44679b41ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if any of 4x32-bit vector float values are +-0.0.  <a href="vec__f32__ppc_8h.html#aac3947cd426bd36bd2456d44679b41ba">More...</a><br /></td></tr>
 <tr class="separator:aac3947cd426bd36bd2456d44679b41ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab69f31ac3c33aa7ff7dca9572a40b851"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f32__ppc_8h.html#ab69f31ac3c33aa7ff7dca9572a40b851">vec_copysignf32</a> (<a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vf32x, <a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vf32y)</td></tr>
-<tr class="memdesc:ab69f31ac3c33aa7ff7dca9572a40b851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the sign bit from vf32y merged with magnitude from vf32x and return the resulting vector float values.  <a href="vec__f32__ppc_8h.html#ab69f31ac3c33aa7ff7dca9572a40b851">More...</a><br /></td></tr>
+<tr class="memdesc:ab69f31ac3c33aa7ff7dca9572a40b851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the sign bit from vf32x merged with magnitude from vf32y and return the resulting vector float values.  <a href="vec__f32__ppc_8h.html#ab69f31ac3c33aa7ff7dca9572a40b851">More...</a><br /></td></tr>
 <tr class="separator:ab69f31ac3c33aa7ff7dca9572a40b851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30f36fba977bc11812ef24b08887613"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f32__ppc_8h.html#ab30f36fba977bc11812ef24b08887613">vec_isfinitef32</a> (<a class="el" href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a> vf32)</td></tr>
 <tr class="memdesc:ab30f36fba977bc11812ef24b08887613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 4x32-bit vector boolean true values for each float element that is Finite (Not NaN nor Inf).  <a href="vec__f32__ppc_8h.html#ab30f36fba977bc11812ef24b08887613">More...</a><br /></td></tr>
@@ -930,7 +930,8 @@ Performance data.</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Copy the sign bit from vf32y merged with magnitude from vf32x and return the resulting vector float values. </p>
+<p>Copy the sign bit from vf32x merged with magnitude from vf32y and return the resulting vector float values. </p>
+<dl class="section note"><dt>Note</dt><dd>This operation was patterned after the intrinsic vec_cpsgn (altivec.h) introduced for POWER7 and VSX. It turns out the original (GCC 4.9) compiler implementation reversed the operands and does not match the PowerISA or the Vector Intrinsic Programming Reference manuals. Subsequent compilers and PVECLIB implementations replicated this (operand order) error. This has now been reported as bug against the compilers, which are in the process of applying fixes and distributing updates. This version of PVECLIB is updated to match the Vector Intrinsic Programming Reference. This implementation is independent of the compilers update status.</dd></dl>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadRight">processor </th><th class="markdownTableHeadCenter">Latency </th><th class="markdownTableHeadLeft">Throughput  </th></tr>
@@ -941,12 +942,12 @@ Performance data.</h1>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vf32x</td><td>vector float values containing the magnitudes. </td></tr>
-    <tr><td class="paramname">vf32y</td><td>vector float values containing the sign bits. </td></tr>
+    <tr><td class="paramname">vf32x</td><td>vector float values containing the sign bits. </td></tr>
+    <tr><td class="paramname">vf32y</td><td>vector float values containing the magnitudes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vector float values with magnitude from vf32x and the sign of vf32y. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vector float values with magnitude from vf32y and the sign of vf32x. </dd></dl>
 
 </div>
 </div>
@@ -2552,18 +2553,18 @@ Performance data.</h1>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="avec__f32__ppc_8h_html_ab30f36fba977bc11812ef24b08887613"><div class="ttname"><a href="vec__f32__ppc_8h.html#ab30f36fba977bc11812ef24b08887613">vec_isfinitef32</a></div><div class="ttdeci">static vb32_t vec_isfinitef32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values for each float element that is Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:843</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_ab30f36fba977bc11812ef24b08887613"><div class="ttname"><a href="vec__f32__ppc_8h.html#ab30f36fba977bc11812ef24b08887613">vec_isfinitef32</a></div><div class="ttdeci">static vb32_t vec_isfinitef32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values for each float element that is Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:864</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_aafeddf1e79ef817440ff01fafb0e00ca"><div class="ttname"><a href="vec__common__ppc_8h.html#aafeddf1e79ef817440ff01fafb0e00ca">vb32_t</a></div><div class="ttdeci">__vector __bool int vb32_t</div><div class="ttdoc">vector of 32-bit bool int elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:228</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a18f1382a0cb269770bbb8387dfcbbe1c"><div class="ttname"><a href="vec__common__ppc_8h.html#a18f1382a0cb269770bbb8387dfcbbe1c">vf32_t</a></div><div class="ttdeci">__vector float vf32_t</div><div class="ttdoc">vector of 32-bit float elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:219</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_a0a7493764e30ad8714335e54f3f18174"><div class="ttname"><a href="vec__f32__ppc_8h.html#a0a7493764e30ad8714335e54f3f18174">vec_any_isfinitef32</a></div><div class="ttdeci">static int vec_any_isfinitef32(vf32_t vf32)</div><div class="ttdoc">Return true if any 4x32-bit vector float values are Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:534</div></div>
-<div class="ttc" id="avec__f32__ppc_8h_html_a0b76fdcb61ad12bdbedb3cb6b766a1fc"><div class="ttname"><a href="vec__f32__ppc_8h.html#a0b76fdcb61ad12bdbedb3cb6b766a1fc">vec_iszerof32</a></div><div class="ttdeci">static vb32_t vec_iszerof32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values, for each float value that is +-0.0.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1069</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_a0b76fdcb61ad12bdbedb3cb6b766a1fc"><div class="ttname"><a href="vec__f32__ppc_8h.html#a0b76fdcb61ad12bdbedb3cb6b766a1fc">vec_iszerof32</a></div><div class="ttdeci">static vb32_t vec_iszerof32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values, for each float value that is +-0.0.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:1090</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a2ff4a776536870e01b7c9e454586544b"><div class="ttname"><a href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div><div class="ttdeci">__vector unsigned int vui32_t</div><div class="ttdoc">vector of 32-bit unsigned int elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:206</div></div>
-<div class="ttc" id="avec__f32__ppc_8h_html_a0d808fb7bf9b6603274b1b3fdbe626a1"><div class="ttname"><a href="vec__f32__ppc_8h.html#a0d808fb7bf9b6603274b1b3fdbe626a1">vec_isnormalf32</a></div><div class="ttdeci">static vb32_t vec_isnormalf32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values, for each float value, if normal (Not NaN,...</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:975</div></div>
-<div class="ttc" id="avec__f32__ppc_8h_html_a11f0df67473a5496a40bbecf41bd54d9"><div class="ttname"><a href="vec__f32__ppc_8h.html#a11f0df67473a5496a40bbecf41bd54d9">vec_isinff32</a></div><div class="ttdeci">static vb32_t vec_isinff32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values for each float, if infinity.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:887</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_a0d808fb7bf9b6603274b1b3fdbe626a1"><div class="ttname"><a href="vec__f32__ppc_8h.html#a0d808fb7bf9b6603274b1b3fdbe626a1">vec_isnormalf32</a></div><div class="ttdeci">static vb32_t vec_isnormalf32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values, for each float value, if normal (Not NaN,...</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:996</div></div>
+<div class="ttc" id="avec__f32__ppc_8h_html_a11f0df67473a5496a40bbecf41bd54d9"><div class="ttname"><a href="vec__f32__ppc_8h.html#a11f0df67473a5496a40bbecf41bd54d9">vec_isinff32</a></div><div class="ttdeci">static vb32_t vec_isinff32(vf32_t vf32)</div><div class="ttdoc">Return 4x32-bit vector boolean true values for each float, if infinity.</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:908</div></div>
 <div class="ttc" id="avec__f32__ppc_8h_html_a95d2962ea183dc8d6f897baefbe28e91"><div class="ttname"><a href="vec__f32__ppc_8h.html#a95d2962ea183dc8d6f897baefbe28e91">vec_any_isnormalf32</a></div><div class="ttdeci">static int vec_any_isnormalf32(vf32_t vf32)</div><div class="ttdoc">Return true if any of 4x32-bit vector float values are normal (Not NaN, Inf, denormal,...</div><div class="ttdef"><b>Definition:</b> vec_f32_ppc.h:668</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 27 2021 16:15:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2022 14:57:44 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

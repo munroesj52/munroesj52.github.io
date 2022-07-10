@@ -122,7 +122,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a47c593b367639924729e7d8fbb044f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if any of 2x64-bit vector double values are +-0.0.  <a href="vec__f64__ppc_8h.html#a47c593b367639924729e7d8fbb044f0e">More...</a><br /></td></tr>
 <tr class="separator:a47c593b367639924729e7d8fbb044f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59d567f31837de74d7fa722b59e73928"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#a59d567f31837de74d7fa722b59e73928">vec_copysignf64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64x, <a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64y)</td></tr>
-<tr class="memdesc:a59d567f31837de74d7fa722b59e73928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the sign bit from vf64y merged with magnitude from vf64x and return the resulting vector double values.  <a href="vec__f64__ppc_8h.html#a59d567f31837de74d7fa722b59e73928">More...</a><br /></td></tr>
+<tr class="memdesc:a59d567f31837de74d7fa722b59e73928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the sign bit from vf64x merged with magnitude from vf64y and return the resulting vector double values.  <a href="vec__f64__ppc_8h.html#a59d567f31837de74d7fa722b59e73928">More...</a><br /></td></tr>
 <tr class="separator:a59d567f31837de74d7fa722b59e73928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae0220385a453649170124948f9085f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">vec_isfinitef64</a> (<a class="el" href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a> vf64)</td></tr>
 <tr class="memdesc:aae0220385a453649170124948f9085f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 2x64-bit vector boolean true values for each double element that is Finite (Not NaN nor Inf).  <a href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">More...</a><br /></td></tr>
@@ -904,7 +904,8 @@ Performance data.</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Copy the sign bit from vf64y merged with magnitude from vf64x and return the resulting vector double values. </p>
+<p>Copy the sign bit from vf64x merged with magnitude from vf64y and return the resulting vector double values. </p>
+<dl class="section note"><dt>Note</dt><dd>This operation was patterned after the intrinsic vec_cpsgn (altivec.h) introduced for POWER7 and VSX. It turns out the original (GCC 4.9) compiler implementation reversed the operands and does not match the PowerISA or the Vector Intrinsic Programming Reference manuals. Subsequent compilers and PVECLIB implementations replicated this (operand order) error. This has now been reported as bug against the compilers, which are in the process of applying fixes and distributing updates. This version of PVECLIB is updated to match the Vector Intrinsic Programming Reference. This implementation is independent of the compilers update status.</dd></dl>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadRight">processor </th><th class="markdownTableHeadCenter">Latency </th><th class="markdownTableHeadLeft">Throughput  </th></tr>
@@ -915,12 +916,12 @@ Performance data.</h1>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vf64x</td><td>vector double values containing the magnitudes. </td></tr>
-    <tr><td class="paramname">vf64y</td><td>vector double values containing the sign bits. </td></tr>
+    <tr><td class="paramname">vf64x</td><td>vector double values containing the sign bits. </td></tr>
+    <tr><td class="paramname">vf64y</td><td>vector double values containing the magnitudes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vector double values with magnitude from vf64x and the sign of vf64y. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vector double values with magnitude from vf64y and the sign of vf64x. </dd></dl>
 
 </div>
 </div>
@@ -2078,17 +2079,17 @@ Performance data.</h1>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="avec__f64__ppc_8h_html_a9c198001c1db455c8a70478fe7c76c8c"><div class="ttname"><a href="vec__f64__ppc_8h.html#a9c198001c1db455c8a70478fe7c76c8c">vec_any_isnormalf64</a></div><div class="ttdeci">static int vec_any_isnormalf64(vf64_t vf64)</div><div class="ttdoc">Return true if any of 2x64-bit vector double values are normal (Not NaN, Inf, denormal,...</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:660</div></div>
-<div class="ttc" id="avec__f64__ppc_8h_html_a0391d8549f3070e515c0f20ed6bea9ac"><div class="ttname"><a href="vec__f64__ppc_8h.html#a0391d8549f3070e515c0f20ed6bea9ac">vec_iszerof64</a></div><div class="ttdeci">static vb64_t vec_iszerof64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values, for each double value that is +-0.0.</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:1062</div></div>
+<div class="ttc" id="avec__f64__ppc_8h_html_a0391d8549f3070e515c0f20ed6bea9ac"><div class="ttname"><a href="vec__f64__ppc_8h.html#a0391d8549f3070e515c0f20ed6bea9ac">vec_iszerof64</a></div><div class="ttdeci">static vb64_t vec_iszerof64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values, for each double value that is +-0.0.</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:1084</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a52a773b6353c69a546bdc2e8686a50ec"><div class="ttname"><a href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a></div><div class="ttdeci">__vector unsigned long long vui64_t</div><div class="ttdoc">vector of 64-bit unsigned long long elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:208</div></div>
-<div class="ttc" id="avec__f64__ppc_8h_html_a5508cb768d48ffec6e833076fc10b497"><div class="ttname"><a href="vec__f64__ppc_8h.html#a5508cb768d48ffec6e833076fc10b497">vec_isinff64</a></div><div class="ttdeci">static vb64_t vec_isinff64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values for each double, if infinity.</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:879</div></div>
+<div class="ttc" id="avec__f64__ppc_8h_html_a5508cb768d48ffec6e833076fc10b497"><div class="ttname"><a href="vec__f64__ppc_8h.html#a5508cb768d48ffec6e833076fc10b497">vec_isinff64</a></div><div class="ttdeci">static vb64_t vec_isinff64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values for each double, if infinity.</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:901</div></div>
 <div class="ttc" id="avec__f64__ppc_8h_html_aa5108dc5fc533329fdd794f306a6ec3d"><div class="ttname"><a href="vec__f64__ppc_8h.html#aa5108dc5fc533329fdd794f306a6ec3d">vec_any_isfinitef64</a></div><div class="ttdeci">static int vec_any_isfinitef64(vf64_t vf64)</div><div class="ttdoc">Return true if any of 2x64-bit vector double values are Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:526</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_aee93592cb008b78c17e85d1eaa3419e1"><div class="ttname"><a href="vec__common__ppc_8h.html#aee93592cb008b78c17e85d1eaa3419e1">vb64_t</a></div><div class="ttdeci">__vector __bool long long vb64_t</div><div class="ttdoc">vector of 64-bit bool long long elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:230</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_ae5cccc22e004bddbb80a51117c448675"><div class="ttname"><a href="vec__common__ppc_8h.html#ae5cccc22e004bddbb80a51117c448675">vf64_t</a></div><div class="ttdeci">__vector double vf64_t</div><div class="ttdoc">vector of 64-bit double elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:221</div></div>
-<div class="ttc" id="avec__f64__ppc_8h_html_aae0220385a453649170124948f9085f1"><div class="ttname"><a href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">vec_isfinitef64</a></div><div class="ttdeci">static vb64_t vec_isfinitef64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values for each double element that is Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:835</div></div>
-<div class="ttc" id="avec__f64__ppc_8h_html_a8f764b415ce41cbbc504554f779bcbe6"><div class="ttname"><a href="vec__f64__ppc_8h.html#a8f764b415ce41cbbc504554f779bcbe6">vec_isnormalf64</a></div><div class="ttdeci">static vb64_t vec_isnormalf64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values, for each double value, if normal (Not NaN,...</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:968</div></div>
+<div class="ttc" id="avec__f64__ppc_8h_html_aae0220385a453649170124948f9085f1"><div class="ttname"><a href="vec__f64__ppc_8h.html#aae0220385a453649170124948f9085f1">vec_isfinitef64</a></div><div class="ttdeci">static vb64_t vec_isfinitef64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values for each double element that is Finite (Not NaN nor Inf).</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:857</div></div>
+<div class="ttc" id="avec__f64__ppc_8h_html_a8f764b415ce41cbbc504554f779bcbe6"><div class="ttname"><a href="vec__f64__ppc_8h.html#a8f764b415ce41cbbc504554f779bcbe6">vec_isnormalf64</a></div><div class="ttdeci">static vb64_t vec_isnormalf64(vf64_t vf64)</div><div class="ttdoc">Return 2x64-bit vector boolean true values, for each double value, if normal (Not NaN,...</div><div class="ttdef"><b>Definition:</b> vec_f64_ppc.h:990</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 27 2021 16:15:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2022 14:57:44 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

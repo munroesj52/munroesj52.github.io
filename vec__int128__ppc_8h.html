@@ -350,6 +350,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a070fe972995f3954362835f5b72e5ff6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int128__ppc_8h.html#a070fe972995f3954362835f5b72e5ff6">vec_slqi</a> (<a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> vra, const unsigned int shb)</td></tr>
 <tr class="memdesc:a070fe972995f3954362835f5b72e5ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Shift Left Quadword Immediate.  <a href="vec__int128__ppc_8h.html#a070fe972995f3954362835f5b72e5ff6">More...</a><br /></td></tr>
 <tr class="separator:a070fe972995f3954362835f5b72e5ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6373310baef2083fb42fd30bbdc6a618"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int128__ppc_8h.html#a6373310baef2083fb42fd30bbdc6a618">vec_splat_s128</a> (const int sim)</td></tr>
+<tr class="memdesc:a6373310baef2083fb42fd30bbdc6a618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Splat Immediate Signed Quadword. Extend a signed integer constant across the quadword element of the result. This is the quadword equivalent of Vector Splat Immediate Signed (Byte | Halfword |Word).  <a href="vec__int128__ppc_8h.html#a6373310baef2083fb42fd30bbdc6a618">More...</a><br /></td></tr>
+<tr class="separator:a6373310baef2083fb42fd30bbdc6a618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13762071e1942feb3a64ae4facdee87a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int128__ppc_8h.html#a13762071e1942feb3a64ae4facdee87a">vec_splat_u128</a> (const int sim)</td></tr>
+<tr class="memdesc:a13762071e1942feb3a64ae4facdee87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Splat Immediate Unsigned Quadword. Extend a unsigned integer constant across the quadword element of the result. This is the quadword equivalent of Vector Splat Immediate Unsigned (Byte | Halfword |Word).  <a href="vec__int128__ppc_8h.html#a13762071e1942feb3a64ae4facdee87a">More...</a><br /></td></tr>
+<tr class="separator:a13762071e1942feb3a64ae4facdee87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99c4af0aae31b02e1f17f12500198f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec__int128__ppc_8h.html#ab99c4af0aae31b02e1f17f12500198f0">vec_sraq</a> (<a class="el" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a> vra, <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> vrb)</td></tr>
 <tr class="memdesc:ab99c4af0aae31b02e1f17f12500198f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector Shift Right Algebraic Quadword.  <a href="vec__int128__ppc_8h.html#ab99c4af0aae31b02e1f17f12500198f0">More...</a><br /></td></tr>
 <tr class="separator:ab99c4af0aae31b02e1f17f12500198f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -500,7 +506,214 @@ Support for Quadword Integer Constants</h2>
 <div class="line"><span class="comment">// Which is 38 digits, so we split into 2 consts of 19 digits each.</span></div>
 <div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> mul_invs_ten16 = <a class="code" href="vec__int128__ppc_8h.html#a25faf0c51245eefdaeda1dc5dd71c516">CONST_VUINT128_Qx19d</a>(</div>
 <div class="line">     7662477704329444291UL, 7917351357515459181UL);</div>
-</div><!-- fragment --><h1><a class="anchor" id="int128_arith_facts_0"></a>
+</div><!-- fragment --><h2><a class="anchor" id="int128_const_0_0_3"></a>
+Loading small Quadword constants</h2>
+<p>Programming with quadword integers will need quadword constants for masking and arithmetic operations. In the sections above we provide means to define large and complex constants. But often there is need for small integer constants for use in boolean logic, masking/select operations, and simple arithmetic.</p>
+<p>The technique above can used for small integer constants as well. For example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> qw_one = <a class="code" href="vec__common__ppc_8h.html#a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW</a>(0, 1);</div>
+<div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> qw_ten = <a class="code" href="vec__common__ppc_8h.html#a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW</a>(0, 10);</div>
+<div class="line"><span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> qw_digit_mask = <a class="code" href="vec__common__ppc_8h.html#a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW</a>(0, 0xf);</div>
+</div><!-- fragment --><p> In most cases this compiler will allocate these constant values to the read-only data (.rodata) section. When these constants are referenced in programming operations the compiler generates the appropriate vector loads. For example the GCC V11 generates the following for the <b>-mcpu=power8</b> target: </p><div class="fragment"><div class="line">addis   r9,r2,.rodata.cst16+0x30@toc@ha</div>
+<div class="line">addi    r9,r9,.rodata.cst16+0x30@toc@l</div>
+<div class="line">lvx     v2,0,r9</div>
+</div><!-- fragment --><p> And the following for the <b>-mcpu=power9</b> target: </p><div class="fragment"><div class="line">addis   r9,r2,.rodata.cst16+0x30@toc@ha</div>
+<div class="line">addi    r9,r9,.rodata.cst16+0x30@toc@l</div>
+<div class="line">lxv     v2,0(r9)</div>
+</div><!-- fragment --><p> This is expected for POWER8 as PowerISA 2.07B does not have any displacement form (D-Form) vector (VSX) loads/stores instructions. The compiler allocates constants to the .rodata sections and the linker collects .rodata from object files into a combined executable .rodata section. This is placed near the <em>Table of Contents (<b>TOC</b>)</em> section. The ABI dedicates R2 as the base address <b>.TOC.</b> for the TOC and adjacent sections.</p>
+<p>The <em>Add Immediate Shifted (addis)</em> <em>Add Immediate (addi)</em> sequence above computes a signed 32-bit <b>.TOC.</b> relative offset to a specific .rodata quadword. Two instructions are required as; <em>addis</em> provides the <em>high adjusted</em> 16-bits shifted left 16-bits, while <em>addi</em> provides the <em>low</em> 16-bits. The sum of R2 and these immediate values is the 64-bit effective address of a .rodata constant value. A signed 32-bit offset is large enough to support most program and library executables.</p>
+<p>The load itself has a 5-cycle latency assuming a L1 cache hit. The three instruction sequence is sequentially dependent and requires 9-cycles latency (minimum) to execute. A L1 cache miss will increase the latency by 7-28 cycles, assuming the data resides in the L2/L3 caches.</p>
+<p>However the compiler is not following the recommendations of</p>
+<p><a href="https://ibm.ent.box.com/s/jd5w15gz301s5b5dt375mshpq9c3lh4u">PowerISA 2.07B</a>, <em>Book II, Chapter 2.1 Performance-Optimized Instruction Sequences</em>. This chapter recommends a specific pattern for the addi/lvx sequence. For example: </p><div class="fragment"><div class="line">addis   rA,r2,.rodata.cst16+0x30@toc@ha</div>
+<div class="line">addi    rx,0,.rodata.cst16+0x30@toc@l</div>
+<div class="line">lvx     v2,rA,rx</div>
+</div><!-- fragment --><p> In this case rx can be any GPR (including r0) while RA must be a valid base (r1 &lt;-&gt; r31) register.</p>
+<p>The POWER8 implementation allows for <em>Instruction Fusion</em> combining information from two <em>adjacent</em>t instructions into one (internal) instruction so that it executes faster than the non-fused case. Effectively the addi/lvx combination above becomes a D-Form load vector instruction.</p>
+<p>There are additional restrictions on the definition of <em>adjacent</em>:</p><ul>
+<li>The instruction must be in the same dispatch group.<ul>
+<li>In single-threaded mode, up to six non-branch and up to two branch instructions (6/2 groups).</li>
+<li>In multi-threaded mode, up to three non-branch and up to one branch instructions (3/1 groups).</li>
+</ul>
+</li>
+<li>Without any intervening branch instructions.</li>
+<li>Instructions may span an I-cache line, but with both fetched and residing in the i-buffer.</li>
+</ul>
+<p>This can reduce the latency from 9 to 7-cycles. This would be true even without <em>Instruction Funsion</em> as the addis/addi instructions are now independent and can execute in parallel.</p>
+<p>The sequence generated for POWER9 is even more disappointing. The lxv is a D-Form (DQ) instruction and the displacement operand could be used to replace the addi instruction. For example: <b>-mcpu=power9</b> target: </p><div class="fragment"><div class="line">addis   r9,r2,.rodata.cst16+0x30@toc@ha</div>
+<div class="line">lxv     v2,.rodata.cst16+0x30@toc@l(r9)</div>
+</div><!-- fragment --><p> This provides the equivalent 32-bit TOC relative displacement with one less instructions and reduced latency of 7-cycles.</p>
+<h3><a class="anchor" id="int128_const_0_0_3_1"></a>
+Alternatives to loading from .rodata</h3>
+<p>This is all a little cumbersome and it seems like there should be a better/faster way. Any instruction sequence that loads quadword integer constant in:</p><ul>
+<li>three instruction or less,</li>
+<li>latency of 6 cycles or less,</li>
+<li>and avoids cache misses</li>
+</ul>
+<p>is a good deal.</p>
+<p>The base (Altivec) vector ISA included Vector Splat Immediate Signed Byte/Halfword/Word instructions. These are fast (2-cycle latency) and convenient for small integer constants in the range -16 to 15. So far the ISA has not added doubleword or quadword forms for these.</p>
+<p>POWER9 added a VSX Vector Splat Immediate Byte (xxspltib) instruction. This expands the immediate range to -128 to 127 but does not include larger element sizes. POWER9 does provide Vector Extend Sign Byte To Word/Doubleword (vextsb2w/vextsb2d) instructions. For example the two instruction sequence: </p><div class="fragment"><div class="line">xxspltib vs34,127</div>
+<div class="line">vextsb2d v2,v2</div>
+</div><!-- fragment --><p> can generate a doubleword splat immediate for integers in the range -128 to 127 with a cycle latency of 5-cycles. So far there is no extend sign byte/halfword/word to quadword. POWER10 does add Vector Extend Sign Doubleword To Quadword (vextsd2q).</p>
+<dl class="section note"><dt>Note</dt><dd>POWER10 does add the interesting <em>VSX Vector Splat Immediate Double-Precision</em> instruction. This is a 64-bit instruction with a 32-bit single precision immediate operand. Interesting but not helpful for quadword integer.</dd></dl>
+<h3><a class="anchor" id="int128_const_0_0_3_2"></a>
+Some special quadword constants</h3>
+<p>The GCC compiler does recognize some vector constants as special case. For example: </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_n1_V0 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_ones = {-1, -1, -1, -1};</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) q_ones;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_0_V0 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_zero = {0, 0, 0, 0};</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) q_zero;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> will generate: </p><div class="fragment"><div class="line">0000000000000080 &lt;__test_splatisq_n1_V0&gt;:</div>
+<div class="line">     vspltisw v2,-1</div>
+<div class="line">     blr</div>
+<div class="line">00000000000000a0 &lt;__test_splatisq_0_V0&gt;:</div>
+<div class="line">     vspltisw v2,0</div>
+<div class="line">     blr</div>
+</div><!-- fragment --><p>Another interesting example is the quadword sign mask. For example: </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
+<div class="line">__test_splatisq_signmask_V0 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0x80000000, 0, 0, 0);</div>
+<div class="line">  <span class="keywordflow">return</span> signmask;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> will generate: </p><div class="fragment"><div class="line">00000000000000c0 &lt;__test_splatisq_signmask_V0&gt;:</div>
+<div class="line">     vspltisw v0,-1</div>
+<div class="line">     vspltisw v2,0</div>
+<div class="line">     vslw    v0,v0,v0</div>
+<div class="line">     vsldoi  v2,v0,v2,12</div>
+<div class="line">     blr</div>
+</div><!-- fragment --><p> The first 2 instructions generate vector constants of <em>all zeros</em> and <em>all ones</em> (same as above). The third instruction uses vector shift left word (vslw) to convert the word elements from 0xffffffff to 0x80000000.</p>
+<p>The cleaver bit is shifting elements of the <em>all ones</em> (0xffffffff or -1) vector, left by 31-bits (0b11111), which is the value of low order 5-bits of the <em>all ones</em> element. Fortunately the <b>vsl[bhw]</b> instructions ignores all but the lower order bits needed for the element shift count.</p>
+<dl class="section note"><dt>Note</dt><dd>This applies for element sizes byte, halfword and word. It also applies to doubleword elements on POWER8/9 using <b>vsld</b> but the compiler does not the recognize this case. And with POWER10 this technique applies to quadwords using <b>vslq</b>.</dd></dl>
+<p>To convert a word sign mask to a quadword sign mask we need the <em>all zeros</em> vector and one additional instruction. The Vector Shift Left Double by Octet Immediate (<b>vsldoi</b>) rotates the low-order signmask word element to the high order word with 3 words of '0' concatenated on the right.</p>
+<p>The equivalent C language with &lt;altivec.h&gt; intrinsics implementation is: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div>
+<div class="line"><a class="code" href="vec__f128__ppc_8h.html#ac94c7ddb75a8fc5f543e65e31e03f1c1">vec_mask128_f128sign</a> (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_zero = {0, 0, 0, 0};</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_ones = {-1, -1, -1, -1};</div>
+<div class="line">  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> signmask;</div>
+<div class="line">  signmask = vec_sl (q_ones, q_ones);</div>
+<div class="line">  <span class="keywordflow">return</span> vec_sld (signmask, q_zero, 12);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> This sequence is a little bigger (4 instructions) then we would like but should execute in 6-cycles. The first two instructions are independent and should execute in parallel. Also (as we will see) the all zero/ones constants are common building blocks. So the compiler should treat these as common sub expressions with across all operations using those constants.</p>
+<h3><a class="anchor" id="int128_const_0_0_3_3"></a>
+Defining our own vec_splat_s128</h3>
+<p>So the compiler can do clever things with vector constants. But so far these are the only examples I have found. Other cases that you might expect to be a special case are not. For example: </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_15_V1 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> qw_15 = {15};</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) qw_15;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> and </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_15_V0 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> qw_15 = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a>(0, 0, 0, 15);</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) qw_15;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> generate the 3 instruction (9-cycle) load from .rodata sequence. also constants using the vector long long or __int128 types may fail to compile on older versions of the compiler.</p>
+<dl class="section note"><dt>Note</dt><dd>PVECLIB has found it best to consistently use vector unsigned int (<b>vui32_t</b>) internally for these operations. First older compiles may fail to compile specific combinations of vector long long or __int128 types and &lt;altivec.h&gt; intrinsics. Second the compiler may consider the vector long long constants as not quadword aligned and generate lxvd2x/xxswapd instead of lvx.</dd></dl>
+<p>We can generate small constants in the range 1-15 with using the following pattern: </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_15_V2 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">//  const vui32_t qw_15 = CONST_VINT128_W(0, 0, 0, 15);</span></div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_zero = <a class="code" href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a> (0, 0, 0, 0);</div>
+<div class="line">  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> qw_15 = (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_splat_s32(15);</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld (q_zero, qw_15, 4);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Which generates: </p><div class="fragment"><div class="line">00000000000000e0 &lt;__test_splatisq_15_V2&gt;:</div>
+<div class="line">     vspltisw v0,0</div>
+<div class="line">     vspltisw v2,15</div>
+<div class="line">     vsldoi  v2,v0,v2,4</div>
+<div class="line">     blr</div>
+</div><!-- fragment --><p> Here we use the vec_splat_s32() intrinsic to generate the vspltisw instruction for the value 15.</p>
+<p>This sequence is only 3 instructions, which should execute in 4-cycles. The first two instructions are independent and should execute in parallel. Also the q_zero constant is commonly used and the compiler should treat it as a common sub expressions.</p>
+<p>For small (-16 to -1) negative constants we need to make one small change. We use the q_ones constant to propagate the sign across the quadword. </p><div class="fragment"><div class="line"><a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">__test_splatisq_n16_V2 (<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">//  const vui32_t qw_16 = CONST_VINT128_W(-1, -1, -1, -16);</span></div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_ones = {-1, -1, -1, -1};</div>
+<div class="line">  <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> qw_16 = (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_splat_s32(-16);</div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld (q_ones, qw_16, 4);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> The generated sequence is also 3 instructions and should execute in 4-cycles.</p>
+<p>Putting this all together we can create a static inline function to generate small quadword constants (in the range -16 to 15). For example: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">vec_splat_s128_PWR8 (<span class="keyword">const</span> <span class="keywordtype">int</span> sim)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a> result;</div>
+<div class="line">  <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; ((sim &gt;= -16) &amp;&amp; (sim &lt; 16)))</div>
+<div class="line">    {</div>
+<div class="line">      <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> vwi = (<a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a>) vec_splat_s32(sim);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; ((sim == 0) || (sim == -1)))</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">// Special case for -1 and 0. Skip vec_sld().</span></div>
+<div class="line">          result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vwi;</div>
+<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; (sim &gt; 0))</div>
+<div class="line">            {</div>
+<div class="line">              <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_zero = {0, 0, 0, 0};</div>
+<div class="line">              result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld (q_zero, vwi, 4);</div>
+<div class="line">            }</div>
+<div class="line">          <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">              <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_ones = {-1, -1, -1, -1};</div>
+<div class="line">              result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld (q_ones, vwi, 4);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    result = vec_splats ((<span class="keywordtype">signed</span> __int128) sim);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> (result);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> This version uses only &lt;altivec.h&gt; intrinsics supported by POWER8 and earlier. For constants in the range (-16 to 15) the range is divided into three groups:</p><ul>
+<li>Special values -1 and 0 that can be gnerated in a single instruction.</li>
+<li>Values 1 to 15 that require the q_zero constant to sign extend.</li>
+<li>Values -16 to -2 that require the q_ones constant to sign extend.</li>
+</ul>
+<p>Values outside this range use the vec_splats() intrinsic which will generate the appropriate quadword constant in .rodata and the load sequence to retrieve that value.</p>
+<p>For POWER9 and later we can use the VSX Vector Splat Immediate Byte (xxspltib) instruction and support the extended constant range of -128 to 127.</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div>
+<div class="line">vec_splat_s128_PWR9 (<span class="keyword">const</span> <span class="keywordtype">int</span> sim)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a> result;</div>
+<div class="line">  <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; ((sim &gt;= -128) &amp;&amp; (sim &lt; 128)))</div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">// Expect the compiler to generate a single xxspltib for this.</span></div>
+<div class="line">      <a class="code" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a> vbi = vec_splats ((<span class="keywordtype">signed</span> <span class="keywordtype">char</span>) sim);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; ((sim == 0) || (sim == -1)))</div>
+<div class="line">        {</div>
+<div class="line">          <span class="comment">// Special case for -1 and 0. Skip vec_sld().</span></div>
+<div class="line">          result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vbi;</div>
+<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> (__builtin_constant_p (sim) &amp;&amp; (sim &gt; 0))</div>
+<div class="line">            {</div>
+<div class="line">              <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_zero = {0, 0, 0, 0};</div>
+<div class="line">              result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld ((<a class="code" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a>) q_zero, vbi, 1);</div>
+<div class="line">            }</div>
+<div class="line">          <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">              <span class="keyword">const</span> <a class="code" href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a> q_ones = {-1, -1, -1, -1};</div>
+<div class="line">              result = (<a class="code" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a>) vec_sld ((<a class="code" href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a>) q_ones, vbi, 1);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    result = vec_splats ((<span class="keywordtype">signed</span> __int128) sim);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> (result);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Here we use the vec_splats() intrinsic to generate the xxspltib instruction. The rest follows the pattern we used for POWER8 but shift left is adjusted for the byte (vs word) element splat to be 1 octet.</p>
+<h1><a class="anchor" id="int128_arith_facts_0"></a>
 Some facts about fixed precision integers</h1>
 <p>The transition from grade school math to computer programming requires the realization that computers handle numbers in fixed sized chunks. For the PowerISA these chunks are byte, halfword, word, doubleword, and quadword. While computer languages like "C" have integer types like char, short, int, long int, and __int128.</p>
 <p>Happily these chunks are large enough to hold the equivalent of several decimal digits and handle most of the grotty details of multiply, divide, add, and subtract. But sometimes the chunk (used) is not large enough to hold all the digits you need. Sums may overflow and multiplies may be truncated (modulo the chunk size).</p>
@@ -6241,6 +6454,94 @@ Performance data.</h1>
 
 </div>
 </div>
+<a id="a6373310baef2083fb42fd30bbdc6a618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6373310baef2083fb42fd30bbdc6a618">&#9670;&nbsp;</a></span>vec_splat_s128()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a> vec_splat_s128 </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>sim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Splat Immediate Signed Quadword. Extend a signed integer constant across the quadword element of the result. This is the quadword equivalent of Vector Splat Immediate Signed (Byte | Halfword |Word). </p>
+<dl class="section note"><dt>Note</dt><dd>POWER9/10 will generate the instruction xxspltib for byte values -128 to 128. But the ISA does not have vextsb2q instructions (so far). So we need to sign extent the byte value using a const quadword (0/-1 depending on the sign) and vsldoi. POWER8 (and earlier) does not have xxspltib but does have vspltisw. For a smaller range (-16 -&gt; 15) POWER8 can use the sequence vec_splat_s8(sim)/vec_splat_s8(0/-1)/vec_sld. Larger values will be loaded as a quadword constant from the read-only data (.rodata) section.</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight">processor </th><th class="markdownTableHeadCenter">Latency </th><th class="markdownTableHeadLeft">Throughput  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">power8 </td><td class="markdownTableBodyCenter">4 - 9 </td><td class="markdownTableBodyLeft">1/cycle  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">power9 </td><td class="markdownTableBodyCenter">5 - 9 </td><td class="markdownTableBodyLeft">2/cycle  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sim</td><td>a small signed integer const. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector with sim value extended to quadword. </dd></dl>
+
+</div>
+</div>
+<a id="a13762071e1942feb3a64ae4facdee87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13762071e1942feb3a64ae4facdee87a">&#9670;&nbsp;</a></span>vec_splat_u128()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a> vec_splat_u128 </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>sim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector Splat Immediate Unsigned Quadword. Extend a unsigned integer constant across the quadword element of the result. This is the quadword equivalent of Vector Splat Immediate Unsigned (Byte | Halfword |Word). </p>
+<dl class="section note"><dt>Note</dt><dd>POWER9/10 will generate the instruction xxspltib for byte values 0 to 255. Then we need to sign extent the byte value using a const quadword 0 and vsldoi. POWER8 (and earlier) does not have xxspltib but does have vspltisw. For a smaller range (0 -&gt; 15) POWER8 can use the sequence vec_splat_s8(sim)/vec_splat_s8(0)/vec_sld. Larger values will be loaded as a quadword constant from the read-only data (.rodata) section.</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight">processor </th><th class="markdownTableHeadCenter">Latency </th><th class="markdownTableHeadLeft">Throughput  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">power8 </td><td class="markdownTableBodyCenter">4 - 9 </td><td class="markdownTableBodyLeft">1/cycle  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">power9 </td><td class="markdownTableBodyCenter">5 - 9 </td><td class="markdownTableBodyLeft">2/cycle  </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sim</td><td>a small unsigned integer const. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector with sim value extended to quadword. </dd></dl>
+
+</div>
+</div>
 <a id="ab99c4af0aae31b02e1f17f12500198f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab99c4af0aae31b02e1f17f12500198f0">&#9670;&nbsp;</a></span>vec_sraq()</h2>
 
@@ -7407,62 +7708,64 @@ This implementation is NOT endian sensitive and the function is stable across BE
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="avec__int128__ppc_8h_html_a6280736f91cb67eca10b55e750bfe1de"><div class="ttname"><a href="vec__int128__ppc_8h.html#a6280736f91cb67eca10b55e750bfe1de">vec_vmaddeud</a></div><div class="ttdeci">static vui128_t vec_vmaddeud(vui64_t a, vui64_t b, vui64_t c)</div><div class="ttdoc">Vector Multiply-Add Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7078</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a6280736f91cb67eca10b55e750bfe1de"><div class="ttname"><a href="vec__int128__ppc_8h.html#a6280736f91cb67eca10b55e750bfe1de">vec_vmaddeud</a></div><div class="ttdeci">static vui128_t vec_vmaddeud(vui64_t a, vui64_t b, vui64_t c)</div><div class="ttdoc">Vector Multiply-Add Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7651</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_ad739666851dfec6cc520c2ee06fd5d41"><div class="ttname"><a href="vec__common__ppc_8h.html#ad739666851dfec6cc520c2ee06fd5d41">VEC_WE_2</a></div><div class="ttdeci">#define VEC_WE_2</div><div class="ttdoc">Element index for vector splat word 2.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:334</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a2e40f9bf5df59b725cbfb6738c765202"><div class="ttname"><a href="vec__int128__ppc_8h.html#a2e40f9bf5df59b725cbfb6738c765202">vec_subeuqm</a></div><div class="ttdeci">static vui128_t vec_subeuqm(vui128_t vra, vui128_t vrb, vui128_t vrc)</div><div class="ttdoc">Vector Subtract Extended Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6826</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a2e40f9bf5df59b725cbfb6738c765202"><div class="ttname"><a href="vec__int128__ppc_8h.html#a2e40f9bf5df59b725cbfb6738c765202">vec_subeuqm</a></div><div class="ttdeci">static vui128_t vec_subeuqm(vui128_t vra, vui128_t vrb, vui128_t vrc)</div><div class="ttdoc">Vector Subtract Extended Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7399</div></div>
 <div class="ttc" id="avec__int32__ppc_8h_html_a0d39dc4278a5e0711e9109746b23f2c7"><div class="ttname"><a href="vec__int32__ppc_8h.html#a0d39dc4278a5e0711e9109746b23f2c7">vec_mrgahw</a></div><div class="ttdeci">static vui32_t vec_mrgahw(vui64_t vra, vui64_t vrb)</div><div class="ttdoc">Vector Merge Algebraic High Words.</div><div class="ttdef"><b>Definition:</b> vec_int32_ppc.h:653</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a1b046a56d566ec2ea351042fd9dd11de"><div class="ttname"><a href="vec__int64__ppc_8h.html#a1b046a56d566ec2ea351042fd9dd11de">vec_vmadd2euw</a></div><div class="ttdeci">static vui64_t vec_vmadd2euw(vui32_t a, vui32_t b, vui32_t c, vui32_t d)</div><div class="ttdoc">Vector Multiply-Add2 Even Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4213</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_af18b98d2d73f1afbc439e1407c78f305"><div class="ttname"><a href="vec__int128__ppc_8h.html#af18b98d2d73f1afbc439e1407c78f305">vec_addecuq</a></div><div class="ttdeci">static vui128_t vec_addecuq(vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extended &amp; write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2216</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a32acead723b7867ff4c9f8be9bb708ca"><div class="ttname"><a href="vec__int64__ppc_8h.html#a32acead723b7867ff4c9f8be9bb708ca">vec_vmaddouw</a></div><div class="ttdeci">static vui64_t vec_vmaddouw(vui32_t a, vui32_t b, vui32_t c)</div><div class="ttdoc">Vector Multiply-Add Odd Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4247</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a6bafb410404d4f1e10a99263b57d1df0"><div class="ttname"><a href="vec__int128__ppc_8h.html#a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm</a></div><div class="ttdeci">static vui128_t vec_subuqm(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Subtract Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6866</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a1e20bdd1df7e3e49dca06d5512ada84b"><div class="ttname"><a href="vec__int64__ppc_8h.html#a1e20bdd1df7e3e49dca06d5512ada84b">vec_vmaddeuw</a></div><div class="ttdeci">static vui64_t vec_vmaddeuw(vui32_t a, vui32_t b, vui32_t c)</div><div class="ttdoc">Vector Multiply-Add Even Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4178</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_af8f06b2c3d612a7cfdeb3bb883c59e19"><div class="ttname"><a href="vec__int128__ppc_8h.html#af8f06b2c3d612a7cfdeb3bb883c59e19">vec_cmpuq_all_ge</a></div><div class="ttdeci">static int vec_cmpuq_all_ge(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Compare any Greater Than or Equal Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3442</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_ae0b83d2696455fea53b1ecf434a0daf8"><div class="ttname"><a href="vec__int128__ppc_8h.html#ae0b83d2696455fea53b1ecf434a0daf8">vec_vmaddoud</a></div><div class="ttdeci">static vui128_t vec_vmaddoud(vui64_t a, vui64_t b, vui64_t c)</div><div class="ttdoc">Vector Multiply-Add Odd Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7332</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a1b046a56d566ec2ea351042fd9dd11de"><div class="ttname"><a href="vec__int64__ppc_8h.html#a1b046a56d566ec2ea351042fd9dd11de">vec_vmadd2euw</a></div><div class="ttdeci">static vui64_t vec_vmadd2euw(vui32_t a, vui32_t b, vui32_t c, vui32_t d)</div><div class="ttdoc">Vector Multiply-Add2 Even Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4723</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_af18b98d2d73f1afbc439e1407c78f305"><div class="ttname"><a href="vec__int128__ppc_8h.html#af18b98d2d73f1afbc439e1407c78f305">vec_addecuq</a></div><div class="ttdeci">static vui128_t vec_addecuq(vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extended &amp; write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2622</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a32acead723b7867ff4c9f8be9bb708ca"><div class="ttname"><a href="vec__int64__ppc_8h.html#a32acead723b7867ff4c9f8be9bb708ca">vec_vmaddouw</a></div><div class="ttdeci">static vui64_t vec_vmaddouw(vui32_t a, vui32_t b, vui32_t c)</div><div class="ttdoc">Vector Multiply-Add Odd Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4757</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a6bafb410404d4f1e10a99263b57d1df0"><div class="ttname"><a href="vec__int128__ppc_8h.html#a6bafb410404d4f1e10a99263b57d1df0">vec_subuqm</a></div><div class="ttdeci">static vui128_t vec_subuqm(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Subtract Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7439</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a1e20bdd1df7e3e49dca06d5512ada84b"><div class="ttname"><a href="vec__int64__ppc_8h.html#a1e20bdd1df7e3e49dca06d5512ada84b">vec_vmaddeuw</a></div><div class="ttdeci">static vui64_t vec_vmaddeuw(vui32_t a, vui32_t b, vui32_t c)</div><div class="ttdoc">Vector Multiply-Add Even Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:4688</div></div>
+<div class="ttc" id="avec__f128__ppc_8h_html_ac94c7ddb75a8fc5f543e65e31e03f1c1"><div class="ttname"><a href="vec__f128__ppc_8h.html#ac94c7ddb75a8fc5f543e65e31e03f1c1">vec_mask128_f128sign</a></div><div class="ttdeci">static vui32_t vec_mask128_f128sign(void)</div><div class="ttdoc">Generate Quadword Quad-Precision Sign-bit mask.</div><div class="ttdef"><b>Definition:</b> vec_f128_ppc.h:3899</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_af8f06b2c3d612a7cfdeb3bb883c59e19"><div class="ttname"><a href="vec__int128__ppc_8h.html#af8f06b2c3d612a7cfdeb3bb883c59e19">vec_cmpuq_all_ge</a></div><div class="ttdeci">static int vec_cmpuq_all_ge(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Compare any Greater Than or Equal Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3848</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_ae0b83d2696455fea53b1ecf434a0daf8"><div class="ttname"><a href="vec__int128__ppc_8h.html#ae0b83d2696455fea53b1ecf434a0daf8">vec_vmaddoud</a></div><div class="ttdeci">static vui128_t vec_vmaddoud(vui64_t a, vui64_t b, vui64_t c)</div><div class="ttdoc">Vector Multiply-Add Odd Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7905</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_ae4520a89b9b5a292a3e647a6d5b712ad"><div class="ttname"><a href="vec__common__ppc_8h.html#ae4520a89b9b5a292a3e647a6d5b712ad">CONST_VINT128_W</a></div><div class="ttdeci">#define CONST_VINT128_W(__w0, __w1, __w2, __w3)</div><div class="ttdoc">Arrange word elements of a unsigned int initializer in high-&gt;low order. May require an explicit cast.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:304</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a9aaaf0e4c2705be1e0e8e925b09c52de"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq</a></div><div class="ttdeci">static vui128_t vec_mulluq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply Low Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5149</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a44e63f70b182d60fe03b43a80647451a"><div class="ttname"><a href="vec__int128__ppc_8h.html#a44e63f70b182d60fe03b43a80647451a">vec_addeuqm</a></div><div class="ttdeci">static vui128_t vec_addeuqm(vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extended Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2278</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a43f6f199cdf39641d940f5b8d55dbf6b"><div class="ttname"><a href="vec__int128__ppc_8h.html#a43f6f199cdf39641d940f5b8d55dbf6b">vec_vmsumeud</a></div><div class="ttdeci">static vui128_t vec_vmsumeud(vui64_t a, vui64_t b, vui128_t c)</div><div class="ttdoc">Vector Multiply-Sum Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7414</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a1799f860ba79e698c66b171392afde01"><div class="ttname"><a href="vec__int128__ppc_8h.html#a1799f860ba79e698c66b171392afde01">vec_cmpuq_all_ne</a></div><div class="ttdeci">static int vec_cmpuq_all_ne(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Compare all Not Equal Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3619</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a84e6361054b52ac4564bcef25b718151"><div class="ttname"><a href="vec__int128__ppc_8h.html#a84e6361054b52ac4564bcef25b718151">vec_vmuleud</a></div><div class="ttdeci">static vui128_t vec_vmuleud(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Multiply Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6914</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a9aaaf0e4c2705be1e0e8e925b09c52de"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9aaaf0e4c2705be1e0e8e925b09c52de">vec_mulluq</a></div><div class="ttdeci">static vui128_t vec_mulluq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply Low Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5555</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a44e63f70b182d60fe03b43a80647451a"><div class="ttname"><a href="vec__int128__ppc_8h.html#a44e63f70b182d60fe03b43a80647451a">vec_addeuqm</a></div><div class="ttdeci">static vui128_t vec_addeuqm(vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extended Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2684</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a43f6f199cdf39641d940f5b8d55dbf6b"><div class="ttname"><a href="vec__int128__ppc_8h.html#a43f6f199cdf39641d940f5b8d55dbf6b">vec_vmsumeud</a></div><div class="ttdeci">static vui128_t vec_vmsumeud(vui64_t a, vui64_t b, vui128_t c)</div><div class="ttdoc">Vector Multiply-Sum Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7987</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a1799f860ba79e698c66b171392afde01"><div class="ttname"><a href="vec__int128__ppc_8h.html#a1799f860ba79e698c66b171392afde01">vec_cmpuq_all_ne</a></div><div class="ttdeci">static int vec_cmpuq_all_ne(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Compare all Not Equal Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4025</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a84e6361054b52ac4564bcef25b718151"><div class="ttname"><a href="vec__int128__ppc_8h.html#a84e6361054b52ac4564bcef25b718151">vec_vmuleud</a></div><div class="ttdeci">static vui128_t vec_vmuleud(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Multiply Even Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7487</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a3b2bbf9f23490ccca3bdc08bc1dc7831"><div class="ttname"><a href="vec__common__ppc_8h.html#a3b2bbf9f23490ccca3bdc08bc1dc7831">vi128_t</a></div><div class="ttdeci">__vector __int128 vi128_t</div><div class="ttdoc">vector of one 128-bit signed __int128 element.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:235</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_aa9c94b59ae2504f498923ed506a22083"><div class="ttname"><a href="vec__int128__ppc_8h.html#aa9c94b59ae2504f498923ed506a22083">CONST_VUINT128_Qx18d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx18d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:1999</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a0f75e65180e68c4753f3d9c2f42d1a31"><div class="ttname"><a href="vec__int128__ppc_8h.html#a0f75e65180e68c4753f3d9c2f42d1a31">CONST_VUINT128_QxW</a></div><div class="ttdeci">#define CONST_VUINT128_QxW(__q0, __q1, __q2, __q3)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from words.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:1932</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_aa9c94b59ae2504f498923ed506a22083"><div class="ttname"><a href="vec__int128__ppc_8h.html#aa9c94b59ae2504f498923ed506a22083">CONST_VUINT128_Qx18d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx18d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2405</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a0f75e65180e68c4753f3d9c2f42d1a31"><div class="ttname"><a href="vec__int128__ppc_8h.html#a0f75e65180e68c4753f3d9c2f42d1a31">CONST_VUINT128_QxW</a></div><div class="ttdeci">#define CONST_VUINT128_QxW(__q0, __q1, __q2, __q3)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from words.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2338</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a52a773b6353c69a546bdc2e8686a50ec"><div class="ttname"><a href="vec__common__ppc_8h.html#a52a773b6353c69a546bdc2e8686a50ec">vui64_t</a></div><div class="ttdeci">__vector unsigned long long vui64_t</div><div class="ttdoc">vector of 64-bit unsigned long long elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:208</div></div>
 <div class="ttc" id="avec__int32__ppc_8h_html_ae30f226bd27241513f0611b50967a080"><div class="ttname"><a href="vec__int32__ppc_8h.html#ae30f226bd27241513f0611b50967a080">vec_vmuleuw</a></div><div class="ttdeci">static vui64_t vec_vmuleuw(vui32_t vra, vui32_t vrb)</div><div class="ttdoc">Vector Multiply Even Unsigned words.</div><div class="ttdef"><b>Definition:</b> vec_int32_ppc.h:2237</div></div>
 <div class="ttc" id="avec__int32__ppc_8h_html_ae52349ced57857d20fb5e06b1b09cc05"><div class="ttname"><a href="vec__int32__ppc_8h.html#ae52349ced57857d20fb5e06b1b09cc05">vec_vmulouw</a></div><div class="ttdeci">static vui64_t vec_vmulouw(vui32_t vra, vui32_t vrb)</div><div class="ttdoc">Vector Multiply Odd Unsigned Words.</div><div class="ttdef"><b>Definition:</b> vec_int32_ppc.h:2340</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a31a893a75e42f5f6c4dfe793678fea59"><div class="ttname"><a href="vec__int128__ppc_8h.html#a31a893a75e42f5f6c4dfe793678fea59">vec_modudq_10e31</a></div><div class="ttdeci">static vui128_t vec_modudq_10e31(vui128_t vra, vui128_t vrb, vui128_t *ql)</div><div class="ttdoc">Vector Modulo Unsigned Double Quadword by const 10e31.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4214</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_ac05c640c6a42770cb95466ff4a2d903c"><div class="ttname"><a href="vec__int128__ppc_8h.html#ac05c640c6a42770cb95466ff4a2d903c">vec_srqi</a></div><div class="ttdeci">static vui128_t vec_srqi(vui128_t vra, const unsigned int shb)</div><div class="ttdoc">Vector Shift Right Quadword Immediate.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6581</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_aee5c5b2998ef105b4c6f39739748ffa8"><div class="ttname"><a href="vec__int128__ppc_8h.html#aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq</a></div><div class="ttdeci">static vui128_t vec_muludq(vui128_t *mulu, vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply Unsigned Double Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5328</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a31a893a75e42f5f6c4dfe793678fea59"><div class="ttname"><a href="vec__int128__ppc_8h.html#a31a893a75e42f5f6c4dfe793678fea59">vec_modudq_10e31</a></div><div class="ttdeci">static vui128_t vec_modudq_10e31(vui128_t vra, vui128_t vrb, vui128_t *ql)</div><div class="ttdoc">Vector Modulo Unsigned Double Quadword by const 10e31.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4620</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_ac05c640c6a42770cb95466ff4a2d903c"><div class="ttname"><a href="vec__int128__ppc_8h.html#ac05c640c6a42770cb95466ff4a2d903c">vec_srqi</a></div><div class="ttdeci">static vui128_t vec_srqi(vui128_t vra, const unsigned int shb)</div><div class="ttdoc">Vector Shift Right Quadword Immediate.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7154</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_aee5c5b2998ef105b4c6f39739748ffa8"><div class="ttname"><a href="vec__int128__ppc_8h.html#aee5c5b2998ef105b4c6f39739748ffa8">vec_muludq</a></div><div class="ttdeci">static vui128_t vec_muludq(vui128_t *mulu, vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply Unsigned Double Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5734</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_abf3504d2f86f03f90239a3196da3b3de"><div class="ttname"><a href="vec__common__ppc_8h.html#abf3504d2f86f03f90239a3196da3b3de">VEC_WE_3</a></div><div class="ttdeci">#define VEC_WE_3</div><div class="ttdoc">Element index for vector splat word 3.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:336</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_ad7aaadba249ce46c4c94f78df1020da3"><div class="ttname"><a href="vec__int128__ppc_8h.html#ad7aaadba249ce46c4c94f78df1020da3">vec_addcuq</a></div><div class="ttdeci">static vui128_t vec_addcuq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add &amp; write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2162</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_ad7aaadba249ce46c4c94f78df1020da3"><div class="ttname"><a href="vec__int128__ppc_8h.html#ad7aaadba249ce46c4c94f78df1020da3">vec_addcuq</a></div><div class="ttdeci">static vui128_t vec_addcuq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add &amp; write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2568</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_aaf7a8e92d8ba681dac3d2ec3259c0820"><div class="ttname"><a href="vec__common__ppc_8h.html#aaf7a8e92d8ba681dac3d2ec3259c0820">vui128_t</a></div><div class="ttdeci">__vector unsigned __int128 vui128_t</div><div class="ttdoc">vector of one 128-bit unsigned __int128 element.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:237</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a1d183ebd232e5826be109cdaa421aeed"><div class="ttname"><a href="vec__int128__ppc_8h.html#a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</a></div><div class="ttdeci">static vui128_t vec_msumudm(vui64_t a, vui64_t b, vui128_t c)</div><div class="ttdoc">Vector Multiply-Sum Unsigned Doubleword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4796</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a208744996e7482604ad274b44999d6ce"><div class="ttname"><a href="vec__int128__ppc_8h.html#a208744996e7482604ad274b44999d6ce">vec_vmuloud</a></div><div class="ttdeci">static vui128_t vec_vmuloud(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Multiply Odd Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7160</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a8238ba590103ac80fb146a6a2b1aed1c"><div class="ttname"><a href="vec__int64__ppc_8h.html#a8238ba590103ac80fb146a6a2b1aed1c">vec_permdi</a></div><div class="ttdeci">static vui64_t vec_permdi(vui64_t vra, vui64_t vrb, const int ctl)</div><div class="ttdoc">Vector Permute Doubleword Immediate. Combine a doubleword selected from the 1st (vra) vector with a d...</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2645</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a363fa7103ccd730c47bb34cb9f05e80b"><div class="ttname"><a href="vec__int128__ppc_8h.html#a363fa7103ccd730c47bb34cb9f05e80b">vec_addcq</a></div><div class="ttdeci">static vui128_t vec_addcq(vui128_t *cout, vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add with carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2382</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a1d183ebd232e5826be109cdaa421aeed"><div class="ttname"><a href="vec__int128__ppc_8h.html#a1d183ebd232e5826be109cdaa421aeed">vec_msumudm</a></div><div class="ttdeci">static vui128_t vec_msumudm(vui64_t a, vui64_t b, vui128_t c)</div><div class="ttdoc">Vector Multiply-Sum Unsigned Doubleword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5202</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a208744996e7482604ad274b44999d6ce"><div class="ttname"><a href="vec__int128__ppc_8h.html#a208744996e7482604ad274b44999d6ce">vec_vmuloud</a></div><div class="ttdeci">static vui128_t vec_vmuloud(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Multiply Odd Unsigned Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7733</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a8238ba590103ac80fb146a6a2b1aed1c"><div class="ttname"><a href="vec__int64__ppc_8h.html#a8238ba590103ac80fb146a6a2b1aed1c">vec_permdi</a></div><div class="ttdeci">static vui64_t vec_permdi(vui64_t vra, vui64_t vrb, const int ctl)</div><div class="ttdoc">Vector Permute Doubleword Immediate. Combine a doubleword selected from the 1st (vra) vector with a d...</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2983</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a363fa7103ccd730c47bb34cb9f05e80b"><div class="ttname"><a href="vec__int128__ppc_8h.html#a363fa7103ccd730c47bb34cb9f05e80b">vec_addcq</a></div><div class="ttdeci">static vui128_t vec_addcq(vui128_t *cout, vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add with carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2788</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a9ed8c282b57705c960542ed869de3325"><div class="ttname"><a href="vec__common__ppc_8h.html#a9ed8c282b57705c960542ed869de3325">CONST_VINT128_DW</a></div><div class="ttdeci">#define CONST_VINT128_DW(__dw0, __dw1)</div><div class="ttdoc">Initializer for 128-bits vector, as two unsigned long long elements in high-&gt;low order....</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:298</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a95d3546b2fd6840b46b031c15b4f60d3"><div class="ttname"><a href="vec__int128__ppc_8h.html#a95d3546b2fd6840b46b031c15b4f60d3">vec_subcuq</a></div><div class="ttdeci">static vui128_t vec_subcuq(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Subtract and Write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6744</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_afa2db6d665f837f96c746d88027e9e19"><div class="ttname"><a href="vec__int128__ppc_8h.html#afa2db6d665f837f96c746d88027e9e19">vec_divudq_10e31</a></div><div class="ttdeci">static vui128_t vec_divudq_10e31(vui128_t *qh, vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Divide Unsigned Double Quadword by const 10e31.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3851</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_acd5c20e29b155f8f575d60f6af8f7955"><div class="ttname"><a href="vec__int128__ppc_8h.html#acd5c20e29b155f8f575d60f6af8f7955">CONST_VUINT128_Qx16d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx16d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2019</div></div>
+<div class="ttc" id="avec__common__ppc_8h_html_a748bbf6563e6ab1ddcb694c86e2aaef4"><div class="ttname"><a href="vec__common__ppc_8h.html#a748bbf6563e6ab1ddcb694c86e2aaef4">vi8_t</a></div><div class="ttdeci">__vector signed char vi8_t</div><div class="ttdoc">vector of 8-bit signed char elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:211</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a95d3546b2fd6840b46b031c15b4f60d3"><div class="ttname"><a href="vec__int128__ppc_8h.html#a95d3546b2fd6840b46b031c15b4f60d3">vec_subcuq</a></div><div class="ttdeci">static vui128_t vec_subcuq(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Subtract and Write Carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:7317</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_afa2db6d665f837f96c746d88027e9e19"><div class="ttname"><a href="vec__int128__ppc_8h.html#afa2db6d665f837f96c746d88027e9e19">vec_divudq_10e31</a></div><div class="ttdeci">static vui128_t vec_divudq_10e31(vui128_t *qh, vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Divide Unsigned Double Quadword by const 10e31.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4257</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_acd5c20e29b155f8f575d60f6af8f7955"><div class="ttname"><a href="vec__int128__ppc_8h.html#acd5c20e29b155f8f575d60f6af8f7955">CONST_VUINT128_Qx16d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx16d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2425</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a9d8b8de825b673b53cd50458dfc6efa8"><div class="ttname"><a href="vec__common__ppc_8h.html#a9d8b8de825b673b53cd50458dfc6efa8">VEC_DW_L</a></div><div class="ttdeci">#define VEC_DW_L</div><div class="ttdoc">Element index for low order dword.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:324</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a12118674c4e47eb7c939bb29a379d381"><div class="ttname"><a href="vec__int128__ppc_8h.html#a12118674c4e47eb7c939bb29a379d381">CONST_VUINT128_QxD</a></div><div class="ttdeci">#define CONST_VUINT128_QxD(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:1958</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a5242d6311cd5ab50377cfeb2cf2ac8bf"><div class="ttname"><a href="vec__int64__ppc_8h.html#a5242d6311cd5ab50377cfeb2cf2ac8bf">vec_mrgald</a></div><div class="ttdeci">static vui64_t vec_mrgald(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Merge Algebraic Low Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2398</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a25faf0c51245eefdaeda1dc5dd71c516"><div class="ttname"><a href="vec__int128__ppc_8h.html#a25faf0c51245eefdaeda1dc5dd71c516">CONST_VUINT128_Qx19d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx19d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:1979</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_acd5bafec6c1c15b0336551e82d1169d4"><div class="ttname"><a href="vec__int64__ppc_8h.html#acd5bafec6c1c15b0336551e82d1169d4">vec_mrgahd</a></div><div class="ttdeci">static vui64_t vec_mrgahd(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Merge Algebraic High Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2372</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a9a6a39212f8a8b9ebf20e0117e1e1e88"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9a6a39212f8a8b9ebf20e0117e1e1e88">vec_divuq_10e31</a></div><div class="ttdeci">static vui128_t vec_divuq_10e31(vui128_t vra)</div><div class="ttdoc">Vector Divide by const 10e31 Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3985</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a12118674c4e47eb7c939bb29a379d381"><div class="ttname"><a href="vec__int128__ppc_8h.html#a12118674c4e47eb7c939bb29a379d381">CONST_VUINT128_QxD</a></div><div class="ttdeci">#define CONST_VUINT128_QxD(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2364</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a5242d6311cd5ab50377cfeb2cf2ac8bf"><div class="ttname"><a href="vec__int64__ppc_8h.html#a5242d6311cd5ab50377cfeb2cf2ac8bf">vec_mrgald</a></div><div class="ttdeci">static vui64_t vec_mrgald(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Merge Algebraic Low Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2736</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a25faf0c51245eefdaeda1dc5dd71c516"><div class="ttname"><a href="vec__int128__ppc_8h.html#a25faf0c51245eefdaeda1dc5dd71c516">CONST_VUINT128_Qx19d</a></div><div class="ttdeci">#define CONST_VUINT128_Qx19d(__q0, __q1)</div><div class="ttdoc">Generate a vector unsigned __int128 constant from doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2385</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_acd5bafec6c1c15b0336551e82d1169d4"><div class="ttname"><a href="vec__int64__ppc_8h.html#acd5bafec6c1c15b0336551e82d1169d4">vec_mrgahd</a></div><div class="ttdeci">static vui64_t vec_mrgahd(vui128_t vra, vui128_t vrb)</div><div class="ttdoc">Vector Merge Algebraic High Doublewords.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:2710</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a9a6a39212f8a8b9ebf20e0117e1e1e88"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9a6a39212f8a8b9ebf20e0117e1e1e88">vec_divuq_10e31</a></div><div class="ttdeci">static vui128_t vec_divuq_10e31(vui128_t vra)</div><div class="ttdoc">Vector Divide by const 10e31 Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4391</div></div>
 <div class="ttc" id="avec__common__ppc_8h_html_a2ff4a776536870e01b7c9e454586544b"><div class="ttname"><a href="vec__common__ppc_8h.html#a2ff4a776536870e01b7c9e454586544b">vui32_t</a></div><div class="ttdeci">__vector unsigned int vui32_t</div><div class="ttdoc">vector of 32-bit unsigned int elements.</div><div class="ttdef"><b>Definition:</b> vec_common_ppc.h:206</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a10780cd8a88f18ec564ee6254c179a06"><div class="ttname"><a href="vec__int128__ppc_8h.html#a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</a></div><div class="ttdeci">static vui64_t vec_mulhud(vui64_t vra, vui64_t vrb)</div><div class="ttdoc">Vector Multiply High Unsigned Doubleword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4871</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_aaa33904ec4de42f54cceab34adb303c5"><div class="ttname"><a href="vec__int128__ppc_8h.html#aaa33904ec4de42f54cceab34adb303c5">vec_sldqi</a></div><div class="ttdeci">static vui128_t vec_sldqi(vui128_t vrw, vui128_t vrx, const unsigned int shb)</div><div class="ttdoc">Vector Shift Left Double Quadword Immediate.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6243</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a539de2a4426a84102471306acc571ce8"><div class="ttname"><a href="vec__int128__ppc_8h.html#a539de2a4426a84102471306acc571ce8">vec_adduqm</a></div><div class="ttdeci">static vui128_t vec_adduqm(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2333</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a28052c1907d1f733c9dda8a48039e546"><div class="ttname"><a href="vec__int64__ppc_8h.html#a28052c1907d1f733c9dda8a48039e546">vec_addudm</a></div><div class="ttdeci">static vui64_t vec_addudm(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Add Unsigned Doubleword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:923</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a9e27910c148d525e17d099688aec9ba1"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9e27910c148d525e17d099688aec9ba1">vec_addeq</a></div><div class="ttdeci">static vui128_t vec_addeq(vui128_t *cout, vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extend with carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2443</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_af4b3b91f7e80522d8a8c0c171e077b99"><div class="ttname"><a href="vec__int128__ppc_8h.html#af4b3b91f7e80522d8a8c0c171e077b99">vec_moduq_10e31</a></div><div class="ttdeci">static vui128_t vec_moduq_10e31(vui128_t vra, vui128_t q)</div><div class="ttdoc">Vector Modulo by const 10e31 Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4312</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_ad6be9c8f02e43c39a659d6bbc9c3a2d2"><div class="ttname"><a href="vec__int128__ppc_8h.html#ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq</a></div><div class="ttdeci">static vui128_t vec_mulhuq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply High Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4981</div></div>
-<div class="ttc" id="avec__int64__ppc_8h_html_a42d2b39711c06106097ef869a20420b6"><div class="ttname"><a href="vec__int64__ppc_8h.html#a42d2b39711c06106097ef869a20420b6">vec_swapd</a></div><div class="ttdeci">static vui64_t vec_swapd(vui64_t vra)</div><div class="ttdoc">Vector doubleword swap. Exchange the high and low doubleword elements of a vector.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:3279</div></div>
-<div class="ttc" id="avec__int128__ppc_8h_html_a269401b65405524bb2d971bef595cb0d"><div class="ttname"><a href="vec__int128__ppc_8h.html#a269401b65405524bb2d971bef595cb0d">vec_cmpsq_all_ge</a></div><div class="ttdeci">static int vec_cmpsq_all_ge(vi128_t vra, vi128_t vrb)</div><div class="ttdoc">Vector Compare any Greater Than or Equal Signed Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3160</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a10780cd8a88f18ec564ee6254c179a06"><div class="ttname"><a href="vec__int128__ppc_8h.html#a10780cd8a88f18ec564ee6254c179a06">vec_mulhud</a></div><div class="ttdeci">static vui64_t vec_mulhud(vui64_t vra, vui64_t vrb)</div><div class="ttdoc">Vector Multiply High Unsigned Doubleword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5277</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_aaa33904ec4de42f54cceab34adb303c5"><div class="ttname"><a href="vec__int128__ppc_8h.html#aaa33904ec4de42f54cceab34adb303c5">vec_sldqi</a></div><div class="ttdeci">static vui128_t vec_sldqi(vui128_t vrw, vui128_t vrx, const unsigned int shb)</div><div class="ttdoc">Vector Shift Left Double Quadword Immediate.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:6649</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a539de2a4426a84102471306acc571ce8"><div class="ttname"><a href="vec__int128__ppc_8h.html#a539de2a4426a84102471306acc571ce8">vec_adduqm</a></div><div class="ttdeci">static vui128_t vec_adduqm(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Add Unsigned Quadword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2739</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a28052c1907d1f733c9dda8a48039e546"><div class="ttname"><a href="vec__int64__ppc_8h.html#a28052c1907d1f733c9dda8a48039e546">vec_addudm</a></div><div class="ttdeci">static vui64_t vec_addudm(vui64_t a, vui64_t b)</div><div class="ttdoc">Vector Add Unsigned Doubleword Modulo.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:1261</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a9e27910c148d525e17d099688aec9ba1"><div class="ttname"><a href="vec__int128__ppc_8h.html#a9e27910c148d525e17d099688aec9ba1">vec_addeq</a></div><div class="ttdeci">static vui128_t vec_addeq(vui128_t *cout, vui128_t a, vui128_t b, vui128_t ci)</div><div class="ttdoc">Vector Add Extend with carry Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:2849</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_af4b3b91f7e80522d8a8c0c171e077b99"><div class="ttname"><a href="vec__int128__ppc_8h.html#af4b3b91f7e80522d8a8c0c171e077b99">vec_moduq_10e31</a></div><div class="ttdeci">static vui128_t vec_moduq_10e31(vui128_t vra, vui128_t q)</div><div class="ttdoc">Vector Modulo by const 10e31 Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:4718</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_ad6be9c8f02e43c39a659d6bbc9c3a2d2"><div class="ttname"><a href="vec__int128__ppc_8h.html#ad6be9c8f02e43c39a659d6bbc9c3a2d2">vec_mulhuq</a></div><div class="ttdeci">static vui128_t vec_mulhuq(vui128_t a, vui128_t b)</div><div class="ttdoc">Vector Multiply High Unsigned Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:5387</div></div>
+<div class="ttc" id="avec__int64__ppc_8h_html_a42d2b39711c06106097ef869a20420b6"><div class="ttname"><a href="vec__int64__ppc_8h.html#a42d2b39711c06106097ef869a20420b6">vec_swapd</a></div><div class="ttdeci">static vui64_t vec_swapd(vui64_t vra)</div><div class="ttdoc">Vector doubleword swap. Exchange the high and low doubleword elements of a vector.</div><div class="ttdef"><b>Definition:</b> vec_int64_ppc.h:3789</div></div>
+<div class="ttc" id="avec__int128__ppc_8h_html_a269401b65405524bb2d971bef595cb0d"><div class="ttname"><a href="vec__int128__ppc_8h.html#a269401b65405524bb2d971bef595cb0d">vec_cmpsq_all_ge</a></div><div class="ttdeci">static int vec_cmpsq_all_ge(vi128_t vra, vi128_t vrb)</div><div class="ttdoc">Vector Compare any Greater Than or Equal Signed Quadword.</div><div class="ttdef"><b>Definition:</b> vec_int128_ppc.h:3566</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 27 2021 16:15:49 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2022 14:57:44 for POWER Vector Library Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
